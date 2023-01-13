@@ -1,0 +1,781 @@
+THREADS
+
+1-
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<pthread.h>
+
+
+int sum=0,n=10;
+
+int array[] = {1,2,3,4,5,6,7,8,9,10};
+
+
+void *AddArray(void *ptr){
+
+
+ sum = sum + array[(int)ptr];
+ printf("%d...",sum);
+ 
+}
+
+
+
+int main(){
+
+
+  int rc,i;
+  
+  pthread_t threads[n];
+  
+  for(i = 0; i< n;i++){
+   
+    pthread_create(&threads[i], NULL, AddArray, (void *)i);
+
+
+   }
+ 
+   for(i = 0; i< n;i++){
+   
+    pthread_join(threads[i],NULL);
+
+   }
+
+   pthread_exit(NULL);
+
+
+
+}
+
+
+2-
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <pthread.h>
+
+
+void * PrintHello(void *data){
+
+     printf("HELLO - I am thread %u. Created in iteration %d..\n", (int)pthread_self(),(int)data);
+  
+ 
+}
+
+
+int main(){
+
+  int rc, i , n;
+  
+  printf("Enter the no of threads: " );
+  scanf("%d", &n);
+  
+  pthread_t thread_id[n];
+  
+  for(i=0;i<n;i++){
+  
+  rc = pthread_create(&thread_id[i], NULL, PrintHello, (void*)i);
+  
+  
+     printf("I am thread %u. Created in iteration %d..\n", (int)pthread_self(),i);
+  
+  
+  
+  }
+  
+   for(i=0;i<n;i++){
+  
+  
+    pthread_join(thread_id[i],NULL);
+  
+  }
+  
+  
+  
+  pthread_exit(NULL);
+
+
+
+
+}
+
+OPENMP
+
+1-
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<omp.h>
+
+
+int main() {
+int num;
+int i;
+
+printf("Table [PROMPT] Enter Your Number: "); scanf("%d",&num);
+
+#pragma omp parallel num_threads(10)
+{
+#pragma omp for
+
+for(i=0;i<10;i++) {
+printf("Table [INFO] Thread ID: %d | %d X %d = %d \n", omp_get_thread_num(), i, num,i*num );
+}
+
+}
+
+return 0;
+}
+
+
+2-
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<omp.h>
+
+int main(){
+
+int nthreads;
+int tid;
+int nop, maxthreads;
+
+#pragma omp parallel private(tid)
+{
+   
+   
+   tid = omp_get_thread_num();
+   
+   printf("hello world for thread id: %d \n", tid);
+   
+   if(tid == 0){
+   nthreads = omp_get_num_threads();
+   nop = omp_get_num_procs();
+   maxthreads = omp_get_max_threads();
+   printf("\n\nNo of threads are %d \n",nthreads);
+   printf("No of processors are %d \n",nop);
+   printf("Max no of threads are %d \n\n",maxthreads);
+   }
+   
+
+}
+
+ return 0;
+}
+
+
+3-
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<omp.h>
+//#include<pthread.h>
+
+
+int sum=0,n=10;
+
+int array[] = {1,2,3,4,5,6,7,8,9,10};
+
+void add(int x){
+
+    sum = sum + array[x];
+     printf("%d..",sum);
+
+}
+
+int main(){
+
+
+  int rc,i;
+  
+   
+   #pragma omp parallel shared(sum,array) private(i)
+ 
+   {
+   
+     #pragma omp for
+ 
+   for(i = 0; i< n;i++){
+     add(i);
+   }
+   
+   }
+
+
+return 0;
+
+
+}
+
+4-
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<omp.h>
+
+int main() {
+  int r, c, a[100][100], b[100][100], mul[100][100], i, j,k;
+  printf("Enter the number of rows (between 1 and 100): ");
+  scanf("%d", &r);
+  printf("Enter the number of columns (between 1 and 100): ");
+  scanf("%d", &c);
+
+  printf("\nEnter elements of 1st matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element a%d%d: ", i + 1, j + 1);
+      scanf("%d", &a[i][j]);
+    }
+
+  printf("Enter elements of 2nd matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element b%d%d: ", i + 1, j + 1);
+      scanf("%d", &b[i][j]);
+    }
+
+  // adding two matrices
+  
+  #pragma omp parallel shared(a, b, mul) private(i,j,k)
+  {
+  
+   #pragma omp for
+  for (i = 0; i < r; i++) {
+    for (j = 0; j < c; j++) {
+      for(k=0; k<c; k++){
+     
+      mul[i][j] += a[i][k] * b[k][j];
+    }
+    
+    }
+    
+   }
+   
+   for(i=0;i<r;i++){
+   for(j=0;j<c;j++)
+      printf("%d  ", mul[i][j]);
+      
+     printf("\n"); 
+   }
+   
+   
+  } 
+
+  
+
+  return 0;
+}
+
+SEMAPHORES
+
+1-
+
+#include <unistd.h> /* Symbolic Constants */
+//#include <sys/types.h> /* Primitive System Data Types */
+#include <stdio.h> /* Input/Output */
+#include <stdlib.h> /* General Utilities */
+#include <pthread.h> /* POSIX Threads */
+#include <semaphore.h> /* Semaphore */
+
+sem_t mutex;
+sem_t paid;
+int icecream = 3;
+
+void *eat(void *ptr){
+
+	int x = *((int*)ptr);
+	
+	sem_wait(&mutex);
+	printf("Customer %d is buying icecream\n", x);
+	--icecream;
+	printf("No of icecream remaining: %d \n",icecream);
+	sem_post(&mutex);
+	
+	printf("Customer %d taking out money from wallet\n", x);
+	sleep(2);
+	sem_wait(&paid);
+	printf("Customer %d paid for the icrecream \n", x);
+	sem_post(&paid);
+	
+	pthread_exit(0);
+	
+	
+}
+
+int main() {
+	pthread_t thread_a, thread_b, thread_c;
+	int num[3]={1,2,3};
+	sem_init(&mutex, 0, 1);
+	sem_init(&paid, 0, 1);
+	//sem_init(&paid,0,1);
+	printf("No of icecream remaining: %d \n",icecream);
+
+          pthread_create(&thread_a, NULL, (void *) &eat, (void *) &num[0] );
+	pthread_create(&thread_b, NULL, (void *) &eat, (void *) &num[1] );
+	pthread_create(&thread_c, NULL, (void *) &eat, (void *) &num[2] );
+	
+	
+	pthread_join(thread_a,NULL);
+	pthread_join(thread_b,NULL);
+	pthread_join(thread_c,NULL);
+	
+	sem_destroy(&mutex);
+	sem_destroy(&paid);
+	return 0;
+}
+
+2-
+
+#include <unistd.h> /* Symbolic Constants */
+#include <sys/types.h> /* Primitive System Data Types */
+#include <errno.h> /* Errors */
+#include <stdio.h> /* Input/Output */
+#include <stdlib.h> /* General Utilities */
+#include <pthread.h> /* POSIX Threads */
+#include <string.h> /* String handling */
+#include <semaphore.h> /* Semaphore */
+
+sem_t weight, security, board;
+
+void *airport(void *ptr){
+	int x=*((int*)ptr);
+	
+	sem_wait(&weight);
+	printf("Customer %d is weighing his luggage\n", x+1);
+	sleep(4);
+          sem_post(&weight);
+          printf("Customer %d luggage has been weighed\n", x+1);
+          
+          sem_wait(&security);
+          printf("Customer %d is getting his luggage checked\n", x+1);
+          sleep(7);
+          sem_post(&security);
+          printf("Customer %d luggage has been checked\n", x+1);
+          
+          sem_wait(&board);
+          printf("Customer %d is getting his boarding pass\n", x+1);
+          sleep(3);
+          sem_post(&board);
+          printf("Customer %d has got his boarding pass\n", x+1);
+          
+          
+	pthread_exit(0);
+	
+	
+}
+
+int main() {
+	pthread_t customers[10];
+	int a[10], i;
+	
+	sem_init(&weight, 0, 1);
+	sem_init(&security, 0, 1);
+	sem_init(&board, 0, 1);
+
+         for(i=0;i<10;i++){
+           a[i] = i;
+	pthread_create(&customers[i], NULL, (void *) &airport, (void *) &a[i]);
+          }
+	
+	for(i=0;i<10;i++){
+	pthread_join(customers[i],NULL);
+          }
+	
+	
+	sem_destroy(&weight);
+	sem_destroy(&security);
+	sem_destroy(&board);
+	return 0;
+}
+
+3-
+
+#include <unistd.h> /* Symbolic Constants */
+#include <sys/types.h> /* Primitive System Data Types */
+#include <errno.h> /* Errors */
+#include <stdio.h> /* Input/Output */
+#include <stdlib.h> /* General Utilities */
+#include <pthread.h> /* POSIX Threads */
+#include <string.h> /* String handling */
+#include <semaphore.h> /* Semaphore */
+
+sem_t machine, dryer;
+
+void *wash(void *ptr){
+	int x=*((int*)ptr);
+	
+	sem_wait(&machine);
+	printf("Customer %d is using washing machine\n", x+1);
+          sem_post(&machine);
+          printf("Customer %d has washed his clothes\n", x+1);
+          
+          sem_wait(&dryer);
+          printf("Customer %d is using his dryer\n", x+1);
+          sem_post(&dryer);
+          printf("Customer %d has used his dryer\n", x+1);
+          
+	pthread_exit(0);
+	
+	
+}
+
+int main() {
+	pthread_t customers[30];
+	int a[30], i;
+	
+	sem_init(&machine, 0, 10);
+	sem_init(&dryer, 0, 5);
+	
+         for(i=0;i<30;i++){
+           a[i] = i;
+	pthread_create(&customers[i], NULL, (void *) &wash, (void *) &a[i]);
+          }
+	
+	for(i=0;i<30;i++){
+	pthread_join(customers[i],NULL);
+          }
+	
+	
+	sem_destroy(&machine);
+	sem_destroy(&dryer);
+	
+	return 0;
+}
+
+4-
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<pthread.h>
+#include<semaphore.h>
+#include<unistd.h>
+
+
+sem_t pizza;
+sem_t accesss;
+
+void *oven(void *ptr){
+  
+   int x = *((int*)ptr);
+   
+   sem_wait(&accesss);
+   printf("oven has been opened by %d cook...\n",x+1);
+   sem_wait(&pizza);
+   printf("pizza is being put into oven...\n");
+   sem_post(&accesss);
+   
+  // wait(NULL);
+   
+   sem_wait(&accesss);
+   printf("oven has been opened again by %d...\n",x+1);
+   printf("pizza is being taken out from oven...\n");
+   
+   sem_post(&pizza);
+   sem_post(&accesss);
+
+
+
+}
+
+int main(){
+
+          pthread_t threads[10];
+          int i,a[10];
+
+          sem_init(&pizza,0,20);
+          sem_init(&accesss,0,1);
+
+
+          for(i=0;i<10;i++){
+               a[i] = i;
+              pthread_create(&threads[i],NULL,oven,(void*)&a[i]);
+
+             }
+             
+             
+          for(i=0;i<10;i++){
+               pthread_join(threads[i],NULL);
+             }
+             
+             
+             sem_destroy(&pizza);
+             sem_destroy(&accesss);
+
+return 0;
+
+
+}
+
+5-
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<semaphore.h>
+#include<pthread.h>
+
+
+sem_t bus;
+sem_t door;
+
+
+ void *BusService(void *ptr){
+ 
+  //int x = *((int*)ptr);
+  int x = (int)ptr;
+  
+  sem_wait(&door);
+  sem_wait(&bus);
+  printf("Door has been opened: passenger %d is entering...\n",x+1);
+  sem_post(&door);
+  printf("Door closed...\n");
+  
+  
+  sem_wait(&door);
+  sem_post(&bus);
+  printf("Door has been opened: passenger %d is leaving...\n",x+1);
+  sem_post(&door);
+  printf("Door closed...\n");
+  
+ 
+ 
+ }
+
+
+
+
+int main(){
+
+int i, a[30];
+
+sem_init(&bus,0,30);
+sem_init(&door,0,2);
+
+pthread_t threads[30];
+
+
+for(i=0;i<30;i++){
+ a[i] = i;
+
+ pthread_create(&threads[i],NULL,BusService,(void *)a[i]);
+
+}
+
+for(i=0;i<30;i++){
+               pthread_join(threads[i],NULL);
+             }
+             
+             
+
+sem_destroy(&bus);
+sem_destroy(&door);
+
+
+}
+
+SIGNALS
+
+1-
+
+
+#include <stdio.h>
+#include <signal.h>
+
+int flag = 0;
+
+void func(){
+printf("Hello \n");
+flag = 1;
+}
+
+int main ( )
+{
+
+signal(SIGALRM,func);
+alarm (4) ; /* schedule an alarm signal in 5 seconds */
+printf ("Looping forever ...\n") ;
+
+while ( !flag );
+pause();      //suspends the calling process
+
+printf ("This line should never be executed.\n") ;
+
+return 0;
+}
+
+
+//Output:
+//Looping forever ...
+//Hello 
+//^C
+
+2-
+
+#include <stdio.h>
+#include <signal.h>
+
+
+void haha(int sig)
+{
+printf("Ha! Ha! \n");   //CTRL + C FOR working
+}
+
+int main()
+{
+int i;
+signal(SIGINT, haha);
+for (i = 1; i <= 2000000000; i++)
+{
+ //do nothing
+}
+return 0;
+}
+
+
+// OUTPUT:
+// ^CHa! Ha! 
+// ^CHa! Ha! 
+// ^CHa! Ha! 
+// ^CHa! Ha! 
+// ^Z
+
+
+3-
+
+
+#include<stdio.h>
+#include<signal.h>
+
+
+
+main ( ) {
+
+int (*oldHandler) ( ) ; /* holds old handler value */
+printf ("I can be Control-C'ed \n") ;
+sleep (5) ;
+
+oldHandler = signal(SIGINT, SIG_IGN) ; /* Ignore Ctrl-C */
+printf ("I am protected from Control-C now \n") ;
+sleep (5) ;
+
+signal (SIGINT, oldHandler) ; /* Restore old handler */
+printf ("\nI can be Control-C'ed again \n") ; 
+sleep (5) ;
+
+printf ("Bye!!!!!!!\n");
+}
+
+
+//I can be Control-C'ed 
+//I am protected from Control-C now 
+//^C^C^C^C^C^C
+//I can be Control-C'ed again 
+//Bye!!!!!!!
+
+
+4-
+
+
+#include<stdio.h>
+#include<signal.h>
+#include <sys/types.h>
+#include<unistd.h>
+
+void hello(){
+printf("Hello WORLD\n");
+}
+
+int main ( ) {
+
+pid_t cpid;
+pid_t ppid;
+
+signal(SIGUSR1, hello);
+
+if( (ppid = fork() ) == 0){
+
+ppid = getppid();
+printf("PID OF PARENT IS: %d \n",ppid);
+
+kill(cpid, SIGUSR1);
+
+exit(0);
+
+}
+  
+   else {
+
+    wait(NULL);
+ 
+  }
+
+}
+
+//OUTPUT:
+//PID OF PARENT IS: 28827 
+//Hello WORLD
+
+5- 
+
+#include<stdio.h>
+#include<signal.h>
+#include <sys/types.h>
+#include<unistd.h>
+
+
+void handler3(int signum){
+printf("You kill me with politeness-3\n");
+signal(SIGINT, SIG_IGN);
+
+sleep(5);
+
+signal(SIGINT,SIG_DFL);
+
+}
+
+void handler2(int signum){
+printf("You kill me with politeness-2\n");
+signal(SIGINT, handler3);
+}
+
+
+void handler1(int signum){
+printf("You kill me with politeness-1\n");
+signal(SIGINT, handler2);
+}
+
+int main ( ) {
+
+signal(SIGINT, handler1);
+
+while(1);
+
+
+}
+
+// OUTPUT:
+// ^CYou kill me with politeness-1
+// ^CYou kill me with politeness-2
+// ^CYou kill me with politeness-3
+// ^C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
