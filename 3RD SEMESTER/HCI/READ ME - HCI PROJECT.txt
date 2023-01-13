@@ -1,0 +1,10 @@
+READ THE INSTRUCTIONS CAREFULLY FOR RUNNING THE APPLICATION
+-	Download Java from the website below
+                     https://www.java.com/download/ie_manual.jsp
+-	Install java and copy the directory of file and add it to the new system environment variable
+-	Then, download IntelliJ Idea or NetBeans for running the java files.
+-	Run the application and go through each functionality.
+
+WARNING!
+-	Violation of copyrights is strictly prohibited and one must not do it.
+        In case of any illegal activity with our software, we will immediately sue the person or organization using it. 

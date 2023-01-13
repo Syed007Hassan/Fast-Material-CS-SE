@@ -1,0 +1,2532 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta name="theme-color" content="#323754">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="
+Detailed tutorial on Depth First Search to improve your understanding of Algorithms. Also try practice problems to test & improve your skill level.
+" >
+        <link rel="canonical" href="https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/" />
+        <meta name="msvalidate.01" content="1BF418E510B5A17A2D71685C571BF4EB" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        
+
+        
+        <script>
+          (function() {
+              if (window.BOOMR && window.BOOMR.version) {
+                  return;
+              }
+              var dom, doc, where, iframe = document.createElement("iframe"),
+                  win = window;
+
+              function boomerangSaveLoadTime(e) {
+                  win.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+              }
+              if (win.addEventListener) {
+                  win.addEventListener("load", boomerangSaveLoadTime, false);
+              } else if (win.attachEvent) {
+                  win.attachEvent("onload", boomerangSaveLoadTime);
+              }
+
+              iframe.src = "javascript:false";
+              iframe.title = "";
+              iframe.role = "presentation";
+              (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display: none;";
+              where = document.getElementsByTagName("script")[0];
+              where.parentNode.insertBefore(iframe, where);
+
+              try {
+                  doc = iframe.contentWindow.document;
+              } catch (e) {
+                  dom = document.domain;
+                  iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+                  doc = iframe.contentWindow.document;
+              }
+              doc.open()._l = function() {
+                  var js = this.createElement("script");
+                  if (dom) this.domain = dom;
+                  js.id = "boomr-if-as";
+                  js.src = "https://s.go-mpulse.net/boomerang/" +
+                      "QKZWA-3BVYP-7W6XK-6HKWZ-EFFZ4";
+                  BOOMR_lstart = new Date().getTime();
+                  this.body.appendChild(js);
+              };
+              doc.write('<body onload="document._l();">');
+              doc.close();
+          })();
+        </script>
+        
+
+
+        
+<meta name="google-site-verification" content="ozqyeStBcz4eehbY9Ohb_IUQcA4y8BKzzDCT-H1QPPc" />
+
+
+        
+        
+        <!-- google analytics start -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-34729975-1', 'auto');
+            ga('require', 'displayfeatures');
+            
+            ga('send', 'pageview');
+        </script>
+        <!-- google analytics end -->
+        
+        
+
+        
+        
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PBHB3B9');
+        </script>
+        <!-- End Google Tag Manager -->
+        
+        
+
+        <title>  Depth First Search Tutorials & Notes | Algorithms | HackerEarth  </title>
+
+        
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1">
+<!-- Facebook tags -->
+<meta property="og:title" content="Depth First Search Tutorials & Notes | Algorithms | HackerEarth"/>
+<meta property="og:image" content="https://static-fastly.hackerearth.com/static/hackerearth/images/logo/HE_cover.jpg" />
+<meta property="og:description" content="Detailed tutorial on Depth First Search to improve your understanding of Algorithms. Also try practice problems to test & improve your skill level."/>
+<meta property="og:url" content="https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/"/>
+<meta property="og:site_name" content="HackerEarth"/>
+<meta property="og:type" content="website"/>
+<!-- end Facbook tags -->
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@HackerEarth"/>
+<meta name="twitter:url" content="https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/"/>
+<meta name="twitter:title" content="Depth First Search Tutorials & Notes | Algorithms | HackerEarth"/>
+<meta name="twitter:description" content="Detailed tutorial on Depth First Search to improve your understanding of Algorithms. Also try practice problems to test & improve your skill level."/>
+<!-- end Twitter tags -->
+
+        
+        <link rel="shortcut icon" href="https://static-fastly.hackerearth.com/static/hackerearth/images/logo/HE_identity.png" type="image/x-icon">
+        
+
+        
+
+        
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/base_common_combined.c94e4c970513.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/marketing_footer.20caf7067b08.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/js/tooltip/tipTip.4cc4f68d44b4.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/offline/offline-theme-slide.12bc3d4c96b4.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/font-awesome-4.7.0/css/font-awesome.min.269550530cc1.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/opensans/opensans.06e0aa7529dc.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/proxima-nova/proxima-nova.61f8e8377456.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/hack/hack.8b30169f8a8b.css"/>
+            <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/css/unicons.9eda5fc182c1.css"/>
+        
+
+        
+
+
+        
+
+        <!-- Make the static variable available for all js files -->
+        <script>
+            var STATIC_URL = "https://static-fastly.hackerearth.com/static/";
+            var RECAPTCHA_V3_SITE_KEY = "6LeyqcIZAAAAAOcy_5WJORJsuu9zmbZZxIRp4-em";
+            var ssEnabled = false;
+        </script>
+
+        <!-- Store CSRF_COOKIE -->
+        <script>
+            var CSRF_COOKIE_USED = "True";
+            var CSRF_COOKIE = "NJpLA8dXBFRtQ3SEqRxO5nJkkCRAh0xh9u9vtqxvNiftiEGTeBYE4g4bQxzWAyzf";
+        </script>
+
+        
+        
+        <script src="https://www.google.com/recaptcha/api.js?render=6LeyqcIZAAAAAOcy_5WJORJsuu9zmbZZxIRp4-em"></script>
+        
+
+        
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/hackathon/problem1.a84343be1675.css"/>
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/hackathon/editor1.9d641dae1fb9.css"/>
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/sub-editor/monaco-editor-core.f1a8a791db04.css"/>
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/sub-editor/sub-editor.c587af1fc2ce.css"/>
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/google-code-prettify/prettify.26e70f1bc891.css"/>
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/problems/practice_track1.327157164333.css"/>
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/problems/fullscreen.5e00920beec4.css"/>
+<script type="application/id+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Tutorial",
+  "headline": "Depth First Search",
+  "author": {
+    "@type": "Person",
+    "name": "Prateek Garg",
+    },
+  "category": "Algorithms, Graphs",
+  "datePublished": "27 Apr 2016"
+}
+</script>
+
+
+    
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="QKZWA-3BVYP-7W6XK-6HKWZ-EFFZ4",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"QKZWA-3BVYP-7W6XK-6HKWZ-EFFZ4";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eqak3qiejeraakqce3yjyaaaabq4loyj-f-64d8954c3-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"32","ak.cp":"755788","ak.ai":parseInt("678462",10),"ak.ol":"0","ak.cr":236,"ak.ipv":6,"ak.proto":"h2","ak.rid":"5ba55562","ak.r":40072,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2400:adc1:449:2200::","ak.cport":56667,"ak.gh":"104.117.76.70","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1640348425","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==UKuVmEDqm90R0Ip+Xchv3rxg3HAh27XJvEvCxVNu7mOZzDkE7YXJZm2vLqV87bLep1ON7uuMxMouKvwCMRXombijJcNkeZNmfxyhNQUtmEBKqTu5DL6uXIUnIOhGQmBc8XIy1VvMbpLSJLXMrIhtm7ijU24+6vbzpItze/1t1qqAhOdi2JfEjW7CvGgyIljob3Z5Z7k8MQEsFl2LmvK6jQ2dHtx78gyiAmY4LqjLeP5PNmmwl2gQ4dWOdCgbPFDo36oLcw3NN7kWAdChHf4ox95fRnsgonODEKBnmuwIxD21sX2blVxu7KqE5R8pmC7ogiQJ9ZhVAY+VkTvpA1LLKiSU6hXHqYLzfpTuyD2zdR24K+wA2X5Zm+D13MJX1uPWwE52uu/FTZFffN1mqO74GAQewoO+kZqCFhZW6UuJQ38=","ak.pv":"7","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+    <body >
+        
+            
+            
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/notification_toast.6e0d473a4bef.css"/>
+<div class="notification-toast-container notification-top-center regular">
+    <div class="notification-errors">
+        <p id="notification-auth-error" class="error-item hidden no-margin">
+            <span class="fa fa-times less-margin-right"></span>Ensure that you are logged in and have the required permissions to access the test.
+        </p>
+        <p id="notification-server-error" class="error-item hidden no-margin">
+            <span class="fa fa-times less-margin-right"></span>A server error has occurred. Please refresh the page or try after some time.
+        </p>
+        <p id="notification-error" class="error-item hidden no-margin">
+            <span class="fa fa-times less-margin-right"></span>An error has occurred. Please refresh the page or try after some time.
+        </p>
+        <p id="notification-custom-error" class="error-item hidden no-margin"></p>
+        
+    </div>
+</div>
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/notification-toast.4ef32e7f16a7.js" crossorigin="anonymous" defer></script>
+
+        
+        
+        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBHB3B9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        
+        
+
+        <!-- Placeholder for any alert message on the site -->
+        
+        <div id="alert-message-holder">
+            
+
+            <!-- put a dummy message box so that it can be used when cloning
+                 and adding more -->
+            <div class="alert-message hidden">
+                <div class="message float-left"></div>
+                <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+                <div class="clear"></div>
+            </div>
+        </div> <!-- end alert-message-holder -->
+
+        <!-- Placeholder for any error message on the site -->
+        
+        <div id="error-message-holder">
+            
+
+            <!-- put a dummy message box so that it can be used when cloning
+                 and adding more -->
+            <div class="error-message hidden">
+                <div class="message float-left"></div>
+                <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+                <div class="clear"></div>
+            </div>
+        </div> <!-- end error-message-holder -->
+        
+        
+
+        
+    
+    
+        
+        <header class="header community-header">
+            <i class="fa fa-bars mobile-menu-btn"></i>
+            <nav class="navigation">
+                
+                <a href="https://www.hackerearth.com" class="logo logo-h-terminal  no-underline float-left track-header-logo"></a>
+                
+
+                
+                <ul class="nav-bar no-padding float-left tablet-hide">
+                    <!-- practice page -->
+                    <li id="problems" class="nav-bar-menu selected"><a class="track-header-problems" href="https://www.hackerearth.com/practice/">PRACTICE</a></li>
+                    <!-- challenges page -->
+                    <li id="challenges" class="nav-bar-menu "><a class="track-header-challenges" href="https://www.hackerearth.com/challenges/">COMPETE</a></li>
+                    <!--Jobs-->
+                    <li id="jobs" class="nav-bar-menu "><a class="track-header-jobs" href="https://www.hackerearth.com/jobs/">JOBS</a></li>
+                    <!--Leaderboard page-->
+                    <li id="leaderboard" class="nav-bar-menu "><a class="track-header-leaderboard" href="https://www.hackerearth.com/leaderboard/contests/rated/">LEADERBOARD
+                    </a></li>
+                </ul>
+                <ul class="nav-bar right-nav-bar no-padding float-right tablet-hide">
+                    
+                    
+                    <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/search/search.e1ef7070302d.css"/>
+                    <li id="searchbar">
+                        <div id="search-icon-container" class="float-right">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <input id="searchbar-input" class="float-left" type="text" value="" name="q" autocomplete="off" spellcheck="false" placeholder="Search developers, problems, etc" ajax1="/search/AJAX/search/" ajax2="/search/search-results/" ></input>
+                        <div id="search-dropdown"></div>
+                    </li>
+                    
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    <li class="nav-bar-menu login-menu-btn"><a target="login-modal" class="track-header-login show-modal">LOGIN</a></li>
+                    <li class="nav-bar-menu signup-menu-btn"><a target="login-modal" class="track-header-signup show-modal show-signup-in-modal">SIGN UP</a></li>
+                    
+
+                    <div class="clear"></div>
+                </ul> <!-- nav-bar -->
+                <div class="clear"></div>
+                
+            </nav> <!-- navigation -->
+
+            <i class="fa fa-filter challenge-filter-btn hidden"></i>
+
+        </header> <!-- header -->
+        
+    
+     <style>
+  #gdpr-modal {
+    position: absolute;
+    bottom: 0;
+  }
+</style>
+<div id="gdpr-modal" class="modal-window smaller-modal hidden">
+  
+
+<style>
+  #gdpr-modal-content {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #gdpr-modal-content .modal-header {
+    padding: 50px 55px 35px 55px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  #gdpr-modal-content .modal-footer {
+    padding: 25px 55px 90px;
+  }
+
+  #gdpr-modal-content .modal-content {
+    padding: 0 55px 5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #gdpr-modal-content .modal-footer .checkbox-row {
+    font-size: 16px;
+    display: inline-flex;
+  }
+
+  #gdpr-modal-content a {
+    color: #0099ff;
+  }
+  
+  #gdpr-modal-content .button.disabled {
+    background: #f5f6f6 !important;
+  }
+</style>
+
+<div id="gdpr-modal-content">
+  
+<div class="modal-header">HackerEarth’s Privacy Policy and Terms of Service</div>
+  <div class="modal-content">
+      We care about your data privacy. HackerEarth uses the information that you provide to contact you about relevant content, products, and services. <br /> <br />
+
+      Our <a href="/privacy/" target="_blank">Privacy Policy</a> and <a href="/terms-of-service/" target="_blank">Terms of Service</a> will help you understand that you are in control of your data at HackerEarth.
+  </div>
+  <div class="modal-footer">
+    <div class="margin-bottom-15 regular checkbox-row">
+      <input type="checkbox" name="gdpr-tnc" />
+      I have read and I agree.
+    </div>
+    <div class="">
+      <input type="submit" name="submit" value="Proceed" class="button btn-blue fontawesome btn-largest disabled large" id="gdpr-submit" />
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+    
+
+    
+    
+    <div class="top-banner">
+        <p class="banner-text login-banner dark">
+        
+         Signup and get free access to 100+ Tutorials and Practice Problems <a class="button btn-orange-bright inline-block medium-margin-left show-modal show-signup-in-modal" target="login-modal">Start Now</a>
+        
+        </p>
+    </div>
+    
+    
+
+    
+
+    <div id="comment-share-modal" class="modal-window small-modal">
+        <div class="modal-header">
+            Comment permalink
+        </div>
+        <div class="modal-content">
+            <div class="comment-share-wrapper align-center">
+                <textarea class="comment-share-text" type="textbox" rows="4" readonly="readonly" onclick="this.select();"></textarea>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    
+
+    <!-- This is the center page which has a fixed width of 1100px -->
+    
+<div class="layout-container">
+    <div class="gray-wide-container problem-track">
+        <div class="breadcrumb dark small no-margin">
+            <a href="/practice/" class="link-color"> All Tracks</a>
+            <i class="light fa fa-angle-right"></i>
+            <a href="/practice/algorithms/" class="link-color no-underline"> Algorithms</a>
+            <i class="light fa fa-angle-right"></i>
+            <a href="/practice/algorithms/graphs/" class="link-color no-underline"> Graphs</a>
+            <span class="dark sub-topic-name">
+                <i class="light fa fa-angle-right"></i>
+                <span class="sub-topic light weight-400">Depth First Search</span>
+            </span>
+        </div>
+
+        <div class="left-section border-radius-3 light float-left small">
+            
+
+
+
+<div class="left-section-track-card">
+    <div class="track-name-card">
+        <div class="track-logo">
+            <img src="https://static-fastly.hackerearth.com/static/images/practice_tracks/algorithms@2x.png" class="track-icon" alt="Algorithms">
+        </div>
+        <div class="track-name">
+            <span class="larger-24 dark"> Algorithms</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    
+    <div class="leaderboard-card align-center pagelet-inview" id="user-track-rank" ajax="/pagelets/user-anatomy-rank/191/" target="user-track-rank" loader="true">
+
+    </div>
+    
+</div>
+
+
+<div class="mobile-select-topic-container">
+    <span class="small light">Topics: </span>
+    <div class="current-topic-container show-modal ellipsis v-align-middle" target="topic-select-modal">
+        <span class="dark regular">Depth First Search</span>
+        <i class="fa fa-caret-down regular dark"></i>
+    </div>
+</div>
+
+<div id="topic-select-modal" class="modal-window large-modal">
+    <div class="modal-content">
+        <div class="subtrack-list-container mobile">
+            <ul class="subtrack-list no-list-style">
+                
+                    
+                    <li class="subtrack">
+                        <div class="subtopic-name darker regular weight-700 pointer">
+                            Searching
+                        </div>
+                        <div class="subtopics-container">
+                            <ul class="no-list-style subtopics-list dark weight-400 regular">
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/searching/linear-search/" class="block dark no-underline left-nav-link ellipsis">Linear Search</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/searching/binary-search/" class="block dark no-underline left-nav-link ellipsis">Binary Search</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/searching/ternary-search/" class="block dark no-underline left-nav-link ellipsis">Ternary Search</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li class="subtrack">
+                        <div class="subtopic-name darker regular weight-700 pointer">
+                            Sorting
+                        </div>
+                        <div class="subtopics-container">
+                            <ul class="no-list-style subtopics-list dark weight-400 regular">
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/bubble-sort/" class="block dark no-underline left-nav-link ellipsis">Bubble Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/selection-sort/" class="block dark no-underline left-nav-link ellipsis">Selection Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/insertion-sort/" class="block dark no-underline left-nav-link ellipsis">Insertion Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/merge-sort/" class="block dark no-underline left-nav-link ellipsis">Merge Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/quick-sort/" class="block dark no-underline left-nav-link ellipsis">Quick Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/counting-sort/" class="block dark no-underline left-nav-link ellipsis">Counting Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/radix-sort/" class="block dark no-underline left-nav-link ellipsis">Radix Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/heap-sort/" class="block dark no-underline left-nav-link ellipsis">Heap Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/sorting/bucket-sort/" class="block dark no-underline left-nav-link ellipsis">Bucket Sort</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li class="subtrack">
+                        <div class="subtopic-name darker regular weight-700 pointer">
+                            Greedy Algorithms
+                        </div>
+                        <div class="subtopics-container">
+                            <ul class="no-list-style subtopics-list dark weight-400 regular">
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/greedy/basics-of-greedy-algorithms/" class="block dark no-underline left-nav-link ellipsis">Basics of Greedy Algorithms</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li class="subtrack">
+                        <div class="subtopic-name darker regular weight-700 pointer">
+                            Graphs
+                        </div>
+                        <div class="subtopics-container">
+                            <ul class="no-list-style subtopics-list dark weight-400 regular">
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/graph-representation/" class="block dark no-underline left-nav-link ellipsis">Graph Representation</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/breadth-first-search/" class="block dark no-underline left-nav-link ellipsis">Breadth First Search</a></li>
+                                
+                                <li class="selected ">
+                                    
+                                    <a href="/practice/algorithms/graphs/depth-first-search/" class="block dark no-underline left-nav-link ellipsis">Depth First Search</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/minimum-spanning-tree/" class="block dark no-underline left-nav-link ellipsis">Minimum Spanning Tree</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/shortest-path-algorithms/" class="block dark no-underline left-nav-link ellipsis">Shortest Path Algorithms</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/flood-fill-algorithm/" class="block dark no-underline left-nav-link ellipsis">Flood-fill Algorithm</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/articulation-points-and-bridges/" class="block dark no-underline left-nav-link ellipsis">Articulation Points and Bridges</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/biconnected-components/" class="block dark no-underline left-nav-link ellipsis">Biconnected Components</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/strongly-connected-components/" class="block dark no-underline left-nav-link ellipsis">Strongly Connected Components</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/topological-sort/" class="block dark no-underline left-nav-link ellipsis">Topological Sort</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/hamiltonian-path/" class="block dark no-underline left-nav-link ellipsis">Hamiltonian Path</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/maximum-flow/" class="block dark no-underline left-nav-link ellipsis">Maximum flow</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/minimum-cost-maximum-flow/" class="block dark no-underline left-nav-link ellipsis">Minimum Cost Maximum Flow</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/graphs/min-cut/" class="block dark no-underline left-nav-link ellipsis">Min-cut</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li class="subtrack">
+                        <div class="subtopic-name darker regular weight-700 pointer">
+                            String Algorithms
+                        </div>
+                        <div class="subtopics-container">
+                            <ul class="no-list-style subtopics-list dark weight-400 regular">
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/string-algorithm/basics-of-string-manipulation/" class="block dark no-underline left-nav-link ellipsis">Basics of String Manipulation</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/string-algorithm/string-searching/" class="block dark no-underline left-nav-link ellipsis">String Searching</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/string-algorithm/z-algorithm/" class="block dark no-underline left-nav-link ellipsis">Z Algorithm</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/string-algorithm/manachars-algorithm/" class="block dark no-underline left-nav-link ellipsis">Manachar’s Algorithm</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li class="subtrack">
+                        <div class="subtopic-name darker regular weight-700 pointer">
+                            Dynamic Programming
+                        </div>
+                        <div class="subtopics-container">
+                            <ul class="no-list-style subtopics-list dark weight-400 regular">
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/" class="block dark no-underline left-nav-link ellipsis">Introduction to Dynamic Programming 1</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/dynamic-programming/2-dimensional/" class="block dark no-underline left-nav-link ellipsis">2 Dimensional</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/dynamic-programming/state-space-reduction/" class="block dark no-underline left-nav-link ellipsis">State space reduction</a></li>
+                                
+                                <li >
+                                    
+                                    <a href="/practice/algorithms/dynamic-programming/bit-masking/" class="block dark no-underline left-nav-link ellipsis">Dynamic Programming and Bit Masking</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="subtrack-list-container">
+    <ul class="subtrack-list no-list-style">
+        
+            
+            <li class="subtrack">
+                <div class="subtopic-name darker regular weight-700 pointer">
+                    Searching
+                    <i class="fa fa-angle fa-angle-down"></i>
+                </div>
+                <div class="subtopics-container hidden">
+                    <ul class="no-list-style subtopics-list dark weight-400 regular">
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/searching/linear-search/" class="block dark no-underline left-nav-link ellipsis" title="Linear Search">Linear Search</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/searching/binary-search/" class="block dark no-underline left-nav-link ellipsis" title="Binary Search">Binary Search</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/searching/ternary-search/" class="block dark no-underline left-nav-link ellipsis" title="Ternary Search">Ternary Search</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+        
+            
+            <li class="subtrack">
+                <div class="subtopic-name darker regular weight-700 pointer">
+                    Sorting
+                    <i class="fa fa-angle fa-angle-down"></i>
+                </div>
+                <div class="subtopics-container hidden">
+                    <ul class="no-list-style subtopics-list dark weight-400 regular">
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/bubble-sort/" class="block dark no-underline left-nav-link ellipsis" title="Bubble Sort">Bubble Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/selection-sort/" class="block dark no-underline left-nav-link ellipsis" title="Selection Sort">Selection Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/insertion-sort/" class="block dark no-underline left-nav-link ellipsis" title="Insertion Sort">Insertion Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/merge-sort/" class="block dark no-underline left-nav-link ellipsis" title="Merge Sort">Merge Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/quick-sort/" class="block dark no-underline left-nav-link ellipsis" title="Quick Sort">Quick Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/counting-sort/" class="block dark no-underline left-nav-link ellipsis" title="Counting Sort">Counting Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/radix-sort/" class="block dark no-underline left-nav-link ellipsis" title="Radix Sort">Radix Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/heap-sort/" class="block dark no-underline left-nav-link ellipsis" title="Heap Sort">Heap Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/sorting/bucket-sort/" class="block dark no-underline left-nav-link ellipsis" title="Bucket Sort">Bucket Sort</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+        
+            
+            <li class="subtrack">
+                <div class="subtopic-name darker regular weight-700 pointer">
+                    Greedy Algorithms
+                    <i class="fa fa-angle fa-angle-down"></i>
+                </div>
+                <div class="subtopics-container hidden">
+                    <ul class="no-list-style subtopics-list dark weight-400 regular">
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/greedy/basics-of-greedy-algorithms/" class="block dark no-underline left-nav-link ellipsis" title="Basics of Greedy Algorithms">Basics of Greedy Algorithms</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+        
+            
+            <li class="subtrack">
+                <div class="subtopic-name darker regular weight-700 pointer">
+                    Graphs
+                    <i class="fa fa-angle fa-angle-up"></i>
+                </div>
+                <div class="subtopics-container ">
+                    <ul class="no-list-style subtopics-list dark weight-400 regular">
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/graph-representation/" class="block dark no-underline left-nav-link ellipsis" title="Graph Representation">Graph Representation</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/breadth-first-search/" class="block dark no-underline left-nav-link ellipsis" title="Breadth First Search">Breadth First Search</a>
+                            
+                            </li>
+                        
+                        <li class="selected ">
+                            
+                            
+                                <span class="block dark no-underline ellipsis left-nav-span" title="Depth First Search">Depth First Search</span>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/minimum-spanning-tree/" class="block dark no-underline left-nav-link ellipsis" title="Minimum Spanning Tree">Minimum Spanning Tree</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/shortest-path-algorithms/" class="block dark no-underline left-nav-link ellipsis" title="Shortest Path Algorithms">Shortest Path Algorithms</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/flood-fill-algorithm/" class="block dark no-underline left-nav-link ellipsis" title="Flood-fill Algorithm">Flood-fill Algorithm</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/articulation-points-and-bridges/" class="block dark no-underline left-nav-link ellipsis" title="Articulation Points and Bridges">Articulation Points and Bridges</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/biconnected-components/" class="block dark no-underline left-nav-link ellipsis" title="Biconnected Components">Biconnected Components</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/strongly-connected-components/" class="block dark no-underline left-nav-link ellipsis" title="Strongly Connected Components">Strongly Connected Components</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/topological-sort/" class="block dark no-underline left-nav-link ellipsis" title="Topological Sort">Topological Sort</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/hamiltonian-path/" class="block dark no-underline left-nav-link ellipsis" title="Hamiltonian Path">Hamiltonian Path</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/maximum-flow/" class="block dark no-underline left-nav-link ellipsis" title="Maximum flow">Maximum flow</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/minimum-cost-maximum-flow/" class="block dark no-underline left-nav-link ellipsis" title="Minimum Cost Maximum Flow">Minimum Cost Maximum Flow</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/graphs/min-cut/" class="block dark no-underline left-nav-link ellipsis" title="Min-cut">Min-cut</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+        
+            
+            <li class="subtrack">
+                <div class="subtopic-name darker regular weight-700 pointer">
+                    String Algorithms
+                    <i class="fa fa-angle fa-angle-down"></i>
+                </div>
+                <div class="subtopics-container hidden">
+                    <ul class="no-list-style subtopics-list dark weight-400 regular">
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/string-algorithm/basics-of-string-manipulation/" class="block dark no-underline left-nav-link ellipsis" title="Basics of String Manipulation">Basics of String Manipulation</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/string-algorithm/string-searching/" class="block dark no-underline left-nav-link ellipsis" title="String Searching">String Searching</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/string-algorithm/z-algorithm/" class="block dark no-underline left-nav-link ellipsis" title="Z Algorithm">Z Algorithm</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/string-algorithm/manachars-algorithm/" class="block dark no-underline left-nav-link ellipsis" title="Manachar’s Algorithm">Manachar’s Algorithm</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+        
+            
+            <li class="subtrack">
+                <div class="subtopic-name darker regular weight-700 pointer">
+                    Dynamic Programming
+                    <i class="fa fa-angle fa-angle-down"></i>
+                </div>
+                <div class="subtopics-container hidden">
+                    <ul class="no-list-style subtopics-list dark weight-400 regular">
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/" class="block dark no-underline left-nav-link ellipsis" title="Introduction to Dynamic Programming 1">Introduction to Dynamic Programming 1</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/dynamic-programming/2-dimensional/" class="block dark no-underline left-nav-link ellipsis" title="2 Dimensional">2 Dimensional</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/dynamic-programming/state-space-reduction/" class="block dark no-underline left-nav-link ellipsis" title="State space reduction">State space reduction</a>
+                            
+                            </li>
+                        
+                        <li >
+                            
+                            
+                                <a href="/practice/algorithms/dynamic-programming/bit-masking/" class="block dark no-underline left-nav-link ellipsis" title="Dynamic Programming and Bit Masking">Dynamic Programming and Bit Masking</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="right-section">
+            <div class="right-section-header">
+                <h1 class="dark no-margin larger-24 weight-600">Depth First Search</h1>
+                <ul class="no-list-style caps weight-700 regular tutorial-problems-tab tab-underline-blue">
+                    
+                    <li class="tab standard-margin-right">
+                        <a href="/practice/algorithms/graphs/depth-first-search/practice-problems/" class="tab-name tab-dark inline-block no-underline" id="practice-problems"> Problems</a>
+                    </li>
+                    
+                    <li class="standard-margin-right tab">
+                        <span class="tab-name tab-dark inline-block no-underline selected"> Tutorial</span>
+                    </li>
+                    
+                        <li class="tab">
+                            <a href="/practice/algorithms/graphs/depth-first-search/visualize/" class="tab-name tab-dark inline-block no-underline"> Visualizer</a>
+                            <span class="visualizer-beta"> BETA</span>
+                        </li>
+                    
+                    <li class="clear"></li>
+                </ul>
+            </div>
+            <div class="right-section-content darker regular tutorial">
+                <div class="opacity-loader hidden">
+                    <div class="dots-loader"></div>
+                </div>
+                <p><strong>Depth First Search (DFS)</strong> </p>
+<p>The DFS algorithm is a recursive algorithm that uses the idea of backtracking. It involves exhaustive searches of all the nodes by going ahead, if possible, else by backtracking.</p>
+<p>Here, the word backtrack means that when you are moving forward and there are no more nodes along the current path, you move backwards on the same path to find nodes to traverse. All the nodes will be visited on the current path till all the unvisited nodes have been traversed after which the next path will be selected.</p>
+<p>This recursive nature of DFS can be implemented using stacks. The basic idea is as follows:<br />
+Pick a starting node and push all its adjacent nodes into a stack.<br />
+Pop a node from stack to select the next node to visit and push all its adjacent nodes into a stack.<br />
+Repeat this process until the stack is empty. However, ensure that the nodes that are visited are marked. This will prevent you from visiting the same node more than once. If you do not mark the nodes that are visited and you visit the same node more than once, you may end up in an infinite loop.  </p>
+<p><strong>Pseudocode</strong> </p>
+<p></p><pre class="prettyprint"><code>    DFS-iterative (G, s):                                   //Where G is graph and s is source vertex
+      let S be stack
+      S.push( s )            //Inserting s in stack 
+      mark s as visited.
+      while ( S is not empty):
+          //Pop a vertex from stack to visit next
+          v  =  S.top( )
+         S.pop( )
+         //Push all the neighbours of v in stack that are not visited   
+        for all neighbours w of v in Graph G:
+            if w is not visited :
+                     S.push( w )         
+                    mark w as visited
+
+
+    DFS-recursive(G, s):
+        mark s as visited
+        for all neighbours w of s in Graph G:
+            if w is not visited:
+                DFS-recursive(G, w)
+</code></pre>
+The following image shows how DFS works. 
+<img alt="enter image description here" src="https://he-s3.s3.amazonaws.com/media/uploads/9fa1119.jpg" /><p></p>
+<p><strong>Time complexity</strong>
+$$O (V+E)$$, when implemented using an adjacency list.  </p>
+<p><strong>Applications</strong> </p>
+<p><strong><em>How to find connected components using DFS?</em></strong> </p>
+<p>A graph is said to be disconnected if it is not connected, i.e. if two nodes exist in the graph such that there is no edge in between those nodes. In an undirected graph, a connected component is a set of vertices in a graph that are linked to each other by paths. </p>
+<p>Consider the example given in the diagram. Graph G is a disconnected graph and has the following 3 connected components.</p>
+<ul>
+<li>First connected component is 1 -&gt; 2 -&gt; 3 as they are linked to each other</li>
+<li>Second connected component 4 -&gt; 5</li>
+<li>Third connected component is vertex 6</li>
+</ul>
+<p>In DFS, if we start from a start node it will mark all the nodes connected to the start node as visited. Therefore, if we choose any node in a connected component and run DFS on that node it will mark the whole connected component as visited.</p>
+<p><img alt="enter image description here" src="https://he-s3.s3.amazonaws.com/media/uploads/bdc31b1.jpg" /></p>
+<p><strong>Input File</strong><br />
+6<br />
+4<br />
+1 2<br />
+2 3<br />
+1 3<br />
+4 5  </p>
+<p><strong>Code</strong> </p>
+<pre class="prettyprint"><code>   #include &lt;iostream&gt;
+   #include &lt;vector&gt;
+    using namespace std;
+
+    vector &lt;int&gt; adj[10];
+    bool visited[10];
+
+    void dfs(int s) {
+        visited[s] = true;
+        for(int i = 0;i &lt; adj[s].size();++i)    {
+         if(visited[adj[s][i]] == false)
+             dfs(adj[s][i]);
+        }
+    }
+
+    void initialize() {
+        for(int i = 0;i &lt; 10;++i)
+         visited[i] = false;
+    }
+
+    int main() {
+        int nodes, edges, x, y, connectedComponents = 0;
+        cin &gt;&gt; nodes;                       //Number of nodes
+        cin &gt;&gt; edges;                       //Number of edges
+        for(int i = 0;i &lt; edges;++i) {
+         cin &gt;&gt; x &gt;&gt; y;     
+     //Undirected Graph 
+         adj[x].push_back(y);                   //Edge from vertex x to vertex y
+         adj[y].push_back(x);                   //Edge from vertex y to vertex x
+        }
+
+        initialize();                           //Initialize all nodes as not visited
+
+        for(int i = 1;i &lt;= nodes;++i) {
+         if(visited[i] == false)     {
+             dfs(i);
+             connectedComponents++;
+         }
+        }
+        cout &lt;&lt; "Number of connected components: " &lt;&lt; connectedComponents &lt;&lt; endl;
+        return 0;
+    }
+</code></pre>
+<p><strong>Output</strong></p>
+<p>Number of connected components: 3  </p>
+<p><strong>Time complexity</strong>
+$$O (V+E)$$, when implemented using the adjacency list.</p>
+                
+                <div class="align-left light italic small weight-400">Contributed by: Prateek Garg</a></div>
+                
+            </div>
+
+            <div id="tutorial-problem" class="pagelet-inview" ajax="/pagelets/sub-topic/tutorial/depth-first-search" target="tutorial-problem" loader="true"></div>
+            <div class="standard-margin">
+                <div id="comments-563-36" class="comments hidden"></div>
+                <div class="load-comments">
+                    <span>
+                        <a class="load-all-comments" ajax="/comment-action/load-comments/36/563/with-voting/with-sort/" target="comments-563-36"><i class='fa fa-comments result-icon'></i> View all comments</a>
+                    </span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- include modal window for login/signup -->
+    
+        
+
+<div id="login-modal" class="modal-window smaller-modal hidden challenges-signup">
+    <div class="modal-header">
+        <div class="login-form bold heading">Log in</div>
+        <div class="signup-form-div hidden bold heading">Sign up</div>
+        <div class="password-reset hidden bold heading">Reset Password</div>
+    </div>
+    <div class="modal-content">
+
+        <div class="login-form">
+            
+                
+
+
+<div class="modal-social-login align-center">
+    
+        <div class="social-auth-row">
+            
+                <a url='/zeus/facebook/login/?display=popup&next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dwww.hackerearth.com%26redirect%3D/practice/algorithms/graphs/depth-first-search/tutorial/&update=facebook&source=practice&purpose=login' title="Facebook" class="button btn-facebook btn-medium show-popup inline-block margin-top-8 less-margin-right less-margin-bottom" minimal="true">
+            
+                <i class="fa fa-facebook"></i>
+                <span class="regular less-margin-left">
+                    Log in with Facebook
+                </span>
+            </a>
+
+            
+                <a url='/zeus/github/login/?next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dwww.hackerearth.com%26redirect%3D/practice/algorithms/graphs/depth-first-search/tutorial/&update=github&source=practice&purpose=login' title="GitHub" class="button btn-github btn-medium show-popup inline-block margin-top-8 less-margin-right" minimal="true">
+            
+                <i class="fa fa-github"></i>
+                <span class="regular less-margin-left">
+                    Log in with GitHub
+                </span>
+            </a>
+        </div>
+        
+            <a url='/zeus/google/login/?next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dwww.hackerearth.com%26redirect%3D/practice/algorithms/graphs/depth-first-search/tutorial/&update=google&source=practice&purpose=login' title="Google" class="button btn-google button-medium show-popup margin-top-8 less-margin-right sign-up-btn-modified" minimal="true">
+        
+        <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/google_logo.png" alt="Google" style="vertical-align: middle">
+        <span class="regular roboto-font-family">
+            Sign in with Google
+        </span>
+        </a>
+    
+    <div class="clear"></div>
+</div>
+<div class="align-center medium-margin">
+    <span class="large light">or</span>
+</div>
+
+            
+            <form id="modal-login-form" name="login-form" method="POST" class="ajax-form medium-margin" ajax="/AJAX/login/">
+                
+
+
+
+
+    
+
+        
+
+        
+        <div class="wrapper small-wrapper">
+            
+            <input id="id_login" name="login" placeholder="Username or Email" type="text" required />
+        </div>
+        <div class="wrapper small-wrapper">
+            <input id="id_password" name="password" placeholder="Password" type="password" required />
+        </div>
+        
+    
+    <input type="hidden" name="next" value="/practice/algorithms/graphs/depth-first-search/tutorial/"/>
+     <div>
+         <a href="#" class="link-3 show-hide-many login-signup-link" show="password-reset" hide="login-form">Forgot Password?</a>
+        <div class="clear"></div>
+    </div>
+    <div class="login-footer standard-margin">
+        <div>
+            <input type="submit" name="submit" clicked="Logging In.." value="Log in" class="button login-btn font-proxima weight-600 large"/>
+        </div>
+        
+        <div class="align-center dark regular dont-have-account">
+            Don't have an account? <a href="#" class="login-signup-link show-hide-many regular bold" show="signup-form-div" hide="login-form"> Sign up</a>
+        </div>
+    </div>
+    
+    
+
+
+
+            </form>
+        </div>
+
+        <div class="signup-form-div hidden">
+            
+                
+
+
+<div class="modal-social-signup align-center">
+    
+        <div class="social-auth-row">
+            
+                <a id="social-login-button-fb" url='/zeus/facebook/login/?display=popup&next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dwww.hackerearth.com%26redirect%3D/practice/algorithms/graphs/depth-first-search/tutorial/&update=facebook&source=practice&purpose=signup' title="Facebook" class="button btn-facebook btn-medium show-popup inline-block margin-top-8 less-margin-right hidden" minimal="true">
+            
+                <i class="fa fa-facebook"></i>
+                <span class="regular weight-600 less-margin-left">
+                    Facebook
+                </span>
+            </a>
+            <a class="button btn-facebook btn-medium inline-block margin-top-8 less-margin-right less-margin-bottom social-login-button social-login-button-fb show-modal" target="gdpr-modal">
+                <i class="fa fa-facebook"></i>
+                <span class="regular less-margin-left">
+                    Sign up with Facebook
+                </span>
+            </a>
+
+            
+                <a id="social-login-button-github" url='/zeus/github/login/?next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dwww.hackerearth.com%26redirect%3D/practice/algorithms/graphs/depth-first-search/tutorial/&update=github&source=practice&purpose=signup' title="GitHub" class="button btn-github btn-medium inline-block margin-top-8 less-margin-right show-popup hidden" minimal="true">
+            
+                <i class="fa fa-github"></i>
+                <span class="regular weight-600 less-margin-left">
+                    GitHub
+                </span>
+            </a>
+            <a class="button btn-github btn-medium inline-block margin-top-8 less-margin-right social-login-button social-login-button-github show-modal" target="gdpr-modal">
+                <i class="fa fa-github"></i>
+                <span class="regular less-margin-left">
+                    Sign up with GitHub
+                </span>
+            </a>
+        </div>
+
+        
+            <a id="social-login-button-g" url='/zeus/google/login/?next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dwww.hackerearth.com%26redirect%3D/practice/algorithms/graphs/depth-first-search/tutorial/&update=google&source=practice&purpose=signup' title="Google" class="button btn-google btn-medium inline-block margin-top-8 less-margin-right show-popup hidden" minimal="true">
+        
+            <i class="fa fa-google-plus"></i>
+            <span class="regular weight-600 less-margin-left">
+                Google
+            </span>
+        </a>
+        <a class="button btn-google button-medium less-margin-right social-login-button social-login-button-g show-modal sign-up-btn-modified" target="gdpr-modal">
+            <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/google_logo.png" alt="Google" style="vertical-align: middle">
+            <span class="regular roboto-font-family">
+                Sign up with Google
+            </span>
+        </a>
+    
+    <div class="clear"></div>
+</div>
+<div class="align-center medium-margin">
+    <span class="large light">or</span>
+</div>
+
+            
+            
+            <form id="modal-signup-form" name="signup-form" method="POST" class="ajax-form medium-margin" ajax="/AJAX/hackerearth/signup/?source=practice&next=/practice/algorithms/graphs/depth-first-search/tutorial/">
+            
+                
+
+
+
+    
+        
+
+        
+        <div class="wrapper small-wrapper float-left">
+            <input id="id_first_name" maxlength="30" name="first_name" placeholder="First Name" type="text" required />
+        </div>
+
+        <div class="wrapper small-wrapper float-right">
+            <input id="id_last_name" maxlength="30" name="last_name" placeholder="Last Name" type="text" />
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="wrapper small-wrapper">
+            <input id="id_email" maxlength="75" name="email" placeholder="Email" type="text" required />
+        </div>
+        <div class="wrapper small-wrapper password-wrapper">
+            <input id="id_password" name="password" placeholder="Password" type="password" required />
+            
+
+<div class="password-tooltip hidden">
+    <div class="tooltip-heading align-center">Password requirements</div>
+    <ul>
+        <li id='js-alphabet'><span>An alphabet</span></li>
+        <li id='js-number'><span>A number</span></li>
+        <li id='js-special'><span>A special character</span></li>
+        <li id='js-length'><span>Minimum 8 characters</span></li>
+    </ul>
+</div>
+        </div>
+        <div class="wrapper small-wrapper signup-captcha">
+            <input type="hidden" name=g-recaptcha-response id="id_recaptcha">
+This site is protected by reCAPTCHA and the Google             <a href="https://policies.google.com/privacy">Privacy Policy</a>             and <a href="https://policies.google.com/terms">            Terms of Service</a> apply.
+        </div>
+
+    
+    <div class="signup-footer medium-margin">
+        <button id="signup-start-now" class="button login-btn font-proxima weight-600 large disabled recaptcha-v3 " target="gdpr-modal"
+            
+            recaptcha-site-key="6LeyqcIZAAAAAOcy_5WJORJsuu9zmbZZxIRp4-em" data-action="signup" country-code="PK"
+            target-form="modal-signup-form"
+        >Sign up</button>
+        <div class="align-center regular dont-have-account">
+            Have an account? <a href="#" class="show-hide-many regular login-signup-link bold" show="login-form" hide="signup-form-div"> Log in</a>
+        </div>
+    </div>
+
+    <style>
+  #gdpr-modal {
+    position: absolute;
+    bottom: 0;
+  }
+</style>
+<div id="gdpr-modal" class="modal-window smaller-modal hidden">
+  
+
+<style>
+  #gdpr-modal-content {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #gdpr-modal-content .modal-header {
+    padding: 50px 55px 35px 55px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  #gdpr-modal-content .modal-footer {
+    padding: 25px 55px 90px;
+  }
+
+  #gdpr-modal-content .modal-content {
+    padding: 0 55px 5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #gdpr-modal-content .modal-footer .checkbox-row {
+    font-size: 16px;
+    display: inline-flex;
+  }
+
+  #gdpr-modal-content a {
+    color: #0099ff;
+  }
+  
+  #gdpr-modal-content .button.disabled {
+    background: #f5f6f6 !important;
+  }
+</style>
+
+<div id="gdpr-modal-content">
+  
+<div class="modal-header">HackerEarth’s Privacy Policy and Terms of Service</div>
+  <div class="modal-content">
+      We care about your data privacy. HackerEarth uses the information that you provide to contact you about relevant content, products, and services. <br /> <br />
+
+      Our <a href="/privacy/" target="_blank">Privacy Policy</a> and <a href="/terms-of-service/" target="_blank">Terms of Service</a> will help you understand that you are in control of your data at HackerEarth.
+  </div>
+  <div class="modal-footer">
+    <div class="margin-bottom-15 regular checkbox-row">
+      <input type="checkbox" name="gdpr-tnc" />
+      I have read and I agree.
+    </div>
+    <div class="">
+      <input type="submit" name="submit" value="Proceed" class="button btn-blue fontawesome btn-largest disabled large" id="gdpr-submit" />
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/hackerearth/password-requirements.99680283a61f.js" crossorigin="anonymous" defer></script>
+<script type='text/javascript'>
+    window.onload = showPasswordTooltip($('.password-wrapper #id_password'), false);
+    showPasswordTooltip($('#password-error #id_password'), true);
+</script>
+
+
+            </form>
+        </div>
+
+        <div class="password-reset hidden">
+            <form name="password-reset" method="POST" class="ajax-form" ajax="/AJAX/password/reset/?next=/practice/algorithms/graphs/depth-first-search/tutorial/">
+                
+
+
+
+
+    
+    <p class="regular"> A password reset link will be sent to the following email id</p>
+    
+    <div class="wrapper">
+        
+        <input id="id_email" name="email" placeholder="Email" size="30" type="text" required />
+    </div>
+    
+    <div class="reset-footer medium-margin">
+        <input id="reset-password" type="submit" name="submit" clicked="Sending.." value="Send Password Reset Link" class="button login-btn weight-600 font-proxima"/>
+        <button id="login-link" class="login-link show-hide-many link-btn button-medium pointer font-proxima bold" show="login-form" hide="password-reset">Back to login page</button>
+    </div>
+
+<script>
+    $('#reset-password').click(function(){
+        $('#login-link').addClass('hidden');
+    })
+</script>
+
+            </form>
+        </div>
+
+    </div>
+    <div class="gdpr-modal-content hidden">
+        
+
+<style>
+  #gdpr-modal-content {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #gdpr-modal-content .modal-header {
+    padding: 50px 55px 35px 55px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  #gdpr-modal-content .modal-footer {
+    padding: 25px 55px 90px;
+  }
+
+  #gdpr-modal-content .modal-content {
+    padding: 0 55px 5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #gdpr-modal-content .modal-footer .checkbox-row {
+    font-size: 16px;
+    display: inline-flex;
+  }
+
+  #gdpr-modal-content a {
+    color: #0099ff;
+  }
+  
+  #gdpr-modal-content .button.disabled {
+    background: #f5f6f6 !important;
+  }
+</style>
+
+<div id="gdpr-modal-content">
+  
+<div class="modal-header">HackerEarth’s Privacy Policy and Terms of Service</div>
+  <div class="modal-content">
+      We care about your data privacy. HackerEarth uses the information that you provide to contact you about relevant content, products, and services. <br /> <br />
+
+      Our <a href="/privacy/" target="_blank">Privacy Policy</a> and <a href="/terms-of-service/" target="_blank">Terms of Service</a> will help you understand that you are in control of your data at HackerEarth.
+  </div>
+  <div class="modal-footer">
+    <div class="margin-bottom-15 regular checkbox-row">
+      <input type="checkbox" name="gdpr-tnc" />
+      I have read and I agree.
+    </div>
+    <div class="">
+      <input type="submit" name="submit" value="Proceed" class="button btn-blue fontawesome btn-largest disabled large" id="gdpr-submit" />
+    </div>
+  </div>
+</div>
+
+    </div>
+</div>
+
+    
+
+    <!-- override this block where we do not want the footer -->
+    
+    
+
+    
+
+
+
+
+
+<footer class="marketing-footer footer-large">
+    <div class="primary-footer">
+        <div class="standard-margin-bottom contact-wrapper">
+            <div class="standard-margin-bottom">
+                <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/he-footer-logo.svg" />
+            </div>
+            <ul class="no-style">
+                <li>+1-650-461-4192</li>
+                <li>
+                    <a href="mailto:contact@hackerearth.com" target="_blank">
+                        contact@hackerearth.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="social-links-container no-style">
+                <li>
+                    <a href="https://www.facebook.com/HackerEarth/" target="_blank">
+                        <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/facebook-logo.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/HackerEarth?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                        <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/twitter-logo.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/hackerearth/?originalSubdomain=in" target="_blank">
+                        <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/linkedin-logo.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCYU6nvKyRYnE5kiG9JXkXpA" target="_blank">
+                        <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/youtube-logo.svg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="standard-margin-bottom">
+            <h3 class="footer-heading">For Developers</h3>
+            <ul class="no-style">
+                <li>
+                    <a href="https://www.hackerearth.com/practice/" target="_blank">
+                        Practice programming
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/getstarted-competitive-programming/" target="_blank">
+                        Complete reference to competitive programming
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/challenges/competitive/" target="_blank">
+                        Competitive coding challenges
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/practice/codemonk/" target="_blank">
+                        Code Monk
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/university/" target="_blank">
+                        Start a programming club
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="standard-margin-bottom">
+            <h3 class="footer-heading">Developer Resources</h3>
+            <ul class="no-style">
+                <li>
+                    <a href="https://www.hackerearth.com/blog/developers/" target="_blank">
+                        Developers blog
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/practice/notes/kaushik.mv3/learn-to-code-by-competitive-programming/" target="_blank">
+                        Learn to code by competitive programming
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/docs/wiki/developers/hackerearth-contest/" target="_blank">
+                        Developers wiki
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/community-hackathons/resources/e-books/guide-to-organize-hackathon/#types-of-hackathons" target="_blank">
+                        How to conduct a hackathon
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="standard-margin-bottom">
+            <h3 class="footer-heading">For Business</h3>
+            <ul class="no-style">
+                <li>
+                    <a href="https://www.hackerearth.com/recruit/" target="_blank">
+                        Assess developers
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/recruit/facecode/" target="_blank">
+                        Conduct remote interviews
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/recruit/hiring/university-hiring/" target="_blank">
+                        Assess university talent
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/community-hackathons/" target="_blank">
+                        Organize hackathon
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="standard-margin-bottom">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="no-style">
+                <li>
+                    <a href="https://www.hackerearth.com/team/" target="_blank">
+                        About us
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/press/" target="_blank">
+                        Press
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/companies/hackerearth/jobs/" target="_blank">
+                        Careers
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.hackerearth.com/reach-us/" target="_blank">
+                        Contact us
+                    </a>
+                </li>
+                <li>
+                    <a href="https://help.hackerearth.com/hc/en-us" target="_blank">
+                        Technical support
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="secondary-footer no-style">
+        <li>
+            
+            
+                &copy; 2021 HackerEarth All rights reserved
+            
+        </li>
+        <li>
+            <a href="https://www.hackerearth.com/terms-of-service/" target="_blank">
+                Terms of Service
+            </a>
+        </li>
+        <li>
+            <a href="https://www.hackerearth.com/privacy/" target="_blank">
+                Privacy Policy
+            </a>
+        </li>
+    </ul>
+</footer>
+
+
+
+    
+
+    <div class="expand-box" id="recruiter-box">
+        <div class="down-arrow"></div>
+        <ul class="no-margin">
+            
+            
+            
+            <a href="/logout/?next=/practice/algorithms/graphs/depth-first-search/tutorial/"><li>Logout</li></a>
+        </ul>
+    </div>
+
+    
+
+    <!-- Include notifications box -->
+    
+
+
+
+<div class="expand-box" id="notifications-box">
+    <div class="down-arrow"></div>
+    <div class="notifications-title-container">
+        <div class="float-left weight-600">Notifications</div>
+        <div class="float-right">
+            <a href="#" ajax="https://www.hackerearth.com/notifications/AJAX/mark-all-read/" class="notif-mark-all-read link smaller clicky-ajax">Mark All as Read</a>
+        </div>
+        <div class="clear"></div>
+    </div> <!-- notifications-title-container -->
+
+    <div class="notifications-container nice-scrollbar" id="notifications-container">
+    </div> <!-- notifications-container -->
+
+    <div class="smaller caps weight-600 align-center less-margin-2 less-margin-2-bottom">
+        <a class="link" href="https://www.hackerearth.com/notifications/">View All Notifications</a>
+    </div>
+</div> <!-- notifications-box -->
+
+
+    <!-- Load notification icon with unread count -->
+    <div id="header-notif-icon-trigger" class="load-pagelet hidden" target="header-notif-icon" ajax="/notifications/pagelets/header-notif-icon-count/" show-loader="false"></div>
+
+    
+
+    
+
+    
+    
+
+        
+        
+
+        <!-- Store any json returned for bigpipe -->
+        <div id="bigpipe-json" class="hidden">
+            
+        </div>
+
+        <!-- Store any html returned for feedback popup -->
+        <div id="user-feedback-popup" class="hidden"></div>
+
+        
+            <div id="common-notification">
+            </div>
+        
+
+        
+        
+
+        
+        <div id="external-link-modal" class="modal-window very-large-modal">
+            <div class="modal-content large dark align-left">
+                <div id="external-link-content-wrapper">
+                    <pre></pre>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- All the scripts go here -->
+        <script>
+            
+            var CURRENT_PATH = "https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/";
+            var HISTORY = '';
+            var DEFAULT_REAL_NUMBER_PRECISION = 2;
+            var DECIMAL_PRECISION_ERROR_TEXT = "Only {decimal_limit} decimal places allowed";
+            var SOMETHING_WENT_WRONG_ERROR_TEXT = "Something went wrong. Please try again later.";
+
+            // Make code constants available globally in JS
+            var MAP_LANG_TO_NAME = {"SCALA_2118": "Scala 2.11.8", "LUA": "Lua", "PASCAL": "Pascal", "CSHARP": "C#", "CPP": "C++", "PYTHON3": "Python 3", "POSTGRESQL": "PostgreSQL", "KOTLIN": "Kotlin", "SCALA": "Scala", "PERL": "Perl", "HASKELL": "Haskell", "D": "D", "PYTHON3_8": "Python 3.8", "CPP14": "C++14", "CPP17": "C++17", "R": "R(RScript)", "CPP11": "C++11", "GO": "Go", "RUBY": "Ruby", "BASH": "Bash", "GROOVY": "Groovy", "LOLCODE": "LOLCODE", "LISP": "Lisp", "Text": "Text", "WHENEVER": "Whenever", "MYSQL": "MySQL", "OBJECTIVEC": "Objective-C", "PHP": "PHP", "JAVASCRIPT_UI": "JavaScript", "PYTHON": "Python", "JAVASCRIPT": "JavaScript(Rhino)", "SWIFT_4_1": "Swift-4.1", "vp": "N/A", "TEXTFILE": "Text", "JAVA8": "Java 8", "JAVASCRIPT_NODE": "JavaScript(Node.js)", "RACKET": "Racket", "HTML": "HTML", "SWIFT": "Swift", "RUST": "Rust", "FSHARP": "F#", "JAVA14": "Java 14", "C": "C", "TYPESCRIPT": "TypeScript", "ORACLE_DB": "Oracle_Db", "OCAML": "OCaml", "OCTAVE": "Octave", "CLOJURE": "Clojure", "BEFUNGE": "Befunge", "CSS": "CSS", "ERLANG": "Erlang", "JAVA": "Java", "LISP_SBCL": "Lisp (SBCL)", "JULIA": "Julia", "VB": "Visual Basic", "MSSQL": "MSSQL"};
+            var MAP_NAME_TO_LANG = {"Java 14": "JAVA14", "Lisp (SBCL)": "LISP_SBCL", "TypeScript": "TYPESCRIPT", "Java": "JAVA", "Scala": "SCALA", "JavaScript": "JAVASCRIPT_UI", "Perl": "PERL", "Lua": "LUA", "JavaScript(Rhino)": "JAVASCRIPT", "MySQL": "MYSQL", "Erlang": "ERLANG", "LOLCODE": "LOLCODE", "HTML": "HTML", "JavaScript(Node.js)": "JAVASCRIPT_NODE", "C#": "CSHARP", "Lisp": "LISP", "C++14": "CPP14", "Rust": "RUST", "Octave": "OCTAVE", "Ruby": "RUBY", "Bash": "BASH", "Groovy": "GROOVY", "C": "C", "Python 3": "PYTHON3", "R(RScript)": "R", "Kotlin": "KOTLIN", "Oracle_Db": "ORACLE_DB", "F#": "FSHARP", "N/A": "vp", "C++": "CPP", "Racket": "RACKET", "Objective-C": "OBJECTIVEC", "Swift": "SWIFT", "CSS": "CSS", "D": "D", "Clojure": "CLOJURE", "Befunge": "BEFUNGE", "Java 8": "JAVA8", "Whenever": "WHENEVER", "PostgreSQL": "POSTGRESQL", "Python 3.8": "PYTHON3_8", "Swift-4.1": "SWIFT_4_1", "OCaml": "OCAML", "Julia": "JULIA", "C++17": "CPP17", "Python": "PYTHON", "Pascal": "PASCAL", "Haskell": "HASKELL", "Scala 2.11.8": "SCALA_2118", "C++11": "CPP11", "Text": "TEXTFILE", "Go": "GO", "Visual Basic": "VB", "PHP": "PHP", "MSSQL": "MSSQL"};
+        </script>
+
+        
+
+        <!-- alljs: static_media/js/jquery-1.7.min.patched.js static_media/js/jquery.color.js static_media/js/jquery.elastic.js static_media/js/ajaxSend.js  static_media/js/jquery.inview.js  static_media/js/tooltip/jquery.tipTip.modified.js  static_media/offline/offline.min.js  static_media/js/watermark.min.js  static_media/history.js?v=0.1/scripts/bundled/html4html5/jquery.history.js  static_media/js/jquery.nicescroll.js  static_media/simplemodal/simplemodal.js static_media/js/jquery.sticky.js static_media/js/pusher.min.js static_media/js/ifvisible.min.js static_media/feeds/feeds.js static_media/base/progress_bar.js -->
+        
+
+
+<script>
+    UPLOADING_TEXT = "Uploading";
+    UPLOADED_TEXT = "Uploaded";
+    SAVING_TEXT = "Saving..";
+    UPLOAD_SUCCESS_MESSAGE = "File saved successfully.";
+    UPLOAD_ERROR_MESSAGE = "An error occured while saving, please try again in sometime.";
+</script>
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/alljs.e5bc5432d816.js" crossorigin="anonymous" ></script>
+        <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/base1.0.1.dccda20e81a0.js" crossorigin="anonymous" ></script>
+        <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/bigpipe/bigpipe.c6f19f153efc.js" crossorigin="anonymous" ></script>
+        
+
+
+<script type="text/javascript">
+var CONFIRM_COMMENT_DELETE = "Are you sure, you want to delete comment?";
+var COMMENT_NOT_DELETED = "Comment could not be deleted!";
+var CONFORM_COMMENT_MARK_SPAM = "Are you sure, you want to mark this comment as spam?";
+var COMMENT_NOT_MARKED_SPAM = "Comment could not be marked as spam!";
+var ENTER_15_CHARS = "Enter at least 15 characters";
+var JUST_X_MORE = "Just {count} more to go";
+</script>
+        <script>
+            var MAP_MARKER_SIGNUP_IMAGE = 'https://static-fastly.hackerearth.com/static/metrics/map-marker.png';
+            var MAP_MARKER_LOGIN_IMAGE = 'https://static-fastly.hackerearth.com/static/metrics/map-marker-login.png';
+            var AJAX_URL = '';
+        </script>
+        
+<script>
+    // firestore credentials
+    var firebaseConfig = {
+        apiKey:'AIzaSyD7oH2r4iyvysFx47-IVwrzdwIuw7Ici90',
+        authDomain:'he-production.firebaseapp.com',
+        databaseURL:'https://he-production.firebaseio.com',
+        projectId:'he-production',
+        storageBucket:'he-production.appspot.com',
+        messagingSenderId:'100736274227',
+        appId:'1:100736274227:web:fdd60d6929555af4d3b846'
+    };
+    window.firebaseConfig = firebaseConfig;
+</script>
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/firebase/firebase-app.a75f50850a09.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/firebase/firebase-firestore.ac7f12977426.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/realtime/firestore_realtime.551dabc1780c.js" crossorigin="anonymous" ></script>
+
+
+        <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/history.9f9bce34e5c7.js" crossorigin="anonymous" ></script>
+        <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/commentUtils.dadb11872038.js" crossorigin="anonymous" ></script>
+
+
+        
+        <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/offline/offline.min.7ce195ae7071.js" crossorigin="anonymous" ></script>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_SVG"></script>
+
+
+<script type="text/x-mathjax-config">
+    var options = {
+      messageStyle: "none",
+      jax: ["input/TeX", "output/SVG", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [['$$','$$'], ['\\(', '\\)']],
+        displayMath: [['$$$', '$$$'], ['\\[', '\\]']],
+        preview: "none"
+      },
+      SVG: {
+        useGlobalCache: false
+      }
+    };
+
+    // modify the options only in case of assessments, since for proxima-nova mathjax renders very small
+    // text in chrome
+    if (window.isProximaNova) {
+      options = {
+        messageStyle: "none",
+        jax: ["input/TeX", "output/SVG", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [['$$','$$'], ['\\(', '\\)']],
+          displayMath: [['$$$', '$$$'], ['\\[', '\\]']],
+          preview: "none"
+        },
+        SVG: {
+          useGlobalCache: false,
+          scale: MathJax.Hub.Browser.isChrome ? 175 : 100,
+          minScaleAdjust: 100
+        },
+        "HTML-CSS": {
+          minScaleAdjust: 100
+        },
+        "CommonHTML": {
+          minScaleAdjust: 100
+        }
+      }
+    }
+
+    MathJax.Hub.Config(options);
+</script>
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/mathjax.3489d4a1e549.js" crossorigin="anonymous" ></script>
+<script type="text/javascript">
+    window.addEventListener("load", function() {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    });
+</script>
+
+        <script>
+            Offline.options = {
+                interceptRequests: false,
+                requests: false,
+            };
+        </script>
+
+        
+
+        
+
+
+<script>
+
+$(document).ready(function (){
+    $('#header-notif-icon-trigger').click();
+
+    
+
+    
+    
+
+    
+
+    // show kone ge widget if not visited
+    
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    
+    var m_links = {};
+    var m_elements = {
+        '#modal-login-form input[type=submit]': 'Modal Email Login',
+        '#modal-signup-form input[type=submit]': 'Modal Email Signup',
+        '.modal-social-login .btn-facebook': 'Modal Facebook Login',
+        '.modal-social-login .btn-google': 'Modal Google Login',
+        '.modal-social-signup .btn-facebook': 'Modal Facebook Signup',
+        '.modal-social-signup .btn-google': 'Modal Google Signup',
+        '.top-banner .login-banner a': 'Signup after banner click',
+    };
+    
+    for (var key in m_elements) {
+        $(key).live('click', {'key': key }, function(e) {
+            var key = e.data.key;
+            mixpanel.track('Click', {'name': m_elements[key]});
+        });
+    }
+    for (var key in m_links) {
+        mixpanel.track_links(key, 'Click', {'name': m_links[key]});
+    }
+});
+</script>
+
+
+
+
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/search/search.1.0.7d336476c653.js" crossorigin="anonymous" defer></script>
+
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/gdpr-modal.e3306212a68a.js" crossorigin="anonymous" ></script>
+
+
+
+        <script>
+            // Used in search
+            var is_user_logged_in = false;
+        </script>
+
+        
+        <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/detect_timezone.12f6ba68823f.js" crossorigin="anonymous" ></script>
+        <script>
+
+            function setTimezoneCookie(detected_user_tz) {
+                /* Sets the detected user timezone as a cookie in the browser.
+                   If someone changes it or removes it, a sanity check is
+                   performed and the cookie is reset.
+
+                   This cookie is set for ready availability of user timezone
+                   in the backend.
+                */
+
+                const USER_TIMEZONE_COOKIE = 'user_tz';
+                // Try to get the existing user timezone cookie stored
+                // in the browser.
+                user_tz = readCookie(USER_TIMEZONE_COOKIE);
+
+                // Flag to determine whether a new cookie has to be created.
+                create_cookie = false;
+
+                if(user_tz) {
+                    if(user_tz !== detected_user_tz) {
+                        // If someone has changed the cookie in some way, we
+                        // set a new cookie.
+                        eraseCookie(USER_TIMEZONE_COOKIE);
+                        create_cookie = true;
+                    }
+                } else {
+                    create_cookie = true;
+                }
+
+                // Create a new cookie if create_cookie flag is set.
+                createCookie(USER_TIMEZONE_COOKIE, detected_user_tz, 1);
+
+            }
+            $(document).ready(function(){
+                var timezone = jstz.determine_timezone(); // Now you have an instance of the TimeZone object.
+                // Set as a cookie in browser for easy access in backend.
+                setTimezoneCookie(timezone.name());
+
+                // Set as a js variable for easy access across frontend.
+                USER_TIMEZONE = timezone.name()
+
+                
+
+                
+
+                
+                
+                
+                
+                
+
+                
+
+                
+                    $.ajax({
+                        type: "POST",
+                        url:"/users/AJAX/set-timezone/",
+                        data: {
+                        'timezone': timezone.name(),
+                        },
+                    });
+                
+            });
+        </script>
+        
+
+        
+
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                //mixpanel delegate links custom method
+                mixpanel.delegate_links = function (parent, selector, event_name, properties) {
+                    properties = properties || {};
+                    parent = parent || document.body;
+                    parent = $(parent);
+                    parent.on('click', selector, function (event) {
+                        var new_tab = event.which === 2 || event.metaKey || event.target.target === '_blank' || this.target === '_blank';
+                        properties.url = event.target.href || this.href;
+                        function callback() {
+                            if (new_tab) {
+                                return;
+                            }
+                            window.location = properties.url;
+                        }
+                        if (!new_tab) {
+                            event.preventDefault();
+                            setTimeout(callback, 300);
+                        }
+                        mixpanel.track(event_name, properties, callback);
+                    });
+                };
+            });
+            
+        </script>
+
+        
+    
+
+
+
+<script type="text/javascript">
+    var CodeEditorText = {
+        fullScreen: "Full Screen",
+        minimise: "Minimise",
+        submit : "Submit code",
+        submitTooltip : "Code can be submitted multiple times. Only your best submission will be considered.",
+        compileSubmit : "Compile & Test code",
+        compileSubmitForSQL : "Execute & Test",
+        provideCustomInput : "Test against custom input",
+        copyCustomInput: "Click to copy input to test against custom input",
+        customInputPopulated : "Custom input populated",
+        resetCustomInput : "Reset custom input",
+        disabledCustomInputTooltip: "This test case is very large and you cannot edit it further. Reset the custom input to enable editing again.",
+        largeCustomInput: "Large custom input are not editable",
+        customInputPopulating : "Custom input getting populated",
+        keybindingNormal : "Normal",
+        keybindingVim : "Vim",
+        keybindingEmacs : "Emacs",
+        intellisense: "Auto-complete",
+        writeOrUploadCode : "Enter your code or <a> <i className='fa fa-upload'></i> Upload your code</a> as file.",
+        overWriteExistingTemplate : "Your existing template will be over-written. Are you sure you want to update?",
+        updateDefaultTemplate : "Update default template",
+        takeMeBack: "Nope take me back",
+        yes: "Yes",
+        selectLanguage: "Language",
+        save : "Save",
+        loading: "Loading",
+        autoCompleteInfo: "Press Ctrl-space for autocomplete suggestions.",
+        autoCompleteServerInfo: "Press Ctrl-space for autocomplete suggestions (accuracy dependent on connection stability).",
+        goFullScreen: "Go full screen",
+        exitFullScreen: "Exit full screen",
+        goFullScreenTooltip: "Fullscreen mode for split view",
+        verticalView: "Vertical view",
+        splitView: "Split view",
+        changeToVerticalView: "Change to vertical view",
+        changeToSplitView: "Change to split view",
+        lightTheme: "Light",
+        darkTheme: "Dark",
+        unsavedCodeWarning: "You may loose all the unsaved changes!",
+        savedText: "Saved",
+        errorInSavingText: "Error in saving",
+        saveText: "Save",
+        setFavoriteLangText: "Set {0} as favorite",
+        setDefaultTemplateText: "Set as default template",
+        selectLanguageText: "Select Language",
+        themeHeader: "Theme",
+        helpText: "Just one more thing to do",
+        editorModeHeader: "Editor Mode",
+        editorFontHeader: "Font",
+        editorTabSpaceHeader: "Tab Space",
+        editText: "Edit",
+        submitText: "Submit",
+        playText: "Play",
+        defaultBot: "Default Bot",
+        fetchFailure: "A server error has occurred. You can continue writing code or attempt any other question and try again after a while.",
+        fetchTimedout: "We have received your submission and it is being evaluated.",
+        multiEditModeIndicator: "Multiline editing is enabled. Press esc to turn it off.",
+        favLangMsg: "has been set as your preferred language.",
+        defaultCodeMsg: "code template has been updated.",
+        visibility: "Visibility",
+        notAvailableText: "-",
+        visibleTestCase: "Visible test case",
+        hiddenTestCase: "Hidden test case",
+        errorHeader: "Error",
+        errorContent: "There was an error while loading the editor. Click Reload to refresh the editor.",
+        reload: "Reload",
+        reconnectText: "Reconnect",
+        resetCodeStub: "Reset to default code",
+        resetCodeStubDisable: "No default code stub available",
+        resetCodeStubModelHeader: "Are you sure you want to reset the code stubs to the default code?",
+        resetCodeStubModelContent: "After you reset the code, all your progress will be lost.",
+        resetCodeStubBtn: "Reset code stubs",
+        cancelBtn: "Cancel",
+        lspConnectionText: {
+            SETTING_UP: "Setting up auto-complete...",
+            OPEN: "Auto-complete ready!",
+            CLOSED: "Auto-complete connection failed.",
+        },
+        submitResponseText: {
+            header: {
+                RESULT: "RESULT",
+                EVALUATING_SOLUTION: "Evaluating solution...",
+                SUBMISSION_ID : "Submission ID",
+                REFER_JUDGE_ENVIRONMENT : "Refer judge environment",
+                VIEW_MORE_TEXT : "View more"
+            },
+            table: {
+                inputCol: {
+                    DISPLAY_NAME: "Input",
+                },
+                outputCol: {
+                    DISPLAY_NAME: "Output",
+                },
+                yourOutput: {
+                    HEADING_TOOLTIP: "Your output for given input",
+                },
+                correctOutput: {
+                    HEADING_TOOLTIP: "Correct output for given input",
+                },
+                log: {
+                    HEADING_TOOLTIP: "Standard error stream for given input",
+                    ERROR_TOOLTIP: "Error log for given testcase",
+                },
+                diff: {
+                    HEADING_TOOLTIP: "Diff between your output and correct output",
+                }
+            },
+            footer: {
+                COMPILATION_LOG: "Compilation log",
+            },
+            common: {
+                SCORE: "Score",
+                TIME: "Time (sec)",
+                MEMORY: "Memory (KiB)",
+                LANGUAGE: "Language",
+                INPUT: "Input",
+                RESULT: "Result",
+                YOUR_OUTPUT: "Your output",
+                CORRECT_OUTPUT: "Correct output",
+                LOG: "Log",
+                DIFF: "Diff",
+                AC_TITLE: "Solution accepted",
+                PAC_TITLE: "Partially solved",
+                SECONDS: "seconds",
+                SEC_S: "sec(s)",
+                KIB: "KiB",
+            },
+            resultMapping: {
+                RE: "Runtime error",
+                CE: "Compilation error",
+                TLE: "Time limit exceeded",
+                OLE: "Output limit exceeded",
+                MLE: "Memory limit exceeded",
+                WA: "Wrong answer",
+                AC: "Accepted",
+                PAC: "Partially accepted",
+            },
+            typeDescriptionMapping: {
+                SIGSEGV: 
+                    '<span class="bold">Segmentation fault:</span> This error has occurred because your program is trying to read or write outside the allocated memory or your program is trying to write a read-only memory. For example, this error is thrown when you are accessing a[-1] in a programming language that does not support negative indices for an array.<div>The SIGSEGV error can also occur when an out-of-scope array index causes a buffer overflow or an incorrectly-initialized pointer.</div>'
+                ,
+                SIGXFSZ: 
+                    '<span class="bold">Output limit exceeded:</span> This error has occurred because your program is printing an excessive amount of data.'
+                ,
+                SIGFPE: 
+                    '<span class="bold">Floating point error:</span> This error has occurred because you are dividing a number by 0 or trying to take the square root of a negative number.'
+                ,
+                SIGABRT: 
+                    '<span class="bold">Signal abort error:</span> This error has occurred because the compiler aborted your program in while executing the same. It can also occur because of allocation of insufficient memory.'
+                ,
+                NZEC: 
+                    '<span class="bold">Non-zero exit code:</span> This error has occurred because the program has exited after returning a different value from 0 to the shell.<div>In C or C++, the error represents (but not limited to) that you forgot to add <span class="bold">return 0</span> at the end of your program, your program throws an exception that has not been caught, or the program has allocated a large amount of memory in vector.</div><div>For languages such as Python, this error represents that your program has crashed or raised an uncaught exception.</div>'
+                ,
+                MLE: 
+                    '<span class="bold">Memory limit exceeded:</span> This error has occurred because your program is trying to allocate some memory beyond the allowed limit. It can also occur if the program has a very large array or if a data structure in your program is too large.'
+                ,
+            }
+        },
+        backend: {
+            CAN_SHOW_VISIBLE_TEST_CASES: false,
+        },
+        warningMessageAndFailure: {
+            WARNING_MESSAGE: "Evaluating your code. Sorry it's taking longer than usual.",
+            modal: {
+                COMPILATION_HEADING: "Compilation failed",
+                SUBMISSION_HEADING: "Submission failed",
+                FAILURE_MESSAGE: "Code evaluation failed. This could be due to an internal error. Try again.",
+                PRIMARY_BUTTON: "Retry",
+                SECONDARY_BUTTON: "Cancel",
+            }
+        },
+    };
+
+    var CodeEditorConstants= {
+        CAN_SHOW_SCORE_FOR_SUBMISSION: false,
+    }
+
+</script>
+
+    
+
+
+<script type="text/javascript">
+var CODE_PLAYER_VIDEO_UNAVAILABLE = "Video unavailable.";
+</script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/google-code-prettify/prettifyall.b06a7696b7e1.js" crossorigin="anonymous" ></script>
+    
+
+
+
+<script type="text/javascript">
+
+
+var IMAGE_UPLOAD_POPUP_STRINGS = {
+    click_browse: 'click browse to choose an image from your computer',
+    from_my_computer: 'from my computer',
+    from_the_web: 'from the web',
+    cancel: 'Cancel',
+    upload: 'Upload',
+    imgur_link: 'image hosting by',
+    insert_image: 'Insert Image',
+    incorrect_file_format: 'You have not selected any file or format is not supported',
+    uploading: 'Uploading ...'
+}
+
+
+</script>
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/markdown/Markdown.All.055870070b84.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/problems/fullscreen.eefd4bb795b5.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/keyboard.02978b283edd.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/problems/problem.f6c9290c008d.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/problems/problem_topic.019e7b6e4cfa.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/penta/penta.3fa093305955.js" crossorigin="anonymous" ></script>
+
+    <script type="text/javascript">
+        setTimeout(function(){var a=document.createElement("script");
+        var b=document.getElementsByTagName("script")[0];
+        a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0021/3865.js?"+Math.floor(new Date().getTime()/3600000);
+        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+
+        $(document).ready(function(){
+            
+
+            var url = '/AJAX/last_visited_practice/';
+            var location = window.location.href;
+            var params = {
+                track : 'Algorithms',
+                topic : 'Graphs',
+                sub_topic :'Depth First Search',
+                url : encodeURI(location)
+            }
+            send_url(url,params);
+            });
+            function basicPopup(url, provider) {
+                if (provider == "twitter"){
+                    url = 'https://twitter.com/home?status='+escape($('#tweet-msg-box').val());
+                }
+                popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+            }
+            $(".tutorial-completed-close").live('click', function(){
+                $(".tutorial-completed-wrap").slideUp(1000);
+            });
+
+    </script>
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/sub-editor/vendors.2d1b32d71a86.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/sub-editor/monaco-editor-core.bd2238e9a406.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/sub-editor/sub-editor.4f79f2369bd1.js" crossorigin="anonymous" ></script>
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/timeline/controller.859f5a564ca0.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/timeline/util.350eec762462.js" crossorigin="anonymous" ></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/timeline/plugins/codevideo/code_player.1487cb2419f4.js" crossorigin="anonymous" ></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Hackerearth",
+                "item": "https://www.hackerearth.com"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Practice",
+                "item": "https://www.hackerearth.com/practice/"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Algorithms",
+                "item": "https://www.hackerearth.com/practice/algorithms/"
+            },{
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Graphs",
+                "item": "https://www.hackerearth.com/practice/algorithms/graphs/"
+            },{
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Depth First Search",
+                "item": "https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/"
+            }]
+        }
+    </script>
+
+
+        
+        <!-- mixpanel analytics start -->
+        <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);mixpanel.init("4c30b8635363027dfb780d5a61785112");
+        </script>
+        <!-- mixpanel analytics end -->
+        <script type="text/javascript">
+            
+                
+                    mixpanel.unregister("username");
+                    mixpanel.unregister("email");
+                    mixpanel.unregister("date_of_joining");
+                    mixpanel.unregister("user_bucket");
+                    mixpanel.unregister("company");
+                    mixpanel.unregister("is_recruiter");
+                    mixpanel.register({
+                        "url_path": "/practice/algorithms/graphs/depth-first-search/tutorial/"
+                    });
+                
+            
+        </script>
+        
+
+        
+        
+        <div id="fb-root"></div>
+        <script>
+            <!-- facebook button -->
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            <!-- twitter button -->
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+            <!-- google+ button -->
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        
+        
+
+        
+            
+
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/cookie_consent/cookiebar.ffe531fab344.css"/>
+
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/cookie_consent/cookiebar.70181766db90.js" crossorigin="anonymous" ></script>
+
+
+        
+
+        
+            
+        
+
+        
+            <!-- Hackerearth Zendesk Widget -->
+
+
+
+
+<link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/customer-support-widget.c878b5e2cd83.css"/>
+
+<script>
+    var COUNTRY_CODE = "PK";
+    var TRIAL_DAYS_LEFT =  0 ;
+    var INTERCOM_APP_ID = 'nofrzq7u';
+    var IS_INTERCOM_FEATUTRE_ENABLE = "True";
+
+    var isRecruiterDashboard = false;
+    var horizontalOffset = "-500px";
+    var zESettingsRecruiterDashboard = {
+        webWidget: {
+            launcher: {
+                label: {
+                    "en-US": "",
+                    "*": "",
+                }
+            },
+            offset: {
+                horizontal: horizontalOffset, /* To hide actual launcher widget */
+                vertical: "50px",
+                mobile: {
+                  horizontal: horizontalOffset,
+                },
+            },
+            position: {
+                horizontal: 'right',
+                vertical: 'top'
+            }
+        }
+    };
+
+    var zESettingsDefault = {
+        webWidget: {
+            launcher: {
+                label: {
+                    "en-US": "",
+                    "*": "",
+                }
+            },
+            offset: {
+                horizontal: horizontalOffset, /* To hide actual launcher widget */
+            }
+        }
+    };
+    if (isRecruiterDashboard) {
+        window.zESettings = zESettingsRecruiterDashboard;
+    } else {
+        window.zESettings = zESettingsDefault;
+    }
+    /*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="hackerearth.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+    /*]]>*/
+
+    var ZENDESK_LOCALE = "en-US";
+    var USER_EMAIL = "";
+    var USER_NAME = "";
+    var ATTACHMENT_LABEL = "Attachments (Optional)";
+    var DESCRIPTION_LABEL = "How can we help you, {name}?";
+
+    
+</script>
+<script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/customer-support-widget.df6b5efa9ec6.js" crossorigin="anonymous" defer></script>
+
+
+    <div class="customer-support-icon">
+        <p>?</p>
+    </div>
+
+
+        
+    </body>
+</html>
