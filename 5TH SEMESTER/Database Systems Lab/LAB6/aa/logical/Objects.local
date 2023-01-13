@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="BD9602CF-3660-4C0F-4B04-123E36624B53" name="Books" seqName="seg_0"/>
+   <object objectType="Entity" objectID="EC8D0847-700F-B4FF-316F-DFD187B7C71A" name="Publisher" seqName="seg_0"/>
+   <object objectType="Entity" objectID="F1E5BBEC-2361-59E0-BA24-9CDDF08045C5" name="Author" seqName="seg_0"/>
+   <object objectType="Relation" objectID="81DDCF8F-FE4E-571B-A02A-BAD098D46CAB" name="Mnay authors for a book" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D08934D7-2522-68B3-94EF-21F8347A9671" name="Publishing books" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="966A4056-3774-3BCF-4337-AF797FA8E092" name="Review">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>F91D5423-BCD3-C7E1-5D9B-532CBDADCD69</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="techinical_merit" id="AF7942BA-A2F2-1C16-7A07-1E1C97556B4C">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>CEA7D3CF-5D70-4DC8-28E6-0430ADA193F7</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="readability" id="8EF4BEAA-3DB5-A797-92CF-C3A4C03F7139">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>92073328-D24D-1EC6-AE61-53261F938222</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="originality" id="EB8E7649-3AE8-83E7-EBC0-06B3998BA752">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>718D2D52-D575-8B46-9499-8DDDAEE84CCA</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="relevence" id="AC234FEC-F92B-67C8-2170-ABE9E7582B10">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>A7D21ED6-4AC9-FC06-80F1-722637B9FAA2</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="review_id" id="63D430DB-AC19-9256-1D9F-4C9AFA6409BA">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>42C0609F-4009-57D7-489C-414AC948CE11</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="32438744-458C-471D-A386-F3DD7B01F2DD" name="Review_PK">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>184738E3-6AEE-0959-FC3F-EAF36066E37C</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63D430DB-AC19-9256-1D9F-4C9AFA6409BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

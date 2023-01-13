@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56E84A38-B5D6-1BA7-9445-6B81AA510A70" name="Author">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>F1E5BBEC-2361-59E0-BA24-9CDDF08045C5</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AuId" id="95120908-C9DF-9769-5098-CC36F632F375">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>32D8C7D0-617A-43CD-CAC8-794412796044</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Books_Id" id="77316DDD-C840-02DE-2FF5-13630FD95163">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>3973D076-F71D-4CAC-66B8-685DF9F46759</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E8288899-236A-EF3B-0F89-B2AAC71A92C1" referredColumn="10DD6788-799E-3D95-B148-0FB7E465D593"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="15239C46-74CA-2EF1-6434-6E15EBBF8620" name="Author_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>BA4CAA7C-296B-2E92-53D3-1DA46B5E060C</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95120908-C9DF-9769-5098-CC36F632F375"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E202329-9BBE-54C1-779C-81F477555411" name="Author_Books_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>81DDCF8F-FE4E-571B-A02A-BAD098D46CAB</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77316DDD-C840-02DE-2FF5-13630FD95163"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

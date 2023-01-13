@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0EDDF278-D036-9A82-DFFE-1F29A5C9C5FE" name="Reveiwer">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:29:14 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Email" id="1F11ACC2-C407-6E44-40F5-D516BD16D322">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:30:25 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_Name" id="61EBC309-A7E1-B393-320D-98D55DAEC68D">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:30:25 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="097B3584-D615-32C2-6115-72042AFB463B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:30:25 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Phone_No" id="88A6C230-D309-468A-BC31-20F02F9C0993">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:30:25 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Affiliation" id="411DE65F-442E-D536-2883-CE412C534B06">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:30:26 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Topic" id="3B2D96A9-6577-29BA-0147-AE5568C7097A">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:32:08 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C176ACF2-435D-68DD-CC46-F1EC7BCBA405" name="Reveiwer PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:30:46 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F11ACC2-C407-6E44-40F5-D516BD16D322</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,24 @@
+https://www.codejava.net/coding/jsp-servlet-jdbc-mysql-create-read-update-delete-crud-example
+
+https://www.javaguides.net/2019/03/jsp-servlet-jdbc-mysql-crud-example-tutorial.html
+
+
+MySQL 
+https://phoenixnap.com/kb/connect-to-mysql-windows-command-line
+
+
+MySQL Connector-J : 
+http://ftp.jaist.ac.jp/pub/mysql/Downloads/Connector-J/mysql-connector-java-8.0.29.tar.gz
+
+
+jstl-1.2.jar
+https://downloads.apache.org/tomcat/taglibs/taglibs-standard-1.2.5/README_bin.txt
+https://dlcdn.apache.org/tomcat/taglibs/taglibs-standard-1.2.5/taglibs-standard-compat-1.2.5.jar
+
+
+mysql-connector-java-8.0.x.jar
+https://cdn.mysql.com/archives/mysql-installer/mysql-installer-web-community-8.0.30.0.msi
+
+
+Microsoft Visual C++ 2019 Redistributable Package (x64):
+https://download.visualstudio.microsoft.com/download/pr/7331f052-6c2d-4890-8041-8058fee5fb0f/CE6593A1520591E7DEA2B93FD03116E3FC3B3821A0525322B0A430FAA6B3C0B4/VC_redist.x64.exe

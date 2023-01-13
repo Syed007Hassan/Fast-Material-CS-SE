@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0A0D7942-1304-6574-20E5-95F65DDE2758" name="Authors">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:25:01 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Email" id="D640D6A5-47B9-0FFF-EA76-183D822040EB">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:26:28 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_Name" id="153B140E-21DF-C9C1-0537-8631FB729D20">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:27:26 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="C69A82F1-D145-49E7-786C-2A297C3DEF00">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:28:28 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7C3E4A72-09F8-9FA4-48CD-27725A8A584F" name="Authors PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:27:18 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D640D6A5-47B9-0FFF-EA76-183D822040EB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

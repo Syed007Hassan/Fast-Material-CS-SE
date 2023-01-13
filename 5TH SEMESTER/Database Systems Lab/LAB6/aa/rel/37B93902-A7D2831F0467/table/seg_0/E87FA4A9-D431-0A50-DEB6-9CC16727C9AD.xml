@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E87FA4A9-D431-0A50-DEB6-9CC16727C9AD" name="Publisher">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>EC8D0847-700F-B4FF-316F-DFD187B7C71A</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Books_Id" id="D02431F7-F5B8-BEB6-4B55-B162F6EFBEDE">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>D04C9B8F-6A91-EFDD-CC5E-43DDF529402A</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D72F5FC3-BEAE-3E8E-793D-0C1EAE6C19FC" referredColumn="10DD6788-799E-3D95-B148-0FB7E465D593"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B766F1AD-3E6B-8BB3-FD7D-F63E20EB9C11" name="Publisher_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>F04F44C8-35AA-851D-9C4D-20644DE968A5</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D02431F7-F5B8-BEB6-4B55-B162F6EFBEDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56EB337F-3FE4-3E3C-E98E-B01FD62B07DD" name="Publisher_Books_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:30:48 UTC</createdTime>
+<generatorID>D08934D7-2522-68B3-94EF-21F8347A9671</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D02431F7-F5B8-BEB6-4B55-B162F6EFBEDE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

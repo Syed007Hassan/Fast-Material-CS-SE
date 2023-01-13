@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="56E84A38-B5D6-1BA7-9445-6B81AA510A70" name="Author" seqName="seg_0"/>
+   <object objectType="Table" objectID="759B5356-8C95-E9A8-67ED-CBDBA2AACF39" name="Books" seqName="seg_0"/>
+   <object objectType="Table" objectID="E87FA4A9-D431-0A50-DEB6-9CC16727C9AD" name="Publisher" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D72F5FC3-BEAE-3E8E-793D-0C1EAE6C19FC" name="Publisher_Books_FK" containerID="E87FA4A9-D431-0A50-DEB6-9CC16727C9AD" refContainerID="759B5356-8C95-E9A8-67ED-CBDBA2AACF39" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="E8288899-236A-EF3B-0F89-B2AAC71A92C1" name="Author_Books_FK" containerID="56E84A38-B5D6-1BA7-9445-6B81AA510A70" refContainerID="759B5356-8C95-E9A8-67ED-CBDBA2AACF39" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

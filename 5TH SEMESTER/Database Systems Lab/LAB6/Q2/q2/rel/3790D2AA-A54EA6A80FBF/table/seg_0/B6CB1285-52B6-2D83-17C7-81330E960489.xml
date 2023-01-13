@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6CB1285-52B6-2D83-17C7-81330E960489" name="College">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>1273DF4F-ADDD-3B05-21CB-CD64B5FF7404</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<afterCreate>Insert into College&lt;br/&gt;values (&apos;Fast&apos;,&apos;khi&apos;,&apos;333&apos;);</afterCreate>
+<shouldGeneratescript>true</shouldGeneratescript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Cname" id="7EBEE2E5-7A52-218B-6431-4E365FAC57B5">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>365DDC77-34EA-1A86-9F46-413AC14B7413</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Coffice" id="D67D6BA2-F8D7-4E06-DB27-2179E004BD1D">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>0A0DE8A9-848B-02BD-A4A8-BB33696018E1</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cphone" id="CB86672D-FA81-AC1A-5194-235C4FCC5C63">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>2FEDD79F-96CF-2904-FCCE-0D22BFA66952</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="40EA2F5E-91E5-4992-3A70-229F4EC88238" name="College_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>4C014734-2B2B-FD77-4519-1AC539A39E34</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EBEE2E5-7A52-218B-6431-4E365FAC57B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

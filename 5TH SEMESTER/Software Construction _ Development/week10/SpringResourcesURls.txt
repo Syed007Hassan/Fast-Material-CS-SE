@@ -1,0 +1,15 @@
+01
+https://www.edureka.co/blog/spring-tutorial/
+
+
+02
+Core Technologies - official docs:(Must read)
+https://docs.spring.io/spring-framework/docs/current/reference/html/core.html
+
+https://spring.io/projects/spring-framework
+
+
+03
+https://slides.com/soaserele/spring-tutorial/fullscreen
+
+

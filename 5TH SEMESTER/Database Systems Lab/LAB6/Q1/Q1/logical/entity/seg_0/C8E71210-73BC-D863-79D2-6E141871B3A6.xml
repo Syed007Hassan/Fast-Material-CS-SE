@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C8E71210-73BC-D863-79D2-6E141871B3A6" name="Authors">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:17:12 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="email id" id="ED8D06B7-DEDE-563B-B923-42DB5C60FF5D">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:17:43 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first name" id="A5773668-5181-AF0C-4D84-8E0EE52B86FA">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:18:39 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="last name" id="2124CEE3-82B8-5E1A-EB00-A26AFA55B189">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:18:56 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EF4C7155-4C48-60A2-AF53-304F9C46BDEF" name="Authors PK">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:18:28 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>ED8D06B7-DEDE-563B-B923-42DB5C60FF5D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

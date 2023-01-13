@@ -1,0 +1,85 @@
+--practice
+select e.first_name, d.department_id, l.city, l.location_id 
+from employees e, departments d, locations l
+where e.department_id = d.department_id AND
+d.location_id = l.location_id;
+
+1-Write a query to list the name, job name, department name, salary of the
+employees according to the department in ascending order.
+
+select e.first_name, e.salary,d.department_id,d.department_name 
+from Employees e join Departments d 
+on e.department_id = d.department_id 
+order by d.department_id asc;
+
+
+2-Write a query to list the department where at least two employees are working.
+
+select count(e.employee_id),d.department_name
+from Employees e ,Departments d
+where e.department_id = d.department_id 
+Group by d.department_name
+having count(e.employee_id) >= 2;
+
+
+3-Fetch all the records where salary of employee is less than the lower salary.
+
+select e.first_name,e.salary,e.job_id 
+from Employees e , Jobs j
+where e.job_id = j.job_id And e.salary < j.min_salary;
+
+
+4-Write a query to list the name, job name, annual salary, department id,
+department name and city who earn 60000 in a year or not working as an
+ANALYST.
+
+select e.first_name, j.job_title, e.salary, d.department_id, l.location_id
+from Employees e, Jobs j, locations l, Departments d
+WHERE (E.DEPARTMENT_ID = D.DEPARTMENT_ID) AND (D.LOCATION_ID = L.LOCATION_ID) AND (E.JOB_ID= J.JOB_ID)
+and (e.salary > 60000 or j.job_title != 'Analyst');
+
+
+5-Write a query to print details of the employees who are also Managers.
+
+select (e.first_name) as "Manager Name", (e.employee_id) as "Employee id" 
+from employees e, employees ee
+where ee.manager_id = e.employee_id;
+
+
+6-List department number, Department name for all the departments in which
+there are no employees in the department.
+
+select e.department_id, d.department_name
+from employees e, departments d
+where e.department_id = d.department_id and e.department_id = 0;
+
+7-Display employee name, salary, department name where all employees has
+matching department as well as employee does not have any departments.
+
+select e.first_name, e.salary, d.department_id 
+from employees e left outer join departments d
+on e.department_id = d.department_id;
+
+8-Display name, job ID, department name, street address and city of the
+employee in which there is no state province.
+
+select e.first_name, d.department_name, j.job_id,l.location_id,l.street_address,l.city
+from employees e, departments d, jobs j, locations l
+where d.location_id = l.location_id and e.department_id = d.department_id and e.job_id = j.job_id 
+and l.state_province is null;
+
+9-Write an SQL query to show records from one table that another table does not have.
+
+select job_id from jobs minus select job_id from employees;
+
+SELECT employee_id, job_id FROM employees MINUS SELECT
+employee_id, job_id FROM job_history;
+
+10-Display all employees who belong to country US but not belongs to state province Washington.
+
+select e.first_name,l.state_province, l.country_id
+from employees e, locations l, departments d
+where (e.department_id = d.department_id) and (d.location_id = l.location_id)
+and (l.country_id = 'US' and l.state_province <> 'Washington'); 
+
+

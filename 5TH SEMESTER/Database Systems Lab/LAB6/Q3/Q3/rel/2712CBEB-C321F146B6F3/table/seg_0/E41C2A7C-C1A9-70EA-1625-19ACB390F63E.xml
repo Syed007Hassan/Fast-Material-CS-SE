@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E41C2A7C-C1A9-70EA-1625-19ACB390F63E" name="Products">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>ED3B389C-F173-6F83-F1BF-FC8EEBD380D5</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ProductId" id="97E12B57-D03F-00DB-5764-3971FC9361BA">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>987F42BE-6CC6-39DC-4DA4-B6118E7FB433</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Stock" id="171AE6AC-C7A7-D3A0-A2DD-1047E32AA4BD">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>CD22AC97-3850-4202-F8DB-AE6909E9938A</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="7533770F-0A42-2D9C-34E6-229B1620288A">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>7F8C0284-A662-C9AA-895F-2647751F8053</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Price" id="D8A6E4FF-593E-50DD-DBC6-0780372994B7">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>B31BA573-E718-C7F6-A739-893EDCFF1247</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Employees_EId" id="62158CD1-05EB-E2E7-735A-CD28FFEAF972">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>18F8C1ED-747F-70B8-E900-65EB50D5B885</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="541630A7-C1AE-ED6D-3196-5E13B6EB4DBA" referredColumn="E44E5DC1-8109-4434-4BA0-318F2B300A2F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0F4AE19D-B896-915D-FD61-81A6C9E30AD2" name="Products_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>3A68DB74-1D32-CD62-6F72-5A6C5CD27ACA</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97E12B57-D03F-00DB-5764-3971FC9361BA"/>
+<colUsage columnID="62158CD1-05EB-E2E7-735A-CD28FFEAF972"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30FB7B27-B7EA-18A8-A9B1-D3C48624FB92" name="Products_Employees_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>5CE99986-2A65-AEFE-CA20-05B5744E33F4</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62158CD1-05EB-E2E7-735A-CD28FFEAF972"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

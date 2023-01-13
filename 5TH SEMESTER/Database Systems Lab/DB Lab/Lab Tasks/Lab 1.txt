@@ -1,0 +1,27 @@
+1) SELECT ename, job, sal FROM emp
+WHERE job IN ('CLERK', 'ANALYST') AND sal NOT IN (1000,3000, 5000);
+
+2) SELECT sal FROM emp order by sal desc 
+
+3) select avg(sal),count(*) from emp
+
+4)
+
+5) 
+
+6) SELECT hiredate FROM emp order by hiredate asc
+
+7) SELECT distinct job FROM emp
+
+8) SELECT min(sal), max(sal) FROM emp 
+
+9) SELECT job, sum(sal) from emp where job='salesman' group by job; 
+
+10) SELECT max(sal)-min(sal) FROM emp 
+
+11) SELECT ename FROM emp where ename LIKE '__A%';
+
+12) SELECT ename, sal FROM emp where sal>2000;
+
+13) SELECT ename, job, sal FROM emp where (job='SALESMAN')
+group by job, sal having count(job), sum(sal)

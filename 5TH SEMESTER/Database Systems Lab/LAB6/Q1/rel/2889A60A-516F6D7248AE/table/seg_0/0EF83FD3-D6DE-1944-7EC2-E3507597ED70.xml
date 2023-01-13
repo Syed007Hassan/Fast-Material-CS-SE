@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0EF83FD3-D6DE-1944-7EC2-E3507597ED70" name="Author">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>563D0642-26AA-1C5B-85B8-16F101A68C33</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Email" id="822E668C-8104-66E6-D5C4-B0ABA39887AA">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>DCAE73CC-C2A1-C9DC-5E44-BBB4071414B7</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="First_Name" id="F8C04413-3922-728C-DFD4-76556F3BF325">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>A134E51F-4FDE-F832-EAE1-D5001636D724</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Last_Name" id="00034049-185D-684F-E951-0D70F79D0980">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>D8835EF3-FC07-A18C-C450-AA73FB2BCDDF</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1EE17C65-9B01-EDBC-263B-BC9A528F39FA" name="Author_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>0DD798DE-5BCC-9E3A-EF9A-E2289D0F6360</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="822E668C-8104-66E6-D5C4-B0ABA39887AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

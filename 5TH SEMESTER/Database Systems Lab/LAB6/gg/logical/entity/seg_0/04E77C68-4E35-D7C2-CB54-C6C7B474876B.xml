@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="04E77C68-4E35-D7C2-CB54-C6C7B474876B" name="Patron">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:17:10 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Patron_Id" id="A473A6EE-7659-4917-BB51-5CD6C1BF5873">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:17:29 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="B95FF3FC-DBF2-E8BE-6241-4D0A50230901">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:19:29 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_Name" id="2187BBF7-CDD6-FAB1-D59A-E11FE7D47EB3">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:19:58 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Street_Address" id="5CBFC7FA-71A8-9351-CB4A-960214677893">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:20:16 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35</dataTypeSize>
+<ownDataTypeParameters>35,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="City" id="C4E6BAEF-8B53-0AD0-ADAC-BC93E1E6CA0F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:20:54 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="State" id="D3BAFE54-87E2-6F1D-40D1-AEFD55F873B3">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:21:23 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Location" id="298E22CF-E730-61B8-CBBF-41896863EFFF">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:22:25 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E438418E-8A76-BE02-9233-C754688A7896" name="Patron PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:19:05 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A473A6EE-7659-4917-BB51-5CD6C1BF5873</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

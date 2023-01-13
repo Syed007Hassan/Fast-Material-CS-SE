@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="19550466-749B-C9EA-5979-3518C5FFA03B" name="Employees">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:49:48 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="EId" id="6FE6EE93-AE38-9596-C3A8-783D424BD3DC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:03:09 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FName" id="360F409C-3B22-056D-EEC6-F38CE94AB8A9">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:03:09 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LName" id="03079C24-8355-7CDE-64CC-C9E61D2B5948">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:03:09 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Address" id="8FA2F78D-0ED6-3119-93FC-9AEDCDEACA07">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:03:10 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DB839857-3F39-FC88-DB7A-6990D8F49230" name="Employees PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:03:30 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6FE6EE93-AE38-9596-C3A8-783D424BD3DC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

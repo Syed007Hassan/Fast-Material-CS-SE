@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="39C01C34-AE3E-56A6-2476-86B8499F79AF" name="Transactions">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:27:07 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Transaction_id" id="8DFFD7E0-ED84-BDE6-611C-4C311407B4A5">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:28:42 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_Date" id="85F5F8DC-E67D-F27D-7D4E-4BDE50E19DBF">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:29:25 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_Type" id="F8E90717-E4C1-6C9E-75B5-7DBA1A91E4A1">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:30:02 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Book_Id" id="CA903D00-CE69-05AE-E018-1CFE18DD6DE0">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:37:14 UTC</createdTime>
+<generatorID>38AF7D80-9992-1229-0164-0F637B7AD593</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<referedAttribute>7050B093-F860-0063-77CC-7C63BA041A9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Patron_Id" id="2A82BE94-DAF3-1E43-1939-C3F1993E227C">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:37:49 UTC</createdTime>
+<generatorID>9D9977EE-6077-C401-9797-1CFCE5C60B1E</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<referedAttribute>A473A6EE-7659-4917-BB51-5CD6C1BF5873</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="019EEAFE-64FF-B317-C0CF-5790F5BE9AE2" name="Transactions PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:28:49 UTC</createdTime>
+<ownerDesignName>gg</ownerDesignName>
+<engineerTo>
+<item key="7B7B0B5B-2F94-244D-5D76-E1C6DF206B73" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8DFFD7E0-ED84-BDE6-611C-4C311407B4A5</attributeRef>
+<attributeRef>CA903D00-CE69-05AE-E018-1CFE18DD6DE0</attributeRef>
+<attributeRef>2A82BE94-DAF3-1E43-1939-C3F1993E227C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

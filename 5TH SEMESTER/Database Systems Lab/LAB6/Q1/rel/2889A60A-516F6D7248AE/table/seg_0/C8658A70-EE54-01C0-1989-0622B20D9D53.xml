@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C8658A70-EE54-01C0-1989-0622B20D9D53" name="Assigned">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Paper_Id" id="13BE1C03-E4B6-30F7-48CE-D7620B0890D1">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D53882C4-F53C-70E6-C32D-50736E0150C7" referredColumn="B4B301F4-2330-F54B-CFA7-533FFBC7A938"/>
+</associations>
+</Column>
+<Column name="Reveiwer_Email" id="B15FE9BE-510F-1EDF-5E1F-BD4A4ED0F50C">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7C829DFC-BA7A-1A1B-6E10-96306E015CBF" referredColumn="FB39BD94-65CD-CB06-2790-97D1B9566505"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8DFB8CE3-77A7-1A4B-508D-CAC062B734D6" name="Assigned_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13BE1C03-E4B6-30F7-48CE-D7620B0890D1"/>
+<colUsage columnID="B15FE9BE-510F-1EDF-5E1F-BD4A4ED0F50C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA93DC2F-22D2-7851-4F94-B0C64B9ED405" name="FK_ASS_1">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>A7A4E9FE-8535-EA0F-163E-B01FB511A8E7</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13BE1C03-E4B6-30F7-48CE-D7620B0890D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAB091C3-253B-A239-BCD4-C7666F345DCF" name="FK_ASS_2">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>A7A4E9FE-8535-EA0F-163E-B01FB511A8E7</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B15FE9BE-510F-1EDF-5E1F-BD4A4ED0F50C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

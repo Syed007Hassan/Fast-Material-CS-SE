@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22E6EFD0-346F-AF01-9BC2-F8C1269F0343" name="Patron">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>04E77C68-4E35-D7C2-CB54-C6C7B474876B</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Patron_Id" id="96DF9692-524C-4F6D-6AA5-B79C89ED8B03">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>A473A6EE-7659-4917-BB51-5CD6C1BF5873</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Last_Name" id="77B45CB9-0D8F-537A-D000-16FF0E5440C6">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>B95FF3FC-DBF2-E8BE-6241-4D0A50230901</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="First_Name" id="33CF5518-80B3-15FD-EA3E-4013908BD5C8">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>2187BBF7-CDD6-FAB1-D59A-E11FE7D47EB3</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Street_Address" id="94CE09B0-6EE9-DDE1-6DBA-9C3C99A444CC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>5CBFC7FA-71A8-9351-CB4A-960214677893</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35</dataTypeSize>
+<ownDataTypeParameters>35,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="C09189ED-C4F6-AD1A-0319-74731AB3806B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>C4E6BAEF-8B53-0AD0-ADAC-BC93E1E6CA0F</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="State" id="6A1E2D86-3F09-1CFF-FF47-A548C9AB0BD7">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>D3BAFE54-87E2-6F1D-40D1-AEFD55F873B3</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Location" id="3D24EA21-D7F5-7919-A6FE-4B02C97BD99B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>298E22CF-E730-61B8-CBBF-41896863EFFF</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="864E46D9-5F62-BF4D-4CAF-8253611E5DAB" name="Patron_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>E438418E-8A76-BE02-9233-C754688A7896</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96DF9692-524C-4F6D-6AA5-B79C89ED8B03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

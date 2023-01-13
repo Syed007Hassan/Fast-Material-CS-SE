@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F94B149-2A02-5BD5-008E-FBB920398AFF" name="Reveiwer">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>0EDDF278-D036-9A82-DFFE-1F29A5C9C5FE</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Email" id="FB39BD94-65CD-CB06-2790-97D1B9566505">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>1F11ACC2-C407-6E44-40F5-D516BD16D322</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="First_Name" id="B5CF4F1E-1BC9-9B8B-B0EA-5E8BF7ECCA64">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>61EBC309-A7E1-B393-320D-98D55DAEC68D</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Last_Name" id="C1595058-67BA-402A-57F3-12773FD59836">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>097B3584-D615-32C2-6115-72042AFB463B</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Phone_No" id="C7E6D24C-97E0-C772-4EC5-155BAED5B46B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>88A6C230-D309-468A-BC31-20F02F9C0993</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Affiliation" id="B969B939-70E1-01A4-5876-ECB5663B25B9">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>411DE65F-442E-D536-2883-CE412C534B06</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Topic" id="CD26D063-61AB-556C-8705-E9BB44432358">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>3B2D96A9-6577-29BA-0147-AE5568C7097A</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5EED632B-31C4-BE9A-9174-BCA945B29262" name="Reveiwer_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>C176ACF2-435D-68DD-CC46-F1EC7BCBA405</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB39BD94-65CD-CB06-2790-97D1B9566505"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

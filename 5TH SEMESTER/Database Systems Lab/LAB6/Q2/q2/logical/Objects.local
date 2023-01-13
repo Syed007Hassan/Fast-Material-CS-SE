@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="1273DF4F-ADDD-3B05-21CB-CD64B5FF7404" name="College" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4CD5F239-5701-2208-44C9-9145AB370E5E" name="Instructor" seqName="seg_0"/>
+   <object objectType="Entity" objectID="6A05E0A7-3310-9895-C679-21BD176C2830" name="Section" seqName="seg_0"/>
+   <object objectType="Entity" objectID="701811EC-8C78-4B4C-5BFE-9FF6DF403C3D" name="Department" seqName="seg_0"/>
+   <object objectType="Entity" objectID="ACD50205-4EE7-728A-577A-2CE1AE73F03B" name="Student" seqName="seg_0"/>
+   <object objectType="Entity" objectID="ED1C2C84-0666-A2FD-9946-14DB051AF036" name="Course" seqName="seg_0"/>
+   <object objectType="Relation" objectID="10428B75-E147-14DB-9537-29D7A9B9E326" name="Employs" seqName="seg_0"/>
+   <object objectType="Relation" objectID="394247F2-A4BF-C4EE-EB8D-16239C6A87E2" name="Takes" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BE682798-F4E5-5492-69C0-B4D0A7F1D481" name="Teaches" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C736F515-B443-DA12-1EB3-17DA367E666B" name="Admin" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F26229BD-75C3-9028-74C6-56D9FA806215" name="Dean" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F5759A26-8558-68C5-BB12-00CFA17884B6" name="has" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F952406C-D9BD-AD36-E127-9B63CF5CEC90" name="Offers" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FFD48F5C-ACCF-408D-F011-93CE2C47C5F0" name="Secs" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

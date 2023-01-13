@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="1C5DC156-A96E-2A5E-A754-EC9DB9F5DCFD" name="Books" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

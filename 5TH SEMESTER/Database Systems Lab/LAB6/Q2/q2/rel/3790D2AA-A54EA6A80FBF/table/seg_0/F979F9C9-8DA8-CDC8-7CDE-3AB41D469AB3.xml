@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F979F9C9-8DA8-CDC8-7CDE-3AB41D469AB3" name="Department">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>701811EC-8C78-4B4C-5BFE-9FF6DF403C3D</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Dname" id="7A0B46B0-158A-3299-ABDC-D76ACC6C337C">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>40353810-9DE3-E592-F618-9D30225B5A8F</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dcode" id="5A83F5EF-2C5F-3CA0-3B3B-EAB522C16486">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>7854CCA7-DA14-893F-D252-32AA2C41CAE9</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Doffice" id="3842A870-1117-2DE2-7CA3-47CCEBD08C73">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>D034F246-81EB-B422-F099-D00368B1F826</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dphone" id="8B604CA7-B829-29C0-5C83-30EB7AB40B99">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>666DAE91-1BD0-E5C7-1F18-6AB87002FFB5</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="College_Cname" id="A4D68532-6475-3BCB-7728-09FF78127CDC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>D68F4023-E6CA-3CBA-C057-6EA67E6EA7DC</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="685CAE18-8DA0-B8F4-0865-777DF84D0CD8" referredColumn="7EBEE2E5-7A52-218B-6431-4E365FAC57B5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="336A5D8F-8CFA-F26F-0734-E6D155971AC8" name="Department_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>DCBF5E1C-0B01-BBB1-1538-15948D753E27</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A0B46B0-158A-3299-ABDC-D76ACC6C337C"/>
+<colUsage columnID="5A83F5EF-2C5F-3CA0-3B3B-EAB522C16486"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="102B689C-C969-358D-14C5-6BDBFCCA3E3E" name="Department_College_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>C736F515-B443-DA12-1EB3-17DA367E666B</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4D68532-6475-3BCB-7728-09FF78127CDC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

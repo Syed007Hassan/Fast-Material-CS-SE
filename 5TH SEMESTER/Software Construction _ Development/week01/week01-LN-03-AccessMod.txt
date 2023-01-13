@@ -1,0 +1,16 @@
+Access Modifiers in Java
+========================
+Last Updated : 22 Aug, 2022
+
+As the name suggests access modifiers in Java helps to restrict the scope of a class, constructor, variable, method, or data member. There are four types of access modifiers available in java: 
+1.	Default – No keyword required
+2.	Private
+3.	Protected
+4.	Public
+
+-------
+Fig 004
+-------
+
+Default: When no access modifier is specified for a class, method, or data member – It is said to be having the default access modifier by default. 
+The data members, class or methods which are not declared using any access modifiers i.e. having default access modifier are accessible only within the same package.

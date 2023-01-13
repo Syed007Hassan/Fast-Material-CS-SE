@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="648F87E2-3DC0-F80C-141C-795A4E5DBDE2" name="Paper">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>C2CEB1AF-E5B6-EB3B-9225-B1C116BE2C42</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="paper_id" id="54972276-F89D-2DF0-5318-882F0530EB23">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>6F23A688-714D-82C2-B0B4-9D888F69B572</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="title" id="B958F3D5-4F80-5DAF-EB5E-578423189FD0">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>2860C720-6012-CC89-59B1-8B9BE073D76B</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="abstract" id="E3B2E2F7-FF2E-0101-F8B8-08703AADB00D">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>9630B7C9-859A-843F-FB27-F03F094D3846</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="elec_file" id="BED152CF-64DC-F6C4-3E19-D4DEE2879808">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>54BFA6BD-ECC8-8241-249F-7C0463F72CBC</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contact_author" id="C6CC3FB4-FFCA-F30E-89B6-55BB08C738BE">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>531EA8EB-91E6-7A90-CDC8-EBFF33AD87C5</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Review_review_id" id="3746A884-647E-6D23-1FDB-1E2983967AB4">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>7C306C14-3646-2ED2-43CF-E4C962EA0950</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E203E63-0D1E-439D-CAE0-E211A7A0D34F" referredColumn="63D430DB-AC19-9256-1D9F-4C9AFA6409BA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D176D20-C787-1A43-1FA7-A2E6EFE89044" name="Paper_PK">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>4B4F01FF-1A4B-CF0D-7125-35E5E117AB4E</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54972276-F89D-2DF0-5318-882F0530EB23"/>
+<colUsage columnID="3746A884-647E-6D23-1FDB-1E2983967AB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41F9E2E5-B6D9-4A24-9944-80489A7BD6AD" name="Paper_Review_FK">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>030B083B-76C4-696F-641F-C8288E0AD2BD</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3746A884-647E-6D23-1FDB-1E2983967AB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

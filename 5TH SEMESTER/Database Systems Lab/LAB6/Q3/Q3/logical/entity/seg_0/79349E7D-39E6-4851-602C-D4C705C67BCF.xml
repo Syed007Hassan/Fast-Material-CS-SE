@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79349E7D-39E6-4851-602C-D4C705C67BCF" name="Orders">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:02:31 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="OrderNo" id="790B51A6-F0F3-4423-861D-16A4C1B4CDBB">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:07:47 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Quantity" id="3B5F10D5-6E3E-2E58-FD81-6F2982B400E9">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:07:47 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ShippedDate" id="1EF07D29-03D4-B784-9346-8B6AA7282542">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:07:47 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ReceivedDate" id="7341C248-04B7-E344-6ADF-735C9B39AE52">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:07:48 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CId" id="97805A16-6602-E1D9-37DE-D4F788DC7552">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:09:38 UTC</createdTime>
+<generatorID>81FE7D0E-B534-4A7B-2C12-F7EE8D1F1FA2</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<referedAttribute>3D2994C0-72F9-801C-4A68-ACF0F8EABB96</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EId" id="D6CCC18D-A146-364C-9C77-FC64D4F1C53B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:09:38 UTC</createdTime>
+<generatorID>81FE7D0E-B534-4A7B-2C12-F7EE8D1F1FA2</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<referedAttribute>01321D21-1377-5F91-5BAB-8DC4C417B3C6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="764E9E4E-D53E-F95E-53DC-6FA850FF7D4B" name="Orders PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:08:02 UTC</createdTime>
+<ownerDesignName>Q3</ownerDesignName>
+<engineerTo>
+<item key="2712CBEB-DF89-8B0B-7BA6-C321F146B6F3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>790B51A6-F0F3-4423-861D-16A4C1B4CDBB</attributeRef>
+<attributeRef>97805A16-6602-E1D9-37DE-D4F788DC7552</attributeRef>
+<attributeRef>D6CCC18D-A146-364C-9C77-FC64D4F1C53B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

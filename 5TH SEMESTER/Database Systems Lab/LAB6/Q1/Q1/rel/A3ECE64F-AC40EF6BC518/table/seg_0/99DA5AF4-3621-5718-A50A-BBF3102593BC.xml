@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99DA5AF4-3621-5718-A50A-BBF3102593BC" name="Relation_18">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Authors_email_id" id="FF19E26B-7A87-CB6D-9426-33710343822A">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="706C99BE-6607-5021-00AE-1519E9B25B44" referredColumn="D16164E4-85EC-07AB-A2B0-E53EBA84A377"/>
+</associations>
+</Column>
+<Column name="Paper_paper_id" id="52E55394-2F10-6570-BF1B-720A50C551C2">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B30AA9D0-6A54-CCB2-9D70-4D53779F96C9" referredColumn="54972276-F89D-2DF0-5318-882F0530EB23"/>
+</associations>
+</Column>
+<Column name="Paper_review_id" id="3E176610-7945-34C0-1796-14D8BA517E1D">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B30AA9D0-6A54-CCB2-9D70-4D53779F96C9" referredColumn="3746A884-647E-6D23-1FDB-1E2983967AB4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B9ECD12-B4D4-1540-605B-4397B27C657F" name="Relation_18_PK">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF19E26B-7A87-CB6D-9426-33710343822A"/>
+<colUsage columnID="52E55394-2F10-6570-BF1B-720A50C551C2"/>
+<colUsage columnID="3E176610-7945-34C0-1796-14D8BA517E1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23310B97-5B40-522B-DE53-1D38545C4ED5" name="FK_ASS_15">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>2539C270-C9CC-333F-CE4E-F3DBA8CB4705</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF19E26B-7A87-CB6D-9426-33710343822A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B480130B-FCA8-699E-2DD7-38CC7D56E937" name="FK_ASS_16">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:36:38 UTC</createdTime>
+<generatorID>2539C270-C9CC-333F-CE4E-F3DBA8CB4705</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52E55394-2F10-6570-BF1B-720A50C551C2"/>
+<colUsage columnID="3E176610-7945-34C0-1796-14D8BA517E1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

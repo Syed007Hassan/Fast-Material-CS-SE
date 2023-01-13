@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FB912628-7AF0-E4EE-25C3-5615BA6C369E" name="Transactions">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>39C01C34-AE3E-56A6-2476-86B8499F79AF</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Transaction_id" id="BD59F6BA-EA38-5F29-8E52-33B96DDEA79F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>8DFFD7E0-ED84-BDE6-611C-4C311407B4A5</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transaction_Date" id="BEB60C9B-5EF1-AE0B-A678-83B4B2B541F4">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>85F5F8DC-E67D-F27D-7D4E-4BDE50E19DBF</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transaction_Type" id="960919D0-9C18-47A5-A0F3-991D491E48F5">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>F8E90717-E4C1-6C9E-75B5-7DBA1A91E4A1</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Books_Book_Id" id="B01F0887-830B-4A7C-EB34-4E4F37EF1867">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:43:43 UTC</createdTime>
+<generatorID>CA903D00-CE69-05AE-E018-1CFE18DD6DE0</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C321A131-2577-D586-9749-E5AFF85304B5" referredColumn="0A5CBA53-0586-0712-352F-06B565610E8C"/>
+</associations>
+</Column>
+<Column name="Patron_Patron_Id" id="C2CEF43B-A1E2-6D8A-C972-E1E891971CE6">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:43:43 UTC</createdTime>
+<generatorID>2A82BE94-DAF3-1E43-1939-C3F1993E227C</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33676661-7C84-9296-D8F8-AAB27ECCDF86" referredColumn="96DF9692-524C-4F6D-6AA5-B79C89ED8B03"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BEDD07C6-DAA4-31D7-9B53-4C8C44C4F448" name="Transactions_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:33:54 UTC</createdTime>
+<generatorID>019EEAFE-64FF-B317-C0CF-5790F5BE9AE2</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD59F6BA-EA38-5F29-8E52-33B96DDEA79F"/>
+<colUsage columnID="B01F0887-830B-4A7C-EB34-4E4F37EF1867"/>
+<colUsage columnID="C2CEF43B-A1E2-6D8A-C972-E1E891971CE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7DDE78E2-5B67-5687-74C7-785B3C904DC2" name="Transactions_Books_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:43:43 UTC</createdTime>
+<generatorID>38AF7D80-9992-1229-0164-0F637B7AD593</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B01F0887-830B-4A7C-EB34-4E4F37EF1867"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4A7B215-22AA-40EF-17E1-068BA4C82637" name="Transactions_Patron_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:43:43 UTC</createdTime>
+<generatorID>9D9977EE-6077-C401-9797-1CFCE5C60B1E</generatorID>
+<ownerDesignName>gg</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2CEF43B-A1E2-6D8A-C972-E1E891971CE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

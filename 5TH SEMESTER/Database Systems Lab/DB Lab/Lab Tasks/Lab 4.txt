@@ -1,0 +1,124 @@
+﻿1- 
+select e.ename,e.job,e.sal,s.grade,d.deptno
+from emp e,dept d,salgrade s
+where e.deptno=d.deptno
+order by e.deptno asc
+
+
+2-
+select count (*) dname
+from emp,dept
+where emp.deptno=dept.deptno
+group by dept.DNAME
+having count(*)>2
+
+
+4-
+select dname,deptno from dept
+where deptno
+not in (select deptno from emp)
+
+
+5-
+select dname,ename,sal 
+from emp e left outer join 
+dept d on (e.deptno = d.deptno);
+
+
+6-
+select d.dname,e.ename,e.sal 
+from emp e,dept d,salgrade s
+where e.deptno=d.deptno
+and not in
+(select '4' from salgrade
+where e.sal between min(sal) and max(sal));
+
+
+7-
+ select ename,e.job,
+  (12*e.sal)"Annual Salary",
+ e.deptno, d.dname,s.grade
+from emp e,dept d, salgrade s
+where e.deptno = d.deptno
+  AND e.sal BETWEEN s.losal AND s.hisal
+  AND (((12*e.sal)>= 60000)
+       OR (e.job != 'ANALYST'))
+
+
+8-
+select * from emp e1,emp e2
+where e1.mgr=e2.empno
+and e1.hiredate < e2.hiredate
+
+
+10-
+select e.ename,e.job,e.sal,s.grade,d.deptno
+from emp e,dept d,salgrade s
+where e.deptno=d.deptno
+order by e.deptno asc
+
+
+11-
+select * from emp e
+where (deptno) in
+(select deptno
+from emp
+where mgr=empno)
+
+
+12-
+select ename from emp where deptno=10
+and sal = any
+(select sal
+from emp 
+where deptno = 30)
+
+
+13-
+select ename,deptno from emp e where deptno!=30
+and sal > any
+(select sal
+from emp 
+where e.deptno = deptno)
+
+
+14-
+select dname from dept 
+where deptno not in
+(select deptno 
+from emp)
+
+
+15-
+select e.ename, e.deptno, e.sal
+from emp e
+where (deptno, sal) in 
+(select deptno, sal
+ from emp
+ where comm is NOT NULL ) ;
+
+
+17-
+select e.ename
+from emp e left outer join 
+emp e2 on (e.mgr = e2.empno)
+
+
+18-
+select distinct job,loc
+from emp e, dept d
+where e.deptno = d.deptno
+AND e.deptno = 30;    
+
+
+19-
+select e.ename "Employee", e.empno "EMP#",ee.ename "Manager", ee.empno "Mgr#"
+from emp e join emp ee
+ON (e.mgr = ee.empno);
+
+
+20-
+select MAX(sal) 
+from emp 
+where Sal NOT IN 
+( select Max(Sal) from Emp);

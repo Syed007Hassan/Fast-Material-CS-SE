@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="8BFDD9A6-6E13-BA02-451E-EFC0F07C4F40" name="Orders" seqName="seg_0"/>
+   <object objectType="Table" objectID="AF046868-DE5B-DA56-E368-8E52626F3707" name="Employees" seqName="seg_0"/>
+   <object objectType="Table" objectID="D0B45CA9-EEE4-39A4-62EA-F65FD96A15BA" name="Customers" seqName="seg_0"/>
+   <object objectType="Table" objectID="E41C2A7C-C1A9-70EA-1625-19ACB390F63E" name="Products" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="156EB85A-88D6-7E54-BCFE-0D705D35F05C" name="Customers_Employees_FK" containerID="D0B45CA9-EEE4-39A4-62EA-F65FD96A15BA" refContainerID="AF046868-DE5B-DA56-E368-8E52626F3707" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="541630A7-C1AE-ED6D-3196-5E13B6EB4DBA" name="Products_Employees_FK" containerID="E41C2A7C-C1A9-70EA-1625-19ACB390F63E" refContainerID="AF046868-DE5B-DA56-E368-8E52626F3707" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="C3A295B4-C601-6239-6192-75604C5279F1" name="Orders_Customers_FK" containerID="8BFDD9A6-6E13-BA02-451E-EFC0F07C4F40" refContainerID="D0B45CA9-EEE4-39A4-62EA-F65FD96A15BA" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

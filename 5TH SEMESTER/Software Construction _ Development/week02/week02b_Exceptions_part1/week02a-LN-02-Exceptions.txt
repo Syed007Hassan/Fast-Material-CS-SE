@@ -1,0 +1,183 @@
+Exceptions in Java
+==================
+Last Updated : 31 Aug, 2022
+
+
+Exception Handling in Java is one of the effective means to handle the runtime errors so that the regular flow of the application can be preserved. Java Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+Exception is an unwanted or unexpected event, which occurs during the execution of a program, i.e. at run time, that disrupts the normal flow of the program’s instructions. Exceptions can be caught and handled by the program. When an exception occurs within a method, it creates an object. This object is called the exception object. It contains information about the exception, such as the name and description of the exception and the state of the program when the exception occurred.
+
+(1) Major reasons why an exception Occurs
+a. Invalid user input
+b. Device failure
+c. Loss of network connection
+d. Physical limitations (out of disk memory)
+e. Code errors
+f. Opening an unavailable file
+
+(2)Errors 
+Errors represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory, memory leaks, stack overflow errors, library incompatibility, infinite recursion, etc. Errors are usually beyond the control of the programmer, and we should not try to handle errors.
+
+(3) difference between Exception & Error
+Let us discuss the most important part which is the differences between Error and Exception that is as follows: 
+
+Error: An Error indicates a serious problem that a reasonable application should not try to catch.
+Exception: Exception indicates conditions that a reasonable application might try to catch.
+
+
+(4) Exception Hierarchy
+All exception and error types are subclasses of class Throwable, which is the base class of the hierarchy. One branch is headed by Exception. This class is used for exceptional conditions that user programs should catch. NullPointerException is an example of such an exception. Another branch, Error is used by the Java run-time system(JVM) to indicate errors having to do with the run-time environment itself(JRE). StackOverflowError is an example of such an error.
+
+------
+Fig 01
+------
+
+(5) Types of Exceptions 
+Java defines several types of exceptions that relate to its various class libraries. Java also allows users to define their own exceptions.
+
+------
+Fig 02
+------
+
+
+(6) Exceptions categories
+Exceptions can be categorized in two ways:
+1.	Built-in Exceptions
+•	Checked Exception
+•	Unchecked Exception 
+2.	User-Defined Exceptions
+Let us discuss the above-defined listed exception that is as follows:
+
+A. Built-in Exceptions:
+Built-in exceptions are the exceptions that are available in Java libraries. These exceptions are suitable to explain certain error situations.
+•	Checked Exceptions: Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler.
+ 
+•	Unchecked Exceptions: The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it, the program would not give a compilation error.
+
+B. User-Defined Exceptions:
+Sometimes, the built-in exceptions in Java are not able to describe a certain situation. In such cases, users can also create exceptions, which are called ‘user-defined Exceptions’. 
+The advantages of Exception Handling in Java are as follows:
+1.	Provision to Complete Program Execution
+2.	Easy Identification of Program Code and Error-Handling Code
+3.	Propagation of Errors
+4.	Meaningful Error Reporting
+5.	Identifying Error Types
+
+
+(7) Methods to print the Exception information:
+
+7.1.printStackTrace()– This method prints exception information in the format of Name of the exception: description of the exception, stack
+trace.
+
+-------------------------
+Ex03 - w02ex03-exceptions
+-------------------------
+//program to print the exception information using printStackTrace() method
+public class StackTraceEx {
+	public static void main(String[] args) {
+		int a=5;
+	      int b=0;
+	        try{
+	          System.out.println(a/b);
+	        }
+	      catch(ArithmeticException e){
+	        e.printStackTrace();
+	      }
+	    }
+	}
+output:
+-------
+java.lang.ArithmeticException: / by zero
+	at StackTraceEx.main(StackTraceEx.java:10)
+
+
+7.2.toString() – This method prints exception information in the format of Name of the exception: description of the exception.
+
+-------------------------
+Ex04 - w02ex04-ToString
+-------------------------
+//program to print the exception information using toString() method
+import java.io.*;
+
+class ExcepToString {
+  public static void main (String[] args) {
+    int a=5;
+    int b=0;
+      try{
+        System.out.println(a/b);
+      }
+    catch(ArithmeticException e){
+      System.out.println(e.toString());
+    }
+  }
+}
+Output:
+
+java.lang.ArithmeticException: / by zero
+
+
+7.3.getMessage() -This method prints only the description of the exception.
+-------------------------
+Ex05 - w02ex05-getMessage
+-------------------------
+
+//program to print the exception information using getMessage() method
+
+import java.io.*;
+
+class getMessage {
+	public static void main (String[] args) {
+	int a=5;
+	int b=0;
+		try{
+		System.out.println(a/b);
+		}
+	catch(ArithmeticException e){
+		System.out.println(e.getMessage());
+	}
+	}
+}
+
+output:
+-------
+/ by zero
+
+
+(8) How Does JVM handle an Exception?
+Default Exception Handling: Whenever inside a method, if an exception has occurred, the method creates an Object known as an Exception Object and hands it off to the run-time system(JVM). The exception object contains the name and description of the exception and the current state of the program where the exception has occurred. Creating the Exception Object and handling it in the run-time system is called throwing an Exception. There might be a list of the methods that had been called to get to the method where an exception occurred. This ordered list of the methods is called Call Stack. Now the following procedure will happen. 
+•	The run-time system searches the call stack to find the method that contains a block of code that can handle the occurred exception. The block of the code is called an Exception handler.
+•	The run-time system starts searching from the method in which the exception occurred, and proceeds through the call stack in the reverse order in which methods were called.
+•	If it finds an appropriate handler, then it passes the occurred exception to it. An appropriate handler means the type of the exception object thrown matches the type of the exception object it can handle.
+•	If the run-time system searches all the methods on the call stack and couldn’t have found the appropriate handler, then the run-time system handover the Exception Object to the default exception handler, which is part of the run-time system. This handler prints the exception information in the following format and terminates the program abnormally.
+Exception in thread "xxx" Name of Exception : Description
+... ...... ..  // Call Stack
+Look at the below diagram to understand the flow of the call stack. 
+
+------
+Fig 04
+------
+
+-------------------------
+Ex05 - w02ex06-Exceptions
+-------------------------
+// Java Program to Demonstrate How Exception Is Thrown
+
+// Class
+// ThrowsExecp
+class ExceptionEx {
+
+	// Main driver method
+	public static void main(String args[])
+	{
+		// Taking an empty string
+		String str = null;
+		// Getting length of a string
+		System.out.println(str.length());
+	}
+}
+
+
+output:
+-------
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+	at ExceptionEx.main(ExceptionEx.java:13)

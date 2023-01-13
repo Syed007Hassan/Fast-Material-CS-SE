@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F1E5BBEC-2361-59E0-BA24-9CDDF08045C5" name="Author">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:27:11 UTC</createdTime>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="AuId" id="32D8C7D0-617A-43CD-CAC8-794412796044">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:27:23 UTC</createdTime>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="3973D076-F71D-4CAC-66B8-685DF9F46759">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:29:30 UTC</createdTime>
+<generatorID>81DDCF8F-FE4E-571B-A02A-BAD098D46CAB</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<referedAttribute>ABC08AAE-7BCF-52F5-D175-B319CBDF5FB5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BA4CAA7C-296B-2E92-53D3-1DA46B5E060C" name="Author PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:27:29 UTC</createdTime>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>32D8C7D0-617A-43CD-CAC8-794412796044</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

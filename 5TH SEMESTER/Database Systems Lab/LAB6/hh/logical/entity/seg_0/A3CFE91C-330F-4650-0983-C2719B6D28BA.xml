@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A3CFE91C-330F-4650-0983-C2719B6D28BA" name="Review">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:41:27 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ReviewID" id="48D992EC-251B-8268-1796-19A16A7EA4F3">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:44:21 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="61BCD96C-C416-0BBF-D8C9-CC7FCB88ED39" name="Review PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:44:39 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>48D992EC-251B-8268-1796-19A16A7EA4F3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

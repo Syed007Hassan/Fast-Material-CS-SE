@@ -1,0 +1,71 @@
+Lab02 remainig tasks
+
+SELECT * FROM EMPLOYEES where COMMISSION_PCT>0 and DEPARTMENT_ID != 90 and DEPARTMENT_ID !=100;
+SELECT first_name, last_name, hire_date FROM employees where TO_CHAR(HIRE_DATE,'YY')='08';
+SELECT * FROM Jobs where MIN_SALARY>8000 and MAX_SALARY <=15000;
+SELECT FIRST_NAME,LAST_NAME,JOB_ID FROM EMPLOYEES where EMPLOYEE_ID > 100 and EMPLOYEE_ID < 150 and DEPARTMENT_ID > 90 and DEPARTMENT_ID < 100;
+select salary+(SALARY*COMMISSION_PCT),COMMISSION_PCT from EMPLOYEES;
+
+****************************  Actual Lab02 Tasks ****************************************************************************************************************************
+
+select first_name || ' ' || job_title as "People at Position" ,length(first_name), instr(upper(first_name), 'A') AS "Position" from employees, departments, jobs 
+where lower(department_name) like '%sales%';
+
+
+select employee_id, hire_date,round(months_between(sysdate, hire_date)) as "Months employed" ,next_day(hire_date, 'FRIDAY') AS "Next Friday" , LAST_DAY(HIRE_DATE)
+from employees where round(months_between(sysdate, hire_date))  > 100;
+
+
+SELECT  EMPLOYEE_id, to_char(hire_date, 'day'), EXTRACT(DAY FROM HIRE_DATE) as "DAY",to_CHAR(hire_date, 'MONTH') AS "month",to_char(hire_date, 'yyyy')  AS "Year" 
+FROM EMPLOYEES where to_char(hire_date, 'YYYY') = '2003';
+
+--To display the employee number, the month number and year of hiring
+
+SELECT EMPLOYEE_ID, extract(month from hire_date) as "Month Number" , TO_CHAR(HIRE_DATE, 'YYYY') FROM EMPLOYEES;
+
+/*To display the employee name and hire date for all employees. The hire date appears as 16 
+September, 2021.*/
+
+SELECT FIRST_NAME, TO_CHAR(HIRE_DATE, 'DD MONTH,YYYY') AS "Hiring_date" from employees;
+
+--Display the salary of employee STEVEN with $ sign preceded.
+
+select to_char(salary, '$99999.00') as "SALARY" FROM EMPLOYEES WHERE lower(first_name) like '%steven%';
+or
+select to_char(salary, '$99999.00') as "SALARY" FROM EMPLOYEES WHERE first_name in 'Steven';
+
+
+--Find the next ‘Monday’ considering todays’ date as date
+
+select next_day(sysdate, 'Monday') as "Next Monday" from dual;
+
+--List all Employees who have an ‘A’ in their last names.
+
+select * from employees where upper(last_name)  like '%A%';
+
+
+--Show all employees’ last three letters of first name
+
+select first_name , reverse(reverse(substr(first_name,-3))) as "Last three letter" from employees;
+
+
+
+/*To display the employee number, name, salary of employee before and after 15% increment in the yearly salary. 
+Name the calculated new salary as “Incremented Salary”. Do calculate the difference between two salaries.
+Name the increased amount to be “Incremented Amount”.*/
+
+
+
+select first_name, employee_id, salary* 12 as "Annual Salary" , ((salary*12)*1.15) as "Incremented Salary" ,
+(((salary*12)*1.15)-(salary*12)) as "Incremented Amount" from employees;
+
+
+--List the name, hire date, and day of the week (labeled DAY) on which job was started. Order the result by day of week starting with Monday.
+
+select Last_name, hire_date, to_char(hire_date,'Day') "Day" from employees order by to_char(hire_date-1,'d');
+OR
+select Last_name, hire_date, to_char(hire_date,'day') "Day" from employees order by to_char(hire_date-3,'day');
+
+
+--Display department_wise and manager_wise average commission for all employees. Round the commission up to 1 decimals.
+select department_id ,manager_id, round(avg(commission_pct), 1) as "Average Commission" from employees where commission_pct is not null group by department_id, manager_id ;

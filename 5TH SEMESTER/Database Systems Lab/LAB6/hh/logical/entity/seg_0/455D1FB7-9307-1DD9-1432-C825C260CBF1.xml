@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="455D1FB7-9307-1DD9-1432-C825C260CBF1" name="Paper">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:28:57 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PaperId" id="4CFAA474-D6F7-6AE4-0BBB-DF0332E19D3F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:29:24 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Abstract" id="E6F6609A-F50A-0FFC-7C43-5920DFBE7886">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:30:22 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="4086D8B9-23F9-402B-302E-BD94A817AA67">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:30:40 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Title" id="7747574D-407B-E812-9ABA-B3BD32ECD08C">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:31:48 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

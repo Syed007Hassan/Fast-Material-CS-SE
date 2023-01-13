@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B288F49-4CB9-75CF-86DE-384C4D9BF9B7" name="Review">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>29C8CC13-9FB0-3DAE-37BF-EF6B502B1E10</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="9558D2F9-6D2E-B9F5-7757-1D2A754347DA">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>6B181365-AD11-22DF-C5BB-0F699467C3FC</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Recommendation" id="F257BB08-98A1-B65B-A81A-9FD238DFEA76">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>35373D1E-D73B-9C89-E4FE-568466A4E3FE</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Score" id="0E8104C5-1650-E80B-6875-737E811BDCEF">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>C72003B9-3A5C-0EF6-E4F4-F7C830E0E1C1</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reveiwer_Email" id="9B790486-8584-0924-9C5E-30A82A111CCC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>AE36B238-58D7-7FA0-55F7-B5230765C89F</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DB4522E-ABFC-7846-6BDA-2FFCD01E646B" referredColumn="FB39BD94-65CD-CB06-2790-97D1B9566505"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B27472A-5632-2858-326A-76AC2DF06FCE" name="Review_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>E1EE2AF6-3588-A9DC-BAF8-7448389C9266</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9558D2F9-6D2E-B9F5-7757-1D2A754347DA"/>
+<colUsage columnID="9B790486-8584-0924-9C5E-30A82A111CCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B0796AE-64A6-FE32-1C1A-396951BCACD9" name="Review_Reveiwer_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:10:16 UTC</createdTime>
+<generatorID>88B95A11-7C9D-5CCD-D68C-F198AE0B9984</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B790486-8584-0924-9C5E-30A82A111CCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

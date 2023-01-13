@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7C08C0D2-7BDD-4030-C709-61634BC18966" name="Reviewers">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:32:13 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Email" id="99FA151A-5C97-E569-76C6-FD4B33E22368">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:32:51 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_Name" id="1D28F5C4-FD6F-27AF-4740-1354164D1DBA">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:36:26 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="690240CF-18C8-7113-13CE-2891F61492D9">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:36:27 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PhoneNo" id="2A7C7989-6A58-4EDB-ABF4-0C5F8CDA27E0">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:36:28 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Affliliation" id="726B8783-BED0-7E44-B54E-66A3070A9E9D">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:36:28 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TopicOfInterest" id="96B674DF-9358-BA9F-9097-64A0AE207510">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:41:05 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1E1C155C-6457-6D00-5970-4290289F22B6" name="Reviewers PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 10:33:16 UTC</createdTime>
+<ownerDesignName>hh</ownerDesignName>
+<engineerTo>
+<item key="F6288199-0F47-796B-5726-5E56E1AF714F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>99FA151A-5C97-E569-76C6-FD4B33E22368</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

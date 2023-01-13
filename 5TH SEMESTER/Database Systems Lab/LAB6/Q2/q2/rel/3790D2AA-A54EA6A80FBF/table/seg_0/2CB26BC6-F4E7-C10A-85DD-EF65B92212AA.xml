@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2CB26BC6-F4E7-C10A-85DD-EF65B92212AA" name="Student">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>ACD50205-4EE7-728A-577A-2CE1AE73F03B</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Sid" id="19935D81-9A0A-0215-2944-006041847C5E">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>FDCF37CC-8EDA-5658-A26B-37C6B7BFF55D</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dob" id="2E1C289A-3C7F-5D0F-470D-2E8B94A1556D">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>AD8DD502-F3A8-F72D-BA38-E27D8394FB99</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fname" id="882BB267-59CC-25B8-80E1-7E546402D60A">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>62550A76-499E-6EEB-D23D-C99F95F5F18F</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lname" id="2C3C16FD-AAD8-8B3C-4806-C9C1CED708BA">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>F279BE2F-4843-B09C-C2D6-D88588C7D3E5</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address" id="0F03B709-B680-27F4-9ABE-0293E34AB1B4">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>99A014D6-BFF4-F68D-0804-6B3C9EE40FB7</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Phone" id="3ED52E0B-DFA3-4C94-A223-CDAC7C0957E4">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>C8834099-B700-8AC3-3BEE-4F9A787E6A44</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Department_Dname" id="927B9768-6AD0-3E49-0009-0F2A74E0745E">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>4F6DF882-1059-F125-FEAB-42D865D2866C</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34C88FC7-4195-FB15-6643-94EFE4D12181" referredColumn="7A0B46B0-158A-3299-ABDC-D76ACC6C337C"/>
+</associations>
+</Column>
+<Column name="Department_Dcode" id="7698F266-31E2-E15F-BBCB-F54D16DB4C12">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>AFB2E0BF-AED5-B646-CD51-3128923ACAF1</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34C88FC7-4195-FB15-6643-94EFE4D12181" referredColumn="5A83F5EF-2C5F-3CA0-3B3B-EAB522C16486"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="658EA9C5-BF7D-8EFB-44BE-16C0E07D54D0" name="Student_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>D0B2BEB3-7EF2-3DA4-6B87-9C247E5C0BA9</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19935D81-9A0A-0215-2944-006041847C5E"/>
+<colUsage columnID="927B9768-6AD0-3E49-0009-0F2A74E0745E"/>
+<colUsage columnID="7698F266-31E2-E15F-BBCB-F54D16DB4C12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88265C6D-C277-5D03-578C-945556BA6D32" name="Student_Department_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>F5759A26-8558-68C5-BB12-00CFA17884B6</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="927B9768-6AD0-3E49-0009-0F2A74E0745E"/>
+<colUsage columnID="7698F266-31E2-E15F-BBCB-F54D16DB4C12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

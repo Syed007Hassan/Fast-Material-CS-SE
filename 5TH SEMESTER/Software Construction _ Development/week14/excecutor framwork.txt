@@ -1,0 +1,543 @@
+package mine;
+import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+class wholesquaresolver{
+	float sum,asquare,bsquare,product;
+	void setsum(float sum) {
+		sum=sum;
+	}
+	public wholesquaresolver() {}
+	float square(float a) {
+		return a*a;
+	}
+	void setasquare(float a){
+		asquare=a;
+	} 
+	void setbsquare(float b){
+		bsquare=b;
+		
+	} 
+	void setproduct(float c){
+		product=c;
+		
+	}
+	float ab(float a,float b) {
+		return a*b;
+	}
+}
+public class part2{
+	public static void main(String[] args) {
+		ExecutorService e = Executors.newFixedThreadPool(2);
+		float a,b,ans;
+		
+		System.out.println("Enter value of a");
+		Scanner sc=new Scanner(System.in);
+		a=sc.nextFloat();
+		System.out.println("Enter value of b");
+		Scanner sc1=new Scanner(System.in);
+		b=sc1.nextFloat();
+		
+		wholesquaresolver A=new wholesquaresolver();
+		
+		Runnable task2=()->{
+			System.out.println("finding square of a");
+			
+			  A.setasquare(A.square(a));
+		};
+	    Runnable task3=()->{
+	    	System.out.println("finding square of b");
+	    	 A.setbsquare(A.square(b));
+	    	
+		};
+		Runnable task5=()->{
+			System.out.println("finding product");
+	    	A.setproduct(A.ab(a,b));
+		};
+		System.out.println("Submitting the tasks for execution...");
+        e.submit(task2);
+        e.submit(task3);
+        e.submit(task5);
+        e.shutdown();
+        try {
+			TimeUnit.SECONDS.sleep(5);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        System.out.println("(a+b)2=a^2+b^2+2ab="+((A.asquare)+(A.bsquare)+(A.product*2)));
+       
+	}
+	
+}
+
+
+------------------------------------------------------------------------------
+
+
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+
+                                    /// calulation of algebric formulas
+
+class Thread_1 extends Thread
+{
+
+	  int i,j;
+	  Thread_1(int x,int y)
+	  {
+		  
+		  i=x;
+		  j=y;
+	  }
+
+	public void run()
+	{
+		System.out.println("THREAD 1___"+(i-j)*(i+j));  // a² – b² = (a-b)(a+b)
+	
+		
+	}
+	 
+	}
+	
+	class Thread_2 extends Thread
+	{
+		
+		int i,j;
+		
+		Thread_2(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 2___"+(i*i)+2*i*j+(j*j));         // (a+b)² = a² + 2ab + b²
+			
+			
+		}
+	}
+	
+	class Thread_3 extends Thread
+	{
+		
+		int i,j,k;
+		
+		Thread_3(int x,int y,int z)
+		{
+			i=x;
+			j=y;
+			k=z;
+		}
+		public void run()
+		{
+			System.out.println("THREAD 3___"+(i*i)+2*i*j+(j*j)+(k*k)+(2*i*k)+2*j*k);  // (a+b+c)² = a²+b²+c²+2ab+2ac+2bc.
+			
+			
+		}
+	}
+	
+	class Thread_4 extends Thread
+	{
+		
+		int i,j;
+		
+		Thread_4(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 4___"+(i*j)*2+2*i*j);    // a² + b² = (a-b)² +2ab.
+			
+			
+		}
+	}
+	
+	
+	class Thread_5 extends Thread
+	{
+		
+		int i,j;
+		
+		Thread_5(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 5___"+(i-j)*(i*i+i*j+j*j));  //  a³-b³ = (a-b) (a² + ab + b²)
+			
+			
+		}
+	}
+	
+
+	class Thread_6 extends Thread
+	{
+		
+		int i,j;
+		
+		Thread_6(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 6___"+(i-j)*(i*i-i*j+j*j));  //a³+b³ = (a+b) (a² – ab + b²)
+			
+			
+		}
+	}
+
+public class mutlithreading_by_thread_class{
+	
+	  public static void main(String[] args)
+	  {
+		  Scanner s = new Scanner(System.in);
+		     int a;
+		     int b;
+		      int c;
+		      System.out.println("Enter the value of a");
+				a=s.nextInt();
+				System.out.println("Enter the value of b");
+				b=s.nextInt();
+				System.out.println("Enter the value of c");
+				c=s.nextInt();
+				
+		     
+		  
+		  
+		  
+		  Thread_1 t1=new Thread_1(a,b);
+		  Thread_2 t2=new Thread_2(a,b);
+		  Thread_3 t3=new Thread_3(a,b,c);
+		  Thread_4 t4=new Thread_4(a,b);
+		  Thread_5 t5=new Thread_5(a,b);
+		  Thread_6 t6=new Thread_6(a,b);
+		  t1.start();
+		  t2.start();
+		  t3.start();
+		  t4.start();
+		  t5.start();
+		  t6.start();
+		  
+		  
+		  
+	  }
+	
+
+	
+}
+
+
+
+----------------------------------------------------------------------------------------
+
+
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class mutlithreading_by_runnable_interface implements Runnable  {
+	
+	public static int m ;
+	public static int c ;
+	public static int v ;
+	public static int g;
+	public static int h;
+	public static int velocity ;
+	public static int a_1 ;
+	public static int a_2 ;
+	public static int a_3 ;
+	public static int a_4 ;
+	public static int total_energy ;
+	
+	 public static void main(String args[]){ 
+		
+		 Scanner s = new Scanner(System.in);
+		 Runnable r1=new Runnable(){  
+			    public void run(){  
+			    	  System.out.println("Enter the Mass m of object");
+		                 m = s.nextInt();
+		                 System.out.println("Enter the Velocity V of object");
+						  v=s.nextInt();
+						  System.out.println("Enter the Gravitaional Accelaration G of object");
+						  g=s.nextInt();
+						  System.out.println("Enter the Gravitaional Height h of object");
+						  h=s.nextInt();
+						  
+			 }
+		        } ;
+			  
+		 
+		        Runnable r2=new Runnable(){  
+				    public void run(){ 
+				    	velocity=v*v;
+				    	 System.out.println("Thread 2 is calculating v*v_____________"+velocity);
+				    	
+				    }
+			        } ;
+		 
+
+			        Runnable r3=new Runnable(){  
+					    public void run(){  
+					    	a_1=m*velocity;
+					    	 System.out.println("Thread 3 is calculating m*v*v_____________"+a_1);
+					    	
+					    	
+					    	
+					    }
+				        } ; 
+
+				        Runnable r4=new Runnable(){  
+						    public void run(){  
+						    	a_2=(int) (0.5*a_1);
+						    	System.out.println("thread 4 is calculating 1/2 mv*2_____________"+a_2);
+						    	
+						    }
+					        } ; 
+					        Runnable r5=new Runnable(){  
+							    public void run(){  
+							    	a_3=m*g;
+							    	System.out.println("thread 5 is calculating m*g_____________"+a_3);
+							    	
+							    }
+						        } ; 
+						        
+						        
+						        Runnable r6=new Runnable(){  
+								    public void run(){  
+								    	a_4=h*a_3;
+								    	System.out.println("thread 6 is calculating h*m*g_____________"+a_4);
+								    	
+								    }
+							        } ; 
+							        
+							        Runnable r7=new Runnable(){  
+									    public void run(){  
+									    total_energy=a_4+a_2;
+					 System.out.println("thread 7 is calculating Total Energy (  Kinectic + Potential )_____________"+total_energy);
+									    	
+					   }
+							   } ; 
+				        
+				        
+				        
+				        
+				        Thread t1=new Thread(r1); 
+				        Thread t2=new Thread(r2);  
+				        Thread t3=new Thread(r3);
+				        Thread t4=new Thread(r4);
+				        Thread t5=new Thread(r5);
+				        Thread t6=new Thread(r6);
+				        Thread t7=new Thread(r7);
+				        
+				        
+				        try {
+				            t1.start(); 
+							t1.join();
+							if( !t1.isAlive()) {
+					            t2.start();
+					            t3.start();
+					            t4.start();
+					            t5.start();
+					            t6.start();
+					            t7.start();
+					        }
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+				        
+				      
+				   
+				        
+	 }
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	 }
+	
+	
+	
+	
+-------------------------------------------------------------------------------------------------------
+
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+
+                                    /// calulation of algebric formulas
+
+class Thread_1 implements Runnable
+{
+
+	  int i,j;
+	  Thread_1(int x,int y)
+	  {
+		  
+		  i=x;
+		  j=y;
+	  }
+
+	public void run()
+	{
+		System.out.println("THREAD 1___"+(i-j)*(i+j));  // a² – b² = (a-b)(a+b)
+	
+		
+	}
+	 
+	}
+	
+	class Thread_2 implements Runnable
+	{
+		
+		int i,j;
+		
+		Thread_2(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 2___"+(i*i)+2*i*j+(j*j));         // (a+b)² = a² + 2ab + b²
+			
+			
+		}
+	}
+	
+	class Thread_3 implements Runnable
+	{
+		
+		int i,j,k;
+		
+		Thread_3(int x,int y,int z)
+		{
+			i=x;
+			j=y;
+			k=z;
+		}
+		public void run()
+		{
+			System.out.println("THREAD 3___"+(i*i)+2*i*j+(j*j)+(k*k)+(2*i*k)+2*j*k);  
+			
+			// (a+b+c)² = a²+b²+c²+2ab+2ac+2bc.
+		}
+	}
+	
+	class Thread_4 implements Runnable
+	{
+		
+		int i,j;
+		
+		Thread_4(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 4___"+(i*j)*2+2*i*j);    // a² + b² = (a-b)² +2ab.
+			
+			
+		}
+	}
+	
+	
+	class Thread_5 implements Runnable
+	{
+		
+		int i,j;
+		
+		Thread_5(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 5___"+(i-j)*(i*i+i*j+j*j));  //  a³-b³ = (a-b) (a² + ab + b²)
+			
+			
+		}
+	}
+	
+
+	class Thread_6 implements Runnable
+	{
+		
+		int i,j;
+		
+		Thread_6(int x,int y)
+		{
+			i=x;
+			j=y;
+			
+		}
+		public void run()
+		{
+			System.out.println("THREAD 6___"+(i-j)*(i*i-i*j+j*j));  //a³+b³ = (a+b) (a² – ab + b²)
+			
+			
+		}
+	}
+
+public class Executer_framework{
+	
+	  public static void main(String[] args)
+	  {
+		  Scanner s = new Scanner(System.in);
+		     int a;
+		     int b;
+		      int c;
+		      System.out.println("Enter the value of a");
+				a=s.nextInt();
+				System.out.println("Enter the value of b");
+				b=s.nextInt();
+				System.out.println("Enter the value of c");
+				c=s.nextInt();
+				
+		  Thread_1 t1=new Thread_1(a,b);
+		  Thread_2 t2=new Thread_2(a,b);
+		  Thread_3 t3=new Thread_3(a,b,c);
+		  Thread_4 t4=new Thread_4(a,b);
+		  Thread_5 t5=new Thread_5(a,b);
+		  Thread_6 t6=new Thread_6(a,b);
+		  System.out.println("Starting Executor");
+		  ExecutorService exe = Executors.newFixedThreadPool(6);
+		  exe.execute(t1);
+		  exe.execute(t2);
+		  exe.execute(t3);
+		  exe.execute(t4);
+		  exe.execute(t5);
+		  exe.execute(t6);
+		  
+		  exe.shutdown();
+		
+		   }
+	
+
+	
+}
+
+
+

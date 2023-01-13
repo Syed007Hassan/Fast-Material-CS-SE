@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="701811EC-8C78-4B4C-5BFE-9FF6DF403C3D" name="Department">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-07 20:09:54 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Dname" id="40353810-9DE3-E592-F618-9D30225B5A8F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:19:29 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dcode" id="7854CCA7-DA14-893F-D252-32AA2C41CAE9">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:19:29 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Doffice" id="D034F246-81EB-B422-F099-D00368B1F826">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:19:29 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dphone" id="666DAE91-1BD0-E5C7-1F18-6AB87002FFB5">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:19:29 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cname" id="D68F4023-E6CA-3CBA-C057-6EA67E6EA7DC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:29:39 UTC</createdTime>
+<generatorID>C736F515-B443-DA12-1EB3-17DA367E666B</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>365DDC77-34EA-1A86-9F46-413AC14B7413</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DCBF5E1C-0B01-BBB1-1538-15948D753E27" name="Department PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:19:40 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>40353810-9DE3-E592-F618-9D30225B5A8F</attributeRef>
+<attributeRef>7854CCA7-DA14-893F-D252-32AA2C41CAE9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

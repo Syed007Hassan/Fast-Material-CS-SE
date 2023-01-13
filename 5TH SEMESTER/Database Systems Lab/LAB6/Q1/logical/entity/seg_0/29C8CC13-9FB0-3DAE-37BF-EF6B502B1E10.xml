@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="29C8CC13-9FB0-3DAE-37BF-EF6B502B1E10" name="Review">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 15:33:08 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="6B181365-AD11-22DF-C5BB-0F699467C3FC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:02:13 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Recommendation" id="35373D1E-D73B-9C89-E4FE-568466A4E3FE">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:03:10 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Score" id="C72003B9-3A5C-0EF6-E4F4-F7C830E0E1C1">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:05:43 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="AE36B238-58D7-7FA0-55F7-B5230765C89F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:07:48 UTC</createdTime>
+<generatorID>88B95A11-7C9D-5CCD-D68C-F198AE0B9984</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="true"/>
+</engineerTo>
+<referedAttribute>1F11ACC2-C407-6E44-40F5-D516BD16D322</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E1EE2AF6-3588-A9DC-BAF8-7448389C9266" name="Review PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 16:02:59 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="2889A60A-0395-EAC6-84AE-516F6D7248AE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6B181365-AD11-22DF-C5BB-0F699467C3FC</attributeRef>
+<attributeRef>AE36B238-58D7-7FA0-55F7-B5230765C89F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

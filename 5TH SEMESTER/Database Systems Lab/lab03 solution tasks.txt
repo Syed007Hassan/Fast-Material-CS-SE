@@ -1,0 +1,67 @@
+--Task1:
+--working on sql command line:
+--create user <username> identified by <Password>;
+--grant privileges to <username>
+--then make new connection with your own username in developer.
+
+--Task2:
+CREATE TABLE Jobs 
+   ("JOB_ID" VARCHAR(20) PRIMARY KEY, 
+	"JOB_TITLE" VARCHAR(35) NOT NULL, 
+	"MIN_SALARY" NUMBER(6,0), 
+	"MAX_SALARY" NUMBER(6,0));
+
+CREATE TABLE Job_History
+   ("JOB_ID" VARCHAR(20),
+   "EMPLOYEE_ID" Number(6,0),
+   "START_DATE" DATE NOT NULL , 
+	"END_DATE" DATE NOT NULL);
+
+--Task3:
+ALTER TABLE jobs MODIFY JOB_ID number(8);
+
+--Task4:
+ALTER TABLE JOB_HISTORY MODIFY JOB_ID number(8);
+ALTER TABLE JOB_HISTORY ADD FOREIGN key(JOB_ID) REFERENCES Jobs(JOB_ID);
+
+--Task5:
+insert into jobs VALUES('100','Programmer','50000','100000');
+insert into JOB_HISTORY VALUES('100','110','13-JAN-01','24-JUL-06');
+SELECT * FROM jobs;
+
+
+--Task#6:
+ALTER TABLE jobs add ("job_nature" varchar(20));
+
+--Task#7:
+Create table employees as SELECT * from HR.EMPLOYEES where 1=2;
+ALTER table employees add primary key(EMPLOYEE_ID);
+
+--Task8:
+delete JOB_HISTORY;
+ALTER TABLE JOB_HISTORY ADD FOREIGN key(EMPLOYEE_ID) REFERENCES employees(EMPLOYEE_ID);
+
+--Task9:
+alter table JOBS drop column "job_nature";
+
+--Task10:
+ALTER TABLE employees ADD CONSTRAINT First_Name_chk CHECK (First_Name=UPPER(First_Name));
+
+--Task11:
+ALTER TABLE employees ADD CONSTRAINT salary_chk  unique(salary);
+
+--Task12:
+ALTER TABLE employees modify PHONE_NUMBER not null;
+
+--Task13:
+insert into employees VALUES('101','FIZZA','aqeel','fq@nu.edu.pk','212535522',sysdate,'100','25000','','','');
+
+--Task14:
+update employees set salary=80000 where EMPLOYEE_ID=101 and SALARY<50000;
+select * FROM EMPLOYEES;
+
+--Task15:
+ALTER TABLE employees ADD CONSTRAINT Col_PK PRIMARY KEY(EMPLOYEE_ID, JOB_ID);--Student need to read and undersatnd the error 
+
+--Task16:
+CREATE INDEX indx_job_id ON job_history(job_id);

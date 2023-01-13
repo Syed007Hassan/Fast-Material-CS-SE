@@ -1,0 +1,56 @@
+Classes and Objects in Java
+============================
+Last Updated : 22 Aug, 2022
+
+(1) Class
+A class is a user defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type. In general, class declarations can include these components, in order: 
+
+Modifiers: A class can be public or has default access (Refer this for details).
+1.	Class keyword: class keyword is used to create a class.
+2.	Class name: The name should begin with an initial letter (capitalized by convention).
+3.	Superclass(if any): The name of the class’s parent (superclass), if any, preceded by the keyword extends. A class can only extend (subclass) one parent.
+4.	Interfaces(if any): A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword implements. A class can implement more than one interface.
+5.	Body: The class body is surrounded by braces, { }.
+Constructors are used for initializing new objects. Fields are variables that provide the state of the class and its objects, and methods are used to implement the behavior of the class and its objects.
+There are various types of classes that are used in real time applications such as nested classes, anonymous classes, lambda expressions. 
+
+
+(2) Object
+It is a basic unit of Object-Oriented Programming and represents real life entities. A typical Java program creates many objects, which as you know, interact by invoking methods. An object consists of : 
+1.	State: It is represented by attributes of an object. It also reflects the properties of an object.
+2.	Behavior: It is represented by methods of an object. It also reflects the response of an object with other objects.
+3.	Identity: It gives a unique name to an object and enables one object to interact with other objects.
+Example of an object: dog
+
+-------
+Fig 002
+-------
+
+Objects correspond to things found in the real world. For example, a graphics program may have objects such as “circle”, “square”, and “menu”. An online shopping system might have objects such as “shopping cart”, “customer”, and “product”. 
+
+
+
+(3) Declaring Objects (Also called instantiating a class)
+When an object of a class is created, the class is said to be instantiated. All the instances share the attributes and the behavior of the class. But the values of those attributes, i.e. the state are unique for each object. A single class may have any number of instances.
+Example: 
+
+-------
+Fig 003
+-------
+
+In general, we can’t create objects of an abstract class or an interface.  
+
+Example : 
+Dog tuffy;
+If we declare a reference variable(tuffy) like this, its value will be undetermined(null) until an object is actually created and assigned to it. Simply declaring a reference variable does not create an object.
+
+(4) Initializing an object
+The new operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The new operator also invokes the class constructor. 
+
+------
+Ex 001
+------
+Output:
+Hi my name is tuffy.
+My breed,age and color are papillon,5,white
+

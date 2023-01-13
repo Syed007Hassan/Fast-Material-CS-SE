@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="1D11EC41-A909-6A25-96BD-0335DB165B50" name="Takes" seqName="seg_0"/>
+   <object objectType="Table" objectID="2CB26BC6-F4E7-C10A-85DD-EF65B92212AA" name="Student" seqName="seg_0"/>
+   <object objectType="Table" objectID="3515B125-64BF-EB5C-4A61-4FB186893730" name="Instructor" seqName="seg_0"/>
+   <object objectType="Table" objectID="B0749E67-253C-9F28-BE49-919B40DB63B3" name="Section" seqName="seg_0"/>
+   <object objectType="Table" objectID="B6CB1285-52B6-2D83-17C7-81330E960489" name="College" seqName="seg_0"/>
+   <object objectType="Table" objectID="BFFD016B-0E57-4785-AA82-CD76D3DF4039" name="Course" seqName="seg_0"/>
+   <object objectType="Table" objectID="F979F9C9-8DA8-CDC8-7CDE-3AB41D469AB3" name="Department" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="19667D9B-5D8B-2D7F-ED76-5A4DA56370B8" name="Course_Department_FK" containerID="BFFD016B-0E57-4785-AA82-CD76D3DF4039" refContainerID="F979F9C9-8DA8-CDC8-7CDE-3AB41D469AB3" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="34C88FC7-4195-FB15-6643-94EFE4D12181" name="Student_Department_FK" containerID="2CB26BC6-F4E7-C10A-85DD-EF65B92212AA" refContainerID="F979F9C9-8DA8-CDC8-7CDE-3AB41D469AB3" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="5C20CA50-3351-39C4-7B93-AF38D6FB6ED9" name="FK_ASS_7" containerID="1D11EC41-A909-6A25-96BD-0335DB165B50" refContainerID="B0749E67-253C-9F28-BE49-919B40DB63B3" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="685CAE18-8DA0-B8F4-0865-777DF84D0CD8" name="Department_College_FK" containerID="F979F9C9-8DA8-CDC8-7CDE-3AB41D469AB3" refContainerID="B6CB1285-52B6-2D83-17C7-81330E960489" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="7F247EE3-FE7A-6B95-0878-11EAA941E51C" name="Instructor_College_FK" containerID="3515B125-64BF-EB5C-4A61-4FB186893730" refContainerID="B6CB1285-52B6-2D83-17C7-81330E960489" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="B6FC982C-4D16-651B-CFE9-1A3A46236B17" name="Instructor_Department_FK" containerID="3515B125-64BF-EB5C-4A61-4FB186893730" refContainerID="F979F9C9-8DA8-CDC8-7CDE-3AB41D469AB3" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="E3137D18-8EDE-40B8-11FB-38E953EC03A3" name="Section_Course_FK" containerID="B0749E67-253C-9F28-BE49-919B40DB63B3" refContainerID="BFFD016B-0E57-4785-AA82-CD76D3DF4039" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="EBBFEEEA-2ECD-3AB3-0E68-3E5D704F82A2" name="FK_ASS_6" containerID="1D11EC41-A909-6A25-96BD-0335DB165B50" refContainerID="2CB26BC6-F4E7-C10A-85DD-EF65B92212AA" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="FD6A7545-6093-7074-BADF-454F0F563B40" name="Section_Instructor_FK" containerID="B0749E67-253C-9F28-BE49-919B40DB63B3" refContainerID="3515B125-64BF-EB5C-4A61-4FB186893730" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Mnay authors for a book" directorySegmentName="seg_0" id="81DDCF8F-FE4E-571B-A02A-BAD098D46CAB">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:29:30 UTC</createdTime>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<sourcePk>D6424089-82AD-6597-981D-63CA5EF433AA</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BD9602CF-3660-4C0F-4B04-123E36624B53</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F1E5BBEC-2361-59E0-BA24-9CDDF08045C5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

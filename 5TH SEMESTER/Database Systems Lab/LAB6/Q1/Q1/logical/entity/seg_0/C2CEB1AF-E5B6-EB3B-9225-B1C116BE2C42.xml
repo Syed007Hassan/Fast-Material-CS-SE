@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C2CEB1AF-E5B6-EB3B-9225-B1C116BE2C42" name="Paper">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:19:29 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="paper id" id="6F23A688-714D-82C2-B0B4-9D888F69B572">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:20:27 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="title" id="2860C720-6012-CC89-59B1-8B9BE073D76B">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:21:15 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="abstract" id="9630B7C9-859A-843F-FB27-F03F094D3846">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:21:38 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="elec file" id="54BFA6BD-ECC8-8241-249F-7C0463F72CBC">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:22:08 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contact author" id="531EA8EB-91E6-7A90-CDC8-EBFF33AD87C5">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:22:40 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="review_id" id="7C306C14-3646-2ED2-43CF-E4C962EA0950">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 14:34:40 UTC</createdTime>
+<generatorID>030B083B-76C4-696F-641F-C8288E0AD2BD</generatorID>
+<ownerDesignName>Q1</ownerDesignName>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="true"/>
+</engineerTo>
+<referedAttribute>42C0609F-4009-57D7-489C-414AC948CE11</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4B4F01FF-1A4B-CF0D-7125-35E5E117AB4E" name="Paper PK">
+<createdBy>Ehtesham Zafar</createdBy>
+<createdTime>2022-10-09 13:20:59 UTC</createdTime>
+<ownerDesignName>Q1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A3ECE64F-DBB8-574E-2EA1-AC40EF6BC518" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6F23A688-714D-82C2-B0B4-9D888F69B572</attributeRef>
+<attributeRef>7C306C14-3646-2ED2-43CF-E4C962EA0950</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

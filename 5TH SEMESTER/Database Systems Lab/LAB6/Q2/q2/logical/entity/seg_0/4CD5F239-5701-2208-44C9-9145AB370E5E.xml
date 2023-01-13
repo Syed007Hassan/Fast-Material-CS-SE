@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4CD5F239-5701-2208-44C9-9145AB370E5E" name="Instructor">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-07 20:09:43 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="6D82CF78-6F86-B7E1-B19A-AF6048F949F3">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:07:58 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Irank" id="A338478B-7445-361E-58C0-596D844EDBAD">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:07:58 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Iname" id="E189DF0C-5BC1-7705-A714-0C8A76ACC3A2">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:07:58 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ioffice" id="A46E02D0-515D-2FE5-AC0B-CE2F6E744CA4">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:07:58 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Iphone" id="3C448458-3DDF-293F-67A6-DE5EBBFD88C5">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:07:59 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cname" id="24E3A223-D41E-2C5F-9F0C-DFC569D6274F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:28:35 UTC</createdTime>
+<generatorID>F26229BD-75C3-9028-74C6-56D9FA806215</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>365DDC77-34EA-1A86-9F46-413AC14B7413</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dname" id="590C758E-B1A1-CCC8-A354-2E28DA1981DC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:05 UTC</createdTime>
+<generatorID>10428B75-E147-14DB-9537-29D7A9B9E326</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>40353810-9DE3-E592-F618-9D30225B5A8F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dcode" id="A8CC85FE-9D60-669A-2E2B-54CF3AF00BDE">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:05 UTC</createdTime>
+<generatorID>10428B75-E147-14DB-9537-29D7A9B9E326</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>7854CCA7-DA14-893F-D252-32AA2C41CAE9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="74EF8F51-ED37-9B9E-F01E-DB1EE3C94FDF" name="Instructor PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:08:09 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6D82CF78-6F86-B7E1-B19A-AF6048F949F3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

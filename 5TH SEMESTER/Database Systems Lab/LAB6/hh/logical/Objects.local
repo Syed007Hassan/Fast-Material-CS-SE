@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="0A0D7942-1304-6574-20E5-95F65DDE2758" name="Authors" seqName="seg_0"/>
+   <object objectType="Entity" objectID="455D1FB7-9307-1DD9-1432-C825C260CBF1" name="Paper" seqName="seg_0"/>
+   <object objectType="Entity" objectID="A3CFE91C-330F-4650-0983-C2719B6D28BA" name="Review" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7C08C0D2-7BDD-4030-C709-61634BC18966" name="Reviewers" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

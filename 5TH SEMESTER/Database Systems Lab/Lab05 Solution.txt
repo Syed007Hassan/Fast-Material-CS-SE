@@ -1,0 +1,35 @@
+1) select e.first_name||' '||e.last_name as Name,e.job_id,d.department_name,e.salary from 
+hr.employees e, hr.departments d where e.department_id=d.department_id order by d.department_name;
+
+2) select count(*) as "Number of Employees",e.department_id , d.department_name from
+ departments d,employees e group by e.department_id,d.department_name having count(*)>=2;
+
+3) select e.FIRST_NAME,e.SALARY from employees e inner join JOBS j using (job_id) 
+where e.salary <= j.min_salary;
+
+4) SELECT e.FIRST_NAME,e.JOB_ID,e.salary*12 as "Anual salary", L.CITY FROM employees e INNER JOIN
+Departments d  using(DEPARTMENT_ID)INNER JOIN Locations L  using (Location_ID) 
+where (e.salary*12) <60000 and d.DEPARTMENT_NAME !='Marketing';
+
+or*** select e.first_name||' '||e.last_name as Name, j.job_title,e.salary*12 As "Annual Salary",
+ e.department_id,d.department_name,l.city from employees e,departments d,locations l,jobs j 
+where (salary*12=60000 OR j.job_title!='Analyst') and j.job_id=e.job_id AND e.department_id
+=d.department_id and  l.location_id=d.location_id order by e.employee_id;
+
+5) select w.employee_id,e.first_name,e.manager_id from employees e, employees w where
+ e.manager_id=w.employee_id;
+
+6) select count(*) as "Number of Employees",e.department_id , d.department_name from departments d,
+employees e group by e.department_id,d.department_name having count(*)<1;
+
+7) select e.first_name||' '||e.last_name as Name,salary, d.department_name from employees e,
+departments d where e.department_id=d.department_id(+) order by e.department_id;
+
+8) select e.first_name||' '||e.last_name as Name, e.job_ID, d.department_name, l.street_address,
+l.city from employees e, locations l,departments d where d.department_id=e.department_id and
+ d.location_id=l.location_id and l.state_province is null;
+
+9) select location_id from locations minus select location_id from departments;
+
+10) select * from employees e, locations l,departments d where d.department_id=e.department_id and 
+d.location_id=l.location_id and (l.state_province!='Washington' and l.country_id='US');

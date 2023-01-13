@@ -1,0 +1,88 @@
+--> Scenario 1
+
+Step 1
+
+CREATE TABLE  FACULTY(
+Faculty_id number(6) constraint faculty_pk primary key,
+last_name varchar2(15) NOT NULL,
+first_name varchar2(15) NOT NULL,
+dept char(3));
+
+
+Step 2
+
+CREATE TABLE  DEPARTMENT(
+Dept_code char(3) constraint dept_pk primary key,
+dept_name varchar2(20) NOT NULL);
+
+
+Step 3
+
+ALTER table dept
+add location char(7);
+
+Step 4
+
+ALTER table FACULTY
+ADD CONSTRAINT faculty_dept_fk FOREIGN KEY(Dept) REFERENCES Department(Dept_Code) 
+
+Step 5
+
+ALTER table FACULTY
+MODIFY last_name varchar(25)
+
+--> Scenario 2
+
+CREATE table BOOK(
+bookid NUMBER(10) PRIMARY KEY,
+title VARCHAR2(20) NOT NULL,
+publishername VARCHAR2(20));
+
+CREATE table BOOK_AUTHORS(
+bookid NUMBER(10),
+authorname VARCHAR2(20) NOT NULL);
+
+CREATE table PUBLISHER(
+name VARCHAR2(20) PRIMARY KEY,
+address VARCHAR2(20) NOT NULL,
+phone VARCHAR2(20) NOT NULL);
+
+CREATE table BOOK_COPIES(
+bookid NUMBER(20),
+branchid NUMBER(20),
+no_of_copies NUMBER(20) UNIQUE);
+
+CREATE table BOOK_LOANS(
+bookid NUMBER(20),
+branchid NUMBER(20),
+cardno NUMBER(20),
+dateout NUMBER(20) UNIQUE,
+duedate NUMBER(20) NOT NULL);
+
+CREATE table LIBRARY_BRANCH(
+branchid NUMBER(20) PRIMARY KEY,
+branchname VARCHAR2(20),
+address VARCHAR2(20) UNIQUE);
+
+CREATE table BORROWER(
+cardno NUMBER(20) PRIMARY KEY,
+name VARCHAR2(20),
+address VARCHAR2(20),
+phone NUMBER(20) NOT NULL);
+
+ALTER table BOOK_AUTHORS
+ADD CONSTRAINT book_id FOREIGN KEY(bookid) REFERENCES BOOK(bookid);
+
+ALTER table BOOK
+ADD CONSTRAINT name_ FOREIGN KEY(publishername) REFERENCES PUBLISHER(name);
+
+ALTER table BOOK_COPIES
+ADD CONSTRAINT book_Id FOREIGN KEY(bookid) REFERENCES BOOK(bookid);
+
+ALTER table BOOK_LOANS
+ADD CONSTRAINT branch_id FOREIGN KEY(branchid) REFERENCES LIBRARY_BRANCH(branchid);
+
+ALTER table BOOK_LOANS
+ADD CONSTRAINT card_no FOREIGN KEY(cardno) REFERENCES BORROWER(cardno);
+
+

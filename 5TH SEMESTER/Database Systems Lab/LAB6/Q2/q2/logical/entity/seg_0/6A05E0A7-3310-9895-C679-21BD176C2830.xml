@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6A05E0A7-3310-9895-C679-21BD176C2830" name="Section">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-07 20:10:58 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="DaysTime" id="AB737E72-C0B1-978C-85AF-FB1D84ECD2FD">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:23:21 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Secid" id="F028B94B-11B9-429E-89F5-CEC203F2B765">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:23:20 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Secno" id="7F20F15A-00AC-5992-8547-812B24BB4788">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:23:20 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Sem" id="28710135-1D12-F012-77C7-DA6875CF7A6F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:23:21 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Year" id="05FBF7C8-2F50-DE6F-CDB8-E35829E27F47">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:23:21 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ccode" id="842BAB5B-401A-0EB9-945C-CB123A530966">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:32:10 UTC</createdTime>
+<generatorID>FFD48F5C-ACCF-408D-F011-93CE2C47C5F0</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>9574C60B-EAF1-B4F8-1E13-D1074CC27A6B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Coname" id="439B205F-A95C-EE80-0124-318EC5BDCBB6">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:32:10 UTC</createdTime>
+<generatorID>FFD48F5C-ACCF-408D-F011-93CE2C47C5F0</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>1D573926-A2F4-EDCA-373E-E442656468DC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dname" id="1F7909D0-DA2B-D7E6-86FE-8D766906CC2B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:32:10 UTC</createdTime>
+<generatorID>FFD48F5C-ACCF-408D-F011-93CE2C47C5F0</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>6E9E5A56-DC6E-FD3D-9EBC-EA0ACD8B5461</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dcode" id="1BF21134-3C96-D0ED-84BB-893F3BD7B90F">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:32:10 UTC</createdTime>
+<generatorID>FFD48F5C-ACCF-408D-F011-93CE2C47C5F0</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>DCBFE86E-A994-8C0C-28C9-5D1434164104</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="E262F9FE-6AE1-DAD2-B8CC-99555F55560A">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:33:47 UTC</createdTime>
+<generatorID>BE682798-F4E5-5492-69C0-B4D0A7F1D481</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>6D82CF78-6F86-B7E1-B19A-AF6048F949F3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89856080-F6B8-4E02-E877-F326DC5C19F8" name="Section PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:23:35 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F028B94B-11B9-429E-89F5-CEC203F2B765</attributeRef>
+<attributeRef>7F20F15A-00AC-5992-8547-812B24BB4788</attributeRef>
+<attributeRef>842BAB5B-401A-0EB9-945C-CB123A530966</attributeRef>
+<attributeRef>439B205F-A95C-EE80-0124-318EC5BDCBB6</attributeRef>
+<attributeRef>1F7909D0-DA2B-D7E6-86FE-8D766906CC2B</attributeRef>
+<attributeRef>1BF21134-3C96-D0ED-84BB-893F3BD7B90F</attributeRef>
+<attributeRef>E262F9FE-6AE1-DAD2-B8CC-99555F55560A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

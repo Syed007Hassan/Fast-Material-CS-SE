@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EC8D0847-700F-B4FF-316F-DFD187B7C71A" name="Publisher">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:27:53 UTC</createdTime>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="D04C9B8F-6A91-EFDD-CC5E-43DDF529402A">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:28:45 UTC</createdTime>
+<generatorID>D08934D7-2522-68B3-94EF-21F8347A9671</generatorID>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<referedAttribute>ABC08AAE-7BCF-52F5-D175-B319CBDF5FB5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F04F44C8-35AA-851D-9C4D-20644DE968A5" name="Publisher PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-12-15 08:28:45 UTC</createdTime>
+<ownerDesignName>aa</ownerDesignName>
+<engineerTo>
+<item key="37B93902-A3CC-781C-666D-A7D2831F0467" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D04C9B8F-6A91-EFDD-CC5E-43DDF529402A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

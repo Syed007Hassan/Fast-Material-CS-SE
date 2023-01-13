@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C5DC156-A96E-2A5E-A754-EC9DB9F5DCFD" name="Books">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:50:26 UTC</createdTime>
+<ownerDesignName>kk</ownerDesignName>
+<engineerTo>
+<item key="165B3C09-F463-D394-5152-8631A9208D84" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Book_Id" id="13129A82-8767-7212-D161-051F1576346A">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:51:22 UTC</createdTime>
+<ownerDesignName>kk</ownerDesignName>
+<engineerTo>
+<item key="165B3C09-F463-D394-5152-8631A9208D84" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F7BD944B-4A57-C748-67EA-7E842F8D1066</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="73316114-AC76-CBCC-940B-E28B95F47139" name="Books PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-05 09:51:55 UTC</createdTime>
+<ownerDesignName>kk</ownerDesignName>
+<engineerTo>
+<item key="165B3C09-F463-D394-5152-8631A9208D84" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>13129A82-8767-7212-D161-051F1576346A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,56 @@
+
+subQuery within a single table table:
+manager names and their manager ids
+select employee_id,first_name from employees where employee_id in(select manager_id from employees);
+
+
+subQuery with more then one table:
+SELECT first_name, department_id
+FROM employees
+WHERE department_id =ALL (SELECT Department_id
+FROM departments
+WHERE LOCATION_ID = 1700 and location_id=1800);
+
+
+
+
+
+
+IN:
+SELECT salary
+FROM employees
+WHERE salary IN(38250,10800,2000);--------->=ANY
+All:
+select salary 
+from employees 
+where salary>all(2000,3000,4000); --------->AND  same as( select salary from employees where salary>2000 and salary>3000 and salary>4000);
+Any:
+select salary 
+from employees
+where salary>any(2000,3000,4000);--------->OR    same as( select salary from employees where salary>2000 or salary>3000 or salary>4000);
+
+
+
+DML:
+create table backup_emp
+as select * from employees
+where 1=2;
+
+
+INSERT INTO backup_emp
+SELECT * FROM EMPLOYEES
+WHERE job_ID IN (SELECT job_id
+FROM jobs WHERE job_title='Accountant');
+
+seloect * from backup_emp;
+
+
+update backup_emp
+set salary= salary+(0.1*salary)
+WHERE job_ID IN (SELECT job_ID
+FROM jobs WHERE min_salary>3000);
+
+
+Delete from backup_emp
+WHERE job_ID IN (SELECT job_ID
+FROM job_History WHERE end_Date='31-Dec-06');

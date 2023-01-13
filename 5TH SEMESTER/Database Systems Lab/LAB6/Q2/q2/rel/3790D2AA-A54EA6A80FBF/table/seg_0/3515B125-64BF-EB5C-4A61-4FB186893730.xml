@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3515B125-64BF-EB5C-4A61-4FB186893730" name="Instructor">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>4CD5F239-5701-2208-44C9-9145AB370E5E</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="963A95F7-4E0B-7A78-571F-F96146C965F1">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>6D82CF78-6F86-B7E1-B19A-AF6048F949F3</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Irank" id="503FB5F9-6DC4-6335-8EBF-0A9D7035FAF4">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>A338478B-7445-361E-58C0-596D844EDBAD</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Iname" id="735297DF-CDDE-F941-8593-91CABB60B310">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>E189DF0C-5BC1-7705-A714-0C8A76ACC3A2</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ioffice" id="B4E922DB-ABD0-1CFE-0E5D-D69EE8F43800">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>A46E02D0-515D-2FE5-AC0B-CE2F6E744CA4</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Iphone" id="2CECBDE9-7A3C-DE1E-23CA-C17382C1CD1B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>3C448458-3DDF-293F-67A6-DE5EBBFD88C5</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="College_Cname" id="CBD8332D-5E04-9BE4-5E77-F78FAE605270">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>24E3A223-D41E-2C5F-9F0C-DFC569D6274F</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F247EE3-FE7A-6B95-0878-11EAA941E51C" referredColumn="7EBEE2E5-7A52-218B-6431-4E365FAC57B5"/>
+</associations>
+</Column>
+<Column name="Department_Dname" id="715EED2D-4796-77F3-4ADC-94CD3A1A95CE">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>590C758E-B1A1-CCC8-A354-2E28DA1981DC</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6FC982C-4D16-651B-CFE9-1A3A46236B17" referredColumn="7A0B46B0-158A-3299-ABDC-D76ACC6C337C"/>
+</associations>
+</Column>
+<Column name="Department_Dcode" id="1B3353C5-CAA8-834E-7B4D-AD876B4D82F6">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>A8CC85FE-9D60-669A-2E2B-54CF3AF00BDE</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6FC982C-4D16-651B-CFE9-1A3A46236B17" referredColumn="5A83F5EF-2C5F-3CA0-3B3B-EAB522C16486"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC58E822-0921-38B3-6C28-BAD5E7ECFFA8" name="Instructor_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>74EF8F51-ED37-9B9E-F01E-DB1EE3C94FDF</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="963A95F7-4E0B-7A78-571F-F96146C965F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DE57F6F-D5BB-D37B-A3C1-684E37BCDAD3" name="Instructor__IDX">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F26229BD-75C3-9028-74C6-56D9FA806215</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="CBD8332D-5E04-9BE4-5E77-F78FAE605270"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1DFE8CF8-42D4-8900-D6CC-306F915E0198" name="Instructor_College_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>F26229BD-75C3-9028-74C6-56D9FA806215</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBD8332D-5E04-9BE4-5E77-F78FAE605270"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69FF5F28-EDF8-7399-63CF-60B723A60469" name="Instructor_Department_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>10428B75-E147-14DB-9537-29D7A9B9E326</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="715EED2D-4796-77F3-4ADC-94CD3A1A95CE"/>
+<colUsage columnID="1B3353C5-CAA8-834E-7B4D-AD876B4D82F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

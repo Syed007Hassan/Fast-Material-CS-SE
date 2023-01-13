@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BFFD016B-0E57-4785-AA82-CD76D3DF4039" name="Course">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>ED1C2C84-0666-A2FD-9946-14DB051AF036</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Ccode" id="AAAB7266-24BA-4867-4A9F-E900842697E8">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>9574C60B-EAF1-B4F8-1E13-D1074CC27A6B</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Credits" id="6B6C1BD9-014A-6507-7991-14E6B686F1C2">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>3C28017B-154F-71FC-1C0A-594124C33FD4</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Coname" id="EC3E71D8-DDEC-5555-23F2-1973C1954606">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>1D573926-A2F4-EDCA-373E-E442656468DC</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cdesc" id="BF395940-41D4-01DE-FD2C-E1DB80F76813">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>46268859-3381-1548-43F7-F9BF7449E694</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Department_Dname" id="FB07B583-E180-A0EC-B7B9-CB3B13BF3B5C">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>6E9E5A56-DC6E-FD3D-9EBC-EA0ACD8B5461</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="19667D9B-5D8B-2D7F-ED76-5A4DA56370B8" referredColumn="7A0B46B0-158A-3299-ABDC-D76ACC6C337C"/>
+</associations>
+</Column>
+<Column name="Department_Dcode" id="EA10D5D5-9FC6-62DF-1698-FA9E62DB4182">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>DCBFE86E-A994-8C0C-28C9-5D1434164104</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="19667D9B-5D8B-2D7F-ED76-5A4DA56370B8" referredColumn="5A83F5EF-2C5F-3CA0-3B3B-EAB522C16486"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E3570A3C-F345-CD81-B6D2-6ECECBE39A36" name="Course_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>310C6885-3F9D-690D-333A-4E06F6B7A816</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAAB7266-24BA-4867-4A9F-E900842697E8"/>
+<colUsage columnID="EC3E71D8-DDEC-5555-23F2-1973C1954606"/>
+<colUsage columnID="FB07B583-E180-A0EC-B7B9-CB3B13BF3B5C"/>
+<colUsage columnID="EA10D5D5-9FC6-62DF-1698-FA9E62DB4182"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B879A37B-8FE6-75BA-FC73-4972213B7DC6" name="Course_Department_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:35:54 UTC</createdTime>
+<generatorID>F952406C-D9BD-AD36-E127-9B63CF5CEC90</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB07B583-E180-A0EC-B7B9-CB3B13BF3B5C"/>
+<colUsage columnID="EA10D5D5-9FC6-62DF-1698-FA9E62DB4182"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

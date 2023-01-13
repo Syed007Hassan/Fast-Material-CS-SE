@@ -1,0 +1,64 @@
+Qs 1
+
+select initcap(ename),lower(job) from emp  
+
+Qs 2
+
+select empno, upper(ename) from emp WHERE ename = 'BLAKE'
+
+Qs 3
+
+select empno, TO_CHAR(hiredate, 'MM') from emp
+
+Qs 4
+
+select (sal*12), ename, job from emp
+
+Qs 5
+
+select sal, ename from emp order by sal asc
+
+Qs 6
+
+select to_char(sal,'$9999') from emp WHERE ename = 'SCOTT'
+
+Qs 7
+
+select ename, hiredate, sal, (sal/30)"Daily sal" from emp WHERE (sal/30)>100
+
+Qs 8
+
+select empno, ename, sal, ceil(sal*0.15*sal)"New salary", ((sal*0.15*sal)-sal)"Increment" from emp
+
+Qs 9
+
+select ename, NVL(comm,0)"commission", NVL2(comm, to_char(sal+comm),sal)"new" from emp
+
+Qs 10
+
+select ename, to_char(hiredate,'DAY') from emp
+
+Qs 11
+
+select initcap(ename) "name", length(ename)"length" from emp WHERE substr(ename,0,1) in ('A','J','M')
+
+Qs 12
+
+select hiredate, ename from emp WHERE sysdate-hiredate>35*365
+
+Qs 13
+
+select sum(sal) "Total sal of all employees" from emp 
+
+Qs 14
+
+select deptno,count(*)"No.of Employees" from emp group by deptno 
+
+
+Qs 15
+
+select deptno,max(sal) from emp group by deptno having (max(sal))>2900 
+
+Qs 16
+
+select deptno,count(*)"No.of Employees" from emp group by deptno having count(*)>3

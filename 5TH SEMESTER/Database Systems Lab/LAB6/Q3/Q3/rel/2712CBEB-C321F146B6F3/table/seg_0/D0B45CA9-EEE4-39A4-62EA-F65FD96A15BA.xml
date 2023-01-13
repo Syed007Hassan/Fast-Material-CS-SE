@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0B45CA9-EEE4-39A4-62EA-F65FD96A15BA" name="Customers">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>12C6F702-F45B-D864-DBD1-CBB8C7AF6D29</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CId" id="4891E7E9-EE50-5E74-AB0E-13DE1C582A1D">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>3D2994C0-72F9-801C-4A68-ACF0F8EABB96</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="63CE025C-3222-0A2E-8345-097EDE18FB92">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>6F7704B5-9CD2-2280-AD42-2B84644B7BD5</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ProductName" id="776ED74A-D2D8-927B-2D54-B36EF8950D27">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>0182B8F5-614F-FDCE-9576-4BE9CF7499F4</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantity" id="DD8E43A7-4313-11F2-41B7-44296F2F3D5E">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>21E23141-615F-47FF-FE44-28EEF0AA2265</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address" id="39CA2167-0741-1385-A8D8-43DE3183B8E3">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>FD2740CB-9FCE-9864-7A3F-2C9139C75DE5</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Employees_EId" id="DEFC7F29-A5E0-5D7C-18DF-806BEAFF36D6">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>01321D21-1377-5F91-5BAB-8DC4C417B3C6</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="156EB85A-88D6-7E54-BCFE-0D705D35F05C" referredColumn="E44E5DC1-8109-4434-4BA0-318F2B300A2F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C21E3B0-D98B-A130-D508-DA50B846E489" name="Customers_PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:35 UTC</createdTime>
+<generatorID>3C97349E-F367-9751-52C6-1EA0D6D7D813</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4891E7E9-EE50-5E74-AB0E-13DE1C582A1D"/>
+<colUsage columnID="DEFC7F29-A5E0-5D7C-18DF-806BEAFF36D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3053EBF9-2285-5AFC-7890-ABE4D97EC478" name="Customers_Employees_FK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 06:11:36 UTC</createdTime>
+<generatorID>0A8C468F-0BA2-E01C-4D97-98FDBB113874</generatorID>
+<ownerDesignName>Q3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEFC7F29-A5E0-5D7C-18DF-806BEAFF36D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

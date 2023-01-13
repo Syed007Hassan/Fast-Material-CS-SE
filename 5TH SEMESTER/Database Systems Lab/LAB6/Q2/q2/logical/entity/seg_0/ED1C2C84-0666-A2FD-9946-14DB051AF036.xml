@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ED1C2C84-0666-A2FD-9946-14DB051AF036" name="Course">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-07 20:10:22 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Ccode" id="9574C60B-EAF1-B4F8-1E13-D1074CC27A6B">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:21:06 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Credits" id="3C28017B-154F-71FC-1C0A-594124C33FD4">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:21:06 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Coname" id="1D573926-A2F4-EDCA-373E-E442656468DC">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:21:06 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cdesc" id="46268859-3381-1548-43F7-F9BF7449E694">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:21:06 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dname" id="6E9E5A56-DC6E-FD3D-9EBC-EA0ACD8B5461">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:31:00 UTC</createdTime>
+<generatorID>F952406C-D9BD-AD36-E127-9B63CF5CEC90</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>40353810-9DE3-E592-F618-9D30225B5A8F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dcode" id="DCBFE86E-A994-8C0C-28C9-5D1434164104">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:31:00 UTC</createdTime>
+<generatorID>F952406C-D9BD-AD36-E127-9B63CF5CEC90</generatorID>
+<ownerDesignName>q2</ownerDesignName>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="true"/>
+</engineerTo>
+<referedAttribute>7854CCA7-DA14-893F-D252-32AA2C41CAE9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="310C6885-3F9D-690D-333A-4E06F6B7A816" name="Course PK">
+<createdBy>syed0</createdBy>
+<createdTime>2022-10-08 05:22:01 UTC</createdTime>
+<ownerDesignName>q2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3790D2AA-204C-20C8-9D85-A54EA6A80FBF" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9574C60B-EAF1-B4F8-1E13-D1074CC27A6B</attributeRef>
+<attributeRef>1D573926-A2F4-EDCA-373E-E442656468DC</attributeRef>
+<attributeRef>6E9E5A56-DC6E-FD3D-9EBC-EA0ACD8B5461</attributeRef>
+<attributeRef>DCBFE86E-A994-8C0C-28C9-5D1434164104</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

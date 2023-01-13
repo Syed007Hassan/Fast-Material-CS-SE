@@ -1,0 +1,1529 @@
+--lab 2
+
+
+select FLOOR(MONTHS_BETWEEN(SYSDATE,'22-NOV-22')*30) from dual;
+
+select sysdate from dual;
+
+
+--Display any two columns from employees table
+select EMPLOYEE_ID, FIRST_NAME FROM EMPLOYEES;
+
+select employee_id as "empID" from employees;
+
+select Sysdate from dual;
+
+
+--Display Hire_date from employees table, name it as Joining Date
+SELECT HIRE_DATE AS "JOINING DATE" FROM EMPLOYEES;
+
+--Display the first_name, last_name of Employees together in one column named 'FULL NAME'
+select FIRST_NAME || LAST_NAME AS "FULL NAME" FROM EMPLOYEES;
+
+--List all Employees having annual salary greater 20, 000 and lesser than 30,000.
+SELECT *FROM EMPLOYEES WHERE SALARY BETWEEN 20000 AND 30000;
+
+--List employee_id and first_name of employees from department # 60 todepartment #100.
+SELECT EMPLOYEE_ID, FIRST_NAME FROM EMPLOYEES WHERE DEPARTMENT_ID BETWEEN 60 AND 100;
+
+--List all the Employees belonging to cities like Toronto, Hiroshima and Sydney.
+SELECT FIRST_NAME,CITY from EMPLOYEES, LOCATIONS WHERE CITY IN('Toronto','Hiroshima','Sydney');
+
+--List all the Employees having an ‘ll’ in their first_names.
+SELECT *FROM EMPLOYEES WHERE FIRST_NAME LIKE '%ll%';
+
+--List all the employees with no commission.
+SELECT *from employees where COMMISSION_PCT is NULL;
+
+--List all employees in order of their decreasing salaries.
+select *from EMPLOYEES order by SALARY desc;
+
+--Print an employee name (first letter capital) and job title (lower Case)
+select INITCAP(FIRST_NAME), LOWER(JOB_ID) from EMPLOYEES;
+
+--Display employee name and job title together, length of employee name and the
+--numeric position of letter A in employee name, for all employees who are in sales.
+--Hint: For finding position you need to use string function “instr()”, this function worked
+--as INSTR(string1, string2)(s1:sreaching string, s2:string/char you’re searching for).
+
+select FIRST_NAME || ' ' || ' ' || JOB_ID as "Name_AND_Job", 
+LENGTH(FIRST_NAME),INSTR(FIRST_NAME,'A') from Employees 
+WHERE JOB_ID like 'S%' AND JOB_ID like '_A%';
+
+select first_name || ' ' || job_title as "People at Position" ,length(first_name),
+instr(upper(first_name), 'A') AS "Position" from employees, departments, jobs 
+where lower(department_name) like '%sales%';
+
+
+--Comparing the hire dates for all employees who started in 2003, 
+--display the employee number, hire date, and month started using the conversion and date functions.
+select employee_id,HIRE_DATE, TO_CHAR(HIRE_DATE,'Month') from Employees
+where HIRE_DATE BETWEEN '01-JAN-03' AND '31-DEC-03';
+
+select employee_id, TO_CHAR(hire_date,'YYYY') from employees
+where hire_date between '01-JAN-00' and '31-DEC-10';
+
+--To display the employee number, the month number and year of hiring.
+SELECT employee_id, TO_CHAR(HIRE_DATE,'MM, YYYY') FROM EMPLOYEES;
+
+--To display the employee’s name and hire date for all employees. The hire date appears as 16 September, 2021.
+select employee_id,to_char(HIRE_DATE,'DD Month YYYY') from employees;
+
+--Display the salary of employee Neena with $ sign preceded.
+select to_char(SALARY,'$99999') FROM EMPLOYEES WHERE FIRST_NAME = 'Neena';
+
+--Find the next ‘Monday’ considering today’s date as date.
+select NEXT_DAY(Sysdate,'Monday') from Employees;
+SELECT NEXT_DAY(SYSDATE,'Saturday') from employees;
+
+--List all Employees who have an ‘A’ in their last names.
+select last_name from Employees where Last_name like '%a%';
+
+--Show all employees’ last three letters of first name.
+select substr(first_name,length(first_name)-2,length(first_name)), first_name from employees;
+select substr('Hassan',length('Hassan')-4,length('Hassan')) from dual; 
+
+
+--For all employees employed for more than 100 months, display the employee number,
+--hire date, number of months employed, first Friday after hire date and last day of the month hired.
+select employee_id, hire_date, MONTHS_BETWEEN(SYSDATE,hire_date),
+Next_day(hire_date,'Friday'),Last_day(hire_date) from employees
+where MONTHS_BETWEEN(SYSDATE,hire_date) > 100  ;
+
+--To display the employee number, name, salary of employee before and after 15%
+--increment in the yearly salary. Name the calculated new salary as “Incremented
+--Salary”. Do calculate the difference between before and after salaries & name this 
+--amount as “Incremented Amount”.
+select employee_id,first_name, salary, salary+(salary*15)/100 as "Incremented Salary", 
+(salary*15)/100 as "Incremented Amount" from employees;
+
+--List the name, hire date, and day of the week (labeled DAY) on which job was
+--started. Order the result by day of week starting with Monday.
+select first_name || ' ' || last_name as "Name", 
+hire_date, to_char(hire_date,'Day')
+from employees order by mod(to_char(hire_date,'D')+5,7); 
+
+--Display the department and manager id for all employees and round the commission up to 1 decimal.
+select * from employees;
+select department_id, manager_id, ROUND(COMMISSION_PCT,1) from employees;
+
+--Write a query to find the list of employees whose COMMISSION_PCT>0 and they do
+--not belong to DEPARTMENT_ID 90 or 100 from Employees table
+select *from employees where Commission_pct > 0 And department_id != 90 OR department_id != 100;
+
+--Write a query to find the employees who are hired in year 2010 from Employees table.
+select *from employees where to_char(hire_date,'YYYY') = 2010;
+
+--Write a query to find the list of jobs whose min salary is greater than 8000 and less than
+--15,000 and commission = 0 from employee table.
+select * from Employees where SALARY Between 8000 AND 15000 And commission_pct is null;
+
+--Write a query to find employee whose ID are greater than 100 and less than 150 and
+--their department_id is greater than 90 and less than 100 along with their first_name,
+--Last_name & Job ID.
+Select employee_id,first_name,last_name,job_id from employees where (employee_id between 100 AND 150) 
+AND (department_id between 90 AND 100);
+
+--Write a query to find total salary (Total salary formula = salary + (commission_pct*
+--salary)) as “Total Salary”, commission_pct where commission_pct is not equal to null.
+select (salary + (commission_pct*salary)) as "Total Salary" from EMPLOYEES where commission_pct is not NUll;
+
+select substr(first_name,1,3) as "Jali naam", first_name from employees;
+select  employee_id,count(employee_id) as "No of employees"
+from employees
+group by department_id; 
+
+
+--JUST FOR PRACTICE
+
+SELECT *FROM EMPLOYEES WHERE FIRST_NAME LIKE '%a%';
+
+select ALL(FIRST_NAME) from EMPLOYEES;
+
+SELECT *FROM LOCATIONS;
+
+SELECT *FROM JOBS WHERE JOB_TITLE IN ('Sales Manager','Purchasing Manager');
+
+select *from dual;
+
+select abs(-1052), ceil(1052.5 - 1.4),floor(1052.5 + 4) from dual;
+
+select LOWER('HASSAN') from dual;
+
+SELECT INITCAP('hasan') from dual;
+
+SELECT substr('hassan ali',0,5) from dual;
+
+SELECT lpad('hassanali',12,'*') from dual;
+
+SELECT sysdate from dual;
+
+select next_day('03-SEP-22','Saturday') from dual;
+
+select extract(Day from hire_date), hire_date from employees;
+
+select to_date('3SEP22') from dual;
+
+SELECT NVL('hassanali','*') from dual;
+
+select DECODE (&a, &b, 'a-b equal', &d, 'a-d equal', 'FAIL') from dual;
+
+SELECT AVG(SALARY) FROM EMPLOYEES;
+
+SELECT SUM(SALARY) FROM EMPLOYEES;
+
+SELECT COUNT(*) FROM EMPLOYEES;
+
+
+--lab 3
+--TASK 1
+connect system
+create user hassan identified by fast;
+grant all privileges to hassan;
+alter user hassan account unlock;
+
+--Task#02: Create table Jobs and job_History (ignore foreign keys relations) same fields as given in HR
+--Schema in which job_ID is considered as primary key in jobs table.
+CREATE TABLE JOBS AS (SELECT * FROM HR.JOBS WHERE 1=2);
+ALTER TABLE JOBS ADD PRIMARY KEY (JOB_ID);
+
+CREATE TABLE JOB_HISTORY AS (SELECT *FROM HR.JOB_HISTORY WHERE 1=2);
+ALTER TABLE JOB_HISTORY ADD PRIMARY KEY (EMPLOYEE_ID);
+
+--Task#03: Change the data type of ‘job_ID’ from character to numeric in Jobs table.(Like IT_Prog-&gt;101).
+ALTER TABLE JOBS MODIFY JOB_ID NUMBER;
+DESC JOBS;
+
+--Task#04: Write a SQL statement to add job_id column in job_history table 
+--as foreign key referencing to the primary key job_id of jobs table.
+ALTER TABLE JOB_HISTORY MODIFY JOB_ID NUMBER;
+ALTER TABLE JOB_HISTORY ADD FOREIGN KEY (JOB_ID) REFERENCES JOBS(JOB_ID);
+DESC JOB_HISTORY;
+
+--Task#05: Insert a new row in jobs table having all the attributes and the job_ID
+--should update in job_History table as well.
+INSERT INTO JOBS VALUES (1001,'Manager',1000,5000);
+INSERT INTO JOB_HISTORY VALUES (2001, '08-JAN-00', '09-SEP-22',1001, 90);
+
+--Task#06: Add Column Job_Nature in Jobs table.
+ALTER TABLE JOBS ADD JOB_NATURE VARCHAR(30);
+
+--Task#07: Create replica of employee table.
+CREATE TABLE EMPLOYEES AS (SELECT * FROM HR.EMPLOYEES WHERE 1=2);
+
+--Task#08: Write a SQL statement to add employee_id column in job_history table as foreign key 
+--referencing to the primary key employee_id of employees table.
+SELECT *FROM JOB_HISTORY;
+ALTER TABLE JOB_HISTORY ADD FOREIGN KEY (EMPLOYEE_ID) REFERENCES EMPLOYEE(EMPLOYEE_ID);
+
+--Task#09: Drop column Job_Nature.
+ALTER TABLE JOBS DROP COLUMN JOB_NATURE;
+
+--Task#10: ALTER table EMPLOYEE created in question 5 and apply the constraint CHECK on
+--First_Name attribute such that ENAME should always be inserted in capital letters.
+ALTER TABLE EMPLOYEES
+ADD CONSTRAINTS ENAME CHECK (FIRST_NAME = UPPER(FIRST_NAME));
+
+--Task#11: ALTER table EMPLOYEE created in question 5 and apply the constraint on SALary attribute
+--such that no two salaries of the employees should be similar.(Hint Unique)
+ALTER TABLE EMPLOYEES ADD CONSTRAINT UNIQUE_SAL UNIQUE(SALARY);
+
+--Task#12: ALTER table Employee created in question 5 and apply constraint on Phone_No such 
+--that Phone_No should not be entered empty (Hint modify).
+ALTER TABLE EMPLOYEES MODIFY PHONE_NUMBER VARCHAR2(30) NOT NULL;
+
+--Task#13: Write a SQL statement to insert one row into the table employees.
+INSERT INTO EMPLOYEES VALUES(1052,'HASSAN','ALI','k201052@nu.edu.pk','09000786','08-JAN-00',101,750,10,90,15);
+
+--Task#14: Write a SQL statement to change the salary of employee to 8000 who’s ID is 105, 
+--if the existing salary is less than 1+000.
+UPDATE EMPLOYEES SET SALARY = 8000 WHERE (EMPLOYEE_ID = 105 AND SALARY < 1000);
+
+--Task#15: Write a SQL statement to add a primary key for a combination of columns employee_id and
+--job_id in employees table, give the reason why this command is showing error.
+ALTER TABLE EMPLOYEE
+ADD CONSTRAINTS PRIMARY_KEY PRIMARY KEY (EMPLOYEE_ID,JOB_ID);
+
+Error: A table can have only one primary key, in this case we are trying to make a composite key but there already exists a primary key
+in employee table, we can not just directly add new key without deleting existing one.
+
+--Task#16: Write a SQL statement to add an index named indx_job_id on job_id column in the table job_history.
+CREATE INDEX indx_job_id ON JOB_HISTORY (JOB_ID);
+
+Task#17: Write a SQL statement to remove employees table.
+DROP TABLE EMPLOYEES;
+
+--lab 4
+
+-----------Practice--------
+
+Select department_id, MIN(salary) as "Low salary" 
+from Employees Group by DEPARTMENT_ID 
+having MIN(salary) > 2500;
+
+Finds the employees who have the highest salary
+
+select employee_id, salary from employees
+where salary = (select max(salary) from EMPLOYEES);
+
+Finds all employees who salaries are greater than the average salary of all employees:
+
+select employee_id, salary from employees
+where salary > 
+(select avg(salary) from employees);
+
+Show the name and dept_ID of all employees having location_ID=1700
+
+SELECT first_name, department_id from employees
+where department_id IN
+(select department_id from departments where location_id = 1700); 
+
+-----------Practice--------
+
+
+----------LAB TASK----------
+Task#01: For each department, retrieve the department no, the number of employees
+in the department and their average salary.
+
+SELECT DEPARTMENT_ID, COUNT(*) 
+AS NUMBER_OF_EMPLOYEES, AVG(SALARY) 
+FROM EMPLOYEES 
+GROUP BY DEPARTMENT_ID;
+
+
+Task#02: Write a Query to display the number of employees with the same job.
+
+SELECT JOB_ID, COUNT(*) AS NUMBER_OF_EMPLOYEES 
+FROM EMPLOYEES GROUP BY JOB_ID;
+
+
+Task#03: Write a Query to select Firstname and Hiredate of Employees 
+Hired right after the joining of employee_ID no 110.
+
+SELECT FIRST_NAME, HIRE_DATE FROM EMPLOYEES WHERE HIRE_DATE > 
+(SELECT HIRE_DATE FROM EMPLOYEES WHERE EMPLOYEE_ID = 110);
+
+
+Task#04: Write a SQL query to select those departments where maximum salary is at least 15000.
+
+SELECT DEPARTMENT_ID, MAX(SALARY)
+FROM EMPLOYEES
+GROUP BY DEPARTMENT_ID 
+HAVING MAX(SALARY) > 15000;   --output
+
+SELECT department_id, salary FROM EMPLOYEES 
+where salary > 
+(select department_id from employees where max(salary) > 15000); --no output
+
+
+Task#05: Write a query to display the employee number, 
+name (first name and last name) and job title for all employees whose salary 
+is smaller than any salary of those employees whose job title is IT_PROG.
+
+SELECT EMPLOYEE_ID, FIRST_NAME || ' ' || LAST_NAME AS FULL_NAME, JOB_ID AS JOB_TITLE
+FROM EMPLOYEES WHERE SALARY < ANY 
+(SELECT SALARY  FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG');
+
+
+Task#06 Write a query in SQL to display all the information 
+of those employees who did not have any job in the past.
+
+SELECT *FROM EMPLOYEES WHERE DEPARTMENT_ID NOT IN
+(SELECT DEPARTMENT_ID FROM JOB_HISTORY);
+
+
+Task#07: Display the manager number and the salary of the lowest paid 
+employee of that manager. Exclude anyone whose manager 
+is not known. Exclude any groups where the minimum salary is 2000.
+Sort the output is descending order of the salary.
+
+SELECT MANAGER_ID, MIN(SALARY) FROM EMPLOYEES WHERE SALARY IN 
+(SELECT MIN(SALARY) FROM EMPLOYEES GROUP BY MANAGER_ID HAVING (MIN(SALARY) <> 2000) 
+AND MANAGER_ID IS NOT NULL) 
+GROUP BY MANAGER_ID ORDER BY MIN(SALARY);
+
+
+Task#08: Insert into employees_BKP as it should copy the record of the employee 
+whose start date is ’13-JAN-01’ from job_History table.
+
+CREATE TABLE EMPLOYEES_BKP AS SELECT * FROM EMPLOYEES WHERE 1=2;
+
+INSERT INTO EMPLOYEES_BKP 
+SELECT *FROM EMPLOYEES WHERE EMPLOYEE_ID =
+(SELECT EMPLOYEE_ID FROM JOB_HISTORY WHERE START_DATE = '13-JAN-01');
+
+
+Task#09: Update salary of employees by 20% increment having minimum salary of 6000.
+
+UPDATE EMPLOYEES_BKP
+SET SALARY = SALARY + (SALARY*0.2)
+WHERE JOB_ID IN
+(SELECT JOB_ID FROM JOBS WHERE MIN_SALARY = 6000);
+
+
+Task#10: Delete the record of employees from employees_BKP who are manager 
+and belongs to the department ‘Finance’.
+
+DELETE FROM EMPLOYEES_BKP
+WHERE MANAGER_ID IN 
+(SELECT MANAGER_ID FROM DEPARTMENTS WHERE DEPARTMENT_NAME = 'Finance');
+
+
+Task#11: For each department that has more than five employees, retrieve the department number and the 
+number of its employees who are making more than $20,000.
+
+SELECT DEPARTMENT_ID, COUNT(EMPLOYEE_ID) AS "NO OF EMPLOYEES" 
+FROM EMPLOYEES 
+WHERE SALARY > 20000 
+GROUP BY DEPARTMENT_ID HAVING COUNT(EMPLOYEE_ID) > 5;
+
+--------------------------------------------------lab5
+
+
+--practice
+SELECT
+    e.first_name,
+    d.department_id,
+    l.city,
+    l.location_id
+FROM
+    employees e,
+    departments d,
+    locations l
+WHERE
+    e.department_id = d.department_id
+    AND d.location_id = l.location_id;
+
+1-Write a query to list the name, job name, department name, salary of the
+employees according to the department in ascending order.
+
+SELECT e.first_name, e.salary, d.department_id,d.department_name
+from employees e, departments d
+order by d.department_id asc;
+
+select e.first_name, e.salary,d.department_id,d.department_name 
+from Employees e join Departments d 
+on e.department_id = d.department_id 
+order by d.department_id asc;
+
+2-Write a query to list the department where at least two employees are working.
+
+select count(e.employee_id),d.department_name
+from Employees e ,Departments d
+where e.department_id = d.department_id 
+Group by d.department_name
+having count(e.employee_id) >= 2;
+
+select * from Employees e intersect select * from Employees d;
+
+3-Fetch all the records where salary of employee is less than the lower salary.
+
+select e.first_name,e.salary,e.job_id 
+from Employees e , Jobs j
+where j.job_id = e.job_id And e.salary < j.min_salary;
+
+4-Write a query to list the name, job name, annual salary, department id,
+department name and city who earn 60000 in a year or not working as an
+ANALYST.
+
+select e.first_name, j.job_title, e.salary, d.department_id, l.location_id
+from Employees e, Jobs j, locations l, Departments d
+WHERE (E.DEPARTMENT_ID = D.DEPARTMENT_ID) AND (l.LOCATION_ID = d.LOCATION_ID) AND (E.JOB_ID= J.JOB_ID)
+and (e.salary > 60000 or j.job_title != 'Analyst');
+
+5-Write a query to print details of the employees who are also Managers.
+
+select (e.first_name) as "Manager Name", (e.employee_id) as "Employee id" 
+from employees e, employees ee
+where ee.manager_id = e.employee_id;
+
+6-List department number, Department name for all the departments in which
+there are no employees in the department.
+
+select count(*) as "dsf", e.department_id, d.department_name 
+from departments d, employees e
+where e.department_id = d.department_id
+group by e.department_id,d.department_name
+having count(*) < 1;
+
+select e.department_id, d.department_name
+from employees e, departments d
+where e.department_id = d.department_id and e.department_id = 0;   --XXXX
+
+7-Display employee name, salary, department name where all employees has
+matching department as well as employee does not have any departments.
+-- left outer join
+select e.first_name, e.salary, d.department_name
+from employees e, departments d
+where e.department_id = d.department_id(+);
+
+SELECT E.FIRST_NAME, E.SALARY, D.DEPARTMENT_NAME
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID(+);
+
+ select e.first_name||' '||e.last_name as Name,salary, d.department_name from employees e,
+departments d where e.department_id=d.department_id(+) order by e.department_id;
+
+select e.first_name, e.salary, d.department_id 
+from employees e left outer join departments d
+on e.department_id = d.department_id;
+
+8-Display name, job ID, department name, street address and city of the
+employee in which there is no state province.
+
+select e.first_name, d.department_name, j.job_id,l.location_id,l.street_address,l.city
+from employees e, departments d, jobs j, locations l
+where l.location_id = d.location_id and d.department_id = e.department_id and j.job_id = e.job_id 
+and l.state_province is null;
+
+select e.first_name||' '||e.last_name as Name, e.job_ID, d.department_name, l.street_address,
+l.city from employees e, locations l,departments d where d.department_id=e.department_id and
+ d.location_id=l.location_id and l.state_province is null;
+
+9-Write an SQL query to show records from one table that another table does not have.
+
+select job_id from jobs minus select job_id from employees;
+
+SELECT employee_id, job_id FROM employees MINUS SELECT
+employee_id, job_id FROM job_history;
+
+select employee_id, job_id From employees union select employee_id, job_id 
+from job_history;
+
+10-Display all employees who belong to country US but not belongs to state province Washington.
+
+select e.first_name,l.state_province, l.country_id
+from employees e, locations l, departments d
+where (e.department_id = d.department_id) and (d.location_id = l.location_id)
+and (l.country_id = 'US' and l.state_province <> 'Washington'); 
+
+
+select count(job_id), job_id from employees group by job_id having count(job_id) > 2;
+
+select d.department_name,e.department_id, avg(salary),count(*) 
+from employees e, departments d
+where e.department_id = d.department_id
+group by e.department_id;
+
+SELECT  E.DEPARTMENT_ID,AVG(SALARY),COUNT(*) 
+FROM EMPLOYEES E,DEPARTMENTS D 
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID
+AND E.COMMISSION_PCT IS NOT NULL GROUP BY E.DEPARTMENT_ID
+
+--1
+SELECT INITCAP(LAST_NAME) FROM EMPLOYEES;
+--2
+SELECT LAST_NAME FROM EMPLOYEES WHERE LAST_NAME like '%aa%';
+--3
+SELECT COUNT(*),JOB_ID FROM EMPLOYEES GROUP BY JOB_ID;
+--4
+SELECT E.FIRST_NAME||' '||E.HIRE_DATE,LENGTH(E.FIRST_NAME) FROM EMPLOYEES E,JOBS J WHERE E.JOB_ID = J.JOB_ID 
+AND J.JOB_TITLE = 'Sales Representative';
+--5
+SELECT E.FIRST_NAME, S.FIRST_NAME  FROM EMPLOYEES E,EMPLOYEES S WHERE E.EMPLOYEE_ID = S.MANAGER_ID ;
+--6
+UPDATE EMPLOYEES set SALARY=SALARY+(0.5*SALARY) where SALARY <=7000;
+--7
+SELECT  E.DEPARTMENT_ID,AVG(SALARY),COUNT(*)
+FROM EMPLOYEES E,DEPARTMENTS D 
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID
+AND E.COMMISSION_PCT IS NOT NULL 
+GROUP BY E.DEPARTMENT_ID;
+--8
+SELECT First_Name,HIRE_DATE FROM EMPLOYEES WHERE HIRE_DATE<'20-MAY-07';
+--9
+SELECT J.* FROM JOBS J , JOB_HISTORY H WHERE J.job_id = H.JOB_ID AND J.JOB_TITLE = 'Public Accountant';
+--10
+
+SELECT FIRST_NAME,SALARY,EMAIL,DEPARTMENT_ID FROM EMPLOYEES 
+WHERE SALARY > (SELECT AVG(SALARY) FROM EMPLOYEES) ORDER BY SALARY desc;
+
+--11
+
+SELECT FIRST_NAME, SALARY,COMMISSION_PCT,SALARY+(commission_pct*salary) AS TOTALSALARY 
+FROM EMPLOYEES WHERE COMMISSION_PCT IS NOT NULL ;
+--12
+SELECT L.CITY,L.COUNTRY_ID,D.DEPARTMENT_ID 
+FROM LOCATIONS L,DEPARTMENTS D WHERE d.location_id = l.location_id AND d.department_id
+IN
+
+( SELECT
+    department_id
+  FROM
+    employees
+  GROUP BY
+    department_id
+HAVING
+    COUNT(*) > 3
+);
+--13
+
+SELECT
+    e.department_id,
+    d.department_name,
+    l.city,
+    l.country_id,
+    l.postal_code
+FROM
+    employees e,
+    departments d,
+    locations l
+WHERE
+    e.manager_id = d.manager_id
+    AND d.location_id = l.location_id;
+--14
+
+SELECT
+    e.first_name,
+    e.last_name,
+    e.department_id,
+    d.department_name
+FROM
+    employees e,
+    departments d
+WHERE
+    e.department_id = d.department_id
+    OR e.department_id IS NULL;
+--15
+
+SELECT
+    e.first_name,
+    e.last_name,
+    e.salary,
+    e.manager_id,
+    d.department_name,
+    l.city
+FROM
+    employees e,
+    departments d,
+    locations l
+WHERE
+    e.last_name LIKE '%y'
+    AND e.department_id = d.department_id
+        AND d.location_id = l.location_id;
+
+select (months_between('10-DEC-23',sysdate) / 12)  from dual;
+
+
+-------------------------------------------lab8
+
+--LAB 8 
+--K20-1052, S.M.HASSAN ALI
+
+-- TASK 1
+
+--set serveroutput on
+--
+--Declare
+--
+--Sec_Name varchar2(20):= 'Lab8';
+--Course_Name varchar(20) := 'Database Systems Lab'; Begin
+--dbms_output.put_line('This is : '|| Sec_Name||' and the courseis' || Course_Name);
+--
+--End;
+
+--
+-- TASK 2
+
+set serveroutput on;
+Declare 
+
+ a integer:=20;
+ b integer:=31;
+ f real;
+BEGIN
+
+DBMS_OUTPUT.PUT_LINE('a+b ' || (a+b));
+DBMS_OUTPUT.PUT_LINE('a+b/3 ' || (a+b)/3);
+DBMS_OUTPUT.PUT_LINE('a*b ' || (a*b)/3);
+
+END;
+
+
+
+--
+---- TASK 3
+--
+--set serveroutput on;
+--
+--Accept emp_id EMPLOYEES.EMPLOYEE_ID%type Prompt 'Enter your Employee_id: '
+--
+--Declare
+--
+--  emp_id EMPLOYEES.EMPLOYEE_ID%type;
+--  emp_salary EMPLOYEES.SALARY%type;
+--  bonus_amount REAL;
+--
+-- Begin
+--
+--  EMP_ID := &EMP_ID;
+--  SELECT SALARY INTO emp_salary from EMPLOYEES WHERE EMPLOYEE_ID = emp_id;
+--  if(emp_salary < 1000) THEN
+--  bonus_amount := emp_salary * 0.1;
+--  
+--  ELSIF (emp_salary>=1000 AND emp_salary<=1500) THEN
+--    bonus_amount := emp_salary*0.15;
+--    
+--  ELSE
+--    bonus_amount := emp_salary*0.20;
+--  dbms_output.put_line('Bonus Amount: ' || bonus_amount);
+--
+--End IF; 
+--End;
+--
+--
+---- TASK 4
+--
+--set serveroutput on;
+--
+--Accept emp_id EMPLOYEES.EMPLOYEE_ID%type Prompt 'Enter your Employee_id: '
+--
+--Declare
+--
+--   emp_id EMPLOYEES.EMPLOYEE_ID%type;
+--   emp_com EMPLOYEES.COMMISSION_PCT%type;
+--   emp_salary EMPLOYEES.SALARY%type;
+-- 
+--BEGIN
+--   emp_id := &emp_id;
+--  SELECT SALARY, COMMISSION_PCT INTO emp_salary, emp_com FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_id;
+--  
+--  if(emp_com is null) THEN
+--  Update Employees set Salary = emp_salary + emp_com where Employee_id = emp_id;
+--  END IF;
+--  
+--  dbms_output.put_line('Salary Updated');
+-- 
+--END;
+--
+--
+---- TASK 5
+--
+--set serveroutput on;
+--
+--Declare
+--
+--   dep_Name DEPARTMENTS.DEPARTMENT_NAME%type;
+--   dep_id DEPARTMENTS.DEPARTMENT_ID%type := 30;
+--
+--Begin
+--
+--   Select Distinct D.DEPARTMENT_NAME INTO dep_Name 
+--   From Employees E, Departments D
+--   where (D.DEPARTMENT_ID = E.DEPARTMENT_ID) and (D.DEPARTMENT_ID = dep_id);
+--
+--   dbms_output.put_line('Department Name : ' || dep_name);
+--
+--End;
+--
+--
+---- TASK 6
+--
+--SET SERVEROUTPUT ON;
+--
+--CREATE OR REPLACE PROCEDURE UPDATE_SALARY (emp_no in NUMBER)
+--IS
+--emp_salary EMPLOYEES.SALARY%TYPE;
+--
+--BEGIN
+-- SELECT SALARY INTO emp_salary from Employees where employee_id = emp_no;
+-- UPDATE EMPLOYEES SET SALARY = emp_salary + (emp_salary*0.10) WHERE EMPLOYEES_ID = emp_no;
+-- dbms_output.put_line('Salary of the employee ' || emp_no || ' updated!');
+--
+--END;
+--EXEC UPDATE_SALARY(100);
+--
+--
+---- TASK 7
+--
+--SET SERVEROUTPUT ON;
+--
+--CREATE OR REPLACE PROCEDURE ADD_SALARY (DEP_NO IN NUMBER)
+--IS
+--emp_salary EMPLOYEES.SALARY%TYPE;
+--
+--BEGIN
+-- for c in (Select Employee_id , Salary from EMPLOYEES WHERE DEPARTMENT_ID = dept_no)
+-- LOOP 
+--   IF(C.salary > 5000) THEN 
+--    UPDATE EMPLOYEES SET SALARY = C.SALARY + 1000 WHERE EMPLOYEE_ID = C.EMPLOYEE_ID;
+--    dbms_output.put_line('Salary of the employee ' || c.EMPLOYEE_ID || ' updated!');
+--           END IF;
+--    END LOOP;
+--END;
+--
+--
+---- TASK 8
+--A)
+--CREATE OR REPLACE VIEW EMP_DESIGNATION(JOB_ID, COUNT_EMPLOYEES)
+--SELECT JOB_ID, COUNT(JOB_ID) AS COUNT_EMPLOYEES FROM EMPLOYEES GROUP BY JOB_ID;
+--SELECT * FROM EMP_DESIGNATION; 
+--
+--B)
+--CREATE OR REPLACE VIEW DISPLAY_EMPLOYEE(EMPLOYEE_ID, EMPLOYEE_NAME, DEPARTMENT_ID, DEPARTMENT_NAME)
+--AS SELECT E.EMPLOYEE_ID, E.FIRST_NAME, E.DEPARTMENT_ID, D.DEPARTMENT_NAME
+--FROM EMPLOYEES E, DEPARTMENTS D WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID AND lower(E.FIRST_NAME) <> 'king';
+--SELECT * FROM DISPLAY_EMPLOYEE;
+--
+--C)
+--CREATE OR REPLACE VIEW  DISPLAY_EMPLOYEES(EMPLOYEE_ID, EMP
+LOYEE_NAME, DEPARTMENT_ID, DEPARTMENT_NAME)
+--AS SELECT E.EMPLOYEE_ID, E.FIRST_NAME || ' ' || E.LAST_NAME AS empname, E.DEPARTMENT_ID, D.DEPARTMENT_NAME
+--FROM EMPLOYEES E, DEPARTMENTS D WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID;
+--SELECT * FROM DISPLAY_EMPLOYEES;
+--
+--
+------ TASK 9
+--
+--set serveroutput on;
+--DECLARE
+--    N1 INTEGER;
+--    N2 INTEGER;
+--    N3 INTEGER;
+--BEGIN
+--    N1 := &N1;
+--    N2 := &N2;
+--    N3 := N1 + N2;
+--    dbms_output.put_line('Total Sum: ' || N3);
+--END;
+--
+--
+--
+------ TASK 10
+--
+--set serveroutput on;
+--DECLARE
+--  N1 INTEGER;
+--  N2 INTEGER;
+--  TOTAL INTEGER:=0;
+--BEGIN 
+--  N1:=&N1;
+--  N2:=&N2;
+--  FOR C IN N1 .. N1
+--  LOOP
+--     TOTAL:=TOTAL+C;
+--  END LOOP;
+--    dbms_output.put_line('Total Sum: ' || TOTAL);
+--END;
+--
+------ TASK 11
+--
+--set serveroutput on;
+--DECLARE
+--    employee_no EMPLOYEES.EMPLOYEE_ID%type;
+--    employee_name EMPLOYEES.FIRST_NAME%type;
+--    employee_hire_date EMPLOYEES.HIRE_DATE%type;
+--    employee_department_name DEPARTMENTS.DEPARTMENT_NAME%type;
+--BEGIN
+--    employee_no := &employee_no;
+--    SELECT E.EMPLOYEE_ID, E.FIRST_NAME || ' ' || E.LAST_NAME,  E.HIRE_DATE, D.DEPARTMENT_NAME INTO employee_no, 
+--    employee_name, employee_hire_date, employee_department_name
+--    FROM EMPLOYEES E, DEPARTMENTS D WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID AND E.EMPLOYEE_ID = employee_no;
+--    dbms_output.put_line('Employee Id: ' || employee_no || ' , Employee Name: ' || employee_name || ' , Hire Date: ' || employee_hire_date || ' ,Department Name: ' || employee_department_name);
+--END;
+--
+--
+------ TASK 12
+--
+--set serveroutput on;
+--DECLARE
+--    PALINDROMECHECK VARCHAR(20);
+--    REVERSE_NUMBER VARCHAR(20);
+--BEGIN 
+--    PALINDROMECHECK := &PALINDROMECHECK;
+--    --reverse function will directly reverse the string of numbers
+--    SELECT REVERSE(PALINDROMECHECK) INTO REVERSE_NUMBER FROM DUAL;
+--    IF(PALINDROMECHECK = REVERSE_NUMBER) THEN
+--        dbms_output.put_line('The number ' ||PALINDROMECHECK|| ' is palindrome.');
+--    ELSE
+--        dbms_output.put_line('The number ' ||PALINDROMECHECK|| ' is not palindrome.');
+--    END IF;
+--END;
+--
+--
+------ TASK 13
+--
+--set serveroutput on;
+--DECLARE
+--    emp_id  EMPLOYEES.EMPLOYEE_ID%type;
+--    emp_first EMPLOYEES.FIRST_NAME%type;
+--    emp_last EMPLOYEES.LAST_NAME%type;
+--    emp_email EMPLOYEES.EMAIL%type;
+--    emp_phone EMPLOYEES.PHONE_NUMBER%type;
+--    emp_hire EMPLOYEES.HIRE_DATE%type;
+--    emp_job_id EMPLOYEES.JOB_ID%type;
+--    emp_salary EMPLOYEES.SALARY%type;
+--    emp_comm EMPLOYEES.COMMISSION_PCT%type;
+--    emp_manager_id EMPLOYEES.MANAGER_ID%type;
+--    emp_depno EMPLOYEES.DEPARTMENT_ID%type;
+--    emp_depart_name DEPARTMENTS.DEPARTMENT_NAME%type;
+--    emp_location_id DEPARTMENTS.LOCATION_ID%type;
+--BEGIN
+--    emp_id := &emp_id;
+--    emp_first := &emp_first;
+--    emp_last := &emp_last;
+--    emp_email := &emp_email;
+--    emp_phone := &emp_phone;
+--    emp_hire := &emp_hire;
+--    emp_job_id := &emp_job_id;
+--    emp_salary := &emp_salary;
+--    emp_comm := &emp_comm;
+--    emp_manager_id := &emp_manager_id;
+--    emp_depno := &emp_depno;
+--    emp_depart_name := &emp_depart_name;
+--    emp_location_id := &emp_location_id;
+--    INSERT INTO EMPLOYEES (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct, manager_id,department_id) 
+--        VALUES (emp_id,emp_first,emp_last,emp_email,emp_phone,emp_hire,emp_job_id,emp_salary,emp_comm,emp_manager_id,emp_depno)
+--    INSERT INTO DEPARTMENTS(DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID)
+--        VALUES(emp_depno,emp_depart_name,emp_manager_id,emp_location_id);
+--    dbms_output.put_line('Record for Employee # : '|| emp_id || ' entered!');
+--END;
+--
+------ TASK 14
+--
+--set serveroutput on;
+--DECLARE
+--    emp_salary EMPLOYEES.SALARY%type:=0;
+--    emp_first_name EMPLOYEES.FIRST_NAME%type;
+--    emp_last_name EMPLOYEES.LAST_NAME%type;
+--    emp_employee_id EMPLOYEES.EMPLOYEE_ID%type := 7499;
+--    emp_manager_id EMPLOYEES.MANAGER_ID%type := 7499;
+--BEGIN
+--    SELECT MANAGER_ID INTO emp_manager_id FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_employee_id;
+--    WHILE(emp_salary <= 2500)
+--    LOOP
+--        SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY INTO emp_employee_id, emp_first_name, emp_last_name, emp_salary
+--        FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_employee_id;
+--    END LOOP;
+--    dbms_output.put_line('The Employe who is higher in chain of command: ' || emp_first_name || ' ' || emp_last_name || ' with salary: ' || emp_salary);
+--EXCEPTION
+--    WHEN NO_DATA_FOUND
+--    THEN
+--        dbms_output.put_line('Record with employee id: ' || emp_employee_id || ' does not exists.');
+--END;
+--
+--
+---- TASK 15
+--
+--set serveroutput on;
+--DECLARE
+--    i NUMBER := 1;
+--    j NUMBER := 100;
+--    SUM NUMBER := 0;
+--BEGIN
+--    FOR c in i .. j
+--    LOOP
+--        SUM :=SUM+c;
+--    END LOOP;
+--    dbms_output.put_line('Total Sum : ' || SUM);
+--END;
+--    
+--    
+--  
+
+
+
+---------------------------lab9
+
+--Create table emp20 (id number, name varchar(20), age number, address varchar(20), salaray number);
+--
+--
+--
+--create or replace trigger emp20_trigger
+--before delete or insert or update on emp20
+--for each row 
+--declare 
+--new_sal number;
+--begin
+--new_sal := :new.salaray - :old.salaray;
+--dbms_output.put_line('');
+--dbms_output.put_line('Old Salary ' || :old.salaray);
+--dbms_output.put_line('New Slaray ' || :new.salaray);
+--dbms_output.put_line('Difference ' || new_sal);
+--dbms_output.put_line('');
+--end;
+--
+--
+--
+--Insert into emp20(id, name, age, address, salaray)
+--Select 1, 'Adams', 25, 'South Wales', 2400 from dual union all
+--Select 2, 'James', 23, 'Orlando', 2100 from dual union all
+--Select 3, 'Leena', 27, 'Vatican City', 2900 from dual union all
+--Select 4, 'John', 29, 'North Hampshire', 3100 from dual union all
+--Select 5, 'Nancy', 24, 'Dublin', 2500 from dual union all
+--Select 5, 'Sarah', 22, 'Dublin', 2700 from dual;
+--
+--
+--set serveroutput on;
+--insert into emp20 values(8,'bari',25,'India',3900);
+--
+--set serveroutput on;
+--update emp20 set salaray = 55000
+--where id = 8;
+--(8,'bari',25,'India',5500);
+
+
+
+CREATE TABLE Person (
+ID int NOT NULL,
+Name varchar (50) NOT NULL,
+PreviousName varchar (50) NULL,
+SameNameCount int NULL,
+CONSTRAINT pk_Person PRIMARY KEY (ID));
+
+--1--------------------------------------
+--CREATE OR REPLACE TRIGGER update_previous_name
+--BEFORE UPDATE ON Person
+--FOR EACH ROW
+--BEGIN
+--	:new.PreviousName := :old.Name;
+--	dbms_output.put_line('');
+--	dbms_output.put_line('Old Name was ' || :old.PreviousName);
+--	dbms_output.put_line('New Name is ' || :new.Name);
+--	dbms_output.put_line('');
+--END;
+----
+
+ALTER TRIGGER UPDATE_PREVIOUS_NAME ENABLE;
+
+INSERT INTO Person (ID, Name) values (1, 'Hassan');
+INSERT INTO Person (ID, Name) values (3, 'Ali');
+
+UPDATE Person SET Name = 'Syed Hassan' WHERE ID = 1;
+SELECT * FROM Person;
+
+--2-----------------------------------
+--CREATE OR REPLACE TRIGGER set_same_name_count
+--AFTER INSERT OR DELETE OR UPDATE OF Name
+--ON Person
+--BEGIN
+--	UPDATE Person A SET SameNameCount = (SELECT COUNT(*) FROM Person WHERE NAME = A.Name);
+--END;
+--
+--INSERT INTO Person (ID, Name) values (2, 'Ali');
+--
+--SELECT * FROM Person;
+--
+--
+--
+--
+--
+--insert into emp20 values(8,'bari',25,'India',3900);
+
+
+------------------------------------lab 9
+
+
+/
+
+SET AUTOCOMMIT OFF;
+
+
+/
+----------------1---------------
+
+CREATE TABLE Persons
+ (
+  PersonID int PRIMARY KEY ,
+  FirstName varchar(255),
+  LastName varchar(255),
+  Address varchar(255),
+  City varchar(255),
+  Age int
+);
+
+insert into Persons values(5,'Furqan','fazal','abc','Karachi',20);
+
+SAVEPOINT after_5_rows;
+
+insert into Persons values(6,'Munir','Abbasi','abc','Karachi',20);
+
+insert into Persons values(7,'Erum','Zahid','abc','Karachi',20);
+
+update Persons 
+set FIRSTNAME = 'Rida'
+where personid = 7;
+
+
+ROLLBACK TO SAVEPOINT after_5_rows;
+
+--AFTER PERFORMING ROLLBACK WE ONLY HAVE 5 ROWS IN TABLE
+
+select * from PERSONS;
+
+----------------2---------------
+
+insert into Persons values(7,'Erum','Zahid','abc','Karachi',20);
+insert into Persons values(8,'Mustafa','Zahid','abc','Karachi',28);
+
+Update PERSONS
+set age = 30
+where PersonID = 8;
+
+--SET TRANSACTION
+--NAME 'update_on_same_id';
+--
+
+Update PERSONS
+set age = 30
+where PersonID = 8;
+
+
+--Since we are updating a value that has not been committed yet so it will 
+--not update the record on the new session, we need to commit that on previous seesion
+
+select * from PERSONS;
+set transaction name 'Afterupdate';
+
+savepoint afterupdate;
+
+Update PERSONS
+set age = 32
+where PersonID = 1;
+
+set transaction name 'Afterupdate1';
+savepoint afterupdate;
+
+commit;
+
+rollback to savepoint afterupdate;
+-- once committed cant be rolled back
+
+
+SET TRANSACTION NAME 'HELLO';
+
+SAVEPOINT A;
+
+ROLLBACK TO SAVEPOINT A;
+/
+
+
+
+
+---------------------------------lab 10
+
+db.restaurant.insert(
+{
+  "address": {
+     "building": "1007",
+     "coord": [ -73.856077, 40.848447 ],
+     "street": "Morris Park Ave",
+     "zipcode": "10462"
+  },
+  "borough": "Bronx",
+  "cuisine": "Bakery",
+  "grades": [
+     { "date": { "date": 1393804800000 }, "grade": "A", "score": 2 },
+     { "date": { "date": 1378857600000 }, "grade": "A", "score": 6 },
+     { "date": { "date": 1358985600000 }, "grade": "A", "score": 10 },
+     { "date": { "date": 1322006400000 }, "grade": "A", "score": 9 },
+     { "date": { "date": 1299715200000 }, "grade": "B", "score": 14 }
+  ],
+  "name": "Morris Park Bake Shop",
+  "restaurant_id": "30075445"
+}
+
+)
+
+db.restaurant.find().pretty()
+
+db.restaurant.find({},{"restaurant_id" : 1,"name":1,"borough":1,"cuisine" :1}).pretty()
+
+db.restaurant.find({"restaurant_id" : 1,"name":1,"borough":1,"cuisine" :1,"_id":0}).pretty()
+
+db.restaurant.find({},{"restaurant_id" : 1,"name":1,"borough":1,"address.zipcode" :1,"_id":0}).pretty()
+
+db.restaurant.find({"borough": "Bronx"}).pretty()
+
+db.restaurant.find({"borough": "Bronx"}).limit(5).pretty()
+
+
+db.restaurant.find({grades : { $elemMatch:{"score":{$gt : 90}}}}).pretty()
+
+db.restaurant.find({grades : { $elemMatch:{"score":{$gt : 8 , $lt :10}}}}).pretty()
+
+db.restaurant.find({"address.coord" : {$lt : -95.754168}}).pretty()
+
+
+db.restaurant.find(
+{ 
+"borough": "Bronx" , 
+$or : [
+{ "cuisine" : "Bakery" },
+{ "cuisine" : "Chinese" }
+] 
+} 
+).pretty()
+
+use practicedb
+
+db.save
+db.help
+
+db.getCollectionNames()
+show collections
+
+show dbs
+
+use laptopDb
+
+db.createCollection("Hp")
+
+db.Hp.insert(
+
+            { 
+             title: 'Spectre',
+            description: 'best spectre', 
+            amount: 150
+         }
+)
+
+db.Hp.find().pretty(
+)
+
+db.Hp.find( { "amount" : {$gt:120} })
+    
+db.Hp.find( { 
+    
+    $and: [{"amount" : {$gt:100}}, {"title" : "Pavilion"} ]
+    
+    })
+    
+    
+    db.Hp.find( { 
+    
+    $or: [{"amount" : {$gt:100}}, {"title" : "Pavilion"} ]
+    
+    })
+    
+    
+    db.Hp.update({"amount": 120},{$set: {"amount": 160} })
+    
+   db.Hp.remove({"amount": 150}) 
+    
+db.Hp.insert({
+{
+      title: 'NoSQL Database', 
+      description: "NoSQL database doesn't have tables",
+      by: 'Ali Raza',
+      url: 'http://www.gmail.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 20, 
+      comments: [	
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2013,11,10,2,35),
+            like: 0 
+         }
+      ]
+   }
+
+})
+
+
+----------------------------------------pratice
+
+
+
+
+
+set serveroutput on;
+--Accept x Number PROMPT 'Please enter something: '
+declare 
+  a Number;
+
+begin
+  a := &a;
+  dbms_output.put_line('Hello ' || a);
+end;           
+ 
+
+--set serveroutput on;
+--
+--Accept emp_id EMPLOYEES.EMPLOYEE_ID%type Prompt 'Enter your Employee_id: '
+--
+--Declare
+--
+--   emp_id EMPLOYEES.EMPLOYEE_ID%type;
+--   emp_com EMPLOYEES.COMMISSION_PCT%type;
+--   emp_salary EMPLOYEES.SALARY%type;
+-- 
+--BEGIN
+--   emp_id := &emp_id;
+--  SELECT SALARY, COMMISSION_PCT INTO emp_salary, emp_com FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_id;
+--  
+--  if(emp_com = null) THEN
+--  Update Employees set Salary = emp_salary + emp_com where Employee_id = emp_id;
+--  END IF;
+--  
+--  dbms_output.put_line('Salary Updated');
+-- 
+--END;
+
+
+--SET serveroutput on;
+--
+----Accept dep_no DEPARTMENTS.DEPARTMENT_ID%type Prompt 'Enter the dep id: '
+--
+--Declare
+--
+-- jobid Employees.Job_id%type;
+-- dep_no Departments.Department_id%type;
+--
+--Begin
+--
+--dep_no := &dep_no;
+--
+--Select E.Job_id into jobid from Employees E, Departments D 
+--where (E.Department_Id = D.Department_Id) and (D.Department_Id = dep_no);
+--
+--dbms_output.put_line(job_id);
+--
+--End;
+
+
+--SET SERVEROUTPUT ON;
+--
+--CREATE OR REPLACE PROCEDURE UPDATE_SALARY (emp_no in NUMBER)
+--IS
+--emp_salary EMPLOYEES.SALARY%TYPE;
+--
+--BEGIN
+-- SELECT SALARY INTO emp_salary from Employees where employee_id = emp_no;
+-- UPDATE EMPLOYEES SET SALARY = emp_salary + (emp_salary*0.10) WHERE EMPLOYEES_ID = emp_no;
+-- dbms_output.put_line('Salary of the employee ' || emp_no || ' updated!');
+--
+--END;
+
+--
+
+
+--set serveroutput on;
+--DECLARE
+--    N1 INTEGER;
+--    N2 INTEGER;
+--    N3 INTEGER:=0;
+--BEGIN
+--    N1 := &N1;
+--    N2 := &N2;
+--    
+--  for c in N1 .. N2
+--  LOOP
+--    N3:=N3+C;
+--  END LOOP;  
+--  
+--  dbms_output.put_line('Total Sum: ' || N3);
+--END;
+
+--
+--set severoutput on;
+--
+--Declare
+--
+--rv varchar(10):='1234';
+--checkrv varchar(10):='4321';
+--rvv varchar(10);
+--Begin
+--
+--Select Reverse(rv) into rvv from dual;
+--
+--if(rvv = checkrv) Then
+--dbms_output.put_line('Tru hai');
+--
+--else
+--dbms_output.put_line('fals hai');
+--
+--End If;
+--
+--End;
+--/
+--set serveroutput on;
+--DECLARE
+--n1 NUMBER := &num1;
+--BEGIN
+---- test if the number provided by the user is even
+--IF MOD(n1,2) = 0 THEN
+--DBMS_OUTPUT.PUT_LINE ('The number. '||n1||
+--' is even number');
+--ELSE
+--DBMS_OUTPUT.PUT_LINE ('The number '||n1||' is odd number.');
+--END IF;
+--DBMS_OUTPUT.PUT_LINE ('Done Successfully');
+--END;
+--/
+--
+--set serveroutput on;
+--DECLARE
+--
+--dt1 DATE := TO_DATE('&new_dt', 'DD-MON-YYYY');
+--get_day VARCHAR2(15);
+--
+--BEGIN
+--
+--get_day := RTRIM(TO_CHAR(currentday,'DAY'));
+--DBMS_OUTPUT.PUT_LINE(currentday);
+--END;
+--/
+/
+
+
+
+
+set serveroutput on;
+
+create or replace function findifexist(empno in number)
+return number 
+is
+flag number:=0;
+Begin
+Declare
+empnoo Employees.Employee_id%type:= empno;
+Select count(1) into flag from Employees where Employees_id = empnoo;
+
+if(flag = 0) then
+return (flag)
+ 
+elsif(flag = 1) then
+return (flag)
+
+else 
+return (flag)
+
+end if;
+end;
+
+------trigger within a function call
+create or replace TRIGGER update_job_history
+  AFTER UPDATE OF job_id, department_id ON employees
+  FOR EACH ROW
+BEGIN
+  add_job_history(:old.employee_id, :old.hire_date, sysdate,
+                  :old.job_id, :old.department_id);
+END;
+
+create or replace PROCEDURE add_job_history
+  (  p_emp_id          job_history.employee_id%type
+   , p_start_date      job_history.start_date%type
+   , p_end_date        job_history.end_date%type
+   , p_job_id          job_history.job_id%type
+   , p_department_id   job_history.department_id%type
+   )
+IS
+BEGIN
+  INSERT INTO job_history (employee_id, start_date, end_date,
+                           job_id, department_id)
+    VALUES(p_emp_id, p_start_date, p_end_date, p_job_id, p_department_id);
+END add_job_history;
+
+
+
+
+
+--select * from departments;
+--select * from job_history;
+--select * from employees;
+--select * from locations;
+--
+--select e.employee_id, j.start_date, j.end_date, e.department_id from employees e, job_history j where e.department_id = j.DEPARTMENT_ID
+--;
+--
+--select sum(salary), avg(salary), department_id from EMPLOYEES
+--group by department_id;
+--
+--select count(e.employee_id), l.country_id from employees e, DEPARTMENTS d, locations l
+--where e.department_id = d.department_id and d.location_id = l.location_id
+--group by l.COUNTRY_ID;
+--
+--select count(e.employee_id),sum(salary)  ,e.department_id from employees e 
+--group by e.department_id;
+--
+--select e.employee_id, e.hire_date, months_between(sysdate, hire_date) from employees e
+--order by e.hire_date asc;
+--
+--Select max(Start_Date) from job_history group by(employee_id)
+--having count(employee_id)<8;
+--
+--select d.department_id, d.department_name, e.first_name, e.salary, l.city from employees e, departments d, locations l where
+--e.employee_id = d.manager_id and d.location_id = l.location_id;
+--
+--select count(e.employee_id), l.state_province from employees e, departments d, locations l where
+--e.department_id = d.department_id and d.location_id = l.location_id and l.state_province is not null 
+--group by l.state_province
+--order by count(e.employee_id) desc
+--;
+--
+--select * from locations;
+--
+--select avg(months_between(end_date, start_date)), department_id from job_history
+--group by department_id;
+--
+--
+--select count(e.employee_id), l.country_id, l.city from employees e, departments d, locations l where
+--e.department_id = d.department_id and d.location_id = l.location_id
+--group by l.country_id, l.CITY
+--;
+--select * from countries;
+--
+--select count(e.employee_id), r.region_name from employees e, departments d, locations l, countries c, regions r
+--where e.department_id = d.department_id and d.location_id = l.location_id and l.country_id = c.country_id and c.region_id = r.region_id
+--group by r.region_name;
+--
+--create table ddl(entity_name varchar(25), user_name varchar(25), operation_name varchar(25), time_of_event date);
+--ora_dict_obj_name
+--ora_dict_obj_type
+--ora_sysevent
+--ora_dict_obj_owner
+--ora_login_user
+--
+--create or replace procedure incrementing(emp_id in employees.employee_id%type)
+--is
+--hire employees.hire_date%type;
+--totalemp number;
+--begin
+--select hire_date into hire from employees where employee_id= emp_id;
+--totalemp:= sysdate-hire;
+--update employees set salary= salary+5000+1000 *(totalemp) where employee_id = emp_id;
+--dbms_output.put_line('Record Updated');
+--end;
+--
+--
+--set serveroutput on
+--declare
+--bonus integer:=0;
+--e_id EMPLOYEES.EMPLOYEE_id %type;
+--e_salary EMPLOYEES.SALARY%type;
+--
+--begin
+--select salary into e_salary from employees where EMPLOYEE_Id = &e_id;
+--if(e_salary < 1000) then bonus := e_salary * 0.10;
+--dbms_output.put_line('Bonus: ' || bonus);
+--
+--elsif (e_salary >=1000  and e_salary <= 1500) then bonus:=e_salary *0.15;
+--dbms_output.put_line('Bonus: ' || bonus);
+--
+--elsif (e_salary >= 1500) then bonus:=e_salary *0.20;
+--dbms_output.put_line('Bonus: ' || bonus);
+--
+--elsif (e_salary = 0) then bonus:=0;
+--dbms_output.put_line('Bonus: ' || bonus);
+--end if;
+--end;
+
+--
+
+--set serveroutput on;
+--create or replace procedure Find_job(deptno in number)
+--is
+--begin
+--for c in (select j.job_title from jobs j, departments d where (j.job_id = d.job_id) and (d.department_id = deptno))
+--loop
+--dbms_output.put_line('Job title = ' || c.job_title);
+--end loop;
+--end;
+
+
+
+
+
+

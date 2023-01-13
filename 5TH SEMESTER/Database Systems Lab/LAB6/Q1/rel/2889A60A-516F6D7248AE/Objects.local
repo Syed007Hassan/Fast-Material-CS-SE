@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="0EF83FD3-D6DE-1944-7EC2-E3507597ED70" name="Author" seqName="seg_0"/>
+   <object objectType="Table" objectID="4B288F49-4CB9-75CF-86DE-384C4D9BF9B7" name="Review" seqName="seg_0"/>
+   <object objectType="Table" objectID="7F94B149-2A02-5BD5-008E-FBB920398AFF" name="Reveiwer" seqName="seg_0"/>
+   <object objectType="Table" objectID="83C8DF56-6A47-E0D2-C393-BA6332BC69B7" name="Paper" seqName="seg_0"/>
+   <object objectType="Table" objectID="C8658A70-EE54-01C0-1989-0622B20D9D53" name="Assigned" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2DB4522E-ABFC-7846-6BDA-2FFCD01E646B" name="Review_Reveiwer_FK" containerID="4B288F49-4CB9-75CF-86DE-384C4D9BF9B7" refContainerID="7F94B149-2A02-5BD5-008E-FBB920398AFF" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="3AB8C75D-FAA4-79B1-0B2B-C3AA011EA040" name="Paper_Author_FK" containerID="83C8DF56-6A47-E0D2-C393-BA6332BC69B7" refContainerID="0EF83FD3-D6DE-1944-7EC2-E3507597ED70" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="7C829DFC-BA7A-1A1B-6E10-96306E015CBF" name="FK_ASS_2" containerID="C8658A70-EE54-01C0-1989-0622B20D9D53" refContainerID="7F94B149-2A02-5BD5-008E-FBB920398AFF" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D53882C4-F53C-70E6-C32D-50736E0150C7" name="FK_ASS_1" containerID="C8658A70-EE54-01C0-1989-0622B20D9D53" refContainerID="83C8DF56-6A47-E0D2-C393-BA6332BC69B7" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>
