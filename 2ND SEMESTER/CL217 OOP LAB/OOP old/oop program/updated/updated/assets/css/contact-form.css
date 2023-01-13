@@ -1,0 +1,55 @@
+
+input[type=text],input[type=email],textarea{
+  width: 400pt;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contact-container{
+  width: 80%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-section{
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.contact-div{
+  text-align: left;
+}
+
+#contact-form{
+  display: inline-block;
+}
+
+#contact-submit {
+  border-radius: 5px;
+  border: 2px solid #008CBA;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 15px;
+  margin: 10px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #008CBA;
+  color: white;
+  width: 30%;
+}
+
+#contact-submit:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}

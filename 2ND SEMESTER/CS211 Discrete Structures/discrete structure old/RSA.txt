@@ -1,0 +1,9 @@
+chose two prime number
+compute n,n-p*q
+compute k,k=(p-1)(q-1)
+chose e such that 1<e<k and gcd(e,k)=1
+let d such that d is the inverse of e mod k
+public key(e,n)
+C-M^e mod n  (incruption)
+private key
+M-C^d mod n(decruption)

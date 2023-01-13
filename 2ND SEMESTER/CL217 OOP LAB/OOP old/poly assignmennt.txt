@@ -1,0 +1,14 @@
+Overload the following UNARY operators:
+-- (prefix and postfix implementation)
+* (dereferencing operator)
+- (negation)
++ (unary positivie operator)
+Construct a C++ program where a single GLOBAL OPERATOR FUNCTION would have been working with more than on class (for UNARY OPERATOR).
+Construct a C++ program where some comparison operators would have been overloaded, your program must have GLOBAL implementation for operator functions.
+By exploring C++ library on your PC, find and write down all the overloaded operators for STRING class. Elaborate the functionalities of each overloaded operator, also insert the operator functions.
+Construct the programs for overloading (both through GLOBAL FUNCTION and MEMBER FUNCTION) the following binary arithmetic operators:
+ + (Addition)
+- (Subtraction)
+* (Multiplication)
+/ (Division)
+% (Modulo)

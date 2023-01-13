@@ -1,0 +1,15 @@
+directed graph:
+two degree
+1.in degree
+when arrow comes to the verteces'
+2.out degree
+when arrow goes from vertces
+cycle graph:
+when each vertices connect to each other 
+wheel graph:
+when each vertces connect to one vertce
+
+ISOMORPHIC GRAPH:
+same vertecs
+same edges
+same degree of each vertces
