@@ -1,7 +1,7 @@
 # **FAST STUDY MATERIAL**
 
 ### WHAT THIS REPO CONTAINS?
-It contains lecture slides, assignments, books and course outlines for each semester's course.
+It contains lecture slides, assignments, books, solved lab tasks and course outlines for each semester's course.
 
 1. [1st Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/1ST%20SEMESTER)
 * [Intro to Info. and Comm. Technologies](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/1ST%20SEMESTER/CL117%20ICT)
