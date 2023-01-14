@@ -1,4 +1,4 @@
-# **FAST STUDY MATERIAL**
+# **FAST NUCES STUDY MATERIAL**
 
 ### WHAT THIS REPO CONTAINS?
 It contains lecture slides, assignments, books, solved lab tasks and course outlines for each semester's course.
