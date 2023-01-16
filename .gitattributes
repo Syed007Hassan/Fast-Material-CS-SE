@@ -7,6 +7,9 @@
 # The above will handle all files NOT found below
 #
 
+*.html linguist-vendored
+*.htm linguist-vendored
+
 # Documents
 *.bibtex   text diff=bibtex
 *.doc      diff=astextplain
