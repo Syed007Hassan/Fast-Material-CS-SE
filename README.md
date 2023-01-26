@@ -50,3 +50,4 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 * [Software Quality Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/5TH%20SEMESTER/SQE)
 * [Technical and Business Writing](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/5TH%20SEMESTER/TBW)
 
+**To download a particular folder, copy the link of the folder and paste it [here](https://minhaskamal.github.io/DownGit/#/home).**
