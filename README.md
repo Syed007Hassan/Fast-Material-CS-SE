@@ -13,8 +13,6 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 * [English Composition and Comprehension](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/1ST%20SEMESTER/ENG%20COM%20AND%20COMP)
 * [Pakistan Studies](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/1ST%20SEMESTER/SS113%20PAK%20STUDIES)
 
-
-
 2. [2nd Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/2ND%20SEMESTER)
 * [Object Oriented Programming](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/2ND%20SEMESTER/CS217%20OOP)
 * [Object Oriented Programming - Lab](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/2ND%20SEMESTER/CL217%20OOP%20LAB )
@@ -49,5 +47,14 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 * [Software Construction and Development - Lab](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/5TH%20SEMESTER/SCD%20LAB)
 * [Software Quality Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/5TH%20SEMESTER/SQE)
 * [Technical and Business Writing](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/5TH%20SEMESTER/TBW)
+
+6. [6th Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER)
+* [Blockchain and Cryptocurrency](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Blockchain%20and%20Cryptocurrency)
+* [Business Process Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Business%20Process%20Engineering)
+* [Computer Networks - Lab](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Computer%20Networks%20-%20Lab)
+* [Computer Networks](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Computer%20Networks)
+* [Simulation and Modeling](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Simulation%20And%20Modeling)
+* [Web Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Web%20Engineering)
+* [Web Engineering - Lab](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Web%20Engineering%20-%20Lab)
 
 **To download a particular folder, copy the link of the folder and paste it [here](https://minhaskamal.github.io/DownGit/#/home).**
