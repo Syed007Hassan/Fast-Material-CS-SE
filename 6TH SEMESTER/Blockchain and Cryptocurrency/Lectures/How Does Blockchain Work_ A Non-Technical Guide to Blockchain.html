@@ -1,0 +1,2240 @@
+<!DOCTYPE html><html lang="en-US"><head ><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />  <script data-cfasync="false" data-pagespeed-no-defer>var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];</script> <title>How Does Blockchain Work: A Non-Technical Guide to Blockchain</title><meta name="description" content="In one hundred years, blockchains will be as common and necessary as electricity is today. It’s worth having blockchain explained." /><script data-cfasync="false" id="ao_optimized_gfonts_config">WebFontConfig={google:{families:["Playfair Display:300italic","Roboto:300,700","Roboto Condensed:300,700","Roboto Slab:300","Open Sans:400,300"] },classes:false, events:false, timeout:1500};</script><link rel="canonical" href="https://taylorpearson.me/blockchain-explained/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="Blockchain Explained: A Layman" /><meta property="og:description" content="In one hundred years, blockchains will be as common and necessary as electricity is today. If that’s true, it’s worth having blockchain explained." /><meta property="og:url" content="https://taylorpearson.me/blockchain-explained/" /><meta property="og:site_name" content="Taylor Pearson" /><meta property="article:author" content="https://www.facebook.com/TaylorPearsonMe/" /><meta property="article:published_time" content="2018-07-23T12:04:05+00:00" /><meta property="article:modified_time" content="2021-01-21T11:05:18+00:00" /><meta property="og:image" content="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2.png" /><meta property="og:image:width" content="1555" /><meta property="og:image:height" content="525" /><meta property="og:image:type" content="image/png" /><meta name="author" content="Taylor Pearson" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:creator" content="@TaylorPearsonMe" /><meta name="twitter:site" content="@TaylorPearsonMe" /><meta name="twitter:label1" content="Written by" /><meta name="twitter:data1" content="Taylor Pearson" /><meta name="twitter:label2" content="Est. reading time" /><meta name="twitter:data2" content="36 minutes" /> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://taylorpearson.me/blockchain-explained/","url":"https://taylorpearson.me/blockchain-explained/","name":"How Does Blockchain Work: A Non-Technical Guide to Blockchain","isPartOf":{"@id":"https://taylorpearson.me/#website"},"primaryImageOfPage":{"@id":"https://taylorpearson.me/blockchain-explained/#primaryimage"},"image":{"@id":"https://taylorpearson.me/blockchain-explained/#primaryimage"},"thumbnailUrl":"https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2.png","datePublished":"2018-07-23T12:04:05+00:00","dateModified":"2021-01-21T11:05:18+00:00","author":{"@id":"https://taylorpearson.me/#/schema/person/b8ab92b0ee52984c58b05021de329fd7"},"description":"In one hundred years, blockchains will be as common and necessary as electricity is today. It’s worth having blockchain explained.","breadcrumb":{"@id":"https://taylorpearson.me/blockchain-explained/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://taylorpearson.me/blockchain-explained/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://taylorpearson.me/blockchain-explained/#primaryimage","url":"https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2.png","contentUrl":"https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2.png","width":1555,"height":525},{"@type":"BreadcrumbList","@id":"https://taylorpearson.me/blockchain-explained/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taylorpearson.me/"},{"@type":"ListItem","position":2,"name":"Blockchain Explained: How Does Blockchain Technology Work?"}]},{"@type":"WebSite","@id":"https://taylorpearson.me/#website","url":"https://taylorpearson.me/","name":"Taylor Pearson","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://taylorpearson.me/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://taylorpearson.me/#/schema/person/b8ab92b0ee52984c58b05021de329fd7","name":"Taylor Pearson","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://taylorpearson.me/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/627d19e5dba40539fb874d4873f37dbe?s=96&r=g","contentUrl":"https://secure.gravatar.com/avatar/627d19e5dba40539fb874d4873f37dbe?s=96&r=g","caption":"Taylor Pearson"},"sameAs":["https://www.facebook.com/TaylorPearsonMe/","https://twitter.com/TaylorPearsonMe"]}]}</script> <link href='https://fonts.gstatic.com' crossorigin='anonymous' rel='preconnect' /><link href='https://ajax.googleapis.com' rel='preconnect' /><link href='https://fonts.googleapis.com' rel='preconnect' /><link rel="alternate" type="application/rss+xml" title="Taylor Pearson &raquo; Feed" href="https://taylorpearson.me/feed/" /><link rel="alternate" type="application/rss+xml" title="Taylor Pearson &raquo; Comments Feed" href="https://taylorpearson.me/comments/feed/" /><link rel='stylesheet' id='sixteen-nine-pro-theme-css'  href='https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/style.css' type='text/css' media='all' /><link rel='stylesheet' id='pmb_common-css'  href='https://taylorpearson.me/wp-content/plugins/print-my-blog/assets/styles/pmb-common.css' type='text/css' media='all' /><link rel='stylesheet' id='wp-block-library-css'  href='https://taylorpearson.me/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' /><link rel='stylesheet' id='activecampaign-form-block-css'  href='https://taylorpearson.me/wp-content/plugins/activecampaign-subscription-forms/activecampaign-form-block/build/style-index.css' type='text/css' media='all' /><link rel='stylesheet' id='pmb-select2-css'  href='https://taylorpearson.me/wp-content/plugins/print-my-blog/assets/styles/libs/select2.css' type='text/css' media='all' /><link rel='stylesheet' id='jquery-ui-css'  href='https://taylorpearson.me/wp-content/plugins/print-my-blog/assets/styles/libs/jquery-ui/jquery-ui.min.css' type='text/css' media='all' /><link rel='stylesheet' id='pmb-setup-page-css'  href='https://taylorpearson.me/wp-content/plugins/print-my-blog/assets/styles/setup-page.css' type='text/css' media='all' /><style id='global-styles-inline-css' type='text/css'>body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style><link rel='stylesheet' id='searchandfilter-css'  href='https://taylorpearson.me/wp-content/plugins/search-filter/style.css' type='text/css' media='all' /><link rel='stylesheet' id='toc-screen-css'  href='https://taylorpearson.me/wp-content/plugins/table-of-contents-plus/screen.min.css' type='text/css' media='all' /><link rel='stylesheet' id='tve_leads_forms-css'  href='//taylorpearson.me/wp-content/plugins/thrive-leads/editor-layouts/css/frontend.css' type='text/css' media='all' /><link rel='stylesheet' id='tve_style_family_tve_flt-css'  href='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/css/thrive_flat.css' type='text/css' media='all' /><link rel='stylesheet' id='tve-ult-main-frame-css-css'  href='https://taylorpearson.me/wp-content/plugins/thrive-ultimatum/tcb-bridge/assets/css/placeholders.css' type='text/css' media='all' /><link rel='stylesheet' id='ultimate-post-list-public-style-css'  href='https://taylorpearson.me/wp-content/plugins/ultimate-post-list/public/css/ultimate-post-list-public.css' type='text/css' media='all' /> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/imagesloaded.min.js' id='imagesloaded-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/masonry.min.js' id='masonry-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/jquery/jquery.masonry.min.js' id='jquery-masonry-js'></script> <script type='text/javascript' id='tve_frontend-js-extra'>var tve_frontend_options = {"is_editor_page":"","page_events":[],"is_single":"1","ajaxurl":"https:\/\/taylorpearson.me\/wp-admin\/admin-ajax.php","social_fb_app_id":"","dash_url":"https:\/\/taylorpearson.me\/wp-content\/plugins\/thrive-visual-editor\/thrive-dashboard","translations":{"Copy":"Copy"},"post_id":"9787","ip":"111.92.142.63","current_user":[],"post_title":"Blockchain Explained: How Does Blockchain Technology Work?","post_type":"post","post_url":"https:\/\/taylorpearson.me\/blockchain-explained\/","is_lp":"","post_request_data":[],"conditional_display":{"is_tooltip_dismissed":false}};</script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/general.min.js' id='tve_frontend-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/plupload/moxie.min.js' id='moxiejs-js'></script> <script type='text/javascript' id='ultimate-post-list-js-extra'>var upl_vars = {"upl_nonce":"46a2b34fd1","ajaxurl":"https:\/\/taylorpearson.me\/wp-admin\/admin-ajax.php"};</script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/ultimate-post-list/public/js/ultimate-post-list-public.min.js' id='ultimate-post-list-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/js/responsive-menu.js' id='sixteen-nine-responsive-menu-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/google-analyticator/external-tracking.min.js' id='ga-external-tracking-js'></script> <link rel="https://api.w.org/" href="https://taylorpearson.me/wp-json/" /><link rel="alternate" type="application/json" href="https://taylorpearson.me/wp-json/wp/v2/posts/9787" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://taylorpearson.me/xmlrpc.php?rsd" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://taylorpearson.me/wp-includes/wlwmanifest.xml" /><meta name="generator" content="WordPress 6.0.3" /><link rel='shortlink' href='https://taylorpearson.me/?p=9787' /><link rel="alternate" type="application/json+oembed" href="https://taylorpearson.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftaylorpearson.me%2Fblockchain-explained%2F" /><link rel="alternate" type="text/xml+oembed" href="https://taylorpearson.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftaylorpearson.me%2Fblockchain-explained%2F&#038;format=xml" /> <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell@1.0.1/nutshell.js"></script><style type="text/css">div#toc_container ul li {font-size: 100%;}</style><style type="text/css">:not(#tve) .ttfm1{font-family: 'Economica' !important;font-weight: 400 !important;}.ttfm1 input, .ttfm1 select, .ttfm1 textarea, .ttfm1 button {font-family: 'Economica' !important;font-weight: 400 !important;}:not(#tve) .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong{font-weight: 700 !important;}.ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong input, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong select, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong textarea, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong button {font-weight: 700 !important;}:not(#tve) .ttfm2{font-family: 'Raleway' !important;font-weight: 400 !important;}.ttfm2 input, .ttfm2 select, .ttfm2 textarea, .ttfm2 button {font-family: 'Raleway' !important;font-weight: 400 !important;}:not(#tve) .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong{font-weight: 500 !important;}.ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong input, .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong select, .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong textarea, .ttfm2.bold_text,.ttfm2 .bold_text,.ttfm2 b,.ttfm2 strong button {font-weight: 500 !important;}</style><style type="text/css" id="tve_global_variables">:root{--tcb-background-author-image:url(https://secure.gravatar.com/avatar/627d19e5dba40539fb874d4873f37dbe?s=256&r=g);--tcb-background-user-image:url();--tcb-background-featured-image-thumbnail:url(https://taylorpearson.me/wp-content/uploads/2018/07/howbtcworks2.png);}</style>
+ <script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">var dataLayer_content = {"pagePostType":"post","pagePostType2":"single-post","pageCategory":["blockchain","investing-decision"],"pagePostAuthor":"Taylor Pearson"};
+	dataLayer.push( dataLayer_content );</script> <script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSW6VBV');</script> <link rel="pingback" href="https://taylorpearson.me/xmlrpc.php" />  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8457H');</script> <link href='https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/bigfoot-number.css' rel='stylesheet' type='text/css'> <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script> <link href="https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/custom.css"><meta property="fb:pages" content="1442121496112772" /><meta name="p:domain_verify" content="4bbee6cc206133aa57f622073c89fd1f"/>  <script>jQuery( document ).ready(function() {
+	jQuery("#responsive-menu-icon").click(function() {
+		 jQuery("html, body").animate({ scrollTop: 0 }, "slow");		
+  	});
+});</script> <meta name="pocket-site-verification" content="e4add9883373303329225bea986cd3" /><meta name="twitter:url" content="https://taylorpearson.me/blockchain-explained/" /><style  type="text/css">.site-title a { color: #ffffff; }</style><link rel="amphtml" href="https://taylorpearson.me/blockchain-explained/amp/"><style type="text/css" id="thrive-default-styles"></style><link rel="icon" href="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2016/03/cropped-fav100-32x32.png" sizes="32x32" /><link rel="icon" href="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2016/03/cropped-fav100-192x192.png" sizes="192x192" /><link rel="apple-touch-icon" href="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2016/03/cropped-fav100-180x180.png" /><meta name="msapplication-TileImage" content="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2016/03/cropped-fav100-270x270.png" />  <script type="text/javascript">var analyticsFileTypes = [];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';</script> <script type="text/javascript">var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-45184881-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();</script> <style type="text/css" id="wp-custom-css">@media(max-width:400px){
+.page-id-4300 .page-content a {
+	font-size:15px!important;
+	padding:14px 40px!important;
+	}
+}
+@media(width:320px){
+.page-id-4300 .page-content a {
+	padding:14px 0px!important;
+	}
+}
+/* mobile adjustments for homepage */
+@media (min-width: 900px){
+.col-md-offset-5 {
+margin-left: 45%!important;
+}
+	.col-md-7 {
+width: 50%!important;
+}
+}
+@media (min-width: 700px) and (max-width:799px){
+.col-md-offset-5 {
+	margin-left: 40%!important;
+}
+	.col-md-7 {
+width: 50%!important;
+}
+	.site-inner {
+    padding: 0px!important;
+}
+}
+@media (min-width: 800px) and (max-width:899px){
+.col-md-offset-5 {
+	margin-left: 42%!important;
+}
+	.col-md-7 {
+width: 50%!important;
+}
+	
+}
+/* hide comments in About page */
+#disqus_thread {
+	display:none !important;
+}
+
+.wp-block-code{
+	background: transparent !important;
+	border: 0 !important;
+}
+
+.newsletter-archive-list li{
+	list-style: none;
+	display: flex;
+	margin: 15px 0;
+}
+.newsletter-archive-list li .date{
+	order: 1;
+	width: 40%;
+	word-break: break-word;
+	color: #1a1a1a;
+}
+.newsletter-archive-list li .title{
+	order: 2;
+	width: 60%;
+	word-break: break-word;
+}
+.page-id-8114 .site-inner {     min-height: auto; }
+.page-id-4966 .bookreview-archives ul li {
+	line-height: 1.58;
+    font-size: 2rem;
+	border-bottom: 3px solid #f5f5f5;
+    margin-bottom: 40px;
+	text-align: center;
+}
+.page-id-4966 .bookreview-archives ul li a {
+	color: #000;
+	font-weight: 600;
+	font-size: 3.236rem;
+    line-height: 1.2;
+	width: 100%!important;
+	display: block;
+}
+.page-id-4966 .bookreview-archives ul li span { width: 100%!important; }
+.page-id-4966 .bookreview-archives ul li .excerpt a {
+	color: #337ab7;
+	font-size: 2rem;
+	font-weight: 400;
+}</style><style id="sccss">/* RipplePop */
+body.page-id-3525 ._form-content ._row._checkbox-radio input[type="checkbox"]{
+	display: inline-block !important;
+	width: 10% !important;
+}
+body.page-id-3525 ._form-content ._row._checkbox-radio span{
+	display: inline;
+}
+body.page-id-3525 .tve_js_placeholder{
+	display: none !important;
+}
+body.page-id-3525 ._form-label, body.page-id-3525 ._form_element ._form-label{
+	font-family: 'Raleway', sans-serif!important;
+	font-size: 2rem !important;
+}
+body.page-id-3525 ._form-content ._row._checkbox-radio span label, body.page-id-3525 ._submit{
+	font-family: 'Raleway', sans-serif!important;
+	font-size: 2rem !important;
+	font-weight: normal !important;
+}
+body.page-id-3525 form._form_749{
+	max-width: 600px !important;
+}
+
+.home .site-container > header.site-header{
+  display: block !important; 
+}
+
+
+.easy-footnotes-wrapper blockquote{
+  background-color: transparent !important; 
+}
+
+.easy-footnotes-wrapper blockquote p, .easy-footnotes-wrapper .graf-after--h3{
+  font-size: 14px !important;
+}
+
+.easy-footnotes-wrapper p.graf-after--p{
+  font-size: 14px !important;
+}
+
+.easy-footnotes-wrapper blockquote:before{
+		display: block !important;
+    content: "\201C" !important;
+    font-size: 24px !important;
+    position: absolute !important;
+    left: 20px !important;
+    top: 0px !important;
+    color: #7a7a7a !important;
+}
+
+body.home > div.site-container > header.site-header.bottom{
+  display: none !important;
+}
+
+.page-id-4300 .entry-content{
+  min-height: 100vh;
+}
+
+.page-id-4966 .clean-my-archives ul li{
+		padding:6px 0;
+}
+
+.page-id-4966 .clean-my-archives ul li span{
+		display:inline-block;
+		width:30%;
+		vertical-align:top;
+		line-height:31px;
+}
+
+.page-id-4966 .clean-my-archives ul li a{
+		display:inline-block;
+		width:60%;
+		vertical-align:top;
+}
+
+.page-id-4966 .clean-my-archives {
+		max-width:700px;
+}
+
+#comments.entry-comments{
+	display: none !important;
+}
+
+#gs_id50.gstl_50.gsc-input{
+	margin-bottom: 0 !important;
+}
+
+.gsc-search-box tbody{
+	border-bottom: none !important;
+}
+.gsc-search-box td{
+	border-top: none !important;
+}
+.gsc-search-button-v2 {
+    padding: 15px 30px !important;
+    border-color: #000000 !important;
+	  background-color: #000000 !important;
+}
+
+/* End RipplePop */
+
+/*WPUP*/
+.single-post .supsystic-social-sharing {text-align: center;}
+/*.page-id-4300 article .entry-content {height: 100vh;}*/
+
+/* wpcurve JWN #116241 start */
+header.site-header {
+    padding-top: 30px !important;
+}
+
+/* wpcurve JWN #116241 end */
+
+.site-container { max-width: 100%; }
+.site-inner { float: none; margin: 0 auto; background: #fff; width: 100%; min-height: 1080px;}
+.content-sidebar-wrap { float: none; max-width: 1040px; width: 100%; margin: 0 auto; }
+/* wpcurve #66494 start */
+/**h1 { font-size: 34px!important;}
+h2 { font-size: 28px!important;}
+h3 { font-size: 24px!important;}
+h4 { font-size: 22px!important;}
+h5 { font-size: 18px!important;}
+h6 { font-size: 16px!important;}**/
+h1 { font-size: 2em!important;}
+h2 { font-size: 1.5em!important;}
+h3 { font-size: 1.17em!important;}
+h4 { font-size: 1em!important;}
+h5 { font-size: 0.83em!important;}
+h6 { font-size: 0.67em!important;}
+/* wpcurve #66494 end */
+
+h1,h2,h3,h4,h5,h6 {	
+    font-family: 'Raleway', sans-serif !important;
+}
+.entry-content p { 
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 16px!important;
+}
+
+h1.entry-title a { color: #000!important; }
+
+.entry-meta{
+display:none;
+}
+
+
+
+.blog h1.entry-title a {
+    color: #000 !important;
+    font-family: "Montserrat" !important;
+    font-size: 5rem;
+}
+
+.widgettitle { font-weight: bold; color: #000; }
+
+.after-entry .button, .after-entry .button:hover,
+.sidebar .button, .sidebar .button:hover { background-color: #0F52BA; }
+.sidebar { color: #000; }
+.sidebar a { color: #0066CD; }
+.page .sidebar, .single .sidebar { display: none; }
+.page .site-inner .content, .single .site-inner .content { float: none; margin: 0 auto; width: 100%; max-width: 700px; padding-left: 0px; padding-right: 0px; }
+.after-entry { background-color: transparent; color: #000; /*border: 1px solid #000;*/ }
+
+.page-id-1160 .site-header {
+    display: none;
+}
+
+.page-id-1160 .sumome-smartbar-popup {
+	display: none;
+}
+
+/* Top Menu */
+@media only screen 
+and (min-width : 768px)
+{
+  .site-header aside {
+    width: 55%;
+}
+}
+
+header.site-header {padding-top:15px;}
+header.site-header .site-avatar {display:none;}
+header.site-header .title-area {margin-top:10px;}
+header.site-header .site-description {margin-bottom:20px;}
+
+/** wpcurve custom**/
+.entry-title{font-size:48px;font-size:4.8rem;margin-top:30px;margin-top:3rem;}
+
+/* Responsive */ 
+@media only screen 
+and (max-width : 768px)
+{
+  header.site-header .title-area {
+margin-top: 15px;
+}
+  .site-inner {
+    padding: 15px;
+}
+}
+
+.home_btn{
+background-color: #000;
+border: none;
+color: #fff;
+cursor: pointer;
+font-family: 'Roboto Condensed', sans-serif;
+font-weight: 300;
+letter-spacing: 1px;
+letter-spacing: 0.1rem;
+padding: 16px 24px;
+padding: 1.6rem 2.4rem;
+text-transform: uppercase;
+width: auto;
+text-decoration: none;
+margin-left: 10%;
+margin-right: 10%;
+}
+
+.mid_section{
+display: block;
+height: auto;
+padding-top: 10px;
+padding-bottom: 30px;
+width: 90%;
+text-align: -webkit-center;
+}
+
+
+/* WPCurve Loreto */
+.home .entry-header .entry-title { font-size: 48px; }
+.home .mid_section .home_btn { margin-left: 7.5px !important; margin-right: 7.5px !important; }
+.home .mid_section .home_btn, .home .button { background-color: #0f52ba !important; }
+
+.button {
+    background-color: #0F52BA !important;
+}
+
+/** wpcurve **/
+#easy-opt-in-widget-3 {width:700px;margin:0 auto;}
+#easy-opt-in-widget-3 span, #easy-opt-in-widget-3 p, #easy-opt-in-widget-3 h3, input { font-family: 'Open Sans', sans-serif !important;  }
+/** wpcurve **/
+
+@media screen and ( min-width: 200px ) and ( max-width: 365px ) {
+	.home .mid_section .home_btn {  
+  		display: block;
+  		margin-top: 15px;
+	}
+}
+
+.content a {text-decoration:none;}
+.content a:hover {color:#000;}
+
+.widget_mailchimpsf_widget{
+background-color: transparent;
+color: #000;
+border: 1px solid #000;
+padding: 20px;
+margin-top: -40px;
+}
+
+.page-template-page_blog .content{
+float: left !important;
+}
+
+.page-template-page_blog .sidebar{
+display: block !important;
+padding-top: 10%;
+float: left !important;
+width: 30% !important;
+word-wrap: break-word;
+padding-left: 20px !important;  
+}
+
+.entry-title a{color:#000;}
+
+/* Articles Page */ 
+.blog .entry-content > p {
+    font-family: 'Raleway', sans-serif !important;
+  font-size: 1.8rem;
+}
+
+/*wocyrve*/
+.wp-tabs ul.ui-tabs-nav li.ui-state-active {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+.wp-tabs ul.ui-tabs-nav li {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+/**.wp-tabs ul.ui-tabs-nav li.ui-state-active {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 whiteSmoke;
+    border-color: #d5d5d5 #d5d5d5 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+}**/
+.wp-tabs ul.ui-tabs-nav li.ui-state-active {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 18px;
+}
+.wp-tabs ul.ui-tabs-nav li {
+    margin-right: 0px !important ;
+}
+.wp-tabs ul.ui-tabs-nav {
+    background: none repeat scroll 0 0 #000 !important;
+    padding-top: 7px !important;
+}
+.wp-tabs ul.ui-tabs-nav li a {
+    color: #fff !important;
+    text-shadow: none !important;
+  
+}
+
+/** wpcurve custom **/
+.parent-tab-wrap{padding:0 6px; position: relative; z-index: 0; float: left !important; margin: 11px 0px -25px  !important; height: 8px !important; }
+.parent-tab-wrap li{transform:perspective(5px) rotateX(0.9deg) translateZ(0px);border-radius:5px;background-color:#d2d2d2;position:relative;top:5px;box-shadow:0 0 2px #000000;}
+.parent-tab-wrap li { list-style: none !important; float: left; padding: 10px 10px 0 10px; cursor: pointer; border: 1px solid #ccc; }
+.parent-tab-wrap li.active{background-color:#e2e2e2;position:relative;z-index:1;}
+.parent-tab-wrap li h2{font-weight:400px;font-size:16px;color:#333333;}
+.parent-tab-wrap li.active h2{color:#000000;}
+.tab-content{position:relative;z-index:10;}
+.wp-tabs ul.ui-tabs-nav li.ui-state-active a{color:#333333 !important;}
+#tab-content-tools { display: none; }
+/** wpcurve custom **/
+
+.search .sidebar{
+color: #FFFFFF !important;
+  
+}
+
+.search .sidebar b{
+display: none !important;
+}
+
+.home #disqus_thread{
+display: none !important;
+}
+
+.site-header #search-6 .search-form input[type="search"] { width:206px !important; height:10px !important; padding:16px !important; margin-right:95px !important; }
+.site-header #search-6 .search-form { text-align:right !important; margin:0px 0px 5px 0px !important; }
+.site-header #search-6 { margin-bottom:0px !important; }
+.site-header #text-3 { margin-bottom:0px !important; }
+
+/* MailChimp Form response */
+.mc-opt-in-widget {
+  display: block!important;
+  border: solid 1px transparent;
+}
+div.response#mce-success-response {
+    color: red;
+}
+/* MailChimp Form responsive */
+@media only screen and (max-width: 768px) {
+#easy-opt-in-widget-3 > div {
+  display: block!important;
+}
+.mc-opt-in-widget {
+  display: block!important;
+}
+body > div.site-container > div > div > main > div.after-entry  {
+  padding: 0;
+}
+#text-6 > div {
+  display: block!important;
+}
+#fca_eoi_form_2101 .fca_eoi_layout_4 {
+  border: solid 2px transparent!important;
+}
+}
+@media only screen and (max-width: 480px) {
+#easy-opt-in-widget-3  {
+  width: 320px;
+  margin: 0 auto;
+}
+.mc-opt-in-widget {
+  width: 320px;
+  margin: 0 auto;
+}
+}
+
+/* wpcurve mike */
+.after-entry {
+    padding: 0!important;
+}
+
+.page-id-1623 .sumome-share-client-wrapper, .page-id-2118 .sumome-share-client-wrapper{
+display: none !important;
+}
+
+/* WPCurve - #63478 */
+.widget-area.header-widget-area { width: 73%; }
+#menu-main-menu-2 li { width: 20%; }
+#menu-main-menu-2 li a { font-size: 12px; font-weight: bold; }
+
+@media only screen and (max-width: 767px) {
+  .widget-area.header-widget-area { width: 100%; }
+  #menu-main-menu-2 li { width: 100%; }
+}
+@media only screen and (min-width: 768px) and ( max-width: 1000px) {
+  #responsive-menu-icon { display: block; }
+}
+/* END WPCurve - #63478 */
+
+
+
+
+/* 
+ *  */
+
+.col-md-3 {
+	float: left;
+/* 	width:24.5%; */
+}
+.col-md-3 img { width: 100%; }
+img.img-virgin { margin-top: -40px; }
+
+
+@media only screen and (max-width: 420px) {
+	.col-md-3 {
+		width:100%;
+	}
+	img.img-virgin { margin-top: 0; width: 100%; max-width: 170px; }
+
+
+}
+
+/* WPcurve End #64621 */
+
+/* WPCurve - #64621 */
+@media only screen and (max-width: 420px) {
+	.wpcurve-col-md-3 {
+    	width: 24% !important;
+	}
+}
+/* END WPCurve - #64621 */
+/*
+.home #search-6 { display: none!important; }
+
+.widget-area.header-widget-area {
+    width: 77%;
+}
+
+@media only screen and (max-width:1279px) {
+  .widget.widget_nav_menu {
+    display: none;
+  }
+}
+*/
+/* WPCurve #67024 - Start */
+.site-title {
+    font-family: "Roboto Condensed",sans-serif !important;
+    font-size: 2.4rem !important;
+}
+.site-header #search-6 {
+    display: none;
+}
+.blog .site-header #search-6 {
+    display: block;
+}
+.genesis-nav-menu {
+ 	border-top: none; 
+}
+.genesis-nav-menu li {
+ 	border-top: 1px solid #333; 
+}
+@media only screen and (max-width:1280px) {
+  	.genesis-nav-menu {
+   		border-top: 1px solid #333; 
+  	}
+  	.genesis-nav-menu li {
+    	border-top: medium none;
+	}
+}
+@media only screen and (max-width:800px) {
+  	
+  	header.site-header .title-area, .widget-area.header-widget-area {
+   	width: 100%; 
+  }
+}
+/* WPCurve #67024 - END */
+
+/* WPCurve - LG -#67569 */
+.home _form { width: 720px !important; height: 270px !important; }
+/* END WPCurve - LG -#67569 */
+
+
+._form {
+position:relative;
+background:#fff;
+width:100%;/*F*/
+padding:0!important;
+text-align:left;
+  margin:0 auto;
+  margin-bottom:20px;
+  max-width:400px;
+}
+._form em {
+color:#9a9a9a;
+}
+._form a {
+margin-left:3px;
+}
+._form ._field,
+._form ._field ._label,
+._form ._type_radio,
+._form ._type_checkbox,
+._form ._type_captcha,
+._form ._field table {
+background:none;
+}
+._form ._field {
+position:relative;
+width:100%;
+cursor:move;
+font-style:normal;
+margin:1.2em 0;
+padding:0;
+overflow:hidden;
+}
+._form ._field input[type="text"] {
+width:100%;
+padding:8px;
+font-size:16px;
+border:1px solid #b6b6b6;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+._form ._field ._label {
+display:block;
+margin:0 0 0.5em;
+padding:0!important;
+font-size:15px;
+}
+._form ._field ._option input[type="checkbox"],
+._form ._field ._option input[type="radio"] {
+position:relative;
+width:13px;
+height:13px;
+margin:-4px 0 0 1px;
+cursor:pointer;
+vertical-align:middle;
+}
+._form ._field ._option input[type="submit"],
+._form ._field ._option input[type="button"] {
+margin:0;
+cursor:pointer;
+height:35px;
+width:auto;
+font-size:15px;
+}
+._form ._field ._option select {
+display:block;
+margin:0;
+padding:0;
+width:auto;
+font-size:15px;
+border:1px solid #b6b6b6;
+}
+._form ._type_radio ._option,
+._form ._type_checkbox ._option {
+font-size:13px;
+font-weight:normal;
+line-height:1.8;
+}
+._form ._type_date ._option input[type="text"] {
+float:left;
+width:100px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+._form ._type_date ._option input[type="button"] {
+width:37px;
+height:36px;
+margin-left:5px;
+padding:20px;
+background:url(https://threemagnolia.activehosted.com/admin/css/../images/icon_calendar.gif) no-repeat 0 0;
+border:none;
+outline:none;
+text-indent:-9999px;
+}
+._form ._type_captcha img {
+float:left;
+margin:0 6px 0 0;
+width:70px;
+height:33px;
+border:1px solid #b6b6b6;
+}
+._form ._type_captcha input[type="text"] {
+margin:-14px 0 0 0!important;
+width:25%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+._form ._field table {
+width:100%!important;
+}
+._form ._field table tbody tr td {
+width:50%!important;
+font-size:15px;
+}
+._form {
+/*width:400px;/*F*/
+padding:10px 16px!important;
+background:#f7f7f7;
+color:#6e6e6e;
+font-weight:normal;
+border:1px solid #d1d1d1;
+text-shadow:1px 1px 1px #fff;
+}
+._form #notice {
+margin:10px 0 0 -3px!important;
+padding:0;
+color:#9f9f9f;
+font-size:11px;
+font-family:helvetica,arial,sans-serif;
+}
+._form #notice a:link, ._form #notice a:visited {
+color:#9f9f9f!important;
+text-decoration:underline;
+}
+._form ._field,
+._form ._field ._label,
+._form ._type_radio,
+._form ._type_checkbox,
+._form ._type_captcha,
+._form ._field table {
+background:none;
+}
+._form ._field {
+position:relative;
+width:100%;
+cursor:default;
+font-style:normal;
+margin:0 0 16px;
+padding:0!important;
+overflow:hidden;
+}
+._form ._field input[type="text"],
+._form ._field input[type="email"] {
+width:100%;
+margin:0!important;
+padding:4px!important;
+font-size:16px;
+background:#fff url(https://threemagnolia.activehosted.com/admin/templates/form-themes/golden/images/bg_input.gif) no-repeat 0 0;
+border:1px solid #cecece;
+border-top:1px solid #bbbbbb;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+._form ._field ._label {
+margin:0 0 0.6em!important;
+color:#6e6e6e;
+font-size:13px;
+font-family:helvetica,arial,sans-serif;
+font-weight:700;
+}
+._form ._field ._option {
+margin:0;
+padding:0;
+color:#6e6e6e;
+font-size:13px;
+font-family:helvetica,arial,sans-serif;
+font-weight:normal;
+line-height:20px;
+}
+._form ._type_header ._label {
+width:100%;
+font-style:normal;
+font-size:18px!important;
+line-height:24px;
+color:#333333;
+margin:0 0 5px!important;
+padding:10px!important;
+overflow:hidden;
+background:#e8e8e8;
+border-bottom:1px solid #dfdfdf;
+}
+._form ._type_input ._option textarea{
+width:97%!important;
+background:#fff url(https://threemagnolia.activehosted.com/admin/templates/form-themes/golden/images/bg_input.gif) no-repeat 0 0;
+border:1px solid #cecece;
+border-top:1px solid #bbbbbb;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+}
+._form ._field ._option input[type="submit"],
+._form ._field ._option input[type="button"] {
+width:auto;
+margin:10px 0 0!important;
+padding:8px 15px!important;
+cursor:pointer;
+font-family:helvetica,arial,sans-serif;
+font-weight:700;
+font-size:13px;
+color:#fff;
+background:#0f52ba;
+border:1px solid #0f52ba;
+border-bottom:2px solid #0f52ba;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+text-shadow:1px 1px 1px #ffe066;
+}
+._form ._type_input ._option input[type="submit"]:hover,
+._form ._type_input ._option input[type="button"]:hover {
+background:#eebe00;
+border-bottom:1px solid #b97e00;
+}
+._form ._type_date ._option input[type="text"] {
+float:left;
+width:100px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+._form ._type_radio {
+background:none;
+}
+._form ._type_radio ._option label {
+display:inline;
+font-size:13px;
+font-weight:normal;
+line-height:22px;
+}
+._form ._type_radio ._option label input[type="radio"] {
+position:relative;
+width:13px;
+height:13px;
+margin:-4px 0 0 1px!important;
+cursor:pointer;
+vertical-align:middle;
+border:none;
+}
+._form ._type_date ._option input[type="button"] {
+width:27px;
+height:27px;
+margin:0 0 0 5px!important;
+padding:0;
+background:transparent url(https://threemagnolia.activehosted.com/admin/templates/form-themes/golden/images/icon_calendar.gif) no-repeat;
+border:none;
+outline:none;
+text-indent:-9999px;
+}
+._form ._type_date ._option input[type="button"]:hover {
+background-color:none!important;
+}
+._form ._field ._option select {
+display:block;
+margin:0;
+padding:0;
+width:auto;
+font-size:13px;
+border:1px solid #cecece;
+}
+._form ._type_captcha img {
+float:left;
+width:88px;
+height:44px;
+margin:0 6px 0 0;
+border:1px solid #cecece;
+}
+._form ._type_captcha input[type="text"] {
+float:left;
+margin:0!important;
+width:40%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+._form ._field table {
+margin:0;
+padding:0;
+border-collapse:collapse;
+width:100%!important;
+table-layout:fixed;
+margin-bottom:18px;
+font-size:13px!important;
+border-collapse:collapse;
+border-spacing:0;
+}
+._form ._field table td {
+padding:0 10px 0 0!important;
+line-height:18px;
+text-align:left;
+font-size:13px!important;
+color:#606060;
+}
+._form ._type_input ._option table tbody#_forward_rcpt input {margin:0 0 5px 0!important; width:96%!important;}
+._form ._type_input ._option table tbody#_forward_rcpt img.image_addrcpt {cursor:pointer;}
+.form_errors{
+text-align:center;
+font-size:15px;
+margin:10px;
+color:#900;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+margin-bottom:20px;
+}
+/* WP Curve - Peter - #70102 */
+#_form_112 ._form {
+position:relative;
+background:#fff;
+width:400px;/*F*/
+padding:0!important;
+text-align:left;
+}
+#_form_112 ._form em {
+color:#9a9a9a;
+}
+#_form_112 ._form a {
+margin-left:3px;
+}
+#_form_112 ._form ._field,
+#_form_112 ._form ._field ._label,
+#_form_112 ._form ._type_radio,
+#_form_112 ._form ._type_checkbox,
+#_form_112 ._form ._type_captcha,
+#_form_112 ._form ._field table {
+background:none;
+}
+#_form_112 ._form ._field {
+position:relative;
+width:100%;
+cursor:move;
+font-style:normal;
+margin:1.2em 0;
+padding:0;
+overflow:hidden;
+}
+#_form_112 ._form ._field input[type="text"] {
+width:100%;
+padding:8px;
+font-size:16px;
+border:1px solid #b6b6b6;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+#_form_112 ._form ._field ._label {
+display:block;
+margin:0 0 0.5em;
+padding:0!important;
+font-size:15px;
+}
+#_form_112 ._form ._field ._option input[type="checkbox"],
+#_form_112 ._form ._field ._option input[type="radio"] {
+position:relative;
+width:13px;
+height:13px;
+margin:-4px 0 0 1px;
+cursor:pointer;
+vertical-align:middle;
+}
+#_form_112 ._form ._field ._option input[type="submit"],
+#_form_112 ._form ._field ._option input[type="button"] {
+margin:0;
+cursor:pointer;
+height:35px;
+width:auto;
+font-size:15px;
+}
+#_form_112 ._form ._field ._option select {
+display:block;
+margin:0;
+padding:0;
+width:auto;
+font-size:15px;
+border:1px solid #b6b6b6;
+}
+#_form_112 ._form ._type_radio ._option,
+#_form_112 ._form ._type_checkbox ._option {
+font-size:13px;
+font-weight:normal;
+line-height:1.8;
+}
+#_form_112 ._form ._type_date ._option input[type="text"] {
+float:left;
+width:100px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+#_form_112 ._form ._type_date ._option input[type="button"] {
+width:37px;
+height:36px;
+margin-left:5px;
+padding:20px;
+background:url(https://threemagnolia.activehosted.com/admin/css/../images/icon_calendar.gif) no-repeat 0 0;
+border:none;
+outline:none;
+text-indent:-9999px;
+}
+#_form_112 ._form ._type_captcha img {
+float:left;
+margin:0 6px 0 0;
+width:70px;
+height:33px;
+border:1px solid #b6b6b6;
+}
+#_form_112 ._form ._type_captcha input[type="text"] {
+margin:-14px 0 0 0!important;
+width:25%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+#_form_112 ._form ._field table {
+width:100%!important;
+}
+#_form_112 ._form ._field table tbody tr td {
+width:50%!important;
+font-size:15px;
+}
+#_form_112 ._form {
+width:400px;/*F*/
+padding:10px 16px!important;
+background:#f7f7f7;
+color:#6e6e6e;
+font-weight:normal;
+border:1px solid #d1d1d1;
+text-shadow:1px 1px 1px #fff;
+}
+#_form_112 ._form #notice {
+margin:10px 0 0 -3px!important;
+padding:0;
+color:#9f9f9f;
+font-size:11px;
+font-family:helvetica,arial,sans-serif;
+}
+#_form_112 ._form #notice a:link, #_form_112 ._form #notice a:visited {
+color:#9f9f9f!important;
+text-decoration:underline;
+}
+#_form_112 ._form ._field,
+#_form_112 ._form ._field ._label,
+#_form_112 ._form ._type_radio,
+#_form_112 ._form ._type_checkbox,
+#_form_112 ._form ._type_captcha,
+#_form_112 ._form ._field table {
+background:none;
+}
+#_form_112 ._form ._field {
+position:relative;
+width:100%;
+cursor:default;
+font-style:normal;
+margin:0 0 16px;
+padding:0!important;
+overflow:hidden;
+}
+#_form_112 ._form ._field input[type="text"],
+#_form_112 ._form ._field input[type="email"] {
+width:100%;
+margin:0!important;
+padding:4px!important;
+font-size:16px;
+background:#fff url(https://threemagnolia.activehosted.com/admin/templates/form-themes/golden/images/bg_input.gif) no-repeat 0 0;
+border:1px solid #cecece;
+border-top:1px solid #bbbbbb;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+#_form_112 ._form ._field ._label {
+margin:0 0 0.6em!important;
+color:#6e6e6e;
+font-size:13px;
+font-family:helvetica,arial,sans-serif;
+font-weight:700;
+}
+#_form_112 ._form ._field ._option {
+margin:0;
+padding:0;
+color:#6e6e6e;
+font-size:13px;
+font-family:helvetica,arial,sans-serif;
+font-weight:normal;
+line-height:20px;
+}
+#_form_112 ._form ._type_header ._label {
+width:100%;
+font-style:normal;
+font-size:18px!important;
+line-height:24px;
+color:#333;
+margin:0 0 5px!important;
+padding:10px!important;
+overflow:hidden;
+background:#e8e8e8;
+border-bottom:1px solid #dfdfdf;
+}
+#_form_112 ._form ._type_input ._option textarea{
+width:97%!important;
+background:#fff url(https://threemagnolia.activehosted.com/admin/templates/form-themes/golden/images/bg_input.gif) no-repeat 0 0;
+border:1px solid #cecece;
+border-top:1px solid #bbbbbb;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+}
+#_form_112 ._form ._field ._option input[type="submit"],
+#_form_112 ._form ._field ._option input[type="button"] {
+width:auto;
+margin:10px 0 0!important;
+padding:8px 15px!important;
+cursor:pointer;
+font-family:helvetica,arial,sans-serif;
+font-weight:700;
+font-size:13px;
+color:#fff;
+background:#0645AD;
+border:1px solid #0645AD;
+border-bottom:2px solid #0645AD;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+text-shadow:1px 1px 1px #ffe066;
+}
+#_form_112 ._form ._type_input ._option input[type="submit"]:hover,
+#_form_112 ._form ._type_input ._option input[type="button"]:hover {
+background:#0645AD;
+border-bottom:1px solid #0645AD;
+}
+#_form_112 ._form ._type_date ._option input[type="text"] {
+float:left;
+width:100px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+#_form_112 ._form ._type_radio {
+background:none;
+}
+#_form_112 ._form ._type_radio ._option label {
+display:inline;
+font-size:13px;
+font-weight:normal;
+line-height:22px;
+}
+#_form_112 ._form ._type_radio ._option label input[type="radio"] {
+position:relative;
+width:13px;
+height:13px;
+margin:-4px 0 0 1px!important;
+cursor:pointer;
+vertical-align:middle;
+border:none;
+}
+#_form_112 ._form ._type_date ._option input[type="button"] {
+width:27px;
+height:27px;
+margin:0 0 0 5px!important;
+padding:0;
+background:transparent url(https://threemagnolia.activehosted.com/admin/templates/form-themes/golden/images/icon_calendar.gif) no-repeat;
+border:none;
+outline:none;
+text-indent:-9999px;
+}
+#_form_112 ._form ._type_date ._option input[type="button"]:hover {
+background-color:none!important;
+}
+#_form_112 ._form ._field ._option select {
+display:block;
+margin:0;
+padding:0;
+width:auto;
+font-size:13px;
+border:1px solid #cecece;
+}
+#_form_112 ._form ._type_captcha img {
+float:left;
+width:88px;
+height:44px;
+margin:0 6px 0 0;
+border:1px solid #cecece;
+}
+#_form_112 ._form ._type_captcha input[type="text"] {
+float:left;
+margin:0!important;
+width:40%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+#_form_112 ._form ._field table {
+margin:0;
+padding:0;
+border-collapse:collapse;
+width:100%!important;
+table-layout:fixed;
+margin-bottom:18px;
+font-size:13px!important;
+border-collapse:collapse;
+border-spacing:0;
+}
+#_form_112 ._form ._field table td {
+padding:0 10px 0 0!important;
+line-height:18px;
+text-align:left;
+font-size:13px!important;
+color:#606060;
+}
+#_form_112 ._form ._type_input ._option table tbody#_forward_rcpt input {margin:0 0 5px 0!important; width:96%!important;}
+#_form_112 ._form ._type_input ._option table tbody#_forward_rcpt img.image_addrcpt {cursor:pointer;}
+.form_errors{
+text-align:center;
+font-size:15px;
+margin:10px;
+color:#900;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+margin-bottom:20px;
+}
+/* WP Curve - Peter - #70102 - end */
+
+/* WPCurve - LG - #71399 */
+.widget-area.header-widget-area { width: 100% !important; }
+@media screen and ( min-width: 767px ) and ( max-width: 1200px ) {
+  #menu-main-menu-2 li { width: 20%; }
+}
+/*@media screen and ( min-width: 1280px ) {
+  #menu-main-menu-2 li { width: 25% !important; }
+
+}*/
+/* END WPCurve - LG - #71399 */
+
+/* WPCurve - JWN Start - #71399 */
+@media only screen and (min-width: 1201px ) {
+.site-header .widget-area.header-widget-area {
+    width: 80% !important;
+    float: right !important;
+}
+}
+/* END WPCurve - JWN- #71399 */
+
+/* WPCurve #71399 (MJ) - Start */
+@media only screen and (max-width: 1201px ) {
+  .header-widget-area .widget_nav_menu {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 80%;
+	}
+}
+@media only screen and (max-width: 1028px ) {
+  .header-widget-area .widget_nav_menu {
+    width: 73%;
+	}
+}
+@media only screen and (max-width: 823px ) {
+  .header-widget-area .widget_nav_menu {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+	}
+  header.site-header .title-area {
+    float: none;
+    text-align: center;
+	}
+}
+/* WPCurve #71399 (MJ) - END */
+
+/* WP Curve MC 78101 */
+@media only screen and (max-width: 767px) 
+{
+#_form_95 ._form{width:100% !important;}
+}
+/* WP Curve MC 78101 */
+
+/* WPCurve #78895 (MJ) - Start */
+.my-essay {
+  	display:none;
+}
+.blog .my-essay {
+ 	display: block; 
+}
+/* WPCurve #78895 (MJ) - END */
+
+/* WPCurve #85671 (MJ) - Start */
+#menu-main-menu-2 li.menu-item {
+    /*width: 25%;*/
+}
+#menu-main-menu-2 > li.menu-item > a {
+    font-size: 15px;
+}
+.menu.genesis-nav-menu.responsive-menu {
+    float: right;
+    margin-bottom: 1em;
+    /*width: 65%;*/
+}
+@media only screen and (max-width:1280px) {
+ 	#menu-main-menu-2 li.menu-item {
+  		 width: 30%;
+  	}
+  	.menu.genesis-nav-menu.responsive-menu {
+  		 width: 100%;
+  	}
+}
+/* WPCurve #85671 (MJ) - END */
+
+/* WPCurve - LG - #86960 */
+@media only screen and ( max-width: 560px ) {
+  ._form { width: 100% !important; max-width: 100% !important; }
+}
+/* END WPCurve - LG - #86960 */
+
+.bigfoot-footnote__button {
+  background-color: #4C96C6!important;
+  padding: 8px!important;
+  border-radius: 150px!important;
+}
+.bigfoot-footnote__button:after {
+	color: #fff!important;
+  	font-size: 11px!important;
+  	padding: 8px!important;
+}
+
+/* wpcurve jwn 87701 Start*/
+blockquote {
+
+    font-family: Georgia, serif  !important; 
+
+    font-size: 18px  !important; 
+
+    font-style: italic  !important; 
+
+    /*width: 450px  !important; */
+
+    margin: 0.25em 0  !important; 
+
+    padding: 0.25em 40px  !important; 
+    line-height: 1.45  !important; 
+
+    position: relative  !important; 
+    color: #383838  !important; 
+    background:#ececec  !important; 
+
+}
+
+blockquote p{
+
+    font-family: Georgia, serif  !important; 
+
+    font-size: 18px  !important; 
+
+    font-style: italic  !important;
+	font-weight: bold!important;
+
+}
+blockquote p i{
+
+    font-family: Georgia, serif  !important; 
+    font-size: 18px  !important; 
+    font-style: italic  !important;
+	font-weight: normal!important;
+}
+
+
+
+blockquote:before {
+    display: block  !important; 
+
+    content: "\201C"  !important; 
+
+    font-size: 80px  !important; 
+
+    position: absolute  !important; 
+
+    left: -10px  !important; 
+
+    top: -10px  !important; 
+
+    color: #7a7a7a  !important; 
+
+}
+
+blockquote cite {
+
+    color: #999999  !important; 
+
+    font-size: 14px  !important; 
+
+    display: block  !important; 
+
+    margin-top: 5px  !important; 
+
+}
+
+blockquote cite:before {
+    content: "\2014 \2009"  !important; 
+
+}
+/*wpcurve jwn 87701 End*/
+
+/* WPCurve - LG - #88264 */
+#menu-main-menu-2 { width: 92%; }
+#menu-main-menu-2 li { width: 120px; }
+.entry-content blockquote { width: 100%; }
+/* .entry-content img { max-width: 100%; } */
+
+/* END WPCurve - LG - #88264 */
+
+/* WPCurve - MA - #88264 */
+@media only screen and ( max-width: 460px ) {
+	.entry-content img { width: 100%; display: block!important; }
+}
+/* WPCurve - MA - #88264 */
+
+/* WPCurve - LG - #91278 */
+.page-id-3603 .site-header {display:none;}
+/* END WPCurve - LG - #91278 */
+
+
+/* WP Curve MC 91398 */
+
+.get-btn {text-align:center;}
+
+.get-btn a.wp-colorbox-iframe.cboxElement {
+    background-color:#2d89ef;
+    background-image:url(https://taylorpearson.me/wp-content/uploads/2016/02/style-glass.png);
+
+
+
+
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-color: #6cacf4;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight:bold;
+    line-height: 50px;
+    padding: 10px 34px;
+    text-shadow: none;   
+}
+
+@media only screen and (max-width: 767px) 
+{
+  .get-btn a.wp-colorbox-iframe.cboxElement {display:block; line-height:normal;}
+}
+
+.img-btn {width:583px; text-align:center; margin:auto;}
+/* WP Curve MC 91398 */
+
+/* WPCurve #92222 (MJ) - Start */
+.site-header.bottom {
+    display: none;
+}
+.home .site-container > header.site-header.bottom {
+    display: block;
+}
+.home .site-container > header.site-header {
+    display: none;
+}
+.home header.site-header.bottom .wrap {
+    width: auto;
+}
+.home .title-area {
+    display: none;
+}
+.home .site-header .widget-area.header-widget-area {
+    float: none !important;
+    margin: 0 auto !important;
+    width: auto !important;
+}
+.home header.site-header.bottom #menu-main-menu-2.menu.genesis-nav-menu.responsive-menu {
+    float: none;
+    margin: 0 auto;   
+  	border: none;
+}
+.home #menu-main-menu-2 li.menu-item {
+    border: medium none !important;
+}
+.home .header-widget-area .widget {
+    margin-bottom: 1rem;
+}
+@media only screen and (max-width:1280px) {
+	#menu-main-menu-2 li.menu-item {
+		width: 20%;
+	}	
+}
+@media only screen and (max-width:1024px) {
+	.home header.site-header.bottom #menu-main-menu-2.menu.genesis-nav-menu.responsive-menu {
+		width: auto;
+	}
+}
+
+/* WPCurve #92222 (MJ) - END */
+
+/* WP Curve #96094 (MJ) - Start */
+@media only screen and (max-width:600px) {
+	#menu-main-menu-2 li.menu-item {
+		width: 80%;
+	}  
+}
+/* WP Curve #96094 (MJ) - END */
+
+/* WPCurve - LG - #96438 */
+@media only screen and (max-width:720px) {
+  .postid-4178 .su-table { overflow-x: scroll !important; }
+}
+/* END WPCurve - LG - #96438 */
+
+/* WPCurve #99438 (MJ) - Start */
+.genesis-nav-menu li .sub-menu {
+    margin-left: 0;
+    margin-top: 0;
+    width: 69%;
+}
+.genesis-nav-menu .sub-menu li a {
+    background: #000 none repeat scroll 0 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+@media only screen and (max-width:600px) {
+ 	.genesis-nav-menu li .sub-menu {
+    	width: 95%;
+	}
+}
+header.site-header.bottom .genesis-nav-menu li .sub-menu {
+    width: auto;
+}
+header.site-header.bottom #menu-main-menu-2.genesis-nav-menu .sub-menu li {
+    width: 180px;
+}
+@media only screen and (min-width:600px) and (max-width: 900px) {
+ 	header.site-header.bottom .genesis-nav-menu li#menu-item-3811 {
+    	width: 180px;
+	} 
+}
+@media only screen and (max-width:600px)  {
+  	header.site-header.bottom .genesis-nav-menu li#menu-item-3811 {
+    	width: 80%;
+	}
+  	header.site-header.bottom #menu-main-menu-2.genesis-nav-menu .sub-menu li {
+    	width: 100%;
+	}
+}
+@media only screen and (max-width:760px) {
+	header.site-header.bottom .genesis-nav-menu li .sub-menu {
+		width: 20%;
+	}
+	header.site-header.bottom .genesis-nav-menu .sub-menu li a {
+		width: 100%;
+	}
+}
+@media only screen and (max-width:600px) {
+ 	header.site-header.bottom .genesis-nav-menu li .sub-menu {
+    	width: 80%;
+	} 
+}
+/* WPCurve #99438 (MJ) - END */
+
+.right{
+	float: right;
+}
+
+/*wpcurve MA #99438 start */
+#menu-item-4299 { display: none; }
+@media only screen and (max-width:600px) {
+	#menu-item-4299 { display: inline-block!important; width: 80%!important; }
+	#menu-item-3811 .sub-menu { display: none!important; visibility:hidden!important; }
+	.site-header .title-area { float: left!important; width: 60%!important; }
+	.site-header .header-widget-area #responsive-menu-icon { float: right!important; width: 38%!important; margin-top: 10px!important; } 
+	.home .site-header .header-widget-area #responsive-menu-icon { margin-top: 0!important; } 
+	.site-header .header-widget-area #search-6 { display: none!important; }
+	.genesis-nav-menu a { text-align: left!important; }
+	
+	.home .site-container > header.site-header {
+    	display: block!important;
+		top: 25px!important;
+	}
+	.home .site-container > header.site-header.bottom {
+    	display: none!important;
+	}
+	.home .title-area {
+		display: block!important;
+	}
+}
+.page-id-4300 .entry-header { display: none; }
+
+.page-id-4300 .content-sidebar-wrap, .page-id-4300 .content { max-width: 100%!important; padding: 0!important; }
+
+
+
+/*wpcurve MA #99438 start */
+
+/* WP Curve #99660 (MJ) - Start */
+@media only screen and (max-width:600px) {
+.page-id-4300 header .title-area {
+    float: left;
+    padding-left: 2%;
+}
+.page-id-4300 header .header-widget-area {
+    float: right;
+    padding-right: 2%;
+}
+.page-id-4300 header .title-area, .page-id-4300 header .header-widget-area {
+    display: inline-block;
+    margin-top: 0;
+    padding-top: 0 !important;
+    width: auto !important;
+}
+.page-id-4300 header .header-widget-area #menu-main-menu-2.menu.genesis-nav-menu.responsive-menu li > a {
+    text-align: left;
+}
+.page-id-4300 header .header-widget-area #menu-main-menu-2.menu.genesis-nav-menu.responsive-menu li {
+    width: 100% !important;
+}
+.page-id-4300 #menu-main-menu-2.menu.genesis-nav-menu.responsive-menu {
+    float: none;
+    margin: 0 auto 25px;
+    width: 95%;
+}
+.page-id-4300 .nav-header > div#responsive-menu-icon {
+    position: absolute;
+    right: 5%;
+    top: 20px;
+}
+.page-id-4300 .row ul.support > li {
+    display: inline-block;
+    width: 22%;
+}
+.page-id-4300 ul.support {
+    margin-left: 0;
+}
+.page-id-4300 .site-inner .entry-content {
+    background: rgba(0, 0, 0, 0) url("https://taylorpearson.cdnoptimus.com/wp-content/uploads/2016/03/taylor-plain.jpg") no-repeat scroll center center / cover;
+}
+}
+@media only screen and (max-width:420px) {
+  .page-id-4300 .row ul.support > li > img {
+    width: auto;
+	}
+}
+/* WP Curve #99660 (MJ) - END */
+
+.site-header.bottom .site-title{
+ display:none;
+}
+
+
+
+.page-id-4300 .site-header.bottom{
+display: block !important;
+}
+.site-header.bottom .widget-area.header-widget-area{
+float:none !important;
+margin: 0 auto !important;
+}
+
+.site-header.bottom .genesis-nav-menu{
+margin-top: -35px;
+}
+
+.site-header.bottom .genesis-nav-menu li{
+border-top: 0px !important;
+border-bottom: 0px !important;
+}
+
+/*.home .genesis-nav-menu .sub-menu {
+  bottom: 70%;
+}*/
+@media only screen and (max-width: 600px) {
+  body.home .site-inner {
+    padding: 0;
+  }
+}
+
+/* wpcurve MA start */
+.page-id-4300 .entry-content { padding-top: 100px!important; }
+/* wpcurve MA start */
+
+/* WP Curve MC 100619 */
+.page-id-1623 .wp-tabs .ui-tabs {margin: 0;}
+
+.page-id-1623 ul.parent-tab-wrap{height:auto; top: -14px;}
+
+.page-id-1623 ul.parent-tab-wrap li h2{margin-bottom:10px !important; margin-top:5px !important;}
+
+.page-id-1623 .parent-tab-wrap li {transform: none; border-radius:16px 16px 0 0;}
+/* WP Curve MC 100619 */
+
+/*WPcurve JWN  105897 start*/
+@media only screen and (max-width:480px) {
+.cboxLoadedContent{
+width:450px !important;
+}
+.cboxContent{
+width:450px !important;
+}
+}
+/*WPcurve JWN  105897 end*/
+
+
+/* WP Curve MC 108525 */
+
+@media only screen and (min-width: 767px) 
+{
+.single .content article .entry-header .entry-title {
+    font-size: 6rem !important;
+}
+}
+
+/* WP Curve MC 108525 */
+/* WP Curve - Peter - #109813 */
+@media print {
+	#menu-main-menu-2, .sumome-share-client, .supsystic-social-sharing, div.after-entry, #disqus_thread {
+		display: none !important;
+	}
+	.content {
+		padding: 0;
+	}
+	h1 {
+		margin: 0;
+		page-break-before: always;
+	}
+	h1.entry-title {
+		page-break-before: avoid;
+	}
+}
+/* WP Curve - Peter - #109813 - end */
+
+
+/* WP Curve - JWN - #356037 - end */
+.post h1.entry-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+    left: 0px;
+    right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.post header.entry-header {
+    padding-bottom: 160px;
+}
+.entry-content p {
+    font-family: 'Raleway', sans-serif!important;
+    font-size: 16px ;
+    font-weight: 400;
+}
+
+
+/* WP Curve - JWN - #356037 - end */
+
+
+/* WP Curve MC 112255 */
+ .single .post h1.entry-title  {position: relative;}
+.single .post header.entry-header {padding-bottom: 40px;}
+.single .content-sidebar-wrap {max-width: 100%;}
+.single.site-inner .content, .single .site-inner .content {max-width: 100%;}
+.single  article .entry-content {margin: auto; max-width: 700px;}
+.single #disqus_thread{
+max-width: 700px;
+margin: 0 auto;
+}
+/* WP Curve MC 112255 */
+
+
+/*WPcurve JWN 112666 start*/
+.page-id-5280, .page-id-5270, .page-id-5278, main.content {
+    margin-top: -25px !important;
+}
+.page-id-5280, .page-id-5270, .page-id-5278, .site-container {
+    margin-top: -25px !important;
+}
+.page-id-5280, .page-id-5270, .page-id-5278 .page .site-inner .content{
+      max-width: 1000px !important;
+}
+
+/*WPcurve JWN 112666 end */
+
+/* WP Curve #113575 (MJ) - Start */
+.page-id-4966 .rt-col-xs-12 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.page-id-4966 .rt-col-xs-12 .rt-detail h2.entry-title a {
+    font-size: 11pt;
+}
+.page-id-4966 .rt-col-xs-12 .rt-detail h2.entry-title {
+    margin: 0 auto;
+   *width: 70%;
+}
+/* WP Curve #113575 (MJ) - END */
+
+/* wpcurve MA #208175 start */
+.page-id-4966 .site-inner .content {
+    max-width: 100%!important;
+}
+/* wpcurve MA #208175 end */
+
+/* WP Curve #118006 (MJ) - Start */
+.page-id-4966 .rt-col-xs-12 .rt-detail h2.entry-title {
+    width: 95%;
+}
+/* WP Curve #118006 (MJ) - END */
+
+/* WP Curve MC 119305 */
+#menu-item-5955 .menu-item{float:none;}
+/* #menu-item-5955 a{cursor:none;} */
+
+#menu-item-5955 .menu-item a{cursor:pointer;}
+/* WP Curve MC 119305 */
+/* WP Curve - Peter - #119991 */
+.page-id-3603 #scrapeazon-wrapper .scrapeazon-reviews#scrapeazon-iframe{
+  height:800px;
+}
+/* WP Curve - Peter - #119991 - end */
+
+/* WP Curve #121258 TA */
+.page-id-4966 .rt-tpg-container .rt-tpg-isotope-buttons button[data-filter=".uncategorized"] {
+    display: none;
+}
+/* WP Curve #121258 TA */
+
+
+/* WP Curve MC 121511 */
+.page-id-4966 .rt-col-xs-12 .rt-detail h2.entry-title{height:100px !important; display:block;}
+.page-id-4966 .rt-col-xs-12 .rt-detail {padding-bottom:0px;}
+/* WP Curve MC 121511 */
+
+/*wpcurve SG #122962 start*/
+
+.page-id-4300 .support .bbc img, .page-id-4300 .support .lifehacker img {opacity:0.6;/* margin-top:30px;*/}
+
+/*wpcurve SG #122962 end*/
+/* WP Curve MC 122962 */
+.page-id-4300 .support li.bbc{padding-left:0px;}
+.page-id-4300 ul.support{margin-left:0px;}
+.page-id-4300 ul.support li{padding-left:18px;}
+
+@media only screen and (min-width:1200px)
+{
+.page-id-4300 ul.support{width:116%; margin-left:-6%;}
+}
+
+@media only screen and (max-width:767px)
+{
+.page-id-4300 .support li img {margin-top:30px;}
+.page-id-4300 .support li.bbc img, .page-id-4300 .support li.forbes img {position: relative; top: -5px;}
+  .page-id-4300 .support li.catalog {width:28% !important;}
+}
+
+/* WP Curve MC 122962 */
+
+/* WP Curve MC 123713 */
+.entry-content p {font-size: 18px !important;}
+/* WP Curve MC 123713 */
+
+/* WP Curve ND 125663 */
+.btn-wpcurve {
+    white-space: normal;
+    width: 45%;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: normal;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+.page-content a.btn-wpcurve {
+  font-size: 15px!important;
+  padding: 4px 36px!important;
+  margin-right: 50px;
+  border-color:#ccc;
+}
+
+.btn-wpcurve:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    text-decoration: none;
+}
+/* WP Curve ND 125663 - End */
+
+/* WP Curve #127329 (MJ) - Start */
+.home .page-content a.btn-wpcurve {
+    font-size: 18px !important;
+    padding: 14px !important;
+  	width: 230px;
+}
+@media only screen and (max-width:560px) {
+  	.home .page-content a.btn-wpcurve {
+		margin-right: 0;
+    	display: block;
+	}
+}
+/* WP Curve #127329 (MJ) - Start */
+
+@media only screen and (max-width:560px) {
+  	.single-post .entry-content p {
+		padding: 0px 15px;
+	}
+}
+/* WP Curve - #145246 - Peter */
+.wpc-small-footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+}
+.wpc-small-footer ul {
+    margin-bottom: 0;
+    text-align: right;
+}
+.wpc-small-footer li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px;
+}
+.wpc-small-footer li a, 
+.wpc-small-footer li a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+/* WP Curve - #145246 - Peter - end */
+
+/* WP Curve #145467 (MJ) - Start */
+.archive.category article > header.entry-header {
+    padding-bottom: 30px;
+}
+.archive.category article {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+/* WP Curve #145467 (MJ) - END */
+
+/* WPCurve - LG - #145898 */
+.home header.site-header.bottom #menu-main-menu-2.menu.genesis-nav-menu.responsive-menu { width: 600px; }
+/* END WPCurve - LG - #145898 */
+
+/* WP Curve #146226 TA */
+@media only screen and (min-width: 601px){
+    #menu-main-menu-2 li.menu-item,
+    header.site-header.bottom .genesis-nav-menu li#menu-item-3811 {
+        width: 15%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .home .widget_nav_menu #menu-main-menu-2 li.menu-item {
+        width: 16%;
+    }
+}
+.home .wpc-small-footer {
+    display: none;
+}
+/* WP Curve #146226 TA */
+
+/* wpcurve MA #146917 start Landing Page Wide*/
+.sixteen-nine-landing-wide .site-inner .content { max-width: 100%!important; }
+/* wpcurve MA #146917 end */
+
+/* WP Curve #149623  - AA - Start*/
+@media only screen and (max-width: 460px) {
+.wp-image-6970 {
+    max-width: 20% !important;
+}
+.wp-image-6969 {
+    max-width: 20% !important;
+}
+.wp-image-6968 {
+    max-width: 20% !important;
+}
+.wp-image-6972 {
+    max-width: 20% !important;
+}
+.wp-image-6975 {
+    max-width: 20% !important;
+}
+  .wp-image-6976 {
+    max-width: 20% !important;
+}
+  .wp-image-6977 {
+    max-width: 20% !important;
+}
+  h2.wpc-padding[style] {
+    padding-left: 100px !important;
+    margin-top: -40px !Important;
+}
+}
+
+/* WP Curve - AA - End*/
+
+/* WP Curve MC 153478 */
+@media only screen and (min-width: 1920px) 
+{
+.page-id-4300 .site-header.bottom{position:absolute; bottom:0px;}
+.page-id-4300 .entry-content{min-height:1920px;}
+}
+/* WP Curve MC 153478 */
+/* WP Curve - #167736 - Peter */
+#menu-main-menu-2 li li.menu-item {
+    float: none;
+}
+/* WP Curve - #167736 - Peter - end */
+
+@media only screen and (max-width: 600px){
+  .page-id-4300 .row ul.support > li {
+     width: 100% !important;
+  }
+}
+
+/* Ripplepop Danel - Text formatting  */
+@media only screen and (min-width: 767px){
+	.single .content article .entry-header .entry-title {
+		font-size: 5.472rem !important;
+	}
+}
+
+.entry-content ol, .entry-content p, .entry-content ul {
+    margin-bottom: 3rem;
+		line-height: 1.58 !important;
+		font-size: 2rem !important;
+}
+
+h1, .h1 {
+	font-size: 5.236rem !important;
+}
+
+h2, .h2 {
+		margin-top: 50px !important;
+	font-size: 3.236rem !important;
+}
+
+h3, .h3 {
+	font-size: 2rem !important;
+}
+
+h4, .h4 {
+	font-size: 2rem !important;
+}
+
+h5, .h5 {
+	font-size: 2rem !important;
+}
+
+h6, .h6 {
+	font-size: 2rem !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 5.2rem;
+}
+
+.entry-content h1, .entry-content .h1 {
+		font-size: 4.236rem !important;
+}
+
+blockquote {
+    background: none !important;
+    border-left: none !important;
+}
+
+.entry-content ol, .entry-content ul {
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif!important;
+}
+
+p.wp-caption-text {
+    font-size: 0.764rem !important;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+.single .post header.entry-header {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1.entry-title {
+		margin-bottom: 0 !important;
+}
+
+/* End - Ripplepop Danel Text Formatting */
+
+/* Ripplepop Danel Archive Width */
+.page-id-4966 .content-sidebar-wrap {
+		max-width: none;
+		padding-left: 20px;
+		padding-right: 20px;
+}
+/* End Archive Width */
+
+/* Ripplepop Danel Post Comment Section Width */
+
+.single div.entry-comments {
+		max-width: 700px;
+		margin: auto;
+}
+/* Ripplepop Comment Section Width */
+
+/* Ripplepop Best Essays */
+
+.middle-content {
+		float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    padding-left: 0px;
+    padding-right: 0px;		
+}
+
+/* End Best Essays */
+
+/* Ripplepop Menu Fix */
+
+ul.sub-menu li {
+    display: block !important;
+    min-width: 150px;
+}
+
+/* End Menu Fix */
+
+
+/* Ripplepop Content Fix */
+
+.single.site-inner.bookreview-template-default .content, 
+.single.bookreview-template-default .site-inner .content{
+	max-width: 700px;
+}
+@media(max-width: 720px){
+	.single.site-inner .content, 
+	.single .site-inner .content{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* End Menu Fix */</style><script data-cfasync="false" id="ao_optimized_gfonts_webfontloader">(function() {var wf = document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf, s);})();</script></head><body class="post-template-default single single-post postid-9787 single-format-standard custom-background custom-header content-sidebar genesis-breadcrumbs-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8457H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="site-container"><header class="site-header"><div class="wrap"><div class="site-avatar"><a href="https://taylorpearson.me/"><img alt="" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2016/06/cropped-TaylorPearsonProfileThumbnail.png" /></a></div><div class="title-area"><p class="site-title"><a href="https://taylorpearson.me/">Taylor Pearson</a></p></div><div class="widget-area header-widget-area"><section id="nav_menu-3" class="widget widget_nav_menu"><div class="widget-wrap"><nav class="nav-header"><ul id="menu-main-menu-2" class="menu genesis-nav-menu"><li id="menu-item-2968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2968"><a rel="nofollow" href="/books"><span >Books</span></a></li><li id="menu-item-2969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2969"><a href="/archive"><span >Essays</span></a></li><li id="menu-item-2971" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2971"><a rel="nofollow" href="/contact"><span >About</span></a></li><li id="menu-item-5955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5955"><a rel="nofollow" href="https://taylorpearson.me/services/"><span >Services</span></a><ul class="sub-menu"><li id="menu-item-11481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11481"><a href="https://taylorpearson.me/coaching-consulting-advising/"><span >Coaching, Consulting and Advising</span></a></li><li id="menu-item-11480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11480"><a href="https://taylorpearson.me/personal-operations-coaching/"><span >Personal Operations Coaching</span></a></li><li id="menu-item-10063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10063"><a href="https://taylorpearson.me/speaking-events/"><span >Speaking &#038; Events</span></a></li></ul></li><li id="menu-item-11838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11838"><a href="https://taylorpearson.me/newsletter/"><span >Newsletter</span></a></li></ul></nav></div></section><section id="search-6" class="widget widget_search"><div class="widget-wrap"><form role="search" method="get" class="search-form" id="search-form"  action="https://taylorpearson.me/" > <input type="search" name="s" placeholder="Search the Archives"> <input type="submit" value="Search"></form></div></section></div><footer class="site-footer"><div class="wrap"> ...</div></footer></div></header><header itemtype="http://schema.org/WPHeader" itemscope="" class="site-header bottom"><div class="wrap"><div class="site-avatar"> <a href="https://taylorpearson.me/"><img src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2014/06/cropped-Screen-Shot-2014-06-28-at-7.57.13-PM.png" alt=""></a></div><div class="title-area"><p itemprop="headline" class="site-title"><a href="https://taylorpearson.me/">Taylor Pearson</a></p></div><div class="widget-area header-widget-area"><section class="widget widget_nav_menu" id="nav_menu-3"><div class="widget-wrap"><nav itemtype="http://schema.org/SiteNavigationElement" itemscope="" class="nav-header"><ul class="menu genesis-nav-menu responsive-menu" id="menu-main-menu-2"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2968" id="menu-item-2968"> <a rel="nofollow" itemprop="url" href="https://taylorpearson.me/eojbook"><span itemprop="name">Book</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2969" id="menu-item-2969"> <a itemprop="url" href="/archive"><span itemprop="name">Essays</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3795" id="menu-item-3795"> <a rel="nofollow" itemprop="url" href="https://taylorpearson.me/free/"><span itemprop="name">Resources</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2971" id="menu-item-2971"> <a rel="nofollow" itemprop="url" href="/contact"><span itemprop="name">About</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3811" id="menu-item-3811"> <a rel="nofollow" itemprop="url" href="https://taylorpearson.me/speaking/"><span itemprop="name">Services</span></a><ul class="sub-menu" style="display:none;"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4290" id="menu-item-4290"><a rel="nofollow" itemprop="url" href="https://taylorpearson.me/speaking/"><span itemprop="name">Work With Taylor</span></a></li></ul></li></ul></nav></div></section></div></div></header><div class="site-inner"><div class="content-sidebar-wrap"><main class="content"><div class="my-essay"><center><h1>Essays</h1></center><h3>Greatest Hits (Sorted by Theme)</h3><p>Learn how to...</p><ul><li><b>Risk Management</b> - Apply <a href="https://taylorpearson.me/antifragile-book-notes/">Antifragility</a> to make <a href="https://taylorpearson.me/extremistan/">Entrepreneurship the Safest 21st Century Career</a> and <a href="https://taylorpearson.me/the-antifragile-person/">Surround yourself with a community that will foster success</a></li><li><b>Writing and Reading</b> - <a href="https://taylorpearson.me/read">Read 60 Books a Year</a> and <a href="https://taylorpearson.me/best-books-entrepreneurs/">67 Recommendations on Where to Start</a></li><li><b>Habits and Rituals</b> - <a href="https://taylorpearson.me/dailyritual/">Build Daily Habits</a> and a <a href="https://taylorpearson.me/weeklyreview/">Weekly Review to Enable Doing Your Best Work</a></li><li><b>Focus</b> - <a href="https://taylorpearson.me/limits/">Decide What to Focus on</a> and <a href="https://taylorpearson.me/focus/">Why It's Essential That You Do</a></li><li><b>Systems</b> - <a href="https://taylorpearson.me/hiring-and-managing-employees-at-scale/">Leverage Systems to Be 10x More Effective</a>,  and <a href="https://taylorpearson.me/arbitrage/">Discover Frameworks that Yield Disproportionately Large Results</a></li><li><b>Marketing</b> - <a href="https://taylorpearson.me/527/">Grow your business 527% in 18 Months</a> and <a href="https://taylorpearson.me/jesusmarketing/">sell 5000 Books in Four Weeks As a First Time Author</a></li></ul> &nbsp;<p>Want more? Browse the full archives below</p></div><article class="post-9787 post type-post status-publish format-standard has-post-thumbnail category-blockchain category-investing-decision entry" aria-label="Blockchain Explained: How Does Blockchain Technology Work?"><header class="entry-header"><h1 class="entry-title">Blockchain Explained: How Does Blockchain Technology Work?</h1><p class="entry-meta"><time class="entry-time">July 23, 2018</time> By <span class="entry-author"><a href="https://taylorpearson.me/author/admin/" class="entry-author-link" rel="author"><span class="entry-author-name">Taylor Pearson</span></a></span></p></header><div class="entry-content"><p><span style="font-weight: 400;"><em><img class="alignleft wp-image-9804 size-medium" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-231x300.png" alt="" width="231" height="300" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-231x300.png 231w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-768x998.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-788x1024.png 788w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf.png 877w" sizes="(max-width: 231px) 100vw, 231px" /></em></span></p><p><span style="font-weight: 400;"><em>This is a long article answering the question &#8220;How Does Blockchain Work?&#8221; to a non-technical reader. You can download a PDF version of this post below.</em> </span></p><div class="tve-leads-shortcode tve-leads-triggered tve-tl-anim tl-anim-instant tve-leads-track-shortcode_9808"><div class="tl-style" id="tve_tcb2_blank" data-state="51" data-form-state=""><style type="text/css" class="tve_custom_style">@media (min-width:300px){[data-css="tve-u-05b55c65791390"]{background-color:rgb(255,255,255) !important;}:not(#tve) [data-css="tve-u-15b55c657913dc"] button{background-image:none !important;background-color:rgb(216,41,41) !important;}}</style><style type="text/css" class="tve_user_custom_style">.tve-leads-conversion-object .thrv_heading h1,.tve-leads-conversion-object .thrv_heading h2,.tve-leads-conversion-object .thrv_heading h3{margin:0;padding:0}.tve-leads-conversion-object .thrv_text_element p,.tve-leads-conversion-object .thrv_text_element h1,.tve-leads-conversion-object .thrv_text_element h2,.tve-leads-conversion-object .thrv_text_element h3{margin:0}</style><div class="tve-leads-conversion-object" data-tl-type="shortcode_9808"><div class="tve_flt"><div id="tve_editor" class="tve_shortcode_editor"><div class="thrv-leads-form-box tve_no_drag tve_no_icons thrv_wrapper tve_editor_main_content tve_empty_dropzone" data-css="tve-u-05b55c65791390"><div class="thrv_wrapper thrv_lead_generation" data-connection="api" style=""><input type="hidden" class="tve-lg-err-msg" value="{&quot;email&quot;:&quot;Email address invalid&quot;,&quot;phone&quot;:&quot;Phone number invalid&quot;,&quot;password&quot;:&quot;Password invalid&quot;,&quot;passwordmismatch&quot;:&quot;Password mismatch error&quot;,&quot;required&quot;:&quot;Required field missing&quot;}"><div class="thrv_lead_generation_container tve_clearfix"><form action="#" method="post" novalidate="novalidate"><div class="tve_lead_generated_inputs_container tve_clearfix tve_empty_dropzone"><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--1"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="tve_lg_input_container tve_lg_input"><input type="email" data-field="email" data-required="1" data-validation="email" name="email" placeholder="Email" data-placeholder="Email" class=""></div></div></div></div></div><div class="tve_lg_input_container tve_submit_container tve_lg_submit" data-css="tve-u-15b55c657913dc"><button type="submit" class="tve-froala">Download</button></div></div><input id="_submit_option" type="hidden" name="_submit_option" value="redirect"><input id="_back_url" type="hidden" name="_back_url" value="https://taylorpearson.me/theendofjobs/"><input type="hidden" name="__tcb_lg_fc" id="__tcb_lg_fc" value="YToxOntzOjE0OiJhY3RpdmVjYW1wYWlnbiI7czoxOiI0Ijt9"><input id="_autofill" type="hidden" name="_autofill" value=""><input type="hidden" id="activecampaign_form" class="tve-api-extra" name="activecampaign_form" value="0"><input type="hidden" id="activecampaign_tags" class="tve-api-extra" name="activecampaign_tags" value="[Lead] - Blockchain Explained"></form></div></div></div></div></div></div></div></div><p><span style="font-weight: 400;">The first blockchain was conceptualized by an individual (or group of individuals) known as Satoshi Nakamoto in 2008.</span></p><p><span style="font-weight: 400;">It was launched the following year in January 2009 by Nakamoto as a core component of the cryptocurrency Bitcoin, where it serves as the public ledger for all transactions on the network.</span></p><p><span style="font-weight: 400;">Through the use of a blockchain, Bitcoin became the first digital currency to solve the double spending problem without requiring a trusted authority and has been the inspiration for many additional applications.</span></p><p><span style="font-weight: 400;">I believe that in one hundred years, blockchains will be as common and necessary as electricity is today. They will be fundamental pieces of the economy which nearly everyone will interact with on a daily basis. They will be so normal that we will forget they exist.</span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;">We should expect that, over the next couple decades, we will see a Cambrian explosion of blockchain applications and organizations much like what happened with the internet over the past few decades or electrification in the early 20th century.</span></p><p><span style="font-weight: 400;">If that’s true, it’s worth developing a basic understanding for blockchains, including why they matter and how they work.</span></p><p><img loading="lazy" class="aligncenter wp-image-9788 size-large" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2-1024x346.png" alt="blockchain explained" width="1024" height="346" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2-1024x346.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2-300x101.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2-768x259.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks2.png 1555w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><h1><span style="font-weight: 400;">Why Blockchains Matter</span></h1><p><em><span style="font-weight: 400;">&#8220;It is a profoundly erroneous truism, repeated by all copy-books and by eminent people when they are making speeches, that we should cultivate the habit of thinking [about] what we are doing. The precise opposite is the case. Civilization advances by extending the number of important operations which we can perform without thinking about them.&#8221;&nbsp; &#8211;&nbsp;</span><a href="https://en.wikipedia.org/wiki/Alfred_North_Whitehead"><span style="font-weight: 400;">Alfred North Whitehead</span></a></em></p><p><span style="font-weight: 400;">In a blockchain, each time a transaction takes place, such as one party sending bitcoin directly to another, the details of that deal – including its source, destination, and date/timestamp – are added to what is referred to as a block.</span></p><p><span style="font-weight: 400;">Using cryptography, blockchains dramatically increases </span><a href="http://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html"><span style="font-weight: 400;">social scalability</span></a><span style="font-weight: 400;">, the ability for humans to collaborate with increasingly large numbers of other humans, a necessary feature of civilization. </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;">Historically, humans only transacted with members of a small tribe, often based on kinship alone, because there was no way for them to trust individuals outside that group.</span><span style="font-weight: 400;">A wide variety of innovations over the last few millennia have increased social scalability by allowing humans to cooperate in larger groups. </span></p><p><span style="font-weight: 400;">The modern legal system which lowers vulnerability to violence, theft and fraud allowing parties or individuals that have no pre-existing relationships to interact.</span></p><p><span style="font-weight: 400;">The internet, particularly through rating systems, facilitated transactions between individuals with little or no social relationship.</span></p><p><span style="font-weight: 400;">Blockchains have the potential to increase social scalability to a level that no previous technology has.&nbsp;</span><span style="font-weight: 400;">For the first time, we have a way for one Internet user to transfer a unique piece of digital property to another internet user safely and securely without relying on a trusted third party. &nbsp;It’s hard to overstate how big of a deal this is.</span></p><p><span style="font-weight: 400;">Think about digital contracts, digital keys (to physical locks or online locks), and digital ownership of physical assets including cars, houses, stocks, bonds and, of course, digital money.</span></p><p><i><span style="font-weight: 400;">Note: There is a lot more to be said about Why Blockchains Matter. For the sake of not making this article insanely long, I will focus this article mostly on the “how” rather than the “why.” If you would like to read more about why blockchain technology matters check out </span></i><a href="https://taylorpearson.me/why-is-bitcoin-valuable/"><i><span style="font-weight: 400;">Why is Bitcoin and Cryptocurrency Technology Valuable?</span></i></a><i><span style="font-weight: 400;">, </span></i><a href="https://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html"><i><span style="font-weight: 400;">Money, blockchains, and social scalability</span></i></a><i><span style="font-weight: 400;">, </span></i><a href="https://blog.chain.com/a-letter-to-jamie-dimon-de89d417cb80"><i><span style="font-weight: 400;">A Letter to Jamie Dimon</span></i></a><i><span style="font-weight: 400;">, </span></i><a href="https://www.nytimes.com/2018/01/16/magazine/beyond-the-bitcoin-bubble.html"><i><span style="font-weight: 400;">Beyond the Bitcoin Bubble</span></i></a><i><span style="font-weight: 400;"> and </span></i><a href="https://medium.com/@cdixon/why-decentralization-matters-5e3f79f7638e"><i><span style="font-weight: 400;">Why Decentralization Matters</span></i></a><i><span style="font-weight: 400;">.</span></i></p><h1><span style="font-weight: 400;">How Does Blockchain Technology Work</span></h1><p><span style="font-weight: 400;">Here’s the short jargon-y version:</span></p><p><i><span style="font-weight: 400;">A blockchain is a ledger that uses cryptography and incentives to record transactions in a tamper-evident way. This allows for trust-minimized transactions between pseudonymous parties without requiring a trusted intermediary.</span></i></p><p><span style="font-weight: 400;">Now, let’s unpack the pieces in there so that by the end of the article that will make perfect sense to you.</span></p><h2><span style="font-weight: 400;">Primitives</span></h2><p><span style="font-weight: 400;">Before we dive into blockchains, we need to establish a few primitives. Primitives are like building material. If you want to build a shed, you’re going to need some wood, some screws, a drill, and a saw. It would be good to get a brief idea on how each of those worked before you started building. That’s all we’re going to do here.</span></p><p><span style="font-weight: 400;">The building blocks of blockchains are— surprise, surprise—</span><a href="https://en.wikipedia.org/wiki/Cryptography"><span style="font-weight: 400;">cryptographic</span></a><span style="font-weight: 400;"> primitives. </span></p><p><span style="font-weight: 400;">Cryptography is the study of techniques for communicating securely in the presence of third parties (AKA adversaries). </span></p><p><span style="font-weight: 400;">Historically, a lot of cryptographic research was done by the military to ensure they could communicate securely without having their enemies be able to read their telegram or radio messages. </span></p><p><span style="font-weight: 400;">Modern cryptography is used on every popular website, in credit card chips, and computer passwords. In all these cases, it’s trying to keep a third party (read: hacker, thief, etc.) from stealing sensitive data like your credit card information.</span></p><p><span style="font-weight: 400;">The first building block we’ll start with is hash functions.</span></p><h3><strong>Hash Functions</strong></h3><p><span style="font-weight: 400;">A hash function is a mathematical function that lets you encrypt data.</span></p><p><span style="font-weight: 400;">A hash function has three properties:</span></p><ul><li><b>Its input can be any size. </b></li></ul><p><span style="font-weight: 400;">E.g. I could use the phrase “I like ice cream” as input or I could use the entire text of </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;"> and both would work.</span></p><ul><li><b>Using any size input, it comes up with a fixed size output determined by which particular hashing algorithm is being used. In order to keep it simple, we’ll use a 256-bit output since that’s what Bitcoin, the first blockchain, uses. </b></li></ul><p><span style="font-weight: 400;">Whether I entered the phrase “I like ice cream” as an input or I used the entire text of </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;"> as the input, both would produce an output of the same size.</span></p><p><a href="http://passwordsgenerator.net/sha256-hash-generator/"><span style="font-weight: 400;">Using the SHA 256 algorithm</span></a><span style="font-weight: 400;">, the one used by Bitcoin, the phrase “I like ice cream” (no quotes) creates the output:</span></p><p><span style="font-weight: 400;">138F4504A873C01D0864343FAD3027F03CA9BEA2F0109005FA4FC8C7DCC12634</span></p><p><span style="font-weight: 400;">The entirety of </span><a href="https://www.gutenberg.org/files/2600/2600-h/2600-h.htm"><i><span style="font-weight: 400;">War and Peace</span></i></a> <span style="font-weight: 400;">(all 587,287 words) copied from project Gutenberg produces the output:</span></p><p><span style="font-weight: 400;">57027F5B3877ABBE43ACB101D59E963BC2CC0E86A6EBCCC34DFD035BBF83B096</span></p><p><span style="font-weight: 400;">Even though the input is 146,821 times longer, you get the same size output. Pretty cool and, it turns out, useful. More on that later.</span></p><ul><li><b>It is efficiently computable. For any given input string, you can figure out the output in a reasonable amount of time.</b></li></ul><p><span style="font-weight: 400;">Even if I want to use the entire text of </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;"> as my input, it can still convert that into an output in a reasonable amount of time.</span></p><p><span style="font-weight: 400;">The above properties are for a general hash function. General hash functions let you map a large space of things to a small space which can be helpful for storing and working with different types of data.</span></p><p><span style="font-weight: 400;">However, we’re going to focus on cryptographic hash functions since those are the ones used in blockchains.</span></p><p><span style="font-weight: 400;">A cryptographic hash function requires three additional properties:</span></p><ol><li style="font-weight: 400;"><span style="font-weight: 400;">Collision Resistance</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Deterministic Hiding</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Puzzle Friendliness</span></li></ol><h2><span style="font-weight: 400;">Cryptographic Hash Functions</span></h2><h3><strong>Collision Resistance</strong></h3><p><span style="font-weight: 400;">A collision is when two different inputs produce the same output. While the output size will be the same, the output itself is not going to be identical to other outputs. “I like ice cream” and the entire text of </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;"> produce outputs of the same size, but the characters are different.</span></p><p><span style="font-weight: 400;">If they produced the exact same output and I sent you that encrypted text and you decrypted it, you wouldn’t know if I was telling you that I liked ice cream or that you should read </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;">.</span></p><p><span style="font-weight: 400;">It’s also notable that two &#8220;nearby&#8221; inputs do not result in nearby outputs. The hash of </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;"> is completely different than the hash of War and Peace with 1 character changed. </span></p><p><span style="font-weight: 400;">Using SHA256, The entirety of </span><a href="https://www.gutenberg.org/files/2600/2600-h/2600-h.htm"><i><span style="font-weight: 400;">War and Peace</span></i></a><span style="font-weight: 400;"> produces the hash:</span></p><p><span style="font-weight: 400;">57027F5B3877ABBE43ACB101D59E963BC2CC0E86A6EBCCC34DFD035BBF83B096</span></p><p><span style="font-weight: 400;">If I delete the final period, but leave everything else the same, it produces the hash:</span></p><p><span style="font-weight: 400;">E2E2E4FFD582E20474F0310C2132EAE5F2D766C6A253C1BC4AF57861095B30FA</span></p><p><span style="font-weight: 400;">This is very similar to how two &#8220;nearby&#8221; starting points in a </span><a href="https://taylorpearson.me/complexity-science/"><span style="font-weight: 400;">chaotic system</span></a><span style="font-weight: 400;"> very quickly lead to two completely different future trajectories. It is this &#8220;chaotic scrambling&#8221; property of hash functions which creates collision resistance. &nbsp;The outputs are appear random and so are unlikely to collide, but are able to map infinity to finite space, which allows us to compress data.</span></p><p><span style="font-weight: 400;">This particularly matters if you are sending around money. The public key to your wallet is produced from the private key using a cryptographic hash function. You don’t want someone else to be able to reverse engineer get your public key to figure out your private key (since they could then steal all your funds).</span></p><p><span style="font-weight: 400;">A hash function is considered to be collision resistant if nobody can find a collision. In theory, we know they exist because the number of inputs is infinite, but the number of outputs is finite — &nbsp;there are only so many ways to arrange 64 characters.</span></p><p><span style="font-weight: 400;">In practice though, the cryptographic hash function SHA 256 is collision resistant because no one has ever found a collision and the odds of it happening are astronomical. If every computer ever made by humanity had been trying to find a collision since the beginning of the universe, the odds of it happening are lower than the odds of the Earth being destroyed by a giant meteor in the next two seconds.</span></p><p><span style="font-weight: 400;">So, it’s possible, but there are a lot of other, bigger problems we should worry about first.</span></p><h3><strong>Deterministic Hiding</strong></h3><p><span style="font-weight: 400;">Hashes look random but are actually deterministic. Their outputs are therefore reproducible so that as long as you use the same input, you always get the same output. This means two different parties who know the input can verify that the other person also knows the input by showing their hash to the other party. </span></p><p><span style="font-weight: 400;">The second property that we want for a cryptographic hash function is hiding. Hiding means that if you are given the output, there is no feasible way to figure out what the input was.</span></p><p><span style="font-weight: 400;">That is, there is no way for a third party observer to know that 138F4504A873C01D0864343FAD3027F03CA9BEA2F0109005FA4FC8C7DCC12634 means “I like ice cream.”</span></p><p><span style="font-weight: 400;">However if I know the input is “I like ice cream” then I can easily verify whether or not you know that by checking your hash.</span></p><p><span style="font-weight: 400;">However, if anyone else sees the hash, they cannot use it to figure out the input. This allows those who know the input to communicate securely about it in a public channel using the hashed output without worrying that a third party observer can figure it out.</span></p><h3><strong>Puzzle Friendliness</strong></h3><p><span style="font-weight: 400;">The third property we need is that they are puzzle-friendly. This means that if someone wanted to generate a hash that came up with the same output as “I like ice cream,” it’s extremely difficult to find another value that exactly hits this target.</span></p><p><span style="font-weight: 400;">The algorithm to generate the hash is to try every possible string, ordered by length and then by alphabetical order, until you get one that hashes to the same value. There&#8217;s a very large haystack to search for a very small needle so we get probabilities that suggest an asteroid annihilating all life on Earth is a more pressing problem.</span></p><p><span style="font-weight: 400;">Another way of saying this is that </span><i><span style="font-weight: 400;">cryptographic hash functions are hard to reverse</span></i><span style="font-weight: 400;">. This is the main thing which makes a cryptographic hash as compared to a hash used in data structures or a compression algorithm.</span></p><p><span style="font-weight: 400;">This is also the arms race part of blockchains &#8212; hackers are always getting better at reversing hash functions so cryptographers are always having to come up with better hash functions.</span></p><p><span style="font-weight: 400;">Having this quality is important because the blockchain is a “tamper-evident ledger,” a tamper proof record of transactions.</span></p><p><span style="font-weight: 400;">The puzzle friendliness property is what makes it tamper-evident. If I wanted to replace an entry like “I like ice cream,” it should be impossible for me to do so without other participants being able to know.</span></p><p><span style="font-weight: 400;"><img loading="lazy" class="aligncenter size-full wp-image-9789" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/1.png" alt="" width="680" height="455" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/1.png 680w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/1-300x201.png 300w" sizes="(max-width: 680px) 100vw, 680px" /></span><i><span style="font-weight: 400;">Caption: Using a good cryptographic hash function, even slight changes in the input will results in dramatically different outputs making the input tamper-resistant.</span></i></p><p><span style="font-weight: 400;">Cryptographic hash functions look random (and so lack collisions), can&#8217;t be reversed, and hide inputs, but, at the same time, are completely deterministic. This is what makes them useful!</span></p><p><span style="font-weight: 400;">This covers the basics of cryptographic hash functions. In the next section, we’ll look at how these hash functions are used to build blockchains.</span></p><h3></h3><h2><span style="font-weight: 400;">Transitive Hash Functions within the Blockchain</span></h2><p><span style="font-weight: 400;">The previous section about about hash functions above is really just a big introduction to how to hash a single piece of information like words in a book or a password.</span></p><p><span style="font-weight: 400;">What if you wanted to hash collections of data like a bunch of documents or a sequence of transactions?</span></p><p><span style="font-weight: 400;">Let&#8217;s start with a linear sequence of things you might want to consecutively hash. You start with some piece of data, A, and you hash it to get A#. </span></p><p><span style="font-weight: 400;">Now you want to &#8220;mix in&#8221; B. So you just add B to it (A# + B) and take the hash of the whole thing. Now you have a new hash (B#) which has some information about both A (from the hash A# you used) and B. </span></p><p><span style="font-weight: 400;">What you need is a hash function for which changing anything about A or B would result in a different final hash. This is a </span><b>transitive hash function</b><span style="font-weight: 400;">.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9790" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/2-1024x440.png" alt="" width="1024" height="440" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/2-1024x440.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/2-300x129.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/2-768x330.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/2.png 1820w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><i><span style="font-weight: 400;">Caption: A blockchain is a chain of hashes.</span></i></p><p><span style="font-weight: 400;">When people talk about blockchains, one of the words that gets thrown around a lot is “trust-minimized.” </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;"><br /> </span><span style="font-weight: 400;">Hashing in general, and </span><i><span style="font-weight: 400;">hash pointers</span></i><span style="font-weight: 400;"> in particular, are a core component of the trust-minimized property of blockchains. A hash pointer is just a hash that points at some other data structure like a previous block.</span></p><p><span style="font-weight: 400;">This is a big deal because it makes easy to see if someone tampers with the data.</span></p><p><span style="font-weight: 400;">If we had a blockchain of 100 blocks and the tenth block contained the hash of the entire manuscript to </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;"> and I changed one letter in the manuscript, it would change the hash pointer in that block and all subsequent blocks.</span></p><p><span style="font-weight: 400;">Hash pointers ensure the integrity of the ledger (i.e. that it hasn’t been modified). Blockchains have been called </span><a href="https://hackernoon.com/why-everyone-missed-the-most-important-invention-in-the-last-500-years-c90b0151c169"><span style="font-weight: 400;">triple entry accounting</span></a><span style="font-weight: 400;"> because this hashpointer data structure is another, harder-to-forge way of making sure the ledger reflects reality.</span></p><p><span style="font-weight: 400;">For example, if there are two people collaborating on a project and one person tries to go back and modify something so that they make more money, it is immediately clear to their partner that they are trying to cheat &#8211; they will end up with a resulting hash that’s different.</span></p><h3><strong>Merkle Trees</strong></h3><p><span style="font-weight: 400;">Now what if you want to hash not just a linear sequence, but a sequence of sets like Bitcoin&#8217;s set of transactions in its sequence of blocks. The new thing you need is a rule for how to traverse each set of data, reducing the problem again to encrypting a consecutive series of things (A#, B#, etc.)</span></p><p><span style="font-weight: 400;">A Merkle Tree is exactly this. It allows you to group blocks of data and hash them together into a structure that looks like, well, a tree branch with leaves.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9791" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/3-1024x511.png" alt="" width="1024" height="511" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/3-1024x511.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/3-300x150.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/3-768x384.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/3.png 1806w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><span style="font-weight: 400;">As with a blockchain, as long as we know the hash point at the “root” of the tree, then we can know that none of the data in the tree has been tampered with.</span></p><p><span style="font-weight: 400;">If one bit, in one transaction is changed, then it changes every subsequent hash and the tampering is revealed.</span></p><p><span style="font-weight: 400;">Using a Merkle tree is preferable over just a digest of all transactions because it allows for a much quicker and simpler test of whether a particular transaction is included in the set of all transactions.</span></p><h2>Blockchains</h2><p><span style="font-weight: 400;">We started by looking at hash functions.</span></p><p><span style="font-weight: 400;">Then saw how we could add three properties: </span><span style="font-weight: 400;">collision resistance</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">deterministic hiding</span><span style="font-weight: 400;"> and </span><span style="font-weight: 400;">puzzle friendliness</span><span style="font-weight: 400;"> to make a hash function into a cryptographic hash function. </span></p><p><span style="font-weight: 400;">Then, we saw how we could connect cryptographic hash functions together to make a transitive cryptographic hash function.</span></p><p><span style="font-weight: 400;">When we add a Merkle tree to a transitive cryptographic hash function, we get a blockchain. Each block contains a set of “merkleized” transactions and the blocks are chained together. </span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9792" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/4-remove-bc-1024x485.png" alt="" width="1024" height="485" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/4-remove-bc-1024x485.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/4-remove-bc-300x142.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/4-remove-bc-768x364.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/4-remove-bc.png 1967w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><h3></h3><h3><span style="font-weight: 400;">Proof of Work Blockchains</span></h3><p><span style="font-weight: 400;">The innovation of Satoshi Nakomoto, the anonymous creator(s) of Bitcoin, was to make one more rule. When you add a new set of transactions (AKA a block) into the existing chain, you have to solve a difficult and un-gameable problem.</span></p><p><span style="font-weight: 400;">This is what so-called “miners” do. They try to solve a very difficult math problem and when they do, they receive a reward and hash the difficulty of the problem into the chain. This hash of the difficulty is a “proof of work,” which is a proof of how much computational energy went into trying to solve the problem.</span></p><p><span style="font-weight: 400;">Among cryptographers, the invention of this “proof of work blockchain” was the biggest breakthrough by Satoshi Nakamoto. </span></p><p><span style="font-weight: 400;">As a proof of work blockchain like Bitcoin becomes more valuable, miners make more money which incentives more miners to participate in the network which increases the difficulty of the problem.</span></p><p><span style="font-weight: 400;">Anyone can download the blockchain on their computer and:</span></p><ol><li><span style="font-weight: 400;"> Verify consecutively that every block transitively hashes correctly on top of the prior block.</span></li></ol><p><span style="font-weight: 400;">and</span></p><ol start="2"><li><span style="font-weight: 400;"> They can calculate the total number of calculations required to have produced this data by reading the difficulty of each block and verifying the miners&#8217; solution.</span></li></ol><p><span style="font-weight: 400;">The blockchain with the most accumulated proof of work (i.e. the most difficult and expensive to create) is considered the true blockchain. </span></p><p><span style="font-weight: 400;">If someone handed you today&#8217;s Bitcoin blockchain on a disk you could very quickly estimate the huge amount of energy that was invested to construct this data. </span></p><p><span style="font-weight: 400;">The benefit of this is that no one can &#8220;fake&#8221; a blockchain the size of Bitcoin with the same difficulties hashed into its blocks without spending the same amount of computational energy.</span></p><p><span style="font-weight: 400;">As of mid-2018, it would </span><a href="https://gobitcoin.io/tools/cost-51-attack/"><span style="font-weight: 400;">cost billions of dollars to buy enough computers and electricity</span></a><span style="font-weight: 400;"> to rewrite the Bitcoin blockchain from scratch.</span></p><p><i><span style="font-weight: 400;">Note: (Mining, Proof of Work, Proof of Stake and other consensus algorithms merit an entirely different post, but I wanted to at least mention them here in the context of blockchains.)</span></i></p><h3><strong>Digital Signatures (AKA Private/Public Key Cryptography)</strong></h3><p><span style="font-weight: 400;">A digital signature is the final primitive of blockchains. A successful digital signature scheme works more or less the same as a handwritten signature with two core properties.</span></p><p><span style="font-weight: 400;">The first is verifiability. If I sign a transaction with my private key, someone else must be able to validate it using my public key. Likewise, only you can write your own signature, but anyone can see that it’s yours.</span></p><p><span style="font-weight: 400;">A private key and a public key together form a key pair. The private key is something you don’t share with anyone, but use to sign transactions proving that it’s yours.</span></p><p><span style="font-weight: 400;">It’s kind of like the wax seal that Harry Potter characters used to put on letters to prove that they sent a letter and that it wasn’t tampered with. You wouldn’t want to share the seal with anyone because then they could send messages pretending to be you.</span></p><p><img loading="lazy" class="aligncenter wp-image-9793 size-medium" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/5-300x300.jpg" alt="" width="300" height="300" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/5-300x300.jpg 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/5-150x150.jpg 150w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/5-768x768.jpg 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/5.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" /></p><p><span style="font-weight: 400;">The public key is something you can give to everyone so they can verify that it’s your signature without them being able to sign it. This is like the recipient having a painting of your seal that they could confirm matches up correctly without actually being able to use it to stamp a message.</span></p><p><span style="font-weight: 400;">Your public key is a hash of your private key. Your address, as in “What’s your bitcoin address so I can pay you?” is a hash of your public key. </span></p><p><span style="font-weight: 400;">Private key ==hash==&gt; Public Key ==hash==&gt; Address</span></p><p><span style="font-weight: 400;">Because of the properties of cryptographic hash functions, this means you can publish your address anywhere so that people can send you bitcoin, ethereum or any other cryptocurrency without being able to reverse engineer it to figure out your private keys.</span></p><p><span style="font-weight: 400;">The second property is unforgeability. Your signature is tied to a particular document. You don’t want someone to be able to “snip” your signature off one document and glue it to the bottom of another one (like one saying you owe them money!).</span></p><p><span style="font-weight: 400;">Bitcoin uses a digital signature scheme called the Elliptic Curve Digital Signature Algorithm to achieve these two properties. Other blockchains and cryptocurrencies use different digital signature schemes, but all have these same two properties of verifiability and unforgeability.</span></p><h3><strong>Blockchains are like Books&#8230;.</strong></h3><p><span style="font-weight: 400;">One of the easiest ways I’ve found to think about blockchains is like pages in a book. A book is a chain of pages with:</span></p><ol><li style="font-weight: 400;"><span style="font-weight: 400;">Data &#8211; (AKA the text) on each page.</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Metadata &#8211; Metadata is information about itself. At the top or bottom of each page, there is some information about the book like the book title, the chapter title, and a page number.</span></li></ol><p><span style="font-weight: 400;">A blockchain is a chain of blocks with</span></p><ul><li style="font-weight: 400;"><span style="font-weight: 400;">Data &#8211; the contents of the block</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Metadata &#8211; data about the block, including a reference to the previous block and a hash of the data contained in this block.</span></li></ul><p><span style="font-weight: 400;">If you ripped all the pages out of a book, you could put them back in order where the story made sense using the page number.</span></p><p><span style="font-weight: 400;">Likewise, in a blockchain, each block references the previous block’s hash making it possible to validate in which order the transactions took place. You would know if someone scrambled them up just like you would know if someone scrambled up the page of a book.</span></p><p><span style="font-weight: 400;">The hash is actually better than a page number because it contains a hash of all the data on the page. In theory, someone could rip the pages out of a book and white out and change the page numbers and you wouldn&#8217;t know. </span></p><p><span style="font-weight: 400;">If someone tried to do the equivalent in our blockchain “book,” it would be transparent because changing one letter on a page &nbsp;would change the hash. This boils down to the fact that a blockchain is a sequence of transitively hashed data. Changing any one bit anywhere in the past would change everything after that in a chaotic and easy to detect way.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9802" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks-1024x346.png" alt="" width="1024" height="346" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks-1024x346.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks-300x101.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks-768x259.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/howbtcworks.png 1555w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><h2><span style="font-weight: 400;">Blockchain Explained: The Evolution of Blockchain Technology</span></h2><p><span style="font-weight: 400;">Now, let’s take these primitives and look at how they can be use to build a simple blockchain.</span></p><p><span style="font-weight: 400;">These types of blockchains are the basis for cryptocurrencies like Bitcoin and Ethereum. By understanding how they work, you’ll have a foundation for understanding all the different blockchain and cryptocurrency projects.</span></p><h3><strong>GoofyCoin</strong></h3><p><span style="font-weight: 400;">GoofyCoin is the simplest blockchain we can imagine.</span></p><p><span style="font-weight: 400;">There are three rules of GoofyCoin. </span></p><ul><li><b>Goofy can create new coins whenever he wants and these newly created coins belong to him.<span style="font-weight: 400;"> The coin has a unique coin ID which Goofy then signs with his key so that anyone can use Goofy’s public key to confirm that the coin is a valid GoofyCoin.</span></b></li></ul><p><img loading="lazy" class="aligncenter size-large wp-image-9794" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/6-1024x547.png" alt="" width="1024" height="547" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/6-1024x547.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/6-300x160.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/6-768x410.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/6.png 1450w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><i><span style="font-weight: 400;">Caption: “signed by pkGoofy” means Goofy signed the transaction (in this case the creation of a new coin) using his public/private keypair.</span></i></p><ul><li><b>Whoever owns a coin can transfer it to someone else using cryptographic operations. </b></li></ul><p><span style="font-weight: 400;">If Goofy wants to transfer a coin to Alice, he creates a transaction saying “Pay this coin to Alice”</span></p><p><span style="font-weight: 400;">Because coins can only be sent using cryptographic operations, “this” is a hash pointer that points to the coin in question.</span></p><p><span style="font-weight: 400;">Goofy then signs this transaction using his secret key making it a valid transaction. Anyone can check that it is a valid transaction by confirming Goofy’s signature.</span></p><p><img loading="lazy" class="aligncenter size-full wp-image-9795" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/7.png" alt="" width="979" height="622" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/7.png 979w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/7-300x191.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/7-768x488.png 768w" sizes="(max-width: 979px) 100vw, 979px" /></p><ul><li><b>Anyone can verify the validity of a coin and who owns it by following the chain of hash pointers (the blockchain) back to its creation by Goofy, making sure all the hashes are correct along the way.</b></li></ul><p><span style="font-weight: 400;">In the example above, anyone can verify that Goofy created a valid coin and that he made a valid transfer to Alice.</span></p><p><span style="font-weight: 400;">However, there’s a security problem with GoofyCoin. Let’s look at an example.</span></p><p><span style="font-weight: 400;">With her new GoofyCoin, Alice could sign a transaction paying Bob for a sandwich.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9796" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/8-1024x807.png" alt="" width="1024" height="807" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/8-1024x807.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/8-300x236.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/8-768x605.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/8.png 1038w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><span style="font-weight: 400;">Looks good right? Anyone can come in and see that these transactions are all valid.</span></p><p><span style="font-weight: 400;">But, what if Alice uses that same coin to pay Chuck for a milkshake?</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9797" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/9-1024x470.png" alt="" width="1024" height="470" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/9-1024x470.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/9-300x138.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/9-768x352.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/9.png 1438w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><span style="font-weight: 400;">Both Bob and Chuck think they own a GoofyCoin now. It looks like a valid transaction because both Chuck and Bob can see Alice signed it and follow it back on the blockchain to see Goofy created it as a valid coin.</span></p><p><span style="font-weight: 400;">This is called a double-spending attack. Alice is spending the same coin twice which is not how we want money to work. You can’t give the same $10 bill to one person for a sandwich and to another person for a milkshake.</span></p><p><span style="font-weight: 400;">A double-spending attack is one of the main problems which a functional cryptocurrency protects against.</span></p><p><span style="font-weight: 400;">To solve the double spending problem, we’ll need to create a new coin called ScroogeCoin.</span></p><h3><strong>ScroogeCoin</strong></h3><p><span style="font-weight: 400;">ScroogeCoin works just like GoofyCoin with a few different tweaks. </span></p><p><span style="font-weight: 400;">Unlike in Goofy Coin, Scrooge publishes a blockchain with a history of all transactions.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9798" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/10-1024x540.png" alt="" width="1024" height="540" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/10-1024x540.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/10-300x158.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/10-768x405.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/10.png 1460w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><span style="font-weight: 400;">Scrooge will sign the hash pointer of each block in the blockchain. Anybody can then verify that a transaction is valid by checking Scrooge’s signature on the block that records the transaction.</span></p><p><span style="font-weight: 400;">Because Scrooge is looking over every transaction, he can make sure nobody double spends. If Alice uses a coin to buy a sandwich from Bob, Scrooge will make sure that she can not also use that same coin to buy a milkshake from Chuck by refusing to validate that transaction.</span></p><p><span style="font-weight: 400;">Because all the blocks are connected by hash pointers into a blockchain, Alice, Bob, Chuck and anyone else using ScroogeCoin can monitor that Scrooge isn’t going back to change any data. Though they couldn’t stop Scrooge from doing it since he is the one in control of the blockchain, they would at least know that he did it.</span></p><p><span style="font-weight: 400;">If a year ago, Alice had paid 1 ScroogeCoin to Bob for a sandwich and Scrooge went back and changed it to say she paid 10 ScroogeCoins, it would change the hash pointers of every single subsequent block making it easy to know that Scrooge had tampered with the data. This is the puzzle-friendly property we looked at earlier.</span></p><p><span style="font-weight: 400;">This makes it easier to trust that the data is correct, rather than if these were just records kept in a large spreadsheet only controlled by Scrooge where he could go back and change one of the previous entries to give himself more money.</span></p><p><span style="font-weight: 400;">ScroogeCoin works in the sense that everyone can see which coins are valid. And, as long as Scrooge monitors all the transactions and rejects attempts to double spend, there is no double spending problem. All the participants can confirm that Scrooge is preventing double spending by looking at the blockchain to confirm that all transactions are valid and no coin has been spent twice.</span></p><p><span style="font-weight: 400;">The potential problem with ScroogeCoin is Scrooge himself. If Scrooge wants to, he can make himself rich by demanding that everyone who does a transaction pays him a large fee for doing the transaction, or he could create a bunch of ScroogeCoins for himself, or he could just get bored and stop verifying the transactions.</span></p><p><span style="font-weight: 400;">The problem, in short, is centralization. Although Scrooge is happy with the system, the users might not be. This system is not unlike the one we have today.</span></p><p><img loading="lazy" class="aligncenter size-medium wp-image-9799" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/11-274x300.png" alt="" width="274" height="300" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/11-274x300.png 274w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/11.png 596w" sizes="(max-width: 274px) 100vw, 274px" /></p><p><span style="font-weight: 400;">You could replace “Scrooge” with “Citibank” and this is not unlike how the existing banking system works. We trust banks or other financial intermediaries to not lie about transactions. For the most part, this works pretty well. These institutions are regulated by federal authorities and subject to some level of competition from other firms which encourages them to be honest and efficient. Many people, particularly those that have spent their whole lives in developed countries, don’t see much value in blockchain because the existing system works pretty well.</span></p><p><span style="font-weight: 400;">We have a legal system designed to prosecute anyone that violates their contracts and businesses are incentivized to protect their reputation by behaving honestly.</span></p><p><span style="font-weight: 400;">However, there are situations where this breaks down. Hyperinflation, when a country prints new money devaluting it’s existing money supply has happened many times in history including Weimar Germany in the 1930s, Argentina and Zimbabwe in the early 2000’s, and Venezuela in the 2010’s.</span></p><p><span style="font-weight: 400;">In all of these cases, it was the equivalent of Scrooge deciding to make more Scrooge coins for himself.</span></p><p><span style="font-weight: 400;">The same scenario can happen in other types of coordination scenarios. For example, your company is working on a joint construction project with four other companies and one of them tries to lie about how much work they did to earn a larger percentage of the contract.</span></p><p><span style="font-weight: 400;">These are all scenarios where decentralized blockchains have the potential to help.</span></p><p><span style="font-weight: 400;">A decentralized blockchain means that instead of a single party controlling it, the ledger is distributed among different parties. Each of these parties maintain their own copy of the ledger. Because of the cryptographic properties we talked about above, if one party tries to tamper with the ledger, it will immediately be clear to all the other parties that someone tried to go Scrooge and cheat.</span></p><p><span style="font-weight: 400;"><em><img class="alignleft wp-image-9804 size-medium" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-231x300.png" alt="" width="231" height="300" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-231x300.png 231w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-768x998.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf-788x1024.png 788w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/pdf.png 877w" sizes="(max-width: 231px) 100vw, 231px" /></em></span></p><p><span style="font-weight: 400;"><em>This is a long article written with the intended outcome of having the blockchain explained to a non-technical reader. You can download a PDF version of this post below.</em> </span></p><div class="tve-leads-shortcode tve-leads-triggered tve-tl-anim tl-anim-instant tve-leads-track-shortcode_9808"><div class="tl-style" id="tve_tcb2_blank" data-state="51" data-form-state=""><style type="text/css" class="tve_custom_style">@media (min-width:300px){[data-css="tve-u-05b55c65791390"]{background-color:rgb(255,255,255) !important;}:not(#tve) [data-css="tve-u-15b55c657913dc"] button{background-image:none !important;background-color:rgb(216,41,41) !important;}}</style><style type="text/css" class="tve_user_custom_style">.tve-leads-conversion-object .thrv_heading h1,.tve-leads-conversion-object .thrv_heading h2,.tve-leads-conversion-object .thrv_heading h3{margin:0;padding:0}.tve-leads-conversion-object .thrv_text_element p,.tve-leads-conversion-object .thrv_text_element h1,.tve-leads-conversion-object .thrv_text_element h2,.tve-leads-conversion-object .thrv_text_element h3{margin:0}</style><div class="tve-leads-conversion-object" data-tl-type="shortcode_9808"><div class="tve_flt"><div id="tve_editor" class="tve_shortcode_editor"><div class="thrv-leads-form-box tve_no_drag tve_no_icons thrv_wrapper tve_editor_main_content tve_empty_dropzone" data-css="tve-u-05b55c65791390"><div class="thrv_wrapper thrv_lead_generation" data-connection="api" style=""><input type="hidden" class="tve-lg-err-msg" value="{&quot;email&quot;:&quot;Email address invalid&quot;,&quot;phone&quot;:&quot;Phone number invalid&quot;,&quot;password&quot;:&quot;Password invalid&quot;,&quot;passwordmismatch&quot;:&quot;Password mismatch error&quot;,&quot;required&quot;:&quot;Required field missing&quot;}"><div class="thrv_lead_generation_container tve_clearfix"><form action="#" method="post" novalidate="novalidate"><div class="tve_lead_generated_inputs_container tve_clearfix tve_empty_dropzone"><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--1"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="tve_lg_input_container tve_lg_input"><input type="email" data-field="email" data-required="1" data-validation="email" name="email" placeholder="Email" data-placeholder="Email" class=""></div></div></div></div></div><div class="tve_lg_input_container tve_submit_container tve_lg_submit" data-css="tve-u-15b55c657913dc"><button type="submit" class="tve-froala">Download</button></div></div><input id="_submit_option" type="hidden" name="_submit_option" value="redirect"><input id="_back_url" type="hidden" name="_back_url" value="https://taylorpearson.me/theendofjobs/"><input type="hidden" name="__tcb_lg_fc" id="__tcb_lg_fc" value="YToxOntzOjE0OiJhY3RpdmVjYW1wYWlnbiI7czoxOiI0Ijt9"><input id="_autofill" type="hidden" name="_autofill" value=""><input type="hidden" id="activecampaign_form" class="tve-api-extra" name="activecampaign_form" value="0"><input type="hidden" id="activecampaign_tags" class="tve-api-extra" name="activecampaign_tags" value="[Lead] - Blockchain Explained"></form></div></div></div></div></div></div></div></div><h2><span style="font-weight: 400;">How Blockchains Achieve Decentralization: Public (AKA Permissionless) vs. Private (AKA Permissioned) Blockchains</span></h2><p><span style="font-weight: 400;">There are two main ways in which a blockchain can go from centralized (e.g. ScroogeCoin) to decentralized.</span></p><ol><li style="font-weight: 400;"><span style="font-weight: 400;">Private Blockchains (AKA Permissioned blockchains)</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Public Blockchains (AKA Permissionless blockchains)</span></li></ol><p><span style="font-weight: 400;">The difference between public and private blockchain is related to who is allowed to participate in the network.</span></p><p><span style="font-weight: 400;">A public blockchain network is completely open and anyone can join and participate. Bitcoin and Ethereum are examples of public blockchains.</span></p><p><span style="font-weight: 400;">A private blockchain network requires an invitation. It is a permissioned network that places restrictions on who is allowed to participate in the network and in which transactions. Some examples of private blockchains are </span><span style="font-weight: 400;">MultiChain, R3&#8217;s Corda</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">Hyperledger Fabric and Chain Core</span><span style="font-weight: 400;">.</span></p><p><span style="font-weight: 400;">The difference in who is allowed to participate matters because it affects how decentralization is achieved. In our example of ScroogeCoin, it suffers from the same problem where a single </span><a href="http://nakamotoinstitute.org/trusted-third-parties/"><span style="font-weight: 400;">trusted third party</span></a><span style="font-weight: 400;"> controls things.</span></p><p><span style="font-weight: 400;">Public blockchains are secured by cryptoeconomics and cryptocurrency mining. (The jargon-y explanation for this is that they use a combination of economic incentives, game theory, cryptography, and computer science to agree on the current state of the ledger — these are topics for a future article).</span></p><p><span style="font-weight: 400;">A permissioned or private blockchain is a blockchain where the consensus process (i.e. Scrooge’s job) is controlled by a pre-selected set of actors (e.g. individuals, companies, members of a consortium). For example, you could have 15 banks each of which have permission to write to the ledger and each of which must sign every block in order for the block to be valid.</span></p><p><span style="font-weight: 400;">This is more decentralized than having a single party in charge of validating all the transactions, which has a few advantages.</span></p><h3><strong>Advantages and Examples of Private Blockchains</strong></h3><p><span style="font-weight: 400;">The primary reason companies may choose to use a private blockchain is to increase the transparency and trust of their processes with their partners in the network. Because the blockchain functions as a tamper-evident log, each company (for example a group of 15 banks) can trust that no one tampered with pre-existing data. </span></p><p><span style="font-weight: 400;">Compared to their public counterparts, private blockchains are also more scalable. You may have heard about </span><a href="https://multicoin.capital/2018/02/23/models-scaling-trustless-computation/"><span style="font-weight: 400;">scalability</span></a> <a href="https://hackernoon.com/blockchains-dont-scale-not-today-at-least-but-there-s-hope-2cb43946551a"><span style="font-weight: 400;">problems</span></a><span style="font-weight: 400;"> with public blockchains like Bitcoin and Ethereum. These are a result of trying to scale the blockchain while also keeping it decentralized and safe in an open environment where anyone can join. </span></p><p><span style="font-weight: 400;">Because private blockchains happen in a closed environment, they can prevent attacks by controlling who gets to join the network.</span></p><p><span style="font-weight: 400;">As an example of a private blockchain, let’s look at Everledger which is working with the diamond industry to help reduce fraud and improve insurance.</span></p><p><span style="font-weight: 400;">The diamond industry has high levels of theft because diamonds are small. There is also a lot of fraud because of document tampering (lying about the quality or size of diamonds) and synthetic diamonds being used in lieu of real diamonds. </span></p><p><span style="font-weight: 400;">There are also ethical issues with so-called “blood diamonds,” and customers want to know they are buying an authentic, conflict-free gem.</span></p><p><span style="font-weight: 400;">About $2 billion is lost from jewelry fraud every year so there’s a meaningfully sized problem to solve here.</span></p><p><span style="font-weight: 400;">Everledger works with the certificate houses which certify the diamonds. Each diamond is measured on forty different criteria and then assigned a unique identifier.</span></p><p><span style="font-weight: 400;">That information is then inserted into the blockchain where it is tamper-evident. Every time the diamond is sold or transferred to another player in the supply chain (E.g. from the mining company to the company that cuts and polishes it), that transfer is likewise recorded in the blockchain.</span></p><p><span style="font-weight: 400;">That makes it possible for an end-consumer to know exactly where their diamond was mined and every company that touched it across the supply chain.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9800" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/12-1024x404.png" alt="" width="1024" height="404" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/12-1024x404.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/12-300x118.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/12-768x303.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/12.png 1278w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><i><span style="font-weight: 400;">Caption: There can be more than a dozen different stakeholders through the life of a diamond. If you want more details, You can </span></i><a href="https://www.youtube.com/watch?v=7Bnitb-HAko"><i><span style="font-weight: 400;">watch Leanne explain Everledger’s business in detail</span></i></a><i><span style="font-weight: 400;">.</span></i></p><p><span style="font-weight: 400;">It also makes it possible for insurers to know they are paying legitimate claims.</span></p><p><span style="font-weight: 400;">Another example of a private blockchain is Construtivo, a Brazilian software company which for the past fifteen years has managed project data for large infrastructure construction projects. They help make sure that all stakeholders have a consistent view of a project’s status and progress.</span></p><p><span style="font-weight: 400;">To satisfy their customers’ desire for greater transparency and auditability, Construtivo are using a private blockchain with each stakeholder maintaining their own copy of the ledger, so each stakeholder can be sure none of the other companies are short changing them.</span></p><h3><span style="font-weight: 400;">The Case Against Private Blockchains</span></h3><p><span style="font-weight: 400;">One of the common criticisms of private blockchains is that they are “just shared databases.” </span></p><p><span style="font-weight: 400;">That is, a private blockchains is basically just like having a shared Google Docs spreadsheet where you are trusting no one else to go back in and change the data entered.</span></p><p><span style="font-weight: 400;">Private blockchains claim to protect data by controlling who gets to join the network, but they are still vulnerable to the same type of network hacks we’ve seen with private corporations like </span><a href="http://money.cnn.com/2017/10/03/technology/business/yahoo-breach-3-billion-accounts/"><span style="font-weight: 400;">Yahoo</span></a><span style="font-weight: 400;"> and </span><a href="http://money.cnn.com/2018/02/09/pf/equifax-hack-senate-disclosure/"><span style="font-weight: 400;">Equifax</span></a><span style="font-weight: 400;">.</span></p><p><span style="font-weight: 400;">Public blockchains don&#8217;t have this problem because everything is public, meaning there&#8217;s no network to hack into. Consensus isn&#8217;t driven by the ability to get into the network; it&#8217;s driven by who spends real world energy in a way which is impossible to fake and which makes the blockchain much more expensive to “hack” (as discussed in the Proof of Work section above).</span></p><p><span style="font-weight: 400;">Blockchains, both public and private, suffer from the need for users to protect their private keys. And users constantly fail to do it correctly, which is why individuals get hacked &#8211; &nbsp;lots of people have had their bitcoin stolen &#8211; even if the system does not.</span></p><p><span style="font-weight: 400;">So, the argument against private blockchains is that they rely on network security to restrict bad actors from joining the network. Detractors argue that this replaces the best, most novel part of blockchain security (proof of work) with the worst part (users protecting their private keys).</span></p><h3><span style="font-weight: 400;">Advantages and Examples of Public Blockchains</span></h3><p><span style="font-weight: 400;">Public blockchains are likely the ones you’ve heard the most about and include networks such as Bitcoin and Ethereum.</span></p><p>One of the biggest advantages of public blockchains is related to the value of open (AKA public AKA permissionless) versus closed (AKA private AKA permissioned) networks.</p><p><span style="font-weight: 400;">The easiest comparison is closed networks versus the internet in the 90’s. At first, there were a number of companies operating closed/permissioned networks like Compuserve and Prodigy. They linked computers to a central server, with news and other information, but not to the broader Internet.</span></p><p><span style="font-weight: 400;">The idea was more appealing to large companies because it seemed safer. Companies wouldn’t &nbsp;be exposed to the whole internet, but would be able to retain control over what could be put on the network.</span></p><p><span style="font-weight: 400;">The internet won out over closed systems like Compuserve and Prodigy because there are 100x more developers building on the internet than on any single intranet.</span></p><p><span style="font-weight: 400;">Today, there are maybe 20 million good developers in the world and the largest companies (Facebook, Google, and Amazon) employ, at most, a few tens of thousands. That means 99% of the best developers in the world always work for someone else.</span></p><p><span style="font-weight: 400;">It is better to create an ecosystem that gets all the world’s smartest people toiling for your goals. If you rely solely on your own employees, you’ll never solve all your customers’ needs.</span></p><p><span style="font-weight: 400;">The other primary advantage of public blockchains (at least in theory) is that they are more decentralized and thus more </span><a href="https://taylorpearson.me/why-is-bitcoin-valuable/"><span style="font-weight: 400;">censorship resistant</span></a><span style="font-weight: 400;">.</span></p><p><span style="font-weight: 400;">ScroogeCoin is the least censorship resistant system you can imagine. If Scrooge decides he doesn’t want to let you use the network, he can do that.</span></p><p><span style="font-weight: 400;">Private blockchains are more censorship resistant. If you have a private blockchain where there are 5 validators, then you need three of them to collude and lie about something which is more difficult than just a single person.</span></p><p><span style="font-weight: 400;">If you have a public blockchain with 5000 validators, then it is much harder for them to collude. You would have to bribe, coerce or otherwise convince 2501 actors to collude, which is much more challenging than convincing a single person or small group of individuals.</span></p><p><span style="font-weight: 400;">The nature of public blockchains allows anyone to join in the security of the network, which has resulted in the </span><a href="https://blockchain.info/charts/hash-rate?timespan=all"><span style="font-weight: 400;">world&#8217;s largest supercomputer</span></a><span style="font-weight: 400;">.</span></p><p><span style="font-weight: 400;">Because they are public, many different companies are building products on top of them which </span><a href="https://taylorpearson.me/fat-thin/"><span style="font-weight: 400;">makes them more valuable</span></a><span style="font-weight: 400;">.</span></p><p><span style="font-weight: 400;">In 2017, there was a wave of other crypto networks launched on the Ethereum blockchain. These networks did not need to ask for permission to launch on Ethereum from the Ethereum team. They just had to build their network and hook it up to the open Ethereum protocol.</span></p><p><span style="font-weight: 400;">This increased the value of the Ethereum network by over 100x. This sort of wave of innovation would have been impossible if Ethereum was a private blockchain that required getting individual permission for each project.</span></p><p><span style="font-weight: 400;">One of these projects is called OmiseGO which is trying to help people send remittance payments. For people who work in one country and send money back to their families in another country, current solutions can be extremely expensive.</span></p><p><span style="font-weight: 400;">Because OmiseGO knew Ethereum was a public blockchain, they could safely invest in building on top of Ethereum knowing there was no risk of Ethereum being able to shut them down in the future. This is not the same as building on top of private blockchain where it is easier to be censored.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9803" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/hobtcworks3-1024x346.png" alt="" width="1024" height="346" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/hobtcworks3-1024x346.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/hobtcworks3-300x101.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/hobtcworks3-768x259.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/hobtcworks3.png 1555w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><h1><span style="font-weight: 400;">Conclusion</span></h1><p><span style="font-weight: 400;">We started with why blockchains matters in the first place: their ability to allow large groups of individuals to coordinate with each other.</span></p><p><span style="font-weight: 400;">Then we explored blockchain primitives, or cryptographic hash functions, which have three important properties:</span></p><ol><li style="font-weight: 400;"><span style="font-weight: 400;">Collision Resistance</span><span style="font-weight: 400;"> &#8211; Two similar strings of text produce very different outputs. If you change just a single character in the manuscript of </span><i><span style="font-weight: 400;">War and Peace</span></i><span style="font-weight: 400;">, you get dramatically different results</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Deterministic Hiding</span><span style="font-weight: 400;"> &#8211; There is no way for a third party observer to know that 138F4504A873C01D0864343FAD3027F03CA9BEA2F0109005FA4FC8C7DCC12634 means “I like ice cream.”</span></li><li style="font-weight: 400;"><span style="font-weight: 400;">Puzzle Friendliness </span><span style="font-weight: 400;">&#8211; If someone wanted to generate a hash that came up with the same output as “I like ice cream,” it’s extremely difficult to find another value that exactly hits this target.</span></li></ol><p><span style="font-weight: 400;">We then examined how hash functions can be strung together into a transitive hash function. </span><span style="font-weight: 400;">When we add a Merkle tree to a transitive cryptographic hash function, we get a blockchain. Each block contains a set of “merkleized” transactions and the blocks are chained together.</span></p><p><img loading="lazy" class="aligncenter size-large wp-image-9801" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/13-remove-bitcoin-1024x484.png" alt="" width="1024" height="484" srcset="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/13-remove-bitcoin-1024x484.png 1024w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/13-remove-bitcoin-300x142.png 300w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/13-remove-bitcoin-768x363.png 768w,  https://taylorpearson.cdnoptimus.com/wp-content/uploads/2018/07/13-remove-bitcoin.png 1967w" sizes="(max-width: 1024px) 100vw, 1024px" /></p><p><span style="font-weight: 400;">We then saw how bitcoin uses a technology called proof of work to secure the blockchain in a way that is impossible to fake. </span></p><p><span style="font-weight: 400;">Next, we investigated Goofycoin and Scroogecoin to see how blockchain technology had evolved over time to solve the double spending problem.</span></p><p><span style="font-weight: 400;">Finally we looked at how public and private blockchains try to achieve decentralization. </span></p><p><span style="font-weight: 400;">Blockchains are still a very young technology. They’ve only been around since 2009 and we should expect that over the coming decades, we will see an explosion of different blockchain applications and networks.</span></p><p><span style="font-weight: 400;">Already, there are thousands of different projects working on modifying the technology to see if and how it can be improved or adjusted for specific use cases.</span></p><p><span style="font-weight: 400;">You now have an understanding of the fundamentals behind blockchain technology and how blockchains work.</span></p><p><span style="font-weight: 400;">Most, if not all, of the biggest innovations in the next generation of blockchain technology haven’t yet happened. There will never be a better time in history to start learning and get involved.</span></p><p><span style="font-weight: 400;">If you’re interested in learning more, sign up for my newsletter and I’ll send you a list of my top 10 resources for learning more about blockchain, a toolkit of blockchain resources, and notifications about future articles I publish on blockchain technology.</span></p><p><i><span style="font-weight: 400;">Acknowledgements: Many of the images and ideas in this article are from the Coursera course </span></i><a href="https://www.coursera.org/learn/cryptocurrency/"><i><span style="font-weight: 400;">Bitcoin and Cyrptocurrency Technologies</span></i></a><i><span style="font-weight: 400;"> developed by Arvind Narayanan and offered for free. I would recommend. I also read and would recommend the </span></i><a href="https://www.amazon.com/Bitcoin-Cryptocurrency-Technologies-Comprehensive-Introduction/dp/0691171696"><i><span style="font-weight: 400;">companion text book</span></i></a><i><span style="font-weight: 400;">. All images credit to them as well unless otherwise noted. Thanks to Gary Basin, Dhruv Bansal, Joe Kelly, and Juvoni Beckford for their extensive feedback on early drafts.</span></i></p><hr><section class="section section--body"><div class="section-content"><p><i><span style="font-weight: 400;">P.S. All our Bitcoin and cryptocurrency research is helped made possible by our sponsors:</span></i></p><p><a href="https://www.kraken.com/?utm_source=taylor+pearson&amp;utm_medium=affiliate&amp;utm_campaign=taylor+rev+share&amp;utm_content="><i><span style="font-weight: 400;">Kraken</span></i></a><i><span style="font-weight: 400;"> is a cryptocurrency exchange where you can buy, sell and trade cryptocurrencies like Bitcoin and Ethereum. Kraken is consistently rated the best and most secure cryptocurrency exchange and is where I go any time I need to make a trade. </span></i><a href="https://www.kraken.com/?utm_source=taylor+pearson&amp;utm_medium=affiliate&amp;utm_campaign=taylor+rev+share&amp;utm_content="><i><span style="font-weight: 400;">Start Trading on Kraken today</span></i></a><i><span style="font-weight: 400;">.</span></i></p><p><i><span style="font-weight: 400;">For the seasoned traders, Kraken offers </span></i><a href="https://cryptowat.ch/?=taylorpearson"><i><span style="font-weight: 400;">Cryptowatch</span></i></a><i><span style="font-weight: 400;"> which lets you trade on every exchange from your price charts and never miss a market move with SMS alerts.</span></i></p><p><i><span style="font-weight: 400;">If you’re planning on holding any meaningful amount of cryptocurrency, you should be doing it on a hardware wallet. Storing cryptocurrency in an online “hot” wallet leave it vulnerable to theft. I use and recommend the </span></i><a href="https://shop.trezor.io?a=taylorpearson.me"><i><span style="font-weight: 400;">Trezor</span></i></a><i><span style="font-weight: 400;"> hardware wallet, which helps protect your assets by storing your private key offline. </span></i><a href="https://shop.trezor.io?a=taylorpearson.me"><i><span style="font-weight: 400;">Start protecting your assets today</span></i></a><i><span style="font-weight: 400;">.</span></i></p></div></section><section class="section section--body section--last"><div class="section-content"><div class="section-inner sectionLayout--insetColumn"></div></div></section><p class="post-modified-info">Last Updated on January 21, 2021 by <a href="" target="_blank" class="last-modified-author">Taylor Pearson</a></p> <span id="tve_leads_end_content" style="display: block; visibility: hidden; border: 1px solid transparent;"></span><div class="tve-leads-post-footer tve-tl-anim tve-leads-track-post_footer-72 tl-anim-instant"><div class="tl-style" id="tve_tcb2_blank" data-state="72" data-form-state=""><style type="text/css" class="tve_custom_style">@media (min-width:300px){[data-css="tve-u-3602116d0d7d02"]{float:none;width:283px;z-index:3;position:relative;margin-left:auto !important;margin-right:auto !important;}[data-css="tve-u-0602116d0d7c4d"]{background-color:rgb(255,255,255) !important;}:not(#tve) [data-css="tve-u-5602116d0d7d7a"] button{background-image:none !important;background-color:rgb(226,71,37) !important;}[data-css="tve-u-1602116d0d7c8b"] > .tcb-flex-col > .tcb-col{justify-content:center;}[data-css="tve-u-4602116d0d7d3e"]{max-width:66.6%;}[data-css="tve-u-2602116d0d7cc6"]{max-width:33.3%;}}</style><style type="text/css" class="tve_user_custom_style">.tve-leads-conversion-object .thrv_heading h1,.tve-leads-conversion-object .thrv_heading h2,.tve-leads-conversion-object .thrv_heading h3{margin:0;padding:0}.tve-leads-conversion-object .thrv_text_element p,.tve-leads-conversion-object .thrv_text_element h1,.tve-leads-conversion-object .thrv_text_element h2,.tve-leads-conversion-object .thrv_text_element h3{margin:0}</style><div class="tve-leads-conversion-object" data-tl-type="post_footer"><div class="tve_flt"><div id="tve_editor" class="tve_shortcode_editor"><div class="thrv-leads-form-box tve_no_drag tve_no_icons thrv_wrapper tve_editor_main_content thrv-leads-in-content tve_empty_dropzone" data-css="tve-u-0602116d0d7c4d"><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb-resized tcb--cols--2" data-css="tve-u-1602116d0d7c8b"><div class="tcb-flex-col" data-css="tve-u-2602116d0d7cc6" style=""><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-3602116d0d7d02"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-8293" alt="" width="200" height="200" title="111924-200" data-id="8293" src="https://taylorpearson.cdnoptimus.com/wp-content/uploads/2017/08/111924-200.png" style="width: 100%;"></span></div></div></div><div class="tcb-flex-col" data-css="tve-u-4602116d0d7d3e" style=""><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><h2>Improve your Decision Making</h2><h3><br></h3><h3>Enter your email to get access to my free <br><strong>Expected Value Calculator</strong> tool. You will also get access to my popular Interesting Times newsletter where I share links to similar articles, tools and lots more.<br><br>Improve your decisions and make them easier, more accurate and stress-free.&nbsp;</h3></div></div></div></div></div><div class="thrv_wrapper thrv_lead_generation" data-connection="api" style=""><input type="hidden" class="tve-lg-err-msg" value="{&quot;email&quot;:&quot;Email address invalid&quot;,&quot;phone&quot;:&quot;Phone number invalid&quot;,&quot;password&quot;:&quot;Password invalid&quot;,&quot;passwordmismatch&quot;:&quot;Password mismatch error&quot;,&quot;required&quot;:&quot;Required field missing&quot;}"><div class="thrv_lead_generation_container tve_clearfix"><form action="#" method="post" novalidate="novalidate"><div class="tve_lead_generated_inputs_container tve_clearfix tve_empty_dropzone"><div class="tve_lg_input_container tve_lg_input"> <input type="email" data-field="email" data-required="1" data-validation="email" name="email" placeholder="Email" data-placeholder="Email" class=""></div><div class="tve_lg_input_container tve_submit_container tve_lg_submit" data-css="tve-u-5602116d0d7d7a"> <button type="submit" class="">Get Access</button></div></div><input id="_submit_option" type="hidden" name="_submit_option" value="redirect"><input id="_back_url" type="hidden" name="_back_url" value="https://taylorpearson.me/theendofjobs/"><input type="hidden" name="__tcb_lg_fc" id="__tcb_lg_fc" value="YToxOntzOjE0OiJhY3RpdmVjYW1wYWlnbiI7czoxOiI0Ijt9"><input id="_autofill" type="hidden" name="_autofill" value=""><input type="hidden" id="activecampaign_form" class="tve-api-extra" name="activecampaign_form" value="0"><input type="hidden" id="activecampaign_tags" class="tve-api-extra" name="activecampaign_tags" value="STATUS: [Lead] - Expected Value Calculator"></form></div></div><div class="thrv_wrapper thrv_text_element"><p style="text-align: left;"><br></p><p style="text-align: left;"><br></p><p style="text-align: left;"><br></p><p style="text-align: left;"><br></p><p style="text-align: left;"><em>Futures and options trading involves a substantial risk of loss. You should therefore carefully consider whether such trading is appropriate for you in light of your financial condition. Unless distinctly noted otherwise, the data and graphs included herein are intended to be mere examples and exhibits of the topic discussed, are for educational and illustrative purposes only, and do not represent trading in actual accounts. Opinions expressed are that of the author. The mention of specific asset class performance (i.e. S&amp;P +3.2%, -4.6%) is based on the noted source index (i.e. S&amp;P 500 Index, etc.), and investors should take care to understand that any index performance is for the constituents of that index only, and does not represent the entire universe of possible investments within that asset class. And further, that there can be limitations and biases to indices such as survivorship, self-reporting, and instant history.<br></em><br><br><strong>DISCLAIMER</strong><br><br><em>This content provides information regarding a commodity pool known as The Mutiny Fund LLC (the “Fund”), which is managed and operated by Attain Portfolio Advisors LLC and Black Pearl Management LLC (the “Manager”). TaylorPearson.Me is a registered DBA of Black Pearl Management, LLC. Investments in the Fund are only available to Accredited Investors as defined in Rule 501 of Regulation D of The Securities Act of 1933. This content is being provided for information and discussion purposes only and is qualified in its entirety by the information included in the Fund’s offering documents and supplements (collectively, the “Memorandum”) described herein. Any offer or solicitation of the Fund may be made only by delivery of the Memorandum. Before making any investment in the Fund, you should thoroughly review the Memorandum with your professional advisor(s) to determine whether an investment in the Fund is suitable for you in light of your investment objectives and financial situation. The Memorandum contains important information concerning risk factors, including a more comprehensive description of the risks and other material aspects of an investment in the Fund, and should be read carefully before any decision to invest is made.</em></p></div></div></div></div></div></div></div></div><footer class="entry-footer"><p class="entry-meta"><span class="entry-categories">Filed Under: <a href="https://taylorpearson.me/category/blockchain/" rel="category tag">Cryptocurrency &amp; Blockchain</a>, <a href="https://taylorpearson.me/category/investing-decision/" rel="category tag">Investing &amp; Decision Making</a></span></p></footer></article></main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar"><section id="categories-3" class="widget widget_categories"><div class="widget-wrap"><h4 class="widget-title widgettitle">Categories</h4><ul><li class="cat-item cat-item-1"><a href="https://taylorpearson.me/category/uncategorized/">All</a> (45)</li><li class="cat-item cat-item-52"><a href="https://taylorpearson.me/category/blockchain/">Cryptocurrency &amp; Blockchain</a> (20)</li><li class="cat-item cat-item-76"><a href="https://taylorpearson.me/category/investing-decision/">Investing &amp; Decision Making</a> (146)</li><li class="cat-item cat-item-62"><a href="https://taylorpearson.me/category/marketing/">Marketing</a> (9)</li></ul></div></section></aside></div></div><div class="wpc-small-footer"><div style="width: 45%; float: left;"><span style='font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; color: #fff; font-size: 12px;'>&copy; Three Magnolia LLC</span></div><div style="width: 45%; float: right"><div class="menu-small-footer-container"><ul id="menu-small-footer" class="menu"><li id="menu-item-6523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6523"><a href="https://taylorpearson.me/terms-and-conditions/">Terms and Conditions</a></li><li id="menu-item-6522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6522"><a href="https://taylorpearson.me/privacy-policy/">Privacy Policy</a></li><li id="menu-item-11184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11184"><a href="https://taylorpearson.me/important-disclosure/">Important Disclosure</a></li><li id="menu-item-6956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6956"><a href="https://taylorpearson.me/ftc-disclosure/">FTC Disclosure</a></li><li id="menu-item-9960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9960"><a href="https://taylorpearson.me/contact-2/">Contact</a></li><li id="menu-item-6525" class="ppr-nofollow menu-item menu-item-type-post_type menu-item-object-page menu-item-6525"><a rel="nofollow" href="https://taylorpearson.me/newsletter-2/">Newsletter</a></li></ul></div></div><div style="clear: both;"></div></div></div><script type='text/javascript'>( $ => {
+	/**
+	 * Displays toast message from storage, it is used when the user is redirected after login
+	 */
+	if ( window.sessionStorage ) {
+		$( window ).on( 'tcb_after_dom_ready', () => {
+			let message = sessionStorage.getItem( 'tcb_toast_message' );
+
+			if ( message ) {
+				tcbToast( sessionStorage.getItem( 'tcb_toast_message' ), false );
+				sessionStorage.removeItem( 'tcb_toast_message' );
+			}
+		} );
+	}
+
+	/**
+	 * Displays toast message
+	 */
+	function tcbToast( message, error, callback ) {
+		/* Also allow "message" objects */
+		if ( typeof message !== 'string' ) {
+			message = message.message || message.error || message.success;
+		}
+		if ( ! error ) {
+			error = false;
+		}
+		TCB_Front.notificationElement.toggle( message, error ? 'error' : 'success', callback );
+	}
+} )( typeof ThriveGlobal === 'undefined' ? jQuery : ThriveGlobal.$j );</script>  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSW6VBV" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript> <script>/* WPCurve */
+jQuery(function() {
+
+jQuery("#mc-embedded-subscribe").on( 'mouseup', function(){
+setTimeout(function() {
+       if ( jQuery( ".response" ).html() ){
+           $response = jQuery( ".response" ).html();
+           if( $response.search( "already subscribed" ) > 0 ) {
+              window.location.href = "https://threemagnolia.leadpages.net/toolkit-eoj/";
+           }
+       }
+   }, 2000);
+});
+
+});</script> <script type="text/javascript" src="https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/js/bigfoot.js"></script> <script type="text/javascript">jQuery.bigfoot();</script> <script src="https://taylorpearson.me/wp-content/themes/sixteen-nine-pro/js/bootstrap.min.js"></script><style type="text/css" id="tve_notification_styles"></style><div class="tvd-toast tve-fe-message" style="display: none"><div class="tve-toast-message tve-success-message"><div class="tve-toast-icon-container"> <span class="tve_tick thrv-svg-icon"></span></div><div class="tve-toast-message-container"></div></div></div><script type='text/javascript' id='site_tracking-js-extra'>var php_data = {"ac_settings":{"tracking_actid":223239693,"site_tracking_default":1,"site_tracking":1},"user_email":""};</script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/activecampaign-subscription-forms/site_tracking.js' id='site_tracking-js'></script> <script type='text/javascript' id='toc-front-js-extra'>var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"};</script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/table-of-contents-plus/front.min.js' id='toc-front-js'></script> <script type='text/javascript' src='//taylorpearson.me/wp-content/plugins/thrive-leads/js/frontend.min.js' id='tve_leads_frontend-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/acf-dynamic-elements.min.js?ver=3.17.1' id='tve_frontend_acf-dynamic-elements-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/audio.min.js?ver=3.17.1' id='tve_frontend_audio-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/contact-form-compat.min.js?ver=3.17.1' id='tve_frontend_contact-form-compat-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/content-reveal.min.js?ver=3.17.1' id='tve_frontend_content-reveal-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/countdown.min.js?ver=3.17.1' id='tve_frontend_countdown-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/conditional-display.min.js?ver=3.17.1' id='tve_frontend_conditional-display-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/search-form.min.js?ver=3.17.1' id='tve_frontend_search-form-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/dropdown.min.js?ver=3.17.1' id='tve_frontend_dropdown-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/divider.min.js?ver=3.17.1' id='tve_frontend_divider-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-includes/js/plupload/plupload.min.js' id='plupload-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/file-upload.min.js?ver=3.17.1' id='tve_frontend_file-upload-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/fill-counter.min.js?ver=3.17.1' id='tve_frontend_fill-counter-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/number-counter.min.js?ver=3.17.1' id='tve_frontend_number-counter-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/image-gallery-libs.min.js' id='image-gallery-libs-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/image-gallery.min.js?ver=3.17.1' id='tve_frontend_image-gallery-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/lead-generation.min.js?ver=3.17.1' id='tve_frontend_lead-generation-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/login.min.js?ver=3.17.1' id='tve_frontend_login-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/menu.min.js?ver=3.17.1' id='tve_frontend_menu-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/number-counter-compat.min.js?ver=3.17.1' id='tve_frontend_number-counter-compat-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/post-grid-compat.min.js?ver=3.17.1' id='tve_frontend_post-grid-compat-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/pagination.min.js?ver=3.17.1' id='tve_frontend_pagination-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/post-list.min.js?ver=3.17.1' id='tve_frontend_post-list-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/post-list-filter.min.js?ver=3.17.1' id='tve_frontend_post-list-filter-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/pricing-table.min.js?ver=3.17.1' id='tve_frontend_pricing-table-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/progress-bar.min.js?ver=3.17.1' id='tve_frontend_progress-bar-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/social-share.min.js?ver=3.17.1' id='tve_frontend_social-share-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/table.min.js?ver=3.17.1' id='tve_frontend_table-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/tabs.min.js?ver=3.17.1' id='tve_frontend_tabs-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/timer.min.js?ver=3.17.1' id='tve_frontend_timer-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/toc.min.js?ver=3.17.1' id='tve_frontend_toc-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/toggle.min.js?ver=3.17.1' id='tve_frontend_toggle-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/twitter.min.js?ver=3.17.1' id='tve_frontend_twitter-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/user-profile.min.js?ver=3.17.1' id='tve_frontend_user-profile-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/editor/js/dist/modules/video.min.js?ver=3.17.1' id='tve_frontend_video-js'></script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js' id='gtm4wp-form-move-tracker-js'></script> <script type='text/javascript' id='tve-dash-frontend-js-extra'>var tve_dash_front = {"ajaxurl":"https:\/\/taylorpearson.me\/wp-admin\/admin-ajax.php","force_ajax_send":"1","is_crawler":"","recaptcha":[],"post_id":"9787"};</script> <script type='text/javascript' src='https://taylorpearson.me/wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.min.js' id='tve-dash-frontend-js'></script> <script type="text/javascript">var tcb_current_post_lists=JSON.parse('[]'); var tcb_post_lists=tcb_post_lists?[...tcb_post_lists,...tcb_current_post_lists]:tcb_current_post_lists;</script><script type="text/javascript">if ( !window.TL_Const ) {var TL_Const={"security":"82d4d3812f","ajax_url":"https:\/\/taylorpearson.me\/wp-admin\/admin-ajax.php","forms":{"post_footer":{"_key":"72","form_name":"expected-value","trigger":"page_load","trigger_config":{},"form_type_id":11758,"main_group_id":11757,"main_group_name":"investing-decisionmaking","active_test_id":"","active_test_data":[]},"shortcode_9808":{"_key":"51","form_name":"blockchain-explained","trigger":"page_load","trigger_config":{},"form_type_id":"9808","main_group_id":"9808","main_group_name":"blockchain-explained","active_test_id":""}},"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"main_group_id":11757,"display_options":{"allowed_post_types":[],"flag_url_match":false},"shortcode_ids":["9808"],"custom_post_data":{"http_referrer":"https:\/\/www.google.com\/"},"current_screen":{"screen_type":4,"screen_id":9787},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin","tcb_token","tve_labels","tve_mapping","_api_custom_fields","_sendParams","_autofill"]};} else { window.TL_Front && TL_Front.extendConst && TL_Front.extendConst({"security":"82d4d3812f","ajax_url":"https:\/\/taylorpearson.me\/wp-admin\/admin-ajax.php","forms":{"post_footer":{"_key":"72","form_name":"expected-value","trigger":"page_load","trigger_config":{},"form_type_id":11758,"main_group_id":11757,"main_group_name":"investing-decisionmaking","active_test_id":"","active_test_data":[]},"shortcode_9808":{"_key":"51","form_name":"blockchain-explained","trigger":"page_load","trigger_config":{},"form_type_id":"9808","main_group_id":"9808","main_group_name":"blockchain-explained","active_test_id":""}},"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"main_group_id":11757,"display_options":{"allowed_post_types":[],"flag_url_match":false},"shortcode_ids":["9808"],"custom_post_data":{"http_referrer":"https:\/\/www.google.com\/"},"current_screen":{"screen_type":4,"screen_id":9787},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin","tcb_token","tve_labels","tve_mapping","_api_custom_fields","_sendParams","_autofill"]})} /* */</script><script type="text/javascript">var TL_Front = TL_Front || {}; TL_Front.impressions_data = TL_Front.impressions_data || {};TL_Front.impressions_data.post_footer = {"group_id":11757,"form_type_id":11758,"variation_key":"72","active_test_id":0,"output_js":true};TL_Front.impressions_data.shortcode_9808 = {"group_id":"9808","form_type_id":"9808","variation_key":"51","active_test_id":null,"output_js":true};</script><script type="text/javascript">( function ( $ ) {
+	$( function () {
+		var event_data = {"form_id":"tve-leads-track-post_footer-72","form_type":"post_footer"};
+		event_data.source = 'page_load';
+		setTimeout( function () {
+			if ( window.TL_Front ) {
+				ThriveGlobal.$j( TL_Front ).trigger( 'showform.thriveleads', event_data );
+			}
+		}, 200 );
+	} );
+})( ThriveGlobal.$j );</script> <script type="text/javascript">( function ( $ ) {
+	$( function () {
+		var event_data = {"form_id":"tve-leads-track-shortcode_9808","form_type":"shortcode"};
+		event_data.source = 'page_load';
+		setTimeout( function () {
+			if ( window.TL_Front ) {
+				ThriveGlobal.$j( TL_Front ).trigger( 'showform.thriveleads', event_data );
+			}
+		}, 200 );
+	} );
+})( ThriveGlobal.$j );</script> <script type='text/javascript'>var TVE_Ult_Data = {"ajaxurl":"https:\/\/taylorpearson.me\/wp-admin\/admin-ajax.php","ajax_load_action":"tve_ult_ajax_load","conversion_events_action":"tve_ult_conversion_event","shortcode_campaign_ids":[],"matched_display_settings":[],"campaign_ids":[],"post_id":9787,"is_singular":true,"tu_em":"","evergreen_redirects":[]};</script> <script type="text/javascript" src="https://taylorpearson.me/wp-content/plugins/thrive-ultimatum/js/dist/no-campaign.min.js?v=3.15.1"></script><script type='text/javascript'>var trackcmp_email = '';
+var trackcmp = document.createElement('script');
+trackcmp.async = true;
+trackcmp.type = 'text/javascript';
+trackcmp.src = '//trackcmp.net/visit?actid=223239693&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+var trackcmp_s = document.getElementsByTagName('script');
+if (trackcmp_s.length) {
+trackcmp_s[0].parentNode.appendChild(trackcmp);
+} else {
+var trackcmp_h = document.getElementsByTagName('head');
+trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+}</script></body></html> 

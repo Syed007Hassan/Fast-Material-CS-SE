@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="jquery-3.6.3.js"></script>
+
+    <script>
+      /*
+      This is to prevent any jQuery code from running before the document is finished loading (is ready).
+
+      It is good practice to wait for the document to be fully loaded and ready before working with it.
+      This also allows you to have your JavaScript code before the body of your document, in the head section.
+      */
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").toggle();
+        });
+      });
+
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#div1").fadeToggle();
+          $("#div2").fadeToggle("slow");
+          $("#div3").fadeToggle(3000);
+          $("#div1").html("Hello World");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Toggle between hiding and showing the paragraphs</button>
+
+    <p>This is a paragraph with little content.</p>
+    <p>This is another small paragraph.</p>
+
+    <!-- Query Fading Methods
+With jQuery you can fade an element in and out of visiFFbility.
+
+jQuery has the following fade methods:
+
+fadeIn() -- with position:none;
+fadeOut()
+fadeToggle()
+fadeTo()
+-->
+
+    <p>Demonstrate fadeOut() with different parameters.</p>
+    <button>Click to fade out boxes</button><br /><br />
+
+    <div
+      id="div1"
+      style="width: 80px; height: 80px; background-color: red"
+    ></div>
+    <br />
+    <div
+      id="div2"
+      style="width: 80px; height: 80px; background-color: green"
+    ></div>
+    <br />
+    <div
+      id="div3"
+      style="width: 80px; height: 80px; background-color: blue"
+    ></div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="country" id="country">
+      <optgroup label="USA">
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Arizona">Arizona</option>
+      </optgroup>
+      <optgroup label="Canada">
+        <option value="Alberta">Alberta</option>
+        <option value="British Columbia">British Columbia</option>
+        <option value="Manitoba">Manitoba</option>
+      </optgroup>
+    </select>
+    <form>
+      <label for="country_code">Country code:</label>
+      <input
+        type="text"
+        id="country_code"
+        name="country_code"
+        pattern="+[0-9]{2}[0-9]{10}"
+        title="Three letter country code"
+      />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <form>
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="em" class="form-label">Email: </label>
+              <input type="email" class="form-control" id="em" />
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="mb-3">
+              <label for="password" class="form-label">Password: </label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+          </div>
+        </div>
+
+        <label for="feed">Feedback: </label>
+        <textarea
+          class="form-control"
+          rows="3"
+          id="feed"
+          name="text"
+        ></textarea>
+
+        <div class="mb-3">
+          <div class="mb-3">
+            <label for="files" class="form-label">Select Input Files </label>
+            <input class="form-control" type="file" id="files" multiple />
+          </div>
+        </div>
+
+        <label for="datalist" class="form-label">Datalist example</label>
+        <input
+          class="form-control"
+          list="datalistOptions"
+          id="datalist"
+          placeholder="Search.."
+        />
+        <datalist id="datalistOptions">
+          <option value="FAST"></option>
+          <option value="NED"></option>
+          <option value="Karachi Uni"></option>
+          <option value="Bhens Colony"></option>
+          <option value="Ifti Mania"></option>
+        </datalist>
+
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="radio" name="occup" id="std" />
+          <label class="form-check-label" for="occup"> TA </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="occup"
+            id="tch"
+            checked
+          />
+          <label class="form-check-label" for="occup"> SLA </label>
+        </div>
+
+        <div class="form-check form-switch mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="light"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >Light Mode
+          </label>
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="dark"
+            checked
+          />
+          <label class="form-check-label" for="switch">Dark Mode </label>
+        </div>
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btn-check"
+          autocomplete="off"
+        />
+        <label class="btn btn-danger mt-3" for="btn-check"
+          >Toggle Me Button</label
+        >
+
+        <div class="mb-3 form-check mt-3">
+          <input type="checkbox" class="form-check-input" id="check" />
+          <label class="form-check-label" for="check">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Room Booking</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4>Hotel Room Booking Form</h4>
+            </div>
+            <div class="card-body">
+              <form
+                action="#"
+                method="POST"
+                class="needs-validation"
+                novalidate
+              >
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter a password.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="city" class="form-label">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    name="city"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your city.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="roomType" class="form-label">Room Type</label>
+                  <select
+                    class="form-select"
+                    id="roomType"
+                    name="roomType"
+                    required
+                  >
+                    <option value="">Choose a room type</option>
+                    <optgroup label="Standard Rooms">
+                      <option value="DELUXE">DELUXE</option>
+                      <option value="PEARL">PEARL</option>
+                    </optgroup>
+                    <optgroup label="Executive Rooms">
+                      <option value="EXECUTIVE">EXECUTIVE</option>
+                      <option value="EXECUTIVE SUITE">EXECUTIVE SUITE</option>
+                    </optgroup>
+                    <optgroup label="Luxury Rooms">
+                      <option value="DELUXE SUITE">DELUXE SUITE</option>
+                    </optgroup>
+                  </select>
+                  <div class="invalid-feedback">Please choose a room type.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script> -->
+  </body>
+</html>

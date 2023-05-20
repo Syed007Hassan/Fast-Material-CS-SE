@@ -1,0 +1,16 @@
+lab 8:
+ssh:
+in router:
+hostname anas
+enable password anas
+line vty 0 15
+login local
+transport input ssh
+exit
+username anas password anas
+ip domain-name anas.com
+crypto key generate rsa
+in pc 
+ssh -l(L) anas 10.0.0.1(gateway)
+enable
+//end

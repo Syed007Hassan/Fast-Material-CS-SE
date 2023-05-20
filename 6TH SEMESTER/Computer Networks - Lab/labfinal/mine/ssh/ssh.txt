@@ -1,0 +1,49 @@
+configure router ip, configure pc with default gateway of router ip.
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#hostname munir
+munir(config)#enable password 12345
+munir(config)#line vty 0 15
+munir(config-line)#login local 
+munir(config-line)#transport input ssh
+munir(config-line)#exit
+munir(config)#username munir
+munir(config)#username munir password munir
+munir(config)#ip domain-name munir.com
+munir(config)#crypto key generate rsa
+The name for the keys will be: munir.munir.com
+Choose the size of the key modulus in the range of 360 to 2048 for your
+  General Purpose Keys. Choosing a key modulus greater than 512 may take
+  a few minutes.
+
+How many bits in the modulus [512]: 
+% Generating 512 bit RSA keys, keys will be non-exportable...[OK]
+
+munir(config)#
+*Mar 1 0:6:40.203: RSA key size needs to be at least 768 bits for ssh version 2
+*Mar 1 0:6:40.203: %SSH-5-ENABLED: SSH 1.5 has been enabled
+munir(config)#
+munir(config)#
+munir(config)#
+munir#
+%SYS-5-CONFIG_I: Configured from console by console
+
+munir#
+munir#
+munir#
+
+
+then close and go to the pc:open cmd
+
+C:\>ssh -l munir 10.0.0.1
+
+Password: munir
+
+munir>enable 
+Password: munir was wrong here
+Password: 12345
+munir#
+
+ssh done

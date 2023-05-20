@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <script src="task7.js"></script>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form name="signup" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact:</label>
+          <input type="tel" id="contact" name="contact" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <div>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              class="form-check-input"
+            />
+            <label for="male" class="form-check-label">Male</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              class="form-check-input"
+            />
+            <label for="female" class="form-check-label">Female</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="interests">Interests:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="music"
+              name="interests"
+              value="music"
+              class="form-check-input"
+            />
+            <label for="music" class="form-check-label">Music</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="sports"
+              name="interests"
+              value="sports"
+              class="form-check-input"
+            />
+            <label for="sports" class="form-check-label">Sports</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="reading"
+              name="interests"
+              value="reading"
+              class="form-check-input"
+            />
+            <label for="reading" class="form-check-label">Reading</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div id="display"></div>
+    </div>
+
+    <!-- Add Bootstrap JS (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      integrity="sha384-W5DiFjC1hepcVGgKTfOLqJp3wL5lxKb5ru5YX2+6Zp6Y7rVQ4sWkhk+8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+next network address then mask then the via route for all routers.

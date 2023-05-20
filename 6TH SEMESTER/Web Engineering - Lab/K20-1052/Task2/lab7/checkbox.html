@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkbox Example</title>
+    <script src="./jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#submit-btn").click(function () {
+          var uncheckedBoxes = $("input[type='checkbox']:not(:checked)");
+          var checkedBoxes = $("input[type='checkbox']:checked");
+
+          var numChecked = checkedBoxes.length;
+          var numUnChecked = uncheckedBoxes.length;
+          var namesChecked = checkedBoxes
+            .map(function () {
+              return $(this).attr("name");
+            })
+            .get()
+            .join(", ");
+          var namesUnChecked = uncheckedBoxes
+            .map(function () {
+              return $(this).attr("name");
+            })
+            .get()
+            .join(", ");
+          var result =
+            numChecked +
+            " checkboxes checked: " +
+            namesChecked +
+            "\n" +
+            numUnChecked +
+            " checkboxes unchecked: " +
+            namesUnChecked;
+          $("#result").text(result);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <label><input type="checkbox" name="javascript" />JavaScript</label><br />
+    <label><input type="checkbox" name="jquery" />jQuery</label><br />
+    <label><input type="checkbox" name="csharp" />C#</label><br />
+    <label><input type="checkbox" name="vb" />VB</label><br />
+    <button id="submit-btn">Submit</button>
+    <div id="result"></div>
+  </body>
+</html>

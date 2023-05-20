@@ -1,0 +1,125 @@
+Assalaam-o-Alaikum
+I am Muhammad Nadeem Ghouri
+
+Today we will discuss Lab Session 06 Wireshark Labs: HTTP/S - DNS - TCP - UDP
+
+In this lecture we discuss 
+Objective:
+Network traffic analysis of UDP protocol using Wireshark
+
+
+
+
+
+Hold 30 seconds, then stop capturing.
+
+Search UDP
+
+
+
+ 1. Four - 4 Header Fields.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Each Field Size is Two - 2 bytes.
+User Datagram Protocol
+
+i.  Source    -            2 bytes
+ii. Destination   -     2 bytes
+iii. Length   -           2 bytes
+iv Checksum  -       2 bytes
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. The value in the length is the sum of the 8 heade bytes.
+
+
+
+
+
+
+
+
+4. Here, The largest possiable source port number is (2 power 16 - 1) = 65535.
+    And the header bytes is 8 bytes. So the maximum number of bytes that can be included in a UDP
+    payload is = 65535 - 8 = 65527 bytes.
+
+
+
+
+
+
+
+
+
+5. The largest possible source port number is (2 power 16 - 1) = 65535.
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Decimal 17
+and Hexadecimal 11.
+
+
+
+
+
+
+7. Send Packet 
+
+
+
+and Reply Packet.
+
+
+
+
+
+
+
+
+
+
+
+
+Thank you :)
+
+
+
+
+
+
+
+
+
+

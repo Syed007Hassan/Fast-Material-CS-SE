@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FAST TOUR & TRAVELS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/4127/4127281.png"
+      type="image/x-icon"
+    />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Icons File-->
+    <script src="https://kit.fontawesome.com/8e3c8f126c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">FAST TOUR & TRAVELS</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="car-rental.html">Car Rental</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Car Booking</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Car Rental</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Booking Section ======= -->
+    <section id="booking" class="booking">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Car Booking</h2>
+          <p>Rent a Car according to your convenience</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-7 mx-auto">
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                  <!-- Credit card form tabs -->
+                  <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                    <li class="nav-item">
+                      <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                          <i class="fa fa-credit-card"></i>
+                                          Credit Card
+                                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                          <i class="fa fa-paypal"></i>
+                                          Paypal
+                                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                          <i class="fa fa-university"></i>
+                                           Bank Transfer
+                                       </a>
+                    </li>
+                  </ul>
+                  <!-- End -->
+
+
+                  <!-- Credit card form content -->
+                  <div class="tab-content">
+
+                    <!-- credit card info-->
+                    <div id="nav-tab-card" class="tab-pane fade show active">
+
+                      <form role="form">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label for="username">Full name (on the card)</label>
+                                <input type="text" name="username" placeholder="Jason Doe" required class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="package-code">Car Code</label>
+                                <input type="text" name="package-code" placeholder="#156h7" required class="form-control">
+                            </div>
+                        </div>
+                        <div class="row pt-3 pb-3">
+                            <div class="col-sm-4">
+                                <label for="pickup">Pick-up Date</label>
+                                <input type="date" name="pickup" required class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="dropoff">Drop-off Date</label>
+                                <input type="date" name="dropoff" required class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="contact">Contact number</label>
+                                <input type="text" name="contact" required class="form-control" placeholder="0321-4567231">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label for="cardNumber">Card number</label>
+                                <div class="input-group">
+                                  <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+                                  <div class="input-group-append">
+                                    <span class="input-group-text text-muted h-100">
+                                                                <i class="fa fa-cc-visa mx-1"></i>
+                                                                <i class="fa fa-cc-amex mx-1"></i>
+                                                                <i class="fa fa-cc-mastercard mx-1"></i>
+                                                            </span>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <!-- dropdown input -->
+                                <label for="cardNumber">Driver</label>
+                                <div class="input-group">
+                                  <select class="form-control" id="cardType">
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-sm-8">
+                            <div class="form-group">
+                              <label><span class="hidden-xs">Expiration</span></label>
+                              <div class="input-group">
+                                <input type="number" placeholder="MM" name="" class="form-control" required>
+                                <input type="number" placeholder="YY" name="" class="form-control" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group mb-4">
+                              <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                          <i class="fa fa-question-circle"></i>
+                                                      </label>
+                              <input type="text" required class="form-control" placeholder="***">
+                            </div>
+                          </div>
+
+
+
+                        </div>
+                        <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"> Confirm  </button>
+                      </form>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                         <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Car Booking Confirmation</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Car has been booked successfully
+                                </div>
+                                <div class="modal-footer">
+                                <button? type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                    <!-- Paypal info -->
+                    <div id="nav-tab-paypal" class="tab-pane fade">
+                      <p>Paypal is easiest way to pay online</p>
+                      <p>
+                        <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                      </p>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                    <!-- End -->
+
+                    <!-- bank transfer info -->
+                    <div id="nav-tab-bank" class="tab-pane fade">
+                      <h6>Bank account details</h6>
+                      <dl>
+                        <dt>Bank</dt>
+                        <dd> THE WORLD BANK</dd>
+                      </dl>
+                      <dl>
+                        <dt>Account number</dt>
+                        <dd>7775877975</dd>
+                      </dl>
+                      <dl>
+                        <dt>IBAN</dt>
+                        <dd>CZ7775877975656</dd>
+                      </dl>
+                      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                    <!-- End -->
+                  </div>
+                  <!-- End -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>FAST Tour & Travels</h3>
+            <p>
+              10th Floor Shahrah-e-Faisal <br>
+              Karachi, Khi 54876<br>
+              Pakistan <br><br>
+              <strong>Phone:</strong> +92 335 6548712<br>
+              <strong>Email:</strong> info.fast@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html">Tour Packages</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="car-rental.html">Car Rental</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Get daily updates about our services</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+     <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          Copyright &copy;  <strong><span>FT&T</span></strong>.
+        </div>
+        <div class="credits">
+          Designed by <a href="https://github.com/Syed007Hassan">Hassan Ali, k20-1052 </a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

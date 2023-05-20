@@ -1,0 +1,104 @@
+setup topology.
+open router cmd
+
+Router(config-if)#
+Router(config-if)#
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#
+Router#
+Router#
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#enable
+% Incomplete command.
+Router(config)#enable password munir
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#
+Router#
+Router#write memory
+Building configuration...
+[OK]
+Router#
+Router#
+Router#
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#
+Router#
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#
+Router(config)#
+Router(config)#line vty 0 15
+Router(config-line)#
+Router(config-line)#password munir
+Router(config-line)#login 
+Router(config-line)#
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#
+Router#
+Router#
+Router#
+Router#
+Router#write memory
+Building configuration...
+[OK]
+Router#
+Router#
+Router#
+Router#
+Router#   wh ru
+             ^
+% Invalid input detected at '^' marker.
+	
+Router#sh run
+Building configuration...
+
+Current configuration : 636 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+enable password munir
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+
+Router#write memory
+Building configuration...
+[OK]
+Router#
+
+
+
+then open the pc and ping the router via cmd.
+then write telnet and ipon cmd
+enter password munir
+router accessed
+write enable
+write password

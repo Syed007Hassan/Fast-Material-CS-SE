@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+</head>
+
+<!--
+  The biggest difference between Bootstrap 3 and Bootstrap 4 & 5 is that Bootstrap 5
+  now uses flexbox, instead of floats, to handle the layout.
+
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout
+structure without using float or positioning.
+
+ d-flex classes to control the layout, align items, and manage spaces between the items.
+ -->
+
+<div class="d-flex p-3 bg-secondary text-white">
+  <div class="p-2 bg-info w-100">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<!-- To create an inline flexbox container, use the d-inline-flex class: -->
+
+<div class="d-inline-flex p-3 bg-secondary text-white">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<!-- Horizontal Direction
+Use .flex-row to display the flex items horizontally (side by side). This is default.
+Tip: Use .flex-row-reverse to right-align the horizontal direction:-->
+
+<div class="d-flex flex-row bg-secondary">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<div class="d-flex flex-row-reverse bg-secondary">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<!-- Justify Content
+Use the .justify-content-* classes to change the alignment of flex items. Valid classes are start (default), end, center, between or around:
+-->
+
+<div class="container mt-3">
+  <h2>Justify content</h2>
+  <p>Use the .justify-content-* classes to change the alignment of flex items. Choose from start (default), end, center,
+    between or around:</p>
+  <div class="d-flex justify-content-start bg-secondary mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <div class="d-flex justify-content-end bg-secondary mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <div class="d-flex justify-content-center bg-secondary mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <div class="d-flex justify-content-between bg-secondary mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <div class="d-flex justify-content-around bg-secondary mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+</div>
+
+
+<!-- Offcanvas
+Offcanvas is similar to modals (hidden by default and shown when activated), except that is
+ often used as a sidebar navigation menu.
+
+
+
+Example Explained
+The .offcanvas class creates the offcanvas sidebar.
+
+The .offcanvas-start class positions the offcanvas, and makes it 400px wide.
+
+The .offcanvas-title class ensures proper margins and line-height.
+Then, add your content inside the .offcanvas-body class.
+
+To open the offcanvas sidebar, you must use a <button> or an <a> element that points to
+the id of the .offcanvas container (#demo in our example).
+
+To open the offcanvas sidebar with an <a> element, you can point to #demo with
+the href attribute, instead of data-bs-target attribute.
+-->
+
+<div class="offcanvas offcanvas-start" id="demo">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Heading</h1>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Some text lorem ipsum.</p>
+    <p>Some text lorem ipsum.</p>
+    <button class="btn btn-secondary" type="button">A Button</button>
+  </div>
+</div>
+
+<!-- Button to open the offcanvas sidebar -->
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+  Open Offcanvas Sidebar
+</button>
+
+<!-- Slider using Bootstrap 5  -->
+
+<body>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Image/1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+
+  <!--with Controls-->
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Image/4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/5.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Image/8.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</body>
+
+
+<!-- -->
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Image/1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="Image/2.jpg" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="Image/3.jpg" alt="New York" class="d-block" style="width:100%">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="container-fluid mt-3">
+  <h3>Carousel Example</h3>
+  <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+</div>
+
+<br /><br /><br /><br />
+
+
+<div class="overflow-auto" style="width: 100px;height: 100px;">..This is an example of using .overflow-scroll on an
+  element with set width and height dimensions.
+  .</div>
+<div class="overflow-hidden" style="width: 100px;height: 100px;"">This is an example of using .overflow-scroll on an element with set width and height dimensions.
+    ...</div>
+<div class=" overflow-visible" style="width: 100px;height: 100px;"">This is an example of using .overflow-scroll on an element with set width and height dimensions.
+    ...</div>
+    <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+<div class=" overflow-scroll" style="width: 100px;height: 100px;"">.This is an example of using .overflow-scroll on an element with set width and height dimensions.
+    ..</div>
+    <script
+      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+  </body>
+
+</html>

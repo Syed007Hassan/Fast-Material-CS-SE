@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./bootstrap-5.0.2-dist/js/bootstrap.esm.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./bootstrap-5.0.2-dist/js/bootstrap.esm.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./bootstrap-5.0.2-dist/js/bootstrap.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!--
+    Modals
+The Modal component is a dialog box/popup window that is displayed on top
+of the current page:
+Button to Open the Modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#myModal"
+    >
+      Open modal
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">Modal body..</div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    Tooltips
+The Tooltip component is small pop-up box that appears when the user moves the mouse pointer over an element:
+How To Create a Tooltip
+To create a tooltip, add the data-bs-toggle="tooltip" attribute to an element.
+
+Use the title attribute to specify the text that should be displayed inside the tooltip:-->
+    <div class="container mt-3">
+      <h3>Tooltip Example</h3>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="tooltip"
+        title="Hooray!"
+      >
+        Hover over me!
+      </button>
+    </div>
+
+    <script>
+      // Initialize tooltips
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <div class="container mt-3">
+      <h3>Tooltip Positioning</h3>
+      <p>The data-bs-placement attribute specifies the tooltip position.</p>
+      <a
+        href="#"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Hooray!"
+        >Top</a
+      >
+      <a
+        href="#"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Hooray!"
+        >Bottom</a
+      >
+      <a
+        href="#"
+        data-bs-toggle="tooltip"
+        data-bs-placement="left"
+        title="Hooray!"
+        >Left</a
+      >
+      <a
+        href="#"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        title="Hooray!"
+        >Right</a
+      >
+    </div>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <!-- Popovers
+The Popover component is similar to tooltips; it is a pop-up box that appears
+when the user clicks on an element. The difference is that the popover can contain much more content.
+
+How To Create a Popover
+To create a popover, add the data-bs-toggle="popover" attribute to an element.
+Use the title attribute to specify the header text of the popover, and use the
+data-bs-content attribute to specify the text that should be displayed inside the popover's body:
+
+-->
+
+    <div class="container mt-3">
+      <h3>Popover Example</h3>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="popover"
+        title="Popover Header"
+        data-bs-content="Some content inside the popover"
+      >
+        Toggle popover
+      </button>
+    </div>
+
+    <div class="container mt-5">
+      <h3>Popover Positioning</h3>
+      <p>Click on the links to see the popover in action:</p>
+      <a
+        href="#"
+        title="Header"
+        data-bs-toggle="popover"
+        data-bs-placement="top"
+        data-bs-content="Content"
+        >Top</a
+      >
+      <a
+        href="#"
+        title="Header"
+        data-bs-toggle="popover"
+        data-bs-placement="bottom"
+        data-bs-content="Content"
+        >Bottom</a
+      >
+      <a
+        href="#"
+        title="Header"
+        data-bs-toggle="popover"
+        data-bs-placement="left"
+        data-bs-content="Content"
+        >Left</a
+      >
+      <a
+        href="#"
+        title="Header"
+        data-bs-toggle="popover"
+        data-bs-placement="right"
+        data-bs-content="Content"
+        >Right</a
+      >
+    </div>
+
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
+
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
+
+    <!-- Toasts
+The toast component is like an alert box that is only shown for a couple of seconds when something happens (i.e. when the user clicks on a button, submits a form, etc.).
+How To Create a Toast
+To create a toast, use the .toast class, and add a .toast-header and a .toast-body inside of it.
+
+Note: Toasts are hidden by default. Use the .show class if you want to display it. To close it, use a <button> element and add data-bs-dismiss="toast":
+
+-->
+
+    <div class="toast show">
+      <div class="toast-header">
+        Toast Header
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+        ></button>
+      </div>
+      <div class="toast-body">Some text inside the toast body</div>
+    </div>
+
+    <div class="container mt-3">
+      <h3>Toast Example</h3>
+      <p>In this example, we use a button to show the toast message.</p>
+
+      <button type="button" class="btn btn-primary" id="toastbtn">
+        Show Toast
+      </button>
+
+      <div class="toast">
+        <div class="toast-header">
+          <strong class="me-auto">Toast Header</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+        <div class="toast-body">
+          <p>Some text inside the toast body</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("toastbtn").onclick = function () {
+        var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+        var toastList = toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl);
+        });
+        toastList.forEach((toast) => toast.show());
+      };
+    </script>
+  </body>
+</html>

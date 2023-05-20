@@ -1,0 +1,58 @@
+go to switch
+ok for commands basically add 2 vlans, then add the vlans to interfaces with switchports.
+
+
+Switch>
+Switch>
+Switch>
+Switch>
+Switch>en
+Switch#enable
+Switch#
+Switch#vlan database
+% Warning: It is recommended to configure VLAN from config mode,
+  as VLAN database mode is being deprecated. Please consult user
+  documentation for configuring VTP/VLAN in config mode.
+
+Switch(vlan)#
+Switch(vlan)#
+Switch(vlan)#vlan 2 name munir1
+VLAN 2 added:
+    Name: munir1
+Switch(vlan)#vlan 3 name munir2
+VLAN 3 added:
+    Name: munir2
+Switch(vlan)#.
+             ^
+% Invalid input detected at '^' marker.
+	
+Switch(vlan)#
+Switch(vlan)#
+Switch(vlan)#config t
+             ^
+% Invalid input detected at '^' marker.
+	
+Switch(vlan)#
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#
+Switch#
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#
+Switch(config)#int f0/1
+Switch(config-if)#switchport access vlan 2
+Switch(config-if)#int f0/2
+Switch(config-if)#switchport access vlan 3
+Switch(config-if)#
+Switch(config-if)#
+Switch(config-if)#
+Switch(config-if)#
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#
+Switch#sh vlan

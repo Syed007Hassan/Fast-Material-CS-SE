@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CDN links for jQuery and Bootstrap -->
+    <script src="./jquery-3.6.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <style>
+      .rotate {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        position: relative;
+      }
+      .container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="rotate"></div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        const rotateDiv = $(".rotate");
+
+        let angle = 0;
+        let intervalId = setInterval(() => {
+          angle += 5;
+          rotateDiv.css("transform", `rotate(${-angle}deg)`);
+          rotateDiv.fadeIn(1000).fadeOut(1000);
+        }, 10);
+
+        $(".rotate").click(() => {
+          //stop animation on click start animation on click
+          if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+          } else {
+            intervalId = setInterval(() => {
+              angle += 5;
+              rotateDiv.css("transform", `rotate(${angle}deg)`);
+              rotateDiv.fadeOut(1000).fadeIn(1000);
+            }, 10);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

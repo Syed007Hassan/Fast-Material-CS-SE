@@ -1,0 +1,18 @@
+telnet router:
+1841 router or 2950-24 switch
+ctrl z (config if se hatao pehle)
+config t
+enable password anas
+exit
+write memory
+config t
+line vty 0 15
+password anas
+login
+ctrl z
+write memory
+sh ru
+in pc:
+ping 10.0.0.1(gateway)
+telnet 10.0.0.1
+enable 

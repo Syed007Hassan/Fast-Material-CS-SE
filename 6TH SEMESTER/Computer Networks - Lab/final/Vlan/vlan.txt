@@ -1,0 +1,46 @@
+switch 
+
+// vlan <VLAN_NUMBER>
+// name <NAME_FOR_VLAN>
+Switch(config)#vlan 2
+Switch(config-vlan)#name cs
+Switch(config-vlan)#vlan 3
+Switch(config-vlan)#name se
+Switch(config-vlan)#vlan 4
+Switch(config-vlan)#name ee
+
+
+switch again
+
+// switchport mode <ACCESS/TRUNK>
+// If in access mode, 
+// switchport access vlan <VLAN_NUMBER>
+Switch(config)#interface fa0/5
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#interface fa0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 2
+Switch(config-if)#interface fa0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 3
+Switch(config-if)#interface fa0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 4
+Switch(config-if)#exit
+
+
+in router 
+
+Router(config)#interface fa0/0
+Router(config-if)#interface fa0/0.20
+Router(config-subif)#encapsulation dot1q 2
+Router(config-subif)#ip address 10.52.1.1 255.0.0.0
+Router(config-subif)#interface fa0/0.30
+Router(config-subif)#encapsulation dot1q 3
+Router(config-subif)#ip address 11.52.1.1 255.0.0.0
+Router(config-subif)#interface fa0/0.40
+Router(config-subif)#encapsulation dot1q 4
+Router(config-subif)#ip address 12.52.1.1 255.0.0.0
+Router(config-subif)#exit
+Router(config)#interface fa0/0
+Router(config-if)#no shutdown

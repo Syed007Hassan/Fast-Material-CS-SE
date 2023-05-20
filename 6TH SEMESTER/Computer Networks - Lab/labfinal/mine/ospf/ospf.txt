@@ -1,0 +1,93 @@
+make topology with pt routers and assign ip
+
+for the red lines assign such that the line ka last is change rest on same line so same network first3 byte.
+
+open router which is connected to a network
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Serial2/0
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#
+Router(config-if)#router ospf 1
+Router(config-router)#network 192.168.1.0 0.0.0.255
+% Incomplete command.
+Router(config-router)#network 192.168.1.0 0.0.0.255 area 0
+Router(config-router)#
+Router(config-router)#end
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Serial2/0
+Router(config-if)#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router(config-if)#
+Router(config-if)#network 10.0.0.0 255.0.0.0 area 0
+                   ^
+% Invalid input detected at '^' marker.
+	
+Router(config-if)#router ospf 1
+Router(config-router)#network 192.168.1.0 0.0.0.255 area 0
+Router(config-router)#network 10.0.0.0 255.0.0.0 area 0
+Router(config-router)#network 20.0.0.0 255.0.0.0 area 0
+Router(config-router)#exit
+Router(config)#
+Router(config)#
+Router(config)#
+Router(config)#
+
+router connected to network system^
+
+
+
+
+router connected to 2 routers (when 2 router start with 0the netmask)
+
+
+Router#
+Router#
+Router#
+Router#en 
+Router#enable
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#
+Router(config)#
+Router(config)#
+Router(config)#
+Router(config)#router ospf 1
+Router(config-router)#
+Router(config-router)#network 20.0.0.0 255.0.0.0.0 area 0
+                                       ^
+% Invalid input detected at '^' marker.
+	
+Router(config-router)#network 20.0.0.0 0.255.255.255 area
+% Incomplete command.
+Router(config-router)#network 20.0.0.0 0.255.255.255 area 0
+Router(config-router)#
+00:25:22: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.1.1 on Serial2/0 from LOADING to FULL, Loading Done
+
+Router(config-router)#
+Router(config-router)#network 40.0.0.0 0.255.255.255 area 0
+Router(config-router)#
+Router(config-router)#end
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Serial2/0
+Router(config-if)#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router(config-if)#exit
+
+
+
+now leftover router with other network
+
+
+
+

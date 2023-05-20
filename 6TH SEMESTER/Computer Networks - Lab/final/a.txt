@@ -1,0 +1,354 @@
+﻿TELNET (switch cli)
+
+Switch>en
+Switch#conf t
+Switch(config)#interface vlan 1
+Switch(config-if)#ip address 02.16.0.1 255.0.0.0
+Switch(config-if)#no shutdown 
+
+Switch(config-if)#exit
+
+Switch(config)#line vty 0 15
+Switch(config-line)#password 123
+Switch(config-line)#login
+Switch(config-line)#end
+Switch#
+Switch#conf t
+Switch(config)#enable password cs
+Switch(config)#exit
+Switch#
+
+change ip of switch from pc using cmd
+
+C:\>telnet 02.16.0.1
+Trying 2.16.0.1 ...Open
+User Access Verification
+C:\>telnet 02.16.0.1
+Trying 2.16.0.1 ...Open
+Password: 
+Password: 
+Switch>en
+Password: 
+Switch#conf t
+Switch(config)#interface vlan 1
+Switch(config-if)#ip address 02.16.1.1 255.0.0.0
+% Connection refused by remote host
+C:\>telnet 02.16.1.1
+Trying 2.16.1.1 ...Open
+User Access Verification
+Password: 
+Switch>exit
+[Connection to 2.16.1.1 closed by foreign host]
+C:\>telnet 02.16.0.1
+Trying 2.16.0.1 ...
+% Connection timed out; remote host not responding
+C:\>
+
+
+SSH (do telnet config on swith first)
+
+Switch>en
+Switch#conf t
+Switch(config)#interface vlan 1
+Switch(config-if)#ip address 02.16.0.1 255.0.0.0
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+Switch(config)#line vty 0 15
+Switch(config-line)#password 123
+Switch(config-line)#login
+Switch(config-line)#end
+Switch#
+Switch#conf t
+Switch(config)#enable password cs
+Switch(config)#exit
+Switch#
+Switch#conf t
+Switch(config)#hostname s1
+s1(config)#ip domain name cs-study
+s1(config)#crypto key generate rsa
+The name for the keys will be: s1.cs-study
+Choose the size of the key modulus in the range of 360 to 2048 for your
+  General Purpose Keys. Choosing a key modulus greater than 512 may take
+  a few minutes.
+
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+
+s1(config)#ip ssh version 2
+s1(config)#line vty 0 15
+s1(config-line)#transport input ssh
+s1(config-line)#
+s1(config-line)#exit
+s1(config)#username cs-study secret abc
+s1(config)#line vty 0 15
+s1(config-line)#login local
+
+changing ssh ip using pc 
+
+s1>en
+Password: 
+Password: 
+s1#conf t
+s1(config-if)#interface vlan 1
+s1(config-if)#ip address 02.16.1.1 255.0.0.0
+
+% Connection refused by remote host
+C:\>ssh -l admin 02.16.1.1
+
+Password:
+
+DHCP ip assignmnet 
+
+Router(config-if)#exit 
+Router(config)#interface fa0/0
+
+	
+Router(config-if)#ip dhcp pool abc
+Router(dhcp-config)#network 192.168.10.0 255.255.255.0
+Router(dhcp-config)#def
+Router(dhcp-config)#default-router 192.168.10.1
+
+never assign ip to server using dhcp
+
+
+
+lab 10 rip
+make subnetting ka scene poora 
+router rip
+(jitno se connected h)
+network --- 
+network ---
+version 2
+exit
+
+ospf
+router ospf 1
+network --- wildmass ( subnet -255) area 1
+
+
+
+11
+
+vlan for switch with pc
+
+witch>en
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#vlan 10
+Switch(config-vlan)#name green
+Switch(config-vlan)#ex
+Switch(config)#vlan 20
+Switch(config-vlan)#name pink
+Switch(config-vlan)#ex
+Switch(config)#int fa0/1
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#ex
+Switch(config)#int fa0/2
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#ex
+Switch(config)#int fa0/3
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#ex
+Switch(config)#int fa0/4
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#ex
+Switch(config)#do sh vlan
+
+
+switch connect with router
+witch(config)#int fa0/5
+Switch(config-if)#sw
+Switch(config-if)#switchport mode trunk
+
+router
+Router>en
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int fa0/0
+Router(config)#interface fa 0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.10.1 255.255.255.0
+Router(config-subif)#no shutdown
+Router(config-subif)#exit
+Router(config)#interface fa 0/0.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.20.1 255.255.255.0
+Router(config-subif)#no shutdown
+Router(config-subif)#exit
+                  
+
+
+
+Lab 12
+Rules of ACL
+1. The standard Access-list is generally applied close to the destination (but not always).
+2. The extended Access-list is generally applied close to the source (but not always).
+3. We can assign only one ACL per interface per protocol per direction, i.e., only one inbound and
+outbound ACL is permitted per interface.
+4. We can’t remove a rule from an Access-list if we are using numbered Access-list. If we try to remove
+a rule then the whole ACL will be removed. If we are using named access lists then we can delete a
+specific rule.
+5. Every new rule which is added to the access list will be placed at the bottom of the access list therefore
+before implementing the access lists, analyses the whole scenario carefully.
+6. As there is an implicit deny at the end of every access list, we should have at least a permit statement
+in our Access-list otherwise all traffic will be denied.
+7. Standard access lists and extended access lists cannot have the same name.
+
+
+
+standard implemented near the destination
+extended implemented near the source
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#acce
+Router(config)#access-list 9 deny 192.168.1.3 0.0.0.0
+Router(config)#access-list 9 permit any
+Router(config)#int fa0/1 (jahan block karna h)
+Router(config-if)#ip access-group 9 out
+Router(config-if)#
+
+
+
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#access-list 102 deny tcp 192.168.1.2 0.0.0.0 192.168.2.4 0.0.0.0 eq 80
+Router(config)#access-list 102 permit tcp any any
+Router(config)#int fa0/0 (jahan se arha h)
+Router(config-if)#ip access
+Router(config-if)#ip access-group 102 in
+
+
+Lab 13 wireless
+
+use wrt300 wireless router
+pc physical red button change port wmp300
+default web browser from anyone connected pc 192.168.0.1 admin
+wireless bscs savesetting
+go to router on wep and put wep key
+pc pc wireless connect bscs
+
+Router(config)#int fa0/0
+Router(config-if)#ip nat inside
+Router(config-if)#exit
+Router(config)#int se0/1/0
+Router(config-if)#ip nat outside
+Router(config-if)#exit
+Router(config)#ip nat inside source static 192.168.10.2 10.0.0.1
+Router(config)#ip route 0.0.0.0 0.0.0.0 se0/1/0
+Router(config)#ip nat inside source static 192.168.10.3 10.0.0.1
+Router(config)#ip route 0.0.0.0 0.0.0.0 se0/1/0
+Router(config)#
+
+dosra router
+Router(config)#int fa0/0
+Router(config-if)#ip nat outside
+Router(config-if)#exit
+Router(config)#int se0/1/0
+Router(config-if)#ip nat inside
+Router(config-if)#exit
+Router(config)#ip nat outside source static 10.0.0.2 172.168.10.2
+Router(config)#ip route 0.0.0.0 0.0.0.0 fa0/0
+Router(config)#
+
+
+
+telnet configure lab 12
+
+Configure Router if we hover over the wire connecting router and the switch, it shows the interface
+en
+config t
+interface gig0/0
+// ip address <IP_ADDRESS> <SUBNET_MASK>
+ip address 192.168.0.1 255.255.0.0
+no shutdown
+interface gig0/1
+ip address 172.168.0.1 255.255.0.0
+no shutdown
+exit
+
+on router
+
+en
+config t
+//enable password <PASSWORD> (password required to enable the end device)
+enable password wahaj
+line vty 0 15
+// password <PASSWORD> (password required to access telnet)
+password wahaj
+login
+exit
+
+
+For Standard ACL
+// ip access-list standard <ACL_NAME>
+Router(config)#ip access-list standard TEL
+// permit / deny <any> the order of statements matters as first is executed first
+Router(config-std-nacl)#permit 192.168.0.2
+Router(config-std-nacl)#deny any
+Router(config-std-nacl)#exit
+Router(config)#interface gig0/0
+// ip access-group <NAME> <IN/OUT>
+Router(config-if)#ip access-group TEL in
+
+
+Lab#13
+
+
+For Router 1
+Router>en
+Router#config t
+Router(config)#int fa0/0
+Router(config-if)#ip address 192.168.10.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#interface Serial0/3/0
+Router(config-if)#ip address 20.0.0.1 255.0.0.0
+Router(config-if)#no shutdown
+For Router 2
+Router>en
+Router#config t
+Router(config)#int fa0/0
+Router(config-if)#ip address 10.0.0.1 255.0.0.0
+Router(config-if)#no shutdown
+Router(config-if)#int se0/3/0
+Router(config-if)#ip address 20.0.0.2 255.0.0.0
+Router(config-if)#no shutdown
+Configure Static NAT for Router 1
+// ip nate inside source static <PRIVATE_IP> <PUBLIC_IP>
+Router(config)#ip nat inside source static 192.168.10.2 20.0.0.3
+Router(config)#ip nat inside source static 192.168.10.3 20.0.0.4
+Router(config)#ip nat inside source static 192.168.10.4 20.0.0.5
+Router(config)#interface se0/3/0
+Router(config-if)#ip nat outside
+Router(config-if)#interface fa0/0
+Router(config-if)#ip nat inside
+now we need to add a static route from router 1 to 2 we used 0.0.0.0 because we dont know what IP will be coming to us
+Router(config)#ip route 0.0.0.0 0.0.0.0 se0/3/0
+
+Configure Dynamic NAT for Router 2
+// ip nat pool <name> <public IP start> <public IP end> netmask <subnetmask>
+Router(config)#ip nat pool MY_POOL 20.0.0.6 20.0.0.20 netmask 255.0.0.0
+// access-list 1 permit <internal network address> <wildcard subnet>
+Router(config)#access-list 1 permit 10.0.0.0 0.255.255.255
+// ip nat inside source list 1 pool <name>
+Router(config)#ip nat inside source list 1 pool MY_POOL
+Router(config)#interface se0/3/0
+Router(config-if)#ip nat outside
+Router(config-if)#interface fa0/0
+Router(config-if)#ip nat inside
+
+to check ping from left pc 10.0.0.2
+
+For PAT
+access list 1 permit <PRIVATE_IP_NETWORK_ADDRESS> <WILDCARD_MASK>
+ip nat inside source list 1 interface <PORT> overload
+interface <PORT>
+ip nat <INSIDE/OUTSIDE>
+
+
+

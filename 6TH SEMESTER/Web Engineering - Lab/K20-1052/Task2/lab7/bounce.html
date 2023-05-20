@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.0.min.js"
+    ></script>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: brown;
+      }
+
+      img {
+        position: absolute;
+        border-radius: 50%;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        function Bounce() {
+          $("#myimg").animate(
+            {
+              top: "100px",
+              width: "200px",
+            },
+            1000,
+            function () {
+              $("#myimg").animate(
+                {
+                  top: "300px",
+                  width: "250px",
+                },
+                1000,
+                Bounce
+              );
+            }
+          );
+        }
+        Bounce();
+      });
+    </script>
+  </head>
+
+  <body>
+    <img
+      id="myimg"
+      src="https://media.geeksforgeeks.org/wp-content/uploads/20210824161630/logo.png"
+      width="200px"
+      height="200px"
+    />
+  </body>
+</html>

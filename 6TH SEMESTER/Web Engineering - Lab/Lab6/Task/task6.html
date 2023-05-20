@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <!-- <script src="task6.js"></script> -->
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form name="signup" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact:</label>
+          <input type="tel" id="contact" name="contact" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <div>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              class="form-check-input"
+            />
+            <label for="male" class="form-check-label">Male</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              class="form-check-input"
+            />
+            <label for="female" class="form-check-label">Female</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="interests">Interests:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="music"
+              name="interests"
+              value="music"
+              class="form-check-input"
+            />
+            <label for="music" class="form-check-label">Music</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="sports"
+              name="interests"
+              value="sports"
+              class="form-check-input"
+            />
+            <label for="sports" class="form-check-label">Sports</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="reading"
+              name="interests"
+              value="reading"
+              class="form-check-input"
+            />
+            <label for="reading" class="form-check-label">Reading</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div id="display"></div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        function displayValues() {
+          var name = $("#signup input[name='name']").val();
+          var contact = $("#signup input[name='contact']").val();
+          var email = $("#signup input[name='email']").val();
+          var password = $("#signup input[name='password']").val();
+          var gender = $("#signup input[name='gender']:checked").val();
+          var interests = $("#signup input[name='interests']:checked");
+
+          var namePara = $("<p>").html("Name: " + name);
+          var contactPara = $("<p>").html("Contact: " + contact);
+          var emailPara = $("<p>").html("Email: " + email);
+          var passwordPara = $("<p>").html("Password: " + password);
+          var genderPara = $("<p>").html("Gender: " + gender);
+          var interestsPara = $("<p>").html("Interests: ");
+
+          interests.each(function () {
+            interestsPara.append($(this).val() + " ");
+          });
+
+          $("#display").empty();
+          $("#display").append(namePara);
+          $("#display").append(contactPara);
+          $("#display").append(emailPara);
+          $("#display").append(passwordPara);
+          $("#display").append(genderPara);
+          $("#display").append(interestsPara);
+        }
+
+        function validateForm() {
+          var name_regex = /^[A-Za-z ]+$/;
+          var contact_regex = /^\d{11}$/;
+          var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          var password_regex =
+            /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+
+          var name = $("#signup input[name='name']").val();
+          var contact = $("#signup input[name='contact']").val();
+          var email = $("#signup input[name='email']").val();
+          var password = $("#signup input[name='password']").val();
+          var gender = $("#signup input[name='gender']:checked");
+          var interests = $("#signup input[name='interests']:checked");
+
+          if (!name_regex.test(name)) {
+            alert("Please enter a valid name.");
+            return false;
+          }
+
+          if (!contact_regex.test(contact)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return false;
+          }
+
+          if (!email_regex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+          }
+
+          if (!password_regex.test(password)) {
+            alert(
+              "Please enter a password that is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one number."
+            );
+            return false;
+          }
+
+          if (!gender.length) {
+            alert("Please select a gender.");
+            return false;
+          }
+
+          if (!interests.length) {
+            alert("Please select at least one interest.");
+            return false;
+          }
+
+          displayValues();
+          return false;
+        }
+
+        $("#signup").submit(function () {
+          return validateForm();
+        });
+
+        //prevent form from submitting
+        $("#signup").submit(function (e) {
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

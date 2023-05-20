@@ -1,0 +1,82 @@
+<html>  
+<script>  
+function calValue() {  
+//fetch all gender radio button data  
+var male = document.getElementById('g1');  
+var female = document.getElementById('g2');  
+var otherg = document.getElementById('g3');  
+  
+//fetch all language radio button data  
+var hindi = document.getElementById('l1');  
+var english = document.getElementById('l2');  
+var otherl = document.getElementById('l3');  
+  
+var gender;  
+var language;  
+//check which gender is selected using radio button  
+if(male.checked == true) {  
+  gender = male;   
+} else if(female.checked == true) {  
+  gender = female;   
+} else if(otherg.checked == true) {  
+  gender = otherg   
+}  
+  
+//check which language is selected using radio button  
+if(hindi.checked == true) {  
+  language = hindi;   
+} else if(english.checked == true) {  
+  language = english;   
+} else if(otherl.checked == true) {  
+  language = otherl   
+}  
+//return data to HTML form  
+return document.getElementById("result").innerHTML = "Your selected gender is: " + gender.value + "</br> and </br> Selected language is: " + language.value;  
+}  
+
+
+
+function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+</script>  
+  
+<body>  
+<h2> Simple radio Buttons Example </h2>  
+  <!-- create radio button for gender selection -->  
+  <p> <b> Select your gender: </b> </p>  
+  <input type="radio" id="g1" name="gender" value="male">  
+  <label for="male"> Male </label> <br>  
+  <input type="radio" id="g2" name="gender" value="female">  
+  <label for="female"> Female </label> <br>  
+  <input type="radio" id="g3" name="gender" value="other">  
+  <label for="other"> Other </label>  
+  
+  <br>    
+  <!-- create radio button for language selection -->  
+  <p> <b> Select your language: </b> </p>  
+  <input type ="radio" id="l1" name="language" value="hindi">  
+  <label for ="male"> Hindi </label> <br>  
+  <input type="radio" id="l2" name="language" value="english">  
+  <label for="female"> English </label> <br>  
+  <input type="radio" id="l3" name="language" value="other">  
+  <label for="other"> Other </label> <br> <br>  
+    
+  <input type="submit" value="Submit" onclick="calValue()">  
+  <h3 id="result" style="color:blue"> </h3>  
+
+
+  <br/><br/><br/><br/><br/>
+  <form name="myform"  method="post" action="#" onsubmit="return validateemail();">  
+    Email: <input type="text" name="email"><br/>  
+      
+    <input type="submit" value="register">  
+</body>  
+</html>  

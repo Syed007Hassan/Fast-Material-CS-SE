@@ -1,0 +1,59 @@
+make topology, set ip and assign a common one to 10.0.0.1 to pc with switch.
+open another pc in network and access cmd.
+
+now open pc connected to the switch with the blue shiny wire.click terminal and ok.
+
+Switch(vlan)#
+Switch(vlan)#
+Switch(vlan)#
+Switch(vlan)#
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#
+Switch#
+Switch#enable 
+Switch#show vlan
+
+
+big table
+
+
+Switch#
+Switch#
+Switch#
+Switch#
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#
+Switch(config)#hostname munir
+munir(config)#enable password munir
+munir(config)#line vty 0 15
+munir(config-line)#
+munir(config-line)#password munir 
+munir(config-line)#
+munir(config-line)#transport input telnet
+munir(config-line)#
+munir(config-line)#login 
+munir(config-line)#exit
+munir(config)#
+munir(config)#
+munir(config)#int vlan 1
+munir(config-if)#ip address 10.0.0.1 255.0.0.0
+munir(config-if)#no shutdown
+
+munir(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+
+munir(config-if)#
+munir(config-if)#
+
+
+
+then go to another pc in the network and then access switch.
+telnet 10.0.0.1
+enter password munir
+enter enable
+enter munir

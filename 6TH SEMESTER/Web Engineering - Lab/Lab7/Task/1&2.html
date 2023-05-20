@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- cdn link for jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- offline link for jquery -->
+    <script src="./jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $(".test").click(() => {
+          $(event.target).hide(2000);
+        });
+
+        $(".x").click(() => {
+          if (!$(".test").is(":visible")) {
+            $(".test").show(2500);
+            $(".y").fadeToggle("slow");
+          }
+        });
+
+        $(".y").click(() => {
+          $("p").fadeOut("slow");
+        });
+
+        $(".z").click(() => {
+          $("p").fadeToggle("slow");
+        });
+
+        $(".m").click(function () {
+          $("p").hide("slow", function () {
+            console.log("The paragraph is now hidden");
+          });
+        });
+
+        $(".n").click(function () {
+          $("h3").animate({ left: "250px" }, 5000, function () {
+            alert("Animation complete.");
+          });
+        });
+
+        $(".L").click(function () {
+          $("h3").animate(
+            {
+              left: "250px",
+              opacity: "0.5",
+              height: "150px",
+              width: "150px",
+            },
+            5000,
+            function () {
+              alert("Animation complete.");
+            }
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p class="test">If you click on me, I will disappear.</p>
+    <p class="x">If you click on me, I will bring above para.</p>
+    <p class="y">Click me to fadeout away!</p>
+    <p class="z">Click me to fadeToggle!</p>
+    <div class="m">
+      <p>Click me to hide with a callback!</p>
+    </div>
+    <div class="n">
+      <h3>Click me to animate</h3>
+    </div>
+    <h3 class="L">Call back to alert</h3>
+  </body>
+</html>

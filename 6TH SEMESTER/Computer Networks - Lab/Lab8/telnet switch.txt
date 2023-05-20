@@ -1,0 +1,22 @@
+telnet switch(2950-24)
+connect one pc with blue wire pc pr rs-32 or switch pr console se connect 
+sub pcs ko ip or gateway dedo jo blue wire se connect nahi hai
+blue pc terminal open
+enable
+show vlan
+
+config t
+hostname anas
+enable password anas
+line vty 0 15
+password anas
+transport input telnet
+login
+exit
+int vlan 1
+ip address 10.0.0.1 255.0.0.0(gateway)
+no shutdown
+
+in pc with simple wire:
+telnet 10.0.0.1
+enable

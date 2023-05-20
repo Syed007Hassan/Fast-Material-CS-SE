@@ -1,0 +1,25 @@
+in router 
+
+// ip nate inside source static <PRIVATE_IP> <PUBLIC_IP>
+Router(config)#ip nat inside source static 192.168.10.2 105.2.0.3
+Router(config)#ip nat inside source static 192.168.10.3 105.2.0.4
+Router(config)#ip nat inside source static 192.168.10.4 105.2.0.5
+Router(config)#interface se0/0/0
+Router(config-if)#ip nat outside
+Router(config-if)#interface fa0/0
+Router(config-if)#ip nat inside
+Router(config)#ip route 0.0.0.0 0.0.0.0 se0/0/0
+
+
+
+in router for dynamic
+// ip nat pool <name> <public IP start> <public IP end> netmask <subnetmask>
+Router(config)#ip nat pool MY_POOL 105.2.0.6 105.2.0.20 netmask 255.0.0.0
+// access-list 1 permit <internal network address> <wildcard subnet>
+Router(config)#access-list 1 permit 10.0.0.0 0.255.255.255
+// ip nat inside source list 1 pool <name>
+Router(config)#ip nat inside source list 1 pool MY_POOL
+Router(config)#interface se0/0/0
+Router(config-if)#ip nat outside
+Router(config-if)#interface fa0/1
+Router(config-if)#ip nat inside

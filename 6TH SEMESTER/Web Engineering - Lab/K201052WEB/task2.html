@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Balls to Basket</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css" />
+    <script src="jquery-3.6.4.min.js"></script>
+    <style>
+      .ball {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: black;
+        position: absolute;
+      }
+      #basket {
+        height: 500px;
+        width: 800px;
+        background-color: #e4c0c0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container p-5 mt-5">
+      <button
+        class="btn btn-warning mb-2 items-center align-content-center"
+        id="add-ball"
+      >
+        Add the Ball To Basket
+      </button>
+      <div id="basket"></div>
+      <script src="jquery-3.6.4.min.js"></script>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        const maxBalls = 50;
+        let ballCount = 0;
+
+        $("#add-ball").click(function () {
+          if (ballCount < maxBalls) {
+            const ball = $("<div>").addClass("ball");
+
+            const randomX = Math.floor(
+              Math.random() * ($("#basket").width() - ball.width())
+            );
+
+            ball.css({
+              left: randomX,
+              top: 0,
+            });
+
+            $("#basket").append(ball);
+
+            ball.animate(
+              {
+                top: $("#basket").height() - ball.height(),
+                opacity: 0.5,
+              },
+              600
+            );
+
+            ballCount++;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

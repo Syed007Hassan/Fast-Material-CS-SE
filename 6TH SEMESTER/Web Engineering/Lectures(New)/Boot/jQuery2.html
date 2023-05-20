@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="jquery-3.6.3.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#panel").slideToggle(4000);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          var div = $("#call");
+          div.animate({ height: "500px", opacity: "0.4" }, "medium");
+          div.animate({ width: "300px", opacity: "0.8" }, "medium");
+          div.animate({ height: "100px", opacity: "0.4" }, "medium");
+          div.animate({ width: "500px", opacity: "0.8" }, "medium");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#flip1").click(function () {
+          $("#panel1").slideDown(5000);
+        });
+        $("#stop1").click(function () {
+          $("#panel1").stop();
+        });
+      });
+
+      $(document).ready(function () {
+        $("#showPass").on("click", function () {
+          var passInput = $("#passInput");
+          if (passInput.attr("type") === "password") {
+            passInput.attr("type", "text");
+          } else {
+            passInput.attr("type", "password");
+          }
+        });
+      });
+
+      function checkPasswordStrength() {
+        var passwordTextBox = document.getElementById("TextBox1");
+        var password = passwordTextBox.value;
+        var specialCharacters = "!£$%^&*_@#~?";
+        var passwordScore = 0;
+
+        passwordTextBox.style.color = "white";
+
+        // Contains special characters
+        for (var i = 0; i < password.length; i++) {
+          if (specialCharacters.indexOf(password[i]) >= 0) {
+            passwordScore += 20;
+            break;
+          }
+        }
+
+        // Contains numbers
+        if (/\d/.test(password)) passwordScore += 20;
+
+        // Contains lower case letter
+        if (/[a-z]/.test(password)) passwordScore += 20;
+
+        // Contains upper case letter
+        if (/[A-Z]/.test(password)) passwordScore += 20;
+
+        if (password.length >= 8) passwordScore += 20;
+
+        var strength = "";
+        var backgroundColor = "red";
+
+        if (passwordScore >= 100) {
+          strength = "Strong";
+          backgroundColor = "green";
+        } else if (passwordScore >= 80) {
+          strength = "Medium";
+          backgroundColor = "gray";
+        } else if (passwordScore >= 60) {
+          strength = "Weak";
+          backgroundColor = "maroon";
+        } else {
+          strength = "Very Weak";
+          backgroundColor = "red";
+        }
+
+        document.getElementById("lblMessage").innerHTML = strength;
+        passwordTextBox.style.backgroundColor = backgroundColor;
+      }
+    </script>
+    <style>
+      #panel,
+      #flip {
+        padding: 5px;
+
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+
+      #panel {
+        padding: 50px;
+        display: none;
+      }
+
+      #panel1,
+      #flip1 {
+        padding: 5px;
+        font-size: 18px;
+        text-align: center;
+        background-color: #555;
+        color: white;
+        border: solid 1px #666;
+        border-radius: 3px;
+      }
+
+      #panel1 {
+        padding: 50px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!--jQuery Sliding Methods
+With jQuery you can create a sliding effect on elements.
+
+jQuery has the following slide methods:
+
+slideDown()
+slideUp()
+slideToggle()
+// $(selector).slideDown(speed,callback);
+-->
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+
+    <br /><br /><br />
+
+    <button id="btn">Start Animation</button>
+    <div
+      id="call"
+      style="
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      "
+    ></div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <button id="stop1">Stop sliding</button>
+    <div id="flip1">Click to slide down panel</div>
+    <div id="panel1">Hello world!</div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <label>Password</label>
+    <div>
+      <input type="password" id="passInput" placeholder="Enter Password" />
+    </div>
+
+    <input type="checkbox" id="showPass" />Show Password
+
+    <br /><br /><br />
+
+    <input
+      type="password"
+      id="TextBox1"
+      TextMode="Password"
+      onkeyup="checkPasswordStrength()"
+    />
+    <label id="lblMessage" runat="server"></label>
+
+    <!--
+
+    <asp:TextBox ID="TextBox1" runat="server" TextMode="Password"
+             onkeyup="checkPasswordStrength()">
+</asp:TextBox>
+<asp:Label ID="lblMessage" runat="server"></asp:Label>
+<script type="text/javascript">
+    function checkPasswordStrength()
+    {
+        var passwordTextBox = document.getElementById("TextBox1");
+        var password = passwordTextBox.value;
+        var specialCharacters = "!£$%^&*_@#~?";
+        var passwordScore = 0;
+
+        passwordTextBox.style.color = "white";
+
+        // Contains special characters
+        for (var i = 0; i < password.length; i++)
+        {
+            if (specialCharacters.indexOf(password.charAt(i)) > -1)
+            {
+                passwordScore += 20;
+                break;
+            }
+        }
+
+        // Contains numbers
+        if (/\d/.test(password))
+            passwordScore += 20;
+
+        // Contains lower case letter
+        if (/[a-z]/.test(password))
+            passwordScore += 20;
+
+        // Contains upper case letter
+        if (/[A-Z]/.test(password))
+            passwordScore += 20;
+
+        if (password.length >= 8)
+            passwordScore += 20;
+
+        var strength = "";
+        var backgroundColor = "red";
+
+        if (passwordScore >= 100)
+        {
+            strength = "Strong";
+            backgroundColor = "green";
+        }
+        else if (passwordScore >= 80)
+        {
+            strength = "Medium";
+            backgroundColor = "gray";
+        }
+        else if (passwordScore >= 60)
+        {
+            strength = "Weak";
+            backgroundColor = "maroon";
+        }
+        else
+        {
+            strength = "Very Weak";
+            backgroundColor = "red";
+        }
+
+        document.getElementById("lblMessage").innerHTML = strength;
+        passwordTextBox.style.backgroundColor = backgroundColor;
+    }
+</script>
+-->
+  </body>
+</html>

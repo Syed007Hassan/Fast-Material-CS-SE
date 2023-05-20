@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      .product-icon {
+        background-color: lightgray;
+        border-radius: 25px;
+        display: inline-block;
+      }
+      .total-amount {
+        text-align: right;
+        font-weight: bold;
+      }
+      .discount {
+        text-align: right;
+      }
+      .checkout-button {
+        background-color: rgb(222, 24, 24);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        float: right;
+      }
+      .close-button {
+        background-color: rgb(61, 10, 164);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        float: right;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <table>
+        <tr>
+          <th>Product Picture</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Quantity x Price</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="product-icon">
+              <img
+                style="width: 100px"
+                src="https://cdn-icons-png.flaticon.com/512/4257/4257349.png"
+                alt=""
+              />
+            </div>
+          </td>
+          <td>Sauce Pan</td>
+          <td>$50</td>
+          <td>4</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="product-icon">
+              <img
+                style="width: 100px"
+                src="https://cdn-icons-png.flaticon.com/512/3063/3063504.png"
+                alt=""
+              />
+            </div>
+          </td>
+          <td>Scoop</td>
+          <td>$80</td>
+          <td>2</td>
+          <td>$160</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="total-amount">Total Amount:</td>
+          <td class="total-amount">$460</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="discount">Discount (5%):</td>
+          <td class="discount">-$23</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="total-amount">Amount to be Paid:</td>
+          <td class="total-amount">$437</td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            <button class="close-button">Close</button>
+            <button class="checkout-button">Checkout</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

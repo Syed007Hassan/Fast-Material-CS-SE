@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 3px dotted #ccc;
+      border-radius: 5px;
+      width: 900px;
+      height: 400px;
+      margin: 30px;
+    }
+  </style>
+  <body>
+    <div
+      class="container"
+      style="margin-top: 70px; height: 400px; background-color: darkcyan"
+    >
+      <h3 style="margin-bottom: 0; padding-bottom: 0">Margin</h3>
+      <div
+        class="container"
+        style="
+          width: 750;
+          margin-bottom: 50px;
+          height: 300px;
+          border: 3px solid #ccc;
+          background-color: lightcyan;
+        "
+      >
+        <h3 style="margin-bottom: 0; padding-bottom: 0">Border</h3>
+        <div
+          class="container"
+          style="
+            width: 650;
+            margin-bottom: 50px;
+            height: 200px;
+            border: 3px solid #ccc;
+            background-color: darkcyan;
+          "
+        >
+          <h3 style="margin-bottom: 0; padding-bottom: 0">Padding</h3>
+          <div
+            class="container"
+            style="
+              width: 500;
+              margin-bottom: 50px;
+              height: 200px;
+              border: 3px dotted #ccc;
+              background-color: lightcyan;
+            "
+          >
+            <h3 style="padding-bottom: 0">Content</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Create a Web Form in which all types of INPUT TYPE used using CSS to make it interactive. -->
+
+    <div class="container mt-4 " >
+    <form action="2.html" method="POST">
+      <label for="name" class="form-label">Name</label>
+      <input class="form-control" placeholder="name" type="text" name="name" id="name" />
+      <br />
+      <label for="formControlInput" class="form-label">Email address</label>
+      <input class="form-control" placeholder="email" type="email" name="email" id="email" />
+      <br />
+      <br />
+        <label for="formControlInput" class="form-label">Password</label>
+      <input class="form-control" placeholder="password" type="password" name="password" id="password" />
+      <br />
+       <label for="formControlInput" class="form-label">Number</label>
+      <input class="form-control" type="number" name="number" id="number" />
+      <br />
+      <label for="formControlInput" class="form-label">Date</label>
+      <input class="form-control" type="date" name="date" id="date" />
+      <br />
+      <label for="formControlInput" class="form-label">Time</label>
+      <input class="form-control" type="time" name="time" id="time" />
+      <br />
+      <label for="formControlInput" class="form-label">Colour</label>
+      <input class="form-control" type="color" name="color" id="color" />
+      <br />
+      <label for="formControlInput" class="form-label">File</label>
+      <input class="form-control" type="file" name="file" id="file" />
+      <br />
+      <br />
+      <label for="formRange" class="form-label">Example range</label>
+      <input type="range" class="form-range" min="0" max="5" step="0.5" id="formRange">
+      <br />
+      <br>
+      <label for="formControlInput" class="form-label">Checkbox</label>
+      <br>
+       <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" id="inlineCheckDefault">
+     <label class="form-check-label" for="inlineCheckDefault">Java</label>
+     </div>
+    <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" value="" id="inlineCheckChecked" checked="">
+    <label class="form-check-label" for="inlineCheckChecked">Cpp</label>
+    </div>
+    <br />
+    <br>
+    <label for="formControlInput" class="form-label">Radio Button</label>
+     <div class="form-check">
+    <input class="form-check-input" type="radio" name="radioDefault" id="formRadioDefault">
+    <label class="form-check-label" for="formRadioDefault">Java</label>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" name="radioDefault" id="formRadioChecked" checked="">
+    <label class="form-check-label" for="formRadioChecked">Cpp</label>
+</div>
+      <br />
+       <label for="formControlInput" class="form-label">Input Submit</label>
+      <button type="button" class="btn btn-outline-primary form-control " data-bs-toggle="button" autocomplete="off">Toggle button</button>
+      <br />
+      <br />
+           <label for="formControlInput" class="form-label">Input Search</label>
+      <input class="form-control" type="search" name="search" id="search" />
+      </div>
+
+  </body>
+</html>

@@ -1,0 +1,9 @@
+in router 
+
+Router(config)#router ospf 1
+Router(config-router)#network 105.2.0.0 0.0.0.255 area 0
+Router(config-router)#network 115.2.0.0 0.0.0.255 area 0
+Router(config-router)#network 125.2.0.0 0.0.0.255 area 0
+Router(config-router)#network 10.0.0.0 0.255.255.255 area 0
+Router(config-router)#network 12.0.0.0 0.255.255.255 area 0
+Router(config-router)#

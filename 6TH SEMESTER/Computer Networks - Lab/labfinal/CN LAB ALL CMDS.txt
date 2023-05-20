@@ -1,0 +1,156 @@
+8 DHCP
+config-if : ip dhcp pool cnlab
+network 10.0.0.1 255.0.0.0
+default-router 10.0.0.1
+
+8 Telnet switch
+Telnet switch
+On the pc thats connected with blue to switch
+
+en
+config t
+hostname aliyan
+enable password aliyan
+line vty 0 15
+password aliyan
+transport input telnet
+login
+exit
+
+int vlan 1
+ip address 10.0.0.1 255.0.0.0
+no shutdown
+
+end
+
+
+8 TELNET ROUTER
+
+en 
+config t
+int vlan 1
+ip address 192.168.0.5 255.255.255.0
+no shutdown 
+exit
+
+enable password aliyan
+line vty 0 15
+password aliyan
+login 
+exit
+
+
+8 SSH
+en 
+config t
+interface vlan 1
+ip address (ip) (subnet)
+no shutdown 
+exit
+
+hostname aliyan
+ip domain name domain
+crypto key generate rsa
+ip ssh version 2
+line vty 0 15
+password aliyan
+transport input ssh
+login local
+exit
+
+enable password aliyan
+username aliyan secret aliyan
+exit
+
+testing: ssh -l aliyan (ipadd)
+
+
+10 - OSPF
+enable
+config t
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+network 10.0.0.0 0.255.255.255 area 0
+//same for all routers
+
+exit
+
+11- VLAN
+vlan database
+vlan 2 name cs
+vlan 3 name se
+exit
+config t
+int f0/1
+switchport access vlan 2
+int f0/2 
+switchport access vlan 3
+exit
+sh vlan
+
+for trunking
+int f0/3
+switchport mode trunk
+
+Intervlan
+same till switchport mode trunk
+Router:(dont assign ip before)
+en
+config t
+host intervlan
+int f0/0
+no shutdown
+int f0/0.1
+encapsulation dot1Q 2
+ip address 192.168.1.1 255.255.255.0 (left gateway)
+int f0/0.2
+encapsulation dot1Q 3
+ip address (right gateway)
+
+
+12- ACL
+en 
+config t
+enable password aliyan
+line vty 0 15
+password aliyan
+login 
+exit
+
+router(config)# ip access-list standard TEL
+permit 192.168.0.2
+deny any
+exit
+interface gig0/0
+ip access-group TEL in
+
+For extended
+ip access-list extended web
+permit tcp 192.168.0.0 0.0.0.255 host 172.168.0.2 eq 80
+deny ip 192.168.0.0 0.0.0.255 host 172.168.0.2
+exit
+int gig0/0
+ip access-group web in
+
+
+Static NAT
+Router
+int fa0/0
+ip nat inside
+exit
+int s0/1/0
+ip nat outside
+exit
+ip nat inside source static 192.168.1.1 1.0.0.1
+IP ROUTE 0.0.0.0 0.0.0.0 S0/1/0
+ip nat inside source static 192.168.1.2 1.0.0.1
+IP ROUTE 0.0.0.0 0.0.0.0 S0/1/0
+SH IP NAT TR
+
+
+for dynamic
+same till inside outside
+access-list 1 permit 192.168.0.0 0.0.0.255
+ip nat pool MY_POOL 4.4.4.1 4.4.4.5 netmask 255.255.255.0
+ip nat inside source list 1 pool MY_POOL
+exit

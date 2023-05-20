@@ -1,0 +1,29 @@
+step 1 topology 
+
+step 2 add module on both router 
+
+join the wic-1t 
+
+step 3 connect both router serial
+
+as well and timing belt red with clock
+
+setp 4 assign IP addresses
+
+cs 2 ip dedo with a subnet mask
+
+step 5 assign serail on both side on router
+step 6 assign network address on router 0
+step 7 assign network address on router 1
+step 8 testing pinging SE to CY any PC
+
+Now we ping SE to AI
+
+Now we ping CS to AI
+
+Now we ping CS to CY
+
+
+
+
+

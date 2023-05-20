@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="jquery-3.6.3.js"></script>
+    <style type="text/css">
+      .imgStyle {
+        width: 100px;
+        height: 100px;
+        border: 3px solid grey;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#myButton").click(function () {
+          animateProgressBar($("#ddlPercentage").val());
+        });
+        function animateProgressBar(percentageCompleted) {
+          $("#innerDiv").animate(
+            { width: (500 * percentageCompleted) / 100 },
+            3000
+          );
+
+          $({ counter: 1 }).animate(
+            { counter: percentageCompleted },
+            {
+              duration: 3000,
+              step: function () {
+                $("#innerDiv").text(Math.ceil(this.counter) + " %");
+              },
+            }
+          );
+        }
+      });
+
+      $(document).ready(function () {
+        $("#divId img").on({
+          mouseover: function () {
+            $(this).css({
+              cursor: "hand",
+              "border-Color": "red",
+            });
+          },
+          mouseout: function () {
+            $(this).css({
+              cursor: "default",
+              "border-Color": "grey",
+            });
+          },
+          click: function () {
+            var imageURL = $(this).attr("src");
+            $("#mainImage")
+              .fadeOut(1000, function () {
+                $(this).attr("src", imageURL);
+              })
+              .fadeIn(1000);
+          },
+        });
+      });
+    </script>
+  </head>
+  <body style="font-family: Arial">
+    Select Percentage :
+    <select id="ddlPercentage">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="40">40</option>
+      <option value="50">50</option>
+      <option value="60">60</option>
+      <option value="70">70</option>
+      <option value="80">80</option>
+      <option value="90">90</option>
+      <option value="100">100</option>
+    </select>
+    <input type="button" id="myButton" value="Start Animation" />
+    <br /><br />
+    <div
+      id="outerDiv"
+      style="
+        background-color: #eeeeee;
+        height: 20px;
+        width: 500px;
+        padding: 5px;
+      "
+    >
+      <div
+        id="innerDiv"
+        style="
+          background-color: red;
+          height: 19px;
+          width: 0px;
+          color: white;
+          text-align: center;
+        "
+      ></div>
+    </div>
+
+    <img id="mainImage" src="Image/2.jpg" height="500" width="540" />
+    <br />
+    <div id="divId">
+      <img class="imgStyle" src="Image/2.jpg" />
+      <img class="imgStyle" src="Image/3.jpg" />
+      <img class="imgStyle" src="Image/4.jpg" />
+      <img class="imgStyle" src="Image/5.jpg" />
+      <img class="imgStyle" src="Image/6.jpg" />
+    </div>
+  </body>
+</html>

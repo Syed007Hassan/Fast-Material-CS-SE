@@ -1,0 +1,47 @@
+telnet 
+
+in router 
+
+int fa0/0
+no sh
+ip add 10.52.0.1 255.0.0.0
+
+line vty 0 15
+
+password 12345
+
+enable password hassan
+
+ 
+in pc
+telent 10.52.0.1
+
+password: 12345
+
+Router>enable
+password: hassan
+
+
+ssh
+
+in router
+config
+
+hostname hassan
+ip domain name se
+crypto key generate rsa 
+ip version 2
+line vty 0 15 
+transport input ssh 
+password 12345
+enable password hassan
+ 
+
+in pc
+ssh -l hassan 10.52.0.1
+password: 12345
+
+
+
+dhcp
+

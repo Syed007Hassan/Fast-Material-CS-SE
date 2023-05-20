@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Comparison Tool</title>
+    </head>
+    <body>
+        <h1>Text Comparison Tool</h1>
+        <p>
+            Enter the expected and actual text in the boxes below and click
+            "Compare".
+        </p>
+        <textarea id="expected"></textarea>
+        <textarea id="actual"></textarea>
+        <button id="compareBtn">Compare</button>
+        <ul id="differences"></ul>
+        <script>
+            const compareBtn = document.querySelector("#compareBtn");
+            compareBtn.addEventListener("click", compareTextAreas);
+
+            function compareTextAreas() {
+                const expectedText = document.querySelector("#expected").value;
+                const actualText = document.querySelector("#actual").value;
+                const expectedLines = expectedText.split("\n");
+                const actualLines = actualText.split("\n");
+                const differencesList = document.querySelector("#differences");
+                differencesList.innerHTML = ""; // clear previous differences
+                let numDifferences = 0;
+
+                // check each line for differences
+                for (
+                    let i = 0;
+                    i < Math.max(expectedLines.length, actualLines.length);
+                    i++
+                ) {
+                    if (expectedLines[i] !== actualLines[i]) {
+                        const newListItem = document.createElement("li");
+                        newListItem.innerText = `line ${i + 1}:\n- ${
+                            expectedLines[i]
+                        }\n- ${actualLines[i]}`;
+                        differencesList.appendChild(newListItem);
+                        numDifferences++;
+                    }
+                }
+
+                // check for different number of lines
+                if (expectedLines.length !== actualLines.length) {
+                    const newListItem = document.createElement("li");
+                    const difference = Math.abs(
+                        expectedLines.length - actualLines.length
+                    );
+                    const message = `lengths differ = ${expectedLines.length}-${actualLines.length} = ${difference}`;
+                    newListItem.innerText = message;
+                    differencesList.appendChild(newListItem);
+                    numDifferences++;
+                }
+
+                // if no differences found, display a message
+                if (numDifferences === 0) {
+                    const newListItem = document.createElement("li");
+                    newListItem.innerText = "No differences found.";
+                    differencesList.appendChild(newListItem);
+                }
+            }
+        </script>
+    </body>
+</html>

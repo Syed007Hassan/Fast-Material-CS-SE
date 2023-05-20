@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar {
+        background-color: lightgray;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .navbar h1 {
+        margin: 0;
+      }
+
+      .body {
+        display: flex;
+      }
+
+      .body .box {
+        background-color: lightblue;
+        flex: 1;
+        height: 200px;
+        margin: 10px;
+        text-align: center;
+      }
+    </style>
+
+    <div class="container">
+      <div class="navbar">
+        <h1 style="display: flex; flex: 1; justify-content: center">
+          My Navbar
+        </h1>
+      </div>
+      <div class="body">
+        <div class="box"><bdo> Box 1 </bdo></div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </div>
+  </body>
+</html>

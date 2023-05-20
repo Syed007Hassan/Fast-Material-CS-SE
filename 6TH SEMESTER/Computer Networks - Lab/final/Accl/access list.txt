@@ -1,0 +1,21 @@
+//normal
+Router(config)#access-list 15 deny host 172.168.0.40
+Router(config)#access-list 15 deny host 172.168.0.30
+Router(config)#access-list 15 permit any
+Router(config)#int fa0/1
+Router(config-if)#ip ac
+Router(config-if)#ip access-group 15 out
+Router(config-if)#int fa0/1
+Router(config-if)#ip access-group 15 in
+
+
+
+//extended
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#access-list 102 deny tcp 192.168.1.2 0.0.0.0 192.168.2.4 0.0.0.0 eq 80
+Router(config)#access-list 102 permit tcp any any
+Router(config)#int fa0/0 (jahan se arha h)
+Router(config-if)#ip access
+Router(config-if)#ip access-group 102 in

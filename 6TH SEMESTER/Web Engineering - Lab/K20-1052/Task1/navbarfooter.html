@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Layout Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">NavBar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav links</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav links</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav links</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" aria-current="page"
+                >Home <span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="#">Action 1</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-light py-5">
+      <div class="container">
+        <h1>Welcome to our Container!</h1>
+        <p>A para inside a container.</p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="container">
+        <h2>A table</h2>
+        <table class="table mb-4">
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Todo item</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Buy groceries for next week</td>
+              <td>In progress</td>
+              <td>
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-success ms-1">
+                  Finished
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Renew car insurance</td>
+              <td>In progress</td>
+              <td>
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-success ms-1">
+                  Finished
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Sign up for online course</td>
+              <td>In progress</td>
+              <td>
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-success ms-1">
+                  Finished
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </header>
+
+    <!-- Footer -->
+    <h2>A footer</h2>
+    <footer class="bg-dark text-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2023 Container</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-inline float-right">
+              <li class="list-inline-item"><a href="#">Container Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

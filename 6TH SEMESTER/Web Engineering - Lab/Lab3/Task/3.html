@@ -1,0 +1,176 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: cadetblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 10px solid #ccc;
+      border-radius: 5px;
+      width: 400px;
+      height: 400px;
+      margin: 50px;
+    }
+    button {
+      background-color: #4caf50;
+      border: 1px solid #ccc;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+    }
+    input {
+      width: 300px;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      outline: oldlace;
+      border: none;
+    }
+    .facebook-button {
+      background-color: #3b5998;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: "Ubuntu", sans-serif;
+      border: none;
+      width: 100px;
+    }
+    .google-button {
+      background-color: #dd4b39;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: "Ubuntu", sans-serif;
+      width: 100px;
+      border: none;
+    }
+    #signin {
+      background-color: #3b5998;
+    }
+    #signup {
+      background-color: whitesmoke;
+      color: #3b5998;
+    }
+    #longbtn {
+      background-color: #3b5998;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: "Ubuntu", sans-serif;
+      width: 100px;
+      border: none;
+    }
+  </style>
+  <body>
+    <!-- Create a Web Form in which Sign-in AND Sign-up shown -->
+    <div class="container">
+      <div>
+        <span
+          ><button id="signup" style="margin-right: 0">Sign In</button
+          ><button id="signin" style="margin-left: 0">Sign Up</button>
+        </span>
+      </div>
+      <br />
+      <div>
+        <span>
+          <button class="facebook-button">F</button>
+          <button class="google-button">G</button>
+        </span>
+      </div>
+      <br />
+      <div>
+        <input placeholder="E-Mail" type="text" />
+        <br />
+        <br />
+        <input placeholder="password" type="text" />
+      </div>
+      <br />
+      <div
+        style="
+          width: 250px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        "
+      >
+        <button
+          style="
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 300;
+            font-family: 'Ubuntu', sans-serif;
+          "
+        >
+          Sign-In
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <span
+          ><button id="signin" style="margin-right: 0">Sign In</button
+          ><button id="signup" style="margin-left: 0">Sign Up</button>
+        </span>
+      </div>
+      <br />
+      <div>
+        <input placeholder="Username" type="text" />
+        <br />
+        <br />
+        <input placeholder="E-Mail" type="text" />
+        <br />
+        <br />
+        <input placeholder="password" type="passsword" />
+      </div>
+      <br />
+      <div
+        style="
+          width: 250px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        "
+      >
+        <button
+          style="
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 300;
+            font-family: 'Ubuntu', sans-serif;
+          "
+        >
+          Sign-Up
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

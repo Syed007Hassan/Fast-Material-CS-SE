@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agency Tour Company</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap-grid.css" />
+
+    <style>
+      .container {
+        max-width: 900px;
+      }
+
+      body {
+        background-image: url("./brazilsafe.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .card {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      label {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4 class="text-center">Agency form</h4>
+            </div>
+            <div class="card-body">
+              <form
+                action="#"
+                method="POST"
+                class="needs-validation"
+                novalidate
+              >
+                <div class="mb-3">
+                  <label for="name" class="form-label font-monospace"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label font-monospace"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="roomType" class="form-label font-monospace"
+                    >Province</label
+                  >
+                  <select
+                    class="form-select"
+                    id="roomType"
+                    name="roomType"
+                    required
+                  >
+                    <option value="">Choose a city</option>
+                    <optgroup label="KPK">
+                      <option value="Peshawar">Peshawar</option>
+                      <option value="Kohat">Kohat</option>
+                      <option value="Mardan">Mardan</option>
+                    </optgroup>
+
+                    <optgroup label="Punjab">
+                      <option value="Islamabad">Islamabad</option>
+                      <option value="Rawalpindi">Rawalpindi</option>
+                      <option value="Lahore">Lahore</option>
+                    </optgroup>
+                    <optgroup label="Balochistan">
+                      <option value="Quetta">Quetta</option>
+                      <option value="Gwadar">Gwadar</option>
+                      <option value="Khuzdar">Khudzar</option>
+                    </optgroup>
+                  </select>
+                  <div class="invalid-feedback">Please choose a city.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

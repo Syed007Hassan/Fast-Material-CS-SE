@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding: 50px;
+      }
+    </style>
+    <script src="./jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Quiz App</h1>
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 0%"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <form>
+        <div class="form-group">
+          <label for="question1"
+            >Question 1: What is the capital of France?</label
+          >
+          <select class="form-control" id="question1">
+            <option value="">Select an answer</option>
+            <option value="paris">Paris</option>
+            <option value="berlin">Berlin</option>
+            <option value="london">London</option>
+            <option value="madrid">Madrid</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question2">Question 2: Who invented the telephone?</label>
+          <select class="form-control" id="question2">
+            <option value="">Select an answer</option>
+            <option value="bell">Alexander Graham Bell</option>
+            <option value="edison">Thomas Edison</option>
+            <option value="tesla">Nikola Tesla</option>
+            <option value="einstein">Albert Einstein</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question3"
+            >Question 3: Which planet is closest to the sun?</label
+          >
+          <select class="form-control" id="question3">
+            <option value="">Select an answer</option>
+            <option value="venus">Venus</option>
+            <option value="mars">Mars</option>
+            <option value="mercury">Mercury</option>
+            <option value="jupiter">Jupiter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question4"
+            >Question 4: What is the largest country in the world?</label
+          >
+          <select class="form-control" id="question4">
+            <option value="">Select an answer</option>
+            <option value="russia">Russia</option>
+            <option value="canada">Canada</option>
+            <option value="china">China</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question5"
+            >Question 5: What is the most spoken language in the world?</label
+          >
+          <select class="form-control" id="question5">
+            <option value="">Select an answer</option>
+            <option value="english">English</option>
+            <option value="mandarin">Mandarin</option>
+            <option value="hindi">Hindi</option>
+            <option value="spanish">Spanish</option>
+          </select>
+        </div>
+      </form>
+      <button id="submit-btn" class="btn btn-primary">Submit</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        //if any of the select elements change, update the progress bar
+        $(".form-control").change(function () {
+          var answered = $(".form-control").filter(function () {
+            return $(this).val() !== "";
+          }).length;
+          var percent = Math.floor((answered / 5) * 100);
+          $(".progress-bar")
+            .css("width", percent + "%")
+            .attr("aria-valuenow", percent);
+        });
+
+        $("#submit-btn").click(function () {
+          var correct = 0;
+          var incorrect = 0;
+          var unanswered = 0;
+          var question1 = $("#question1").val();
+          var question2 = $("#question2").val();
+          var question3 = $("#question3").val();
+          var question4 = $("#question4").val();
+          var question5 = $("#question5").val();
+          if (question1 === "paris") {
+            correct++;
+          } else if (question1 === "") {
+            unanswered++;
+          } else {
+            incorrect++;
+          }
+
+          if (question2 === "bell") {
+            correct++;
+          } else if (question2 === "") {
+            unanswered++;
+          } else {
+            incorrect++;
+          }
+
+          if (question3 === "mercury") {
+            correct++;
+          } else if (question3 === "") {
+            unanswered++;
+          } else {
+            incorrect++;
+          }
+
+          if (question4 === "russia") {
+            correct++;
+          } else if (question4 === "") {
+            unanswered++;
+          } else {
+            incorrect++;
+          }
+
+          if (question5 === "mandarin") {
+            correct++;
+          } else if (question5 === "") {
+            unanswered++;
+          } else {
+            incorrect++;
+          }
+
+          var result =
+            "Correct: " +
+            correct +
+            "<br>Incorrect: " +
+            incorrect +
+            "<br>Unanswered: " +
+            unanswered;
+          $("#result").html(result);
+        });
+      });
+    </script>
+  </body>
+</html>

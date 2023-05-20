@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+      }
+
+      #clear {
+        width: 270px;
+        border: 3px solid gray;
+        border-radius: 3px;
+        padding: 20px;
+        background-color: red;
+        color: white;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .formstyle {
+        width: 300px;
+        height: 510px;
+        margin: 20px auto;
+        border: 3px solid skyblue;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      input[type="text"] {
+        width: 250px;
+        background-color: #f2f2f2;
+        color: black;
+        border: none;
+        border-bottom: 2px solid gray;
+        font-size: 28px;
+        text-align: right;
+        margin-bottom: 10px;
+      }
+
+      input[type="button"] {
+        width: 60px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      input[type="button"]:hover {
+        background-color: #3e8e41;
+      }
+
+      input[type="button"]:active {
+        background-color: #4caf50;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS Calculator</h1>
+    <div class="formstyle">
+      <form name="form1">
+        <!-- This input box shows the button pressed by the user in calculator. -->
+        <input id="calc" type="text" name="answer" /> <br />
+        <br />
+        <!-- Display the calculator button on the screen. -->
+        <!-- onclick() function display the number prsses by the user. -->
+        <input type="button" value="1" onclick="form1.answer.value += '1' " />
+        <input type="button" value="2" onclick="form1.answer.value += '2' " />
+        <input type="button" value="3" onclick="form1.answer.value += '3' " />
+        <input type="button" value="+" onclick="form1.answer.value += '+' " />
+        <br />
+        <br />
+
+        <input type="button" value="4" onclick="form1.answer.value += '4' " />
+        <input type="button" value="5" onclick="form1.answer.value += '5' " />
+        <input type="button" value="6" onclick="form1.answer.value += '6' " />
+        <input type="button" value="-" onclick="form1.answer.value += '-' " />
+        <br />
+        <br />
+
+        <input type="button" value="7" onclick="form1.answer.value += '7' " />
+        <input type="button" value="8" onclick="form1.answer.value += '8' " />
+        <input type="button" value="9" onclick="form1.answer.value += '9' " />
+        <input type="button" value="*" onclick="form1.answer.value += '*' " />
+        <br />
+        <br />
+
+        <input type="button" value="/" onclick="form1.answer.value += '/' " />
+        <input type="button" value="0" onclick="form1.answer.value += '0' " />
+        <input type="button" value="." onclick="form1.answer.value += '.' " />
+        <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+        <input
+          type="button"
+          value="="
+          onclick="form1.answer.value = eval(form1.answer.value)"
+        />
+        <br />
+        <!-- Display the Cancel button and erase all data entered by the user. -->
+        <input
+          type="button"
+          value="Clear All"
+          id="clear"
+          onclick="form1.answer.value = ''"
+        />
+        <br />
+      </form>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var display = $("#display");
+        var buttons = $(".button");
+
+        buttons.click(function (e) {
+          switch (e.target.innerText) {
+            case "C":
+              display.text("");
+              break;
+            case "←":
+              if (display.text()) {
+                display.text(display.text().slice(0, -1));
+              }
+              break;
+            case "=":
+              try {
+                display.text(eval(display.text()));
+              } catch {
+                display.text("Error");
+              }
+              break;
+            default:
+              display.text(display.text() + e.target.innerText);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

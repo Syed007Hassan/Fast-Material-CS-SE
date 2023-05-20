@@ -1,0 +1,20 @@
+step 1 topology 
+step 2 add module on both router 
+step 3 connect both router serial
+setp 4 assign IP addresses
+step 5 assign serail on both side on router
+step 6 assign network address on router 0
+step 7 assign network address on router 1
+step 8 testing pinging SE to CY any PC
+
+Now we ping SE to AI
+
+Now we ping CS to AI
+
+Now we ping CS to CY
+
+Alhamdulilah students Thank you so much :)
+
+
+
+
