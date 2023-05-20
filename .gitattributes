@@ -7,6 +7,8 @@
 *.html linguist-vendored
 *.htm linguist-vendored
 *.ipynb linguist-vendored
+*.php linguist-vendored
+*.PHP linguist-vendored
 
 # Documents
 *.bibtex   linguist-vendored
