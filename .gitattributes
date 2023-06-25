@@ -1,4 +1,5 @@
 *.css linguist-detectable=false
+*.scss linguist-detectable=false
 
 
 # The above will handle all files NOT found below
