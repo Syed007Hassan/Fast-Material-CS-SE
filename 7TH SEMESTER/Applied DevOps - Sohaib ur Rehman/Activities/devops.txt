@@ -1,0 +1,172 @@
+2 group with different privileges 
+
+app deploy using the users created (one user from that group)
+
+
+
+DASHBOARD 
+APP SERVICE
+2 VIDEOS WILL BE UPLOADED INTRO TO DEVOPS /  INTRO TO GITHUB QS FROM THIS 
+
+
+server lesss computing
+
+SLN FILE IS COMPILED AS A BUILD AS CI PIPELINE 
+
+Hassan786
+
+- create two groups with different priviledges
+- ek ko admin k rights denge or ek ko different and observe behavior of both roles
+
+- vitual studio pr publish krenge, github ko integrate krna hai, website publish krni hai 
+- side relibility engineering team monitors applications and SOC team ensures security
+- tags are unique for every machine and use for identifying them.
+- introduction + second class (dashboard+services se related questions for mid)
+- 2 videos upload krenge on (github,devops) sawal inheen se honge paper mein
+
+- continuos integration mein check points add krte hain,tools k through quality ko check krte
+- ci k andr test cases likhe jate hain jo developer likhta hai
+- code ki repo management mein hoti
+- git ko integrate krke buggy code add krte, or specific features k through bug reflect hona shuru hojata hai
+- sln file ko compile krna hota hai waheen errors ajate , developer ko notify krdete or usi stage pr ruk jate ye sb CI ki
+ pipline mein hota, version checking, integration , bug identify, compilation, unit testing, code quality sb CI pipline mein hota
+- agr code duplicate hai tw woheen identify krdeta hai
+- ip likhi hui hai agr kaheen tw error dedega qk hacker asaani se penetrate krleta hai through ip
+- code review nhi hota ab due to automation
+
+- CD 
+- cd ki pipeline k andr 2 terminologies use hoti
+1- cont. deployment 
+2- cont. delivery
+- delivery mein human intervention hoti
+
+- zero manual intervention in deployment
+- cd ki pipline make sure krti k buggy code deliver na ho
+- previous build ka successful hona is must
+- dev. cycle or release process ko easy krna hota 
+- delivery is deploy krna or run time pr nazar aae sb 
+- har jagah har concept use ni hota
+- tools differ for every techniques
+- client apna portal  export krta developer nhi krta
+- ci cd ki pipelines bnadete hain, vendor side pr pipelines nhi bnti qk cost brh jati
+- automatically preparation hoti haii
+- deployment mein production k access hote approval ki zarurat nhi
+
+- CI k andr processes ko decouple krna hota wrna alg alg se issues aate, faida ye hoga k ap focus hoskte konsa task fail horha konsa pass
+- compilation ka standard same hoga 
+- ci cycle bar bar nhi bnti
+- fail fast mein jo b stage fail hojati usi wqt email chali krni, removes auto generated emails, wrna saare errors ek sath check krne prte,
+ cause auto generated email error aane k bd jati hain
+- notify pehle se krdo unit testing krne k bd nhi 
+
+what makes cd good
+- CD k andr deployment se pehle design and architecture ko clear krlo, wrna application run nhi hogi, ek function k na hone se bhi app ruk skti deployment
+- cloud k andr infrastructure ki cost zyada hai
+- infrastructure bhi runtime pr define krna chahye before deployment
+- pre req installation hoti hai then configuration, ]- CD pipline
+- state ka pta chal jata hai pehle konsi 
+- production k system mein ye janna zaruri kya install hua kya nhi
+- tracking horhi hoti hai proper hr cheez ki state ka pta chal rha hota 
+
+cd pipeline flow
+
+- tracking confidence
+- confidence map bnta hai kch parameters se, validation ka phase, deployment and development  ka phase etc
+- confidence map se pta chalta kam kis tarah or kahan krna kahan msla arha etc 
+- if you are new in a company bla bla bla 
+
+
+- complete maturity matrix 
+- system thinking is overall picture ko visualize kro end result kya hoga 
+- wsjf waited short job first 
+- current state, - wsjf identify krlo, - isko globaly kese extend krskte hain
+- ci ki pipeline k andr bht kam changes aate compare to dev pipelines 
+- sonarQube ka community version free hota hai we can use in our fyp
+
+- SonarQube
+
+- infrastructor create krna hai 
+- ci cd k phases bnane hain abhi platform pr kra hai without vm ab vm bna kr krna 
+- cd ki pipline mein vm create hoga
+
+
+
+Q1: What are some key responsibilities of the Site Reliability Engineering (SRE) team and the SOC (Security Operations Center) team in a software development environment?
+
+Answer: The SRE team is responsible for monitoring applications and ensuring their reliability, while the SOC team focuses on ensuring the security of the software.
+
+Q2: How are tags used in the context of machine identification, and why are they important?
+
+Answer: Tags are unique identifiers assigned to machines, helping to distinguish and manage them. They are crucial for tracking and identifying specific machines in a network or infrastructure.
+
+Q3: What is the role of Continuous Integration (CI) in the software development process, and how does it improve software quality?
+
+Answer: CI aims to detect integration issues by regularly merging code changes into a shared repository. It enhances software quality by automating the build and test process, catching defects early, and ensuring that code changes integrate smoothly.
+
+Q4: Explain the difference between Continuous Delivery (CD) and Continuous Deployment (CD) in the software development lifecycle.
+
+Answer: Continuous Delivery (CD) involves making code changes always deployable but requires manual approval for production deployment. Continuous Deployment (CD), on the other hand, automates the deployment to production without manual intervention.
+
+Q5: Why is it important to include Continuous Testing and Continuous Monitoring in the CI/CD pipeline?
+
+Answer: Continuous Testing ensures that code changes are thoroughly tested for quality and functionality, while Continuous Monitoring helps detect issues in production and gather performance data for improvements.
+
+Q6: How does Continuous Feedback contribute to software development, and what are some sources of feedback?
+
+Answer: Continuous Feedback helps gather input from users, stakeholders, and automated testing to improve software quality. Sources of feedback include in-app surveys, error reports, and user interactions.
+
+Q7: What are some key principles of Continuous Security, and how does it impact the development process?
+
+Answer: Continuous Security integrates security practices throughout development, including security scans, penetration testing, and code analysis. It helps identify and mitigate security vulnerabilities early in the development process.
+
+Q8: Why is Continuous Documentation important, and how can it be automated in software development?
+
+Answer: Continuous Documentation keeps documentation up-to-date and relevant. Automation tools like Swagger or Redoc can generate and update API documentation based on code changes.
+
+Q9: Describe the concept of Continuous Compliance and its significance in regulated industries.
+
+Answer: Continuous Compliance ensures that software complies with legal and regulatory requirements throughout its lifecycle. It is essential in regulated industries like healthcare (HIPAA compliance), where automated checks verify compliance.
+
+Q10: What are the benefits of decoupling processes in Continuous Integration (CI), and how does it improve pipeline efficiency?
+
+Answer: Decoupling processes in CI separates tasks, making it easier to identify issues and focus on specific tasks. It improves pipeline efficiency by allowing parallel processing of tasks.
+
+Q11: What is the role of confidence mapping in Continuous Delivery (CD), and how does it help in deployment?
+
+Answer: Confidence mapping assesses various parameters, identifies validation phases, and helps understand where and how tasks should be performed. It aids in building confidence in the deployment process.
+
+Q12: Why is it important to define infrastructure and configurations before deployment in a Continuous Delivery (CD) pipeline?
+
+Answer: Defining infrastructure and configurations in advance ensures that the deployment process is smooth and that all necessary resources are available for the application to run successfully.
+
+Q13: How does Continuous Monitoring contribute to understanding the state of a system, and why is it important?
+
+Answer: Continuous Monitoring provides real-time insights into the state of a system, helping identify issues promptly. It is crucial for maintaining system health and performance.
+
+Q14: What challenges and considerations are involved in implementing CI/CD pipelines in a real-world company setting?
+
+Answer: Challenges include infrastructure costs, process automation, and ensuring that the CD pipeline aligns with the development cycle. Considerations include proper architecture and design to avoid deployment issues.
+
+Q15: What is the significance of maturity matrices in the context of CI/CD pipelines?
+
+Answer: Maturity matrices help assess the maturity level of CI/CD practices within an organization. They provide insights into areas that need improvement and guide development teams toward best practices.
+
+Q16: What is "Zero Manual Intervention" in Continuous Deployment (CD), and why is it a desirable characteristic?
+
+Answer: "Zero Manual Intervention" means fully automating the deployment process without requiring manual approval or actions. It is desirable because it reduces the chance of human error and accelerates the delivery of new features.
+
+Q17: How does Continuous Integration (CI) promote early bug detection and code quality improvement?
+
+Answer: CI automates the build and testing of code changes after every commit, allowing for the early detection of bugs and ensuring that code quality remains high.
+
+Q18: What tools are commonly used for Continuous Integration (CI) and Continuous Deployment (CD) processes?
+
+Answer: Common tools include Jenkins, Travis CI, CircleCI, GitLab CI/CD, and Azure DevOps for CI, while CD tools like Kubernetes, Docker, and Jenkins X are widely used for deployment.
+
+Q19: Explain how Continuous Integration (CI) and Continuous Deployment (CD) pipelines can be used to improve collaboration between development and operations teams (DevOps).
+
+Answer: CI/CD pipelines automate the integration, testing, and deployment processes, reducing the friction between development and operations teams and enabling faster and more reliable software delivery.
+
+Q20: Why is Continuous Security an essential aspect of modern software development, and what role does it play in DevSecOps?
+
+Answer: Continuous Security ensures that security is integrated throughout the development process, identifying vulnerabilities early and preventing security breaches. In DevSecOps, security practices are automated and integrated into CI/CD pipelines

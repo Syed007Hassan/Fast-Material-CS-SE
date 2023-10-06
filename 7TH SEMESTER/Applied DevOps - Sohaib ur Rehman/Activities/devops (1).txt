@@ -1,0 +1,40 @@
+AWS sir Presenting ( Need to do on Azure)
+Launch Instance - Add name
+Which image you are launching from? Linux or Windows Machine
+AMI - Amazon Machine Images 
+Ram/Cpu identify
+Key pair - 2 way (if not using existing, create key pair) need key to login to machine and generate password (if pass lost its fine, key shouldnt be lost or cost required)
+.pem key file format for windows
+Network Setting
+vpc = how to create entire network including porting, ip class etc (nahi prh rhe). In Azure it will be vnet
+Use default vpc - 172 series(B class)
+No preference option -> will use zone whatever available according to region selected
+enable public ip
+Firewall setting: create security group (which port allow,against which ip, who can access)
+Any description
+RDP Port to be opened
+TCP/IP 3389 protocol
+Source : Custom (define ip) -> machine will only be accessible by that ip (can also give range)
+Anywhere selected for now. myip wont be accessible if using from work and ip is of home.
+Can add description
+
+Set Rules
+Http deployment so HTTP to be enabled
+Linux 8gb by default, windows 30gb by default (if goes above that, will be charged)
+
+Advanced Settings
+Spot instance : on demand etc
+Create only 1 Instance
+
+Monitoring : By default for free
+rdb client: download desktop file
+For password: upload your private key , decrypt password
+
+To do:
+Create Vm on azure
+
+
+Azure devops should be functional as we have to create pipeline in next class
+Install IS manager
+Cli connection between
+transform all the steps in code using terraform etc..
