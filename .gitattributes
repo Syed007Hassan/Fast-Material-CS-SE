@@ -1,5 +1,11 @@
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
+*.html linguist-detectable=false
+*.ipynb linguist-detectable=false
+*.c linguist-detectable=false
+*.cpp linguist-detectable=false
+*.php linguist-detectable=false
+*.js linguist-detectable=false
 
 
 # The above will handle all files NOT found below
