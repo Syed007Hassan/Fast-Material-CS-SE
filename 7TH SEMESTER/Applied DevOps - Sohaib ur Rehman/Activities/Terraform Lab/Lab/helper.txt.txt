@@ -1,0 +1,7 @@
+az login --user devops1@domain.com --password <password>
+az ad sp create-for-rbac --name terraformrole --role Contributor --scopes /subscriptions/<ur_subscription_id>
+
+$Env:ARM_CLIENT_ID = "<APPID_VALUE>“
+$Env:ARM_CLIENT_SECRET = "<PASSWORD_VALUE>“
+$Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>" 
+$Env:ARM_TENANT_ID = "<TENANT_VALUE>“
