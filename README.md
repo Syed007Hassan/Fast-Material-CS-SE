@@ -57,4 +57,10 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 * [Web Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Web%20Engineering)
 * [Web Engineering - Lab](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/6TH%20SEMESTER/Web%20Engineering%20-%20Lab)
 
+7. [7th Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER)
+* [DevOps](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Applied%20DevOps%20-%20Sohaib%20ur%20Rehman)
+* [Fundamentals of Software & Project Management](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Fundamentals%20Of%20Software%20%26%20Project%20Management%20-%20Iqra%20Fahad)
+* [Information Security](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Information%20Security%20-%20Abdul%20Aziz)
+* [Professional Practices In IT](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Professional%20Practices%20In%20IT%20-%20Shoaib%20Rauf)
+
 **To download a particular folder, copy the link of the folder and paste it [here](https://minhaskamal.github.io/DownGit/#/home).**
