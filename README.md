@@ -1,7 +1,9 @@
-# **FAST NUCES STUDY MATERIAL**
+# **FAST NUCES COURSE RESOURCES**
 
 ### WHAT THIS REPO CONTAINS?
-It contains lecture slides, assignments, books, solved lab tasks and course outlines for each semester's course.
+It contains lecture slides, assignments, books, solved lab tasks and course outlines for each semester's course offered at the university.
+
+#### BATCH 20k (2020-2024)
 
 1. [1st Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/1ST%20SEMESTER)
 * [Intro to Info. and Comm. Technologies](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/1ST%20SEMESTER/CL117%20ICT)
@@ -62,5 +64,17 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 * [Fundamentals of Software & Project Management](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Fundamentals%20Of%20Software%20%26%20Project%20Management%20-%20Iqra%20Fahad)
 * [Information Security](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Information%20Security%20-%20Abdul%20Aziz)
 * [Professional Practices In IT](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Professional%20Practices%20In%20IT%20-%20Shoaib%20Rauf)
+
+### Accepting Contributions
+If you would like to contribute to this repository by adding course materials, please follow these steps:
+
+- Fork this repository to your account.
+- Clone the forked repository to your local machine.
+- Create a new branch for your changes: **git checkout -b your-branch-name**
+- Add your course materials to the appropriate semester folder.
+- Commit your changes: **git commit -m "Added course material xyz"**
+- Push your changes to your forked repository: **git push origin your-branch-name**
+- Create a pull request from your forked repository to this repository.
+- Wait for your pull request to be reviewed and merged.
 
 **To download a particular folder, copy the link of the folder and paste it [here](https://minhaskamal.github.io/DownGit/#/home).**
