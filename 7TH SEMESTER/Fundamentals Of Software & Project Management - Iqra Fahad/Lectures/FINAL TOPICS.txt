@@ -1,0 +1,39 @@
+Topics For Final Exam:
+Principles of Project Management (FROM pmbok 12 principles)
+
+Schedule Management
+
+Cost Management
+
+Resource Management
+
+Risk Management
+
+Configuration Management
+
+Agile Project Management
+
+SCRUM
+
+10pearls (Software testing content)
+
+
+
+
+Topics For Final Exam:
+Principles of Project Management
+https://rebelsguidetopm.com/the-12-principles-of-project-management/
+Schedule Management
+(Precedence Diagramming method, Schedule Estimation techniques like Planning Poker, Wideband Delphi, Three point estimation, Bottom Up estimates, Gantt chart etc.)
+Cost Management
+Example qs practice 
+Resource Management
+Risk Management
+Configuration Management
+10pearls (Software testing content)
+Agile Project Management
+SCRUM
+Diagrams 
+Precedence Diagram
+Gantt chart
+WBS
