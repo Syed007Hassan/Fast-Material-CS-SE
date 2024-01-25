@@ -3,6 +3,7 @@
 *.html linguist-detectable=false
 *.ipynb linguist-detectable=false
 *.php linguist-detectable=false
+
 *.js linguist-detectable=false
 
 
