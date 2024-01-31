@@ -68,6 +68,7 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 8. [8th Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER)
 * [Design Defects & Restructuring](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER/Design%20Defects%20%26%20Restructuring)
 * [Software RE-Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER/Software%20RE-Engineering)
+* [Introduction To Cloud Computing](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER/Introduction%20To%20Cloud%20Computing)
 
 ### Accepting Contributions
 If you would like to contribute to this repository by adding course materials, please follow these steps:
