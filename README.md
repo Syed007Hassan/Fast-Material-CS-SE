@@ -65,6 +65,10 @@ It contains lecture slides, assignments, books, solved lab tasks and course outl
 * [Information Security](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Information%20Security%20-%20Abdul%20Aziz)
 * [Professional Practices In IT](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/7TH%20SEMESTER/Professional%20Practices%20In%20IT%20-%20Shoaib%20Rauf)
 
+8. [8th Semester](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER)
+* [Design Defects & Restructuring](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER/Design%20Defects%20%26%20Restructuring)
+* [Software RE-Engineering](https://github.com/Syed007Hassan/Fast-Material-CS-SE/tree/main/8TH%20SEMESTER/Software%20RE-Engineering)
+
 ### Accepting Contributions
 If you would like to contribute to this repository by adding course materials, please follow these steps:
 
