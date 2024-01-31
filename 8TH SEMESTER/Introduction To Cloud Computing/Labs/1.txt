@@ -1,0 +1,21 @@
+Scenario#4:
+Create an S3 bucket with encryption and versioning.
+Objective:
+Create a bucket with default encryption, enable object-level versioning with public access, and upload 3 versions of the text file, version 1 should be on S3 standard, version 2 should exist on Standard-IA, and version 3 should exist on RRS
+Hint: AWS S3
+Scenario#5:
+Create an S3 bucket with bucket policy and lifecycle.
+Objective:
+Create a bucket, with a bucket policy that denies a particular user to delete the file from an s3 bucket, and the S3 bucket lifecycle policy should be configured in this manner that every s3 standard object should go to s3-IA after 30 days & go to the glacier after 60 days.
+Hint: AWS S3
+Scenario#6:
+Configure S3 bucket with S3 bucket policies
+Objective:
+In this scenario, you need to configure the S3 bucket along with mentioned items:
+Create an s3 bucket with 3 folders name Stage, Dev & Prod, Write a bucket policy that allows IAM user A can access the stage folder only, the Rest of the users will be able to access only the Dev folder, and No IAM user will be able to access the Prod folder.
+Hint: AWS S3, S3 Bucket Policy
+Scenario#7:
+Deploy a Static website using an S3 bucket and CloudFront.
+Objective:
+In this scenario, deploy a static website using an S3 bucket and create a distribution using the cloud front.
+Hint: AWS S3, CloudFront
