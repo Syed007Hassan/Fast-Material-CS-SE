@@ -1,0 +1,7 @@
+Severity vs Priority
+
+Scenarios for discussion: 
+High Severity with Low Priority
+Low Severity with Low Priority
+High Severity with High Priority
+Low Severity with High Priority

@@ -1,0 +1,10 @@
+efficiency vs effectiveness
+
+reliability (downtime) vs availability (service time)
+
+security vs availability
+---
+now on the basis of above discussions you must be able to relate any requirements listed here:
+https://medium.com/coinmonks/types-of-non-functional-requirements-examples-ceb7be958e27
+https://en.wikipedia.org/wiki/Non-functional_requirement
+Just go and analyze all of the aspects of the releations for the requirements listed in above URLs.
