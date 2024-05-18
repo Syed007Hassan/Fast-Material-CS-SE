@@ -1,0 +1,30 @@
+Definition of the Liskov Substitution Principle
+Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.
+- Barbara Liskov 1987
+
+
+* The Liskov Substitution Principle in practical software development
+The principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application.
+
+* Subtypes must be able to substitute base types.
+
+
+
+That requires the objects of your subclasses to behave in the same way as the objects of your superclass. 
+
+
+
+E.g.,
+An overridden method of a subclass needs to accept the same input parameter values as the method of the superclass.
+
+That means you can implement less restrictive validation rules, but you are not allowed to enforce stricter ones in your subclass.
+
+
+Similar rules apply to the return value of the method. The return value of a method of the subclass needs to comply with the same rules as the return value of the method of the superclass.
+
+
+Example 1:
+Liskov Substitution Principle use an example in which they implement a Rectangle and a Square class to show that you break the design principle if your Square class extends the Rectangle class.
+
+
+
