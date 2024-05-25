@@ -1,0 +1,27 @@
+
+Week 12 Classwork:
+=================
+Reference:
+https://refactoring.guru/refactoring/techniques
+
+all code: 
+https://github.com/RefactoringGuru
+
+Week 12 Class 2 work:
+---------------------
+Write berif notes on all of the following in your DDR register. Try useing your own examples:
+[After completing the notes and understanding it please show it to instructor for your attandance. If you come late and could not complete the notes in class, then instructor will mark you absent.]
+
+12. https://refactoring.guru/encapsulate-field
+13. https://refactoring.guru/extract-class
+14. https://refactoring.guru/extract-interface
+15. https://refactoring.guru/extract-method
+16. https://refactoring.guru/extract-subclass
+17. https://refactoring.guru/extract-superclass
+18. https://refactoring.guru/extract-variable
+19. https://refactoring.guru/form-template-method
+20. https://refactoring.guru/hide-delegate
+21. https://refactoring.guru/hide-method
+22. https://refactoring.guru/inline-class
+23. https://refactoring.guru/inline-method
+------------------------

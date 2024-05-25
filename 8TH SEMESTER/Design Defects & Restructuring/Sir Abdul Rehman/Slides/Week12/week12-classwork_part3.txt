@@ -1,0 +1,28 @@
+
+Week 12 Classwork:
+=================
+Reference:
+https://refactoring.guru/refactoring/techniques
+
+all code: 
+https://github.com/RefactoringGuru
+
+Week 12 Class 3 work:
+---------------------
+Write berif notes on all of the following in your DDR register. Try useing your own examples:
+[After completing the notes and understanding it please show it to instructor for your attandance. If you come late and could not complete the notes in class, then instructor will mark you absent.]
+BAD smells:
+01. https://refactoring.guru/smells/duplicate-code
+02. https://refactoring.guru/smells/long-method
+03. https://refactoring.guru/smells/large-class
+04. https://refactoring.guru/smells/long-parameter-list
+05. https://refactoring.guru/smells/shotgun-surgery
+06. https://refactoring.guru/smells/feature-envy
+07. https://refactoring.guru/smells/switch-statements
+
+Write a detailed note on all of the following:
+1. Benefits of Refactoring?
+2. Refactoring Risks 
+3. Costs of Refactoring 
+
+

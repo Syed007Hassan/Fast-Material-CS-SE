@@ -1,0 +1,25 @@
+
+Week 12 Classwork:
+=================
+Reference:
+https://refactoring.guru/refactoring/techniques
+
+all code: 
+https://github.com/RefactoringGuru
+
+Class 1:
+--------
+Write berif notes on all of the following in your DDR register. Try useing your own examples:
+[After completing the notes and understanding it please show it to instructor for your attandance. If uoi come late and could not complete the notes in class, then instructor will mark you absent.]
+
+01. https://refactoring.guru/add-parameter
+02. https://refactoring.guru/change-bidirectional-association-to-unidirectional
+03. https://refactoring.guru/change-unidirectional-association-to-bidirectional
+04. https://refactoring.guru/change-reference-to-value
+05. https://refactoring.guru/change-value-to-reference
+06. https://refactoring.guru/collapse-hierarchy
+07. https://refactoring.guru/consolidate-conditional-expression
+08. https://refactoring.guru/consolidate-duplicate-conditional-fragments
+09. https://refactoring.guru/decompose-conditional
+10. https://refactoring.guru/encapsulate-collection
+11. https://www.refactoring.com/catalog/encapsulateDowncast.html

@@ -1,0 +1,3 @@
+https://refactoring.guru/smells/temporary-field
+https://refactoring.guru/smells/middle-man
+https://refactoring.guru/smells/inappropriate-intimacy
