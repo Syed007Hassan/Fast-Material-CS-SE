@@ -84,3 +84,10 @@ If you would like to contribute to this repository by adding course materials, p
 - Wait for your pull request to be reviewed and merged.
 
 **To download a particular folder, copy the link of the folder and paste it [here](https://minhaskamal.github.io/DownGit/#/home).**
+
+### GitHub Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Syed007Hassan/Fast-Material-CS-SE&type=Date&width=1000&height=450)](https://star-history.com/#Syed007Hassan/Fast-Material-CS-SE&Date)
+
+
+
